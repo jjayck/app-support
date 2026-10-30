@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jjayck.github.io/app-support/sitemap.xml
