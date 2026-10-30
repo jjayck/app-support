@@ -1,0 +1,3592 @@
+[
+ {
+  "year": "R3",
+  "subject": 1,
+  "problem": 1,
+  "part": "(1)",
+  "area": "法規",
+  "point": "エネルギー管理統括者・企画推進者の業務と選任",
+  "calc": false,
+  "tag": "law-roles2"
+ },
+ {
+  "year": "R3",
+  "subject": 1,
+  "problem": 1,
+  "part": "(2)",
+  "area": "法規",
+  "point": "原油換算量から指定区分と管理者数を判定",
+  "calc": true,
+  "tag": "crude"
+ },
+ {
+  "year": "R3",
+  "subject": 1,
+  "problem": 1,
+  "part": "(3)",
+  "area": "法規",
+  "point": "定期報告に含まれる事項",
+  "calc": false,
+  "tag": "law"
+ },
+ {
+  "year": "R3",
+  "subject": 1,
+  "problem": 1,
+  "part": "(4)",
+  "area": "法規",
+  "point": "機器・建築材料のトップランナー制度",
+  "calc": false,
+  "tag": "law"
+ },
+ {
+  "year": "R3",
+  "subject": 1,
+  "problem": 2,
+  "part": "(1)",
+  "area": "エネルギー概論・単位",
+  "point": "SI組立単位と水柱の圧力",
+  "calc": true,
+  "tag": "units"
+ },
+ {
+  "year": "R3",
+  "subject": 1,
+  "problem": 2,
+  "part": "(2)",
+  "area": "エネルギー情勢・政策",
+  "point": "電源構成と火力燃料別の推移",
+  "calc": false,
+  "tag": "stat-power"
+ },
+ {
+  "year": "R3",
+  "subject": 1,
+  "problem": 2,
+  "part": "(3)",
+  "area": "エネルギー概論・単位",
+  "point": "エクセルギーとエクセルギー率",
+  "calc": false,
+  "tag": "exergy-rate"
+ },
+ {
+  "year": "R3",
+  "subject": 1,
+  "problem": 3,
+  "part": "(1)",
+  "area": "判断基準",
+  "point": "目標及び措置部分の対象設備とFEMS",
+  "calc": false,
+  "tag": "crit-waste-fems"
+ },
+ {
+  "year": "R3",
+  "subject": 1,
+  "problem": 3,
+  "part": "(2)",
+  "area": "管理技術の基礎",
+  "point": "カルノーサイクルの熱効率",
+  "calc": true,
+  "tag": "carnot"
+ },
+ {
+  "year": "R3",
+  "subject": 1,
+  "problem": 3,
+  "part": "(3)",
+  "area": "管理技術の基礎",
+  "point": "アセチレン燃焼の理論酸素量",
+  "calc": true,
+  "tag": "gas_combustion"
+ },
+ {
+  "year": "R3",
+  "subject": 1,
+  "problem": 3,
+  "part": "(4)",
+  "area": "管理技術の基礎",
+  "point": "平板を介した熱通過の熱抵抗",
+  "calc": true,
+  "tag": "wall"
+ },
+ {
+  "year": "R3",
+  "subject": 1,
+  "problem": 3,
+  "part": "(5)",
+  "area": "管理技術の基礎",
+  "point": "放射エネルギーの温度4乗則",
+  "calc": true,
+  "tag": "radiation"
+ },
+ {
+  "year": "R3",
+  "subject": 1,
+  "problem": 3,
+  "part": "(6)",
+  "area": "管理技術の基礎",
+  "point": "湿り蒸気が保有する潜熱",
+  "calc": true,
+  "tag": "wet_steam"
+ },
+ {
+  "year": "R3",
+  "subject": 1,
+  "problem": 3,
+  "part": "(7)",
+  "area": "管理技術の基礎",
+  "point": "燃焼効率の定義",
+  "calc": false,
+  "tag": null
+ },
+ {
+  "year": "R3",
+  "subject": 1,
+  "problem": 3,
+  "part": "(8)",
+  "area": "判断基準",
+  "point": "廃熱回収利用の基準",
+  "calc": false,
+  "tag": "crit-waste-fems"
+ },
+ {
+  "year": "R3",
+  "subject": 1,
+  "problem": 3,
+  "part": "(9)",
+  "area": "判断基準",
+  "point": "空調の負荷低減と高効率機器採用",
+  "calc": false,
+  "tag": "crit-office"
+ },
+ {
+  "year": "R3",
+  "subject": 1,
+  "problem": 3,
+  "part": "(10)",
+  "area": "管理技術の基礎",
+  "point": "発電効率から燃料ガス使用量",
+  "calc": true,
+  "tag": "gen_fuel"
+ },
+ {
+  "year": "R3",
+  "subject": 1,
+  "problem": 3,
+  "part": "(11)",
+  "area": "判断基準",
+  "point": "受電端力率の基準値と目標値",
+  "calc": false,
+  "tag": "crit"
+ },
+ {
+  "year": "R3",
+  "subject": 1,
+  "problem": 3,
+  "part": "(12)",
+  "area": "管理技術の基礎",
+  "point": "デマンド管理の残り時間の平均電力",
+  "calc": true,
+  "tag": "demand"
+ },
+ {
+  "year": "R3",
+  "subject": 1,
+  "problem": 3,
+  "part": "(13)",
+  "area": "管理技術の基礎",
+  "point": "三相電動機の力率計算",
+  "calc": true,
+  "tag": "power_factor"
+ },
+ {
+  "year": "R3",
+  "subject": 1,
+  "problem": 3,
+  "part": "(14)",
+  "area": "管理技術の基礎",
+  "point": "誘導電動機の負荷と回転速度",
+  "calc": false,
+  "tag": "motor_slip"
+ },
+ {
+  "year": "R3",
+  "subject": 1,
+  "problem": 3,
+  "part": "(15)",
+  "area": "管理技術の基礎",
+  "point": "送風機の定義と全圧換算",
+  "calc": true,
+  "tag": "affinity"
+ },
+ {
+  "year": "R3",
+  "subject": 1,
+  "problem": 3,
+  "part": "(16)",
+  "area": "管理技術の基礎",
+  "point": "ファラデーの法則",
+  "calc": false,
+  "tag": "faraday"
+ },
+ {
+  "year": "R3",
+  "subject": 1,
+  "problem": 3,
+  "part": "(17)",
+  "area": "管理技術の基礎",
+  "point": "LEDランプの総合効率",
+  "calc": false,
+  "tag": "lighting-eff"
+ },
+ {
+  "year": "R3",
+  "subject": 2,
+  "problem": 4,
+  "part": "",
+  "area": "熱力学",
+  "point": "ディーゼルサイクルの圧縮比・締切比と理論熱効率",
+  "calc": true,
+  "tag": "otto"
+ },
+ {
+  "year": "R3",
+  "subject": 2,
+  "problem": 5,
+  "part": "1)",
+  "area": "熱力学",
+  "point": "湿り蒸気の絞り膨張(等エンタルピー)と乾き度",
+  "calc": true,
+  "tag": "quality"
+ },
+ {
+  "year": "R3",
+  "subject": 2,
+  "problem": 5,
+  "part": "2)",
+  "area": "熱力学",
+  "point": "過熱蒸気の凝縮放熱量と加熱能力",
+  "calc": true,
+  "tag": "steam_heat"
+ },
+ {
+  "year": "R3",
+  "subject": 2,
+  "problem": 6,
+  "part": "(1)",
+  "area": "流体工学",
+  "point": "ピトー管とU字管マノメータによる流速測定",
+  "calc": true,
+  "tag": "bernoulli"
+ },
+ {
+  "year": "R3",
+  "subject": 2,
+  "problem": 6,
+  "part": "(2)",
+  "area": "流体工学",
+  "point": "送風機の軸動力と軸流送風機の旋回失速",
+  "calc": false,
+  "tag": "affinity"
+ },
+ {
+  "year": "R3",
+  "subject": 2,
+  "problem": 6,
+  "part": "(3)",
+  "area": "流体工学",
+  "point": "直円管の圧力損失・管摩擦係数と層流乱流判定",
+  "calc": true,
+  "tag": "reynolds"
+ },
+ {
+  "year": "R3",
+  "subject": 2,
+  "problem": 7,
+  "part": "(1)",
+  "area": "伝熱工学",
+  "point": "円管内強制対流のヌセルト数と必要管長",
+  "calc": true,
+  "tag": "tube_convection"
+ },
+ {
+  "year": "R3",
+  "subject": 2,
+  "problem": 7,
+  "part": "(2)",
+  "area": "伝熱工学",
+  "point": "円筒壁の定常熱伝導の熱流量と温度分布式",
+  "calc": false,
+  "tag": "wall"
+ },
+ {
+  "year": "R3",
+  "subject": 3,
+  "problem": 8,
+  "part": "(1)",
+  "area": "燃料と燃焼管理",
+  "point": "LPGのJIS種類・成分と蒸気圧",
+  "calc": false,
+  "tag": "fuel"
+ },
+ {
+  "year": "R3",
+  "subject": 3,
+  "problem": 8,
+  "part": "(2)",
+  "area": "燃料と燃焼管理",
+  "point": "重油のJIS分類とC/H比・密度",
+  "calc": false,
+  "tag": "fuel"
+ },
+ {
+  "year": "R3",
+  "subject": 3,
+  "problem": 8,
+  "part": "(3)",
+  "area": "燃料と燃焼管理",
+  "point": "燃料液滴燃焼のd²則と燃焼時間",
+  "calc": true,
+  "tag": "droplet"
+ },
+ {
+  "year": "R3",
+  "subject": 3,
+  "problem": 8,
+  "part": "(4)",
+  "area": "燃料と燃焼管理",
+  "point": "すす・セノスフェアの生成条件",
+  "calc": false,
+  "tag": "fuel"
+ },
+ {
+  "year": "R3",
+  "subject": 3,
+  "problem": 9,
+  "part": "(1)",
+  "area": "燃料と燃焼管理",
+  "point": "拡散燃焼バーナの特徴と形式",
+  "calc": false,
+  "tag": "burner"
+ },
+ {
+  "year": "R3",
+  "subject": 3,
+  "problem": 9,
+  "part": "(2)",
+  "area": "燃料と燃焼管理",
+  "point": "油圧・流体噴霧式バーナの調節範囲",
+  "calc": false,
+  "tag": "fuel"
+ },
+ {
+  "year": "R3",
+  "subject": 3,
+  "problem": 9,
+  "part": "(3)",
+  "area": "燃料と燃焼管理",
+  "point": "流動層燃焼の層温度と空気流速",
+  "calc": false,
+  "tag": "fuel"
+ },
+ {
+  "year": "R3",
+  "subject": 3,
+  "problem": 9,
+  "part": "(4)",
+  "area": "燃料と燃焼管理",
+  "point": "磁気式O₂計と赤外線CO計の干渉",
+  "calc": false,
+  "tag": "fuel"
+ },
+ {
+  "year": "R3",
+  "subject": 3,
+  "problem": 10,
+  "part": "1)",
+  "area": "燃焼計算",
+  "point": "液体燃料の理論空気量・理論排ガス量",
+  "calc": true,
+  "tag": "liquid_fuel"
+ },
+ {
+  "year": "R3",
+  "subject": 3,
+  "problem": 10,
+  "part": "2)",
+  "area": "燃焼計算",
+  "point": "排ガスCO₂濃度から空気比と排ガス量",
+  "calc": true,
+  "tag": "co2_air_ratio"
+ },
+ {
+  "year": "R3",
+  "subject": 3,
+  "problem": 10,
+  "part": "3)",
+  "area": "燃焼計算",
+  "point": "空気予熱器の回収熱と予熱空気温度",
+  "calc": true,
+  "tag": "air_preheat"
+ },
+ {
+  "year": "R3",
+  "subject": 3,
+  "problem": 10,
+  "part": "4)",
+  "area": "燃焼計算",
+  "point": "空気予熱による燃料削減率",
+  "calc": true,
+  "tag": "air_preheat"
+ },
+ {
+  "year": "R3",
+  "subject": 4,
+  "problem": 11,
+  "part": "(1)",
+  "area": "計測と制御",
+  "point": "放射温度計の原理と放射率補正",
+  "calc": false,
+  "tag": "measure"
+ },
+ {
+  "year": "R3",
+  "subject": 4,
+  "problem": 11,
+  "part": "(2)",
+  "area": "計測と制御",
+  "point": "熱電対と測温抵抗体の原理",
+  "calc": false,
+  "tag": "measure-values"
+ },
+ {
+  "year": "R3",
+  "subject": 4,
+  "problem": 11,
+  "part": "(3)",
+  "area": "計測と制御",
+  "point": "熱式・コリオリ式流量計の特徴",
+  "calc": false,
+  "tag": "measure-flow2"
+ },
+ {
+  "year": "R3",
+  "subject": 4,
+  "problem": 11,
+  "part": "(4)",
+  "area": "計測と制御",
+  "point": "真空計の種類と測定原理",
+  "calc": false,
+  "tag": "measure-values"
+ },
+ {
+  "year": "R3",
+  "subject": 4,
+  "problem": 12,
+  "part": "(1)",
+  "area": "計測と制御",
+  "point": "燃焼炉のカスケード・比率制御",
+  "calc": false,
+  "tag": "ctrl-class"
+ },
+ {
+  "year": "R3",
+  "subject": 4,
+  "problem": 12,
+  "part": "(2)",
+  "area": "計測と制御",
+  "point": "調節弁の構造・Cv値・流量特性",
+  "calc": false,
+  "tag": "valve-structure"
+ },
+ {
+  "year": "R3",
+  "subject": 4,
+  "problem": 13,
+  "part": "(1)",
+  "area": "ボイラ・蒸気",
+  "point": "循環ボイラと貫流ボイラの構成と制御",
+  "calc": false,
+  "tag": "boiler-control"
+ },
+ {
+  "year": "R3",
+  "subject": 4,
+  "problem": 13,
+  "part": "(2)",
+  "area": "ボイラ・蒸気",
+  "point": "エコノマイザと空気予熱器による効率改善",
+  "calc": false,
+  "tag": "boiler-eco"
+ },
+ {
+  "year": "R3",
+  "subject": 4,
+  "problem": 13,
+  "part": "(3)",
+  "area": "蒸気輸送・断熱",
+  "point": "蒸気輸送の圧力損失後の過熱度・乾き度",
+  "calc": true,
+  "tag": "wet_steam"
+ },
+ {
+  "year": "R3",
+  "subject": 4,
+  "problem": 14,
+  "part": "(1)",
+  "area": "その他設備",
+  "point": "蒸気タービンの構造と損失対策",
+  "calc": false,
+  "tag": "turbine"
+ },
+ {
+  "year": "R3",
+  "subject": 4,
+  "problem": 14,
+  "part": "(2)",
+  "area": "その他設備",
+  "point": "内燃機関の種類と作動方式",
+  "calc": false,
+  "tag": "engine"
+ },
+ {
+  "year": "R3",
+  "subject": 4,
+  "problem": 14,
+  "part": "(3)",
+  "area": "その他設備",
+  "point": "ガスタービン性能と圧力比・大気条件",
+  "calc": false,
+  "tag": "gt-performance"
+ },
+ {
+  "year": "R3",
+  "subject": 4,
+  "problem": 15,
+  "part": "(1)",
+  "area": "熱交換器・熱回収",
+  "point": "開放式・密閉式冷却塔の特徴",
+  "calc": false,
+  "tag": "tower"
+ },
+ {
+  "year": "R3",
+  "subject": 4,
+  "problem": 15,
+  "part": "(2)",
+  "area": "熱交換器・熱回収",
+  "point": "コークス乾式消火・蓄熱式バーナの排熱回収",
+  "calc": false,
+  "tag": "burner"
+ },
+ {
+  "year": "R3",
+  "subject": 4,
+  "problem": 15,
+  "part": "(3)",
+  "area": "熱交換器・熱回収",
+  "point": "熱交換器の汚れによる損失と潜熱回収",
+  "calc": false,
+  "tag": "hx-fouling"
+ },
+ {
+  "year": "R3",
+  "subject": 4,
+  "problem": 15,
+  "part": "(4)",
+  "area": "熱交換器・熱回収",
+  "point": "向流熱交換器の温度効率と熱収支",
+  "calc": true,
+  "tag": "hx_effectiveness"
+ },
+ {
+  "year": "R3",
+  "subject": 4,
+  "problem": 16,
+  "part": "(1)",
+  "area": "冷凍・空調",
+  "point": "吸収冷凍機の構成と冷媒・吸収剤",
+  "calc": false,
+  "tag": "refrig"
+ },
+ {
+  "year": "R3",
+  "subject": 4,
+  "problem": 16,
+  "part": "(2)",
+  "area": "冷凍・空調",
+  "point": "空気線図の座標と熱水分比・顕熱比",
+  "calc": false,
+  "tag": "air_mix"
+ },
+ {
+  "year": "R3",
+  "subject": 4,
+  "problem": 16,
+  "part": "(3)",
+  "area": "冷凍・空調",
+  "point": "冷房プロセスの混合点と必要送風量",
+  "calc": false,
+  "tag": "air_mix"
+ },
+ {
+  "year": "R3",
+  "subject": 4,
+  "problem": 17,
+  "part": "(1)",
+  "area": "工業炉・熱設備材料",
+  "point": "工業炉の熱源・操業方式による分類",
+  "calc": false,
+  "tag": "furnace-types"
+ },
+ {
+  "year": "R3",
+  "subject": 4,
+  "problem": 17,
+  "part": "(2)",
+  "area": "工業炉・熱設備材料",
+  "point": "工業炉の省エネ基準と蓄熱式バーナ",
+  "calc": false,
+  "tag": "furnace_recup"
+ },
+ {
+  "year": "R3",
+  "subject": 4,
+  "problem": 17,
+  "part": "(3)",
+  "area": "工業炉・熱設備材料",
+  "point": "セラミックファイバの特性と施工法",
+  "calc": false,
+  "tag": "furnace-fiber"
+ },
+ {
+  "year": "R3",
+  "subject": 4,
+  "problem": 18,
+  "part": "(1)",
+  "area": "その他設備",
+  "point": "連続蒸留塔の物質収支と還流比",
+  "calc": true,
+  "tag": "dist_balance"
+ },
+ {
+  "year": "R3",
+  "subject": 4,
+  "problem": 18,
+  "part": "(2)",
+  "area": "その他設備",
+  "point": "汚泥乾燥の含水率換算と乾燥機",
+  "calc": true,
+  "tag": "drying"
+ },
+ {
+  "year": "R3",
+  "subject": 4,
+  "problem": 18,
+  "part": "(3)",
+  "area": "その他設備",
+  "point": "石炭からの水素製造(水性ガス反応)",
+  "calc": false,
+  "tag": "gasify-reaction"
+ },
+ {
+  "year": "R4",
+  "subject": 1,
+  "problem": 1,
+  "part": "(1)",
+  "area": "法規",
+  "point": "法の目的規定",
+  "calc": false,
+  "tag": "law"
+ },
+ {
+  "year": "R4",
+  "subject": 1,
+  "problem": 1,
+  "part": "(2)",
+  "area": "法規",
+  "point": "基本方針の策定と協議・供給事業者の措置",
+  "calc": false,
+  "tag": "law"
+ },
+ {
+  "year": "R4",
+  "subject": 1,
+  "problem": 1,
+  "part": "(3)",
+  "area": "法規",
+  "point": "原油換算量から指定区分と管理者数を判定",
+  "calc": true,
+  "tag": "energy-count"
+ },
+ {
+  "year": "R4",
+  "subject": 1,
+  "problem": 1,
+  "part": "(4)",
+  "area": "法規",
+  "point": "定期報告の期限と報告項目",
+  "calc": false,
+  "tag": "law"
+ },
+ {
+  "year": "R4",
+  "subject": 1,
+  "problem": 1,
+  "part": "(5)",
+  "area": "法規",
+  "point": "合理化計画の指示・命令・公表",
+  "calc": false,
+  "tag": "law"
+ },
+ {
+  "year": "R4",
+  "subject": 1,
+  "problem": 2,
+  "part": "(1)",
+  "area": "エネルギー概論・単位",
+  "point": "SI組立単位と電池のエネルギー量",
+  "calc": true,
+  "tag": "units-elec"
+ },
+ {
+  "year": "R4",
+  "subject": 1,
+  "problem": 2,
+  "part": "(2)",
+  "area": "エネルギー情勢・政策",
+  "point": "最終エネルギー消費と化石燃料輸入先",
+  "calc": false,
+  "tag": "stat-final"
+ },
+ {
+  "year": "R4",
+  "subject": 1,
+  "problem": 2,
+  "part": "(3)",
+  "area": "エネルギー情勢・政策",
+  "point": "メタネーションと水素の色分類",
+  "calc": true,
+  "tag": "energy-ccus"
+ },
+ {
+  "year": "R4",
+  "subject": 1,
+  "problem": 3,
+  "part": "(1)",
+  "area": "判断基準",
+  "point": "全事業者が取り組むべき8項目",
+  "calc": false,
+  "tag": "crit"
+ },
+ {
+  "year": "R4",
+  "subject": 1,
+  "problem": 3,
+  "part": "(2)",
+  "area": "管理技術の基礎",
+  "point": "熱力学第一法則",
+  "calc": false,
+  "tag": null
+ },
+ {
+  "year": "R4",
+  "subject": 1,
+  "problem": 3,
+  "part": "(3)",
+  "area": "管理技術の基礎",
+  "point": "プロパン燃焼の理論空気量",
+  "calc": true,
+  "tag": "gas_combustion"
+ },
+ {
+  "year": "R4",
+  "subject": 1,
+  "problem": 3,
+  "part": "(4)",
+  "area": "管理技術の基礎",
+  "point": "放散熱量制限から炉壁の必要厚さ",
+  "calc": true,
+  "tag": "wall"
+ },
+ {
+  "year": "R4",
+  "subject": 1,
+  "problem": 3,
+  "part": "(5)",
+  "area": "管理技術の基礎",
+  "point": "灰色体球面の放射エネルギー",
+  "calc": true,
+  "tag": "radiation"
+ },
+ {
+  "year": "R4",
+  "subject": 1,
+  "problem": 3,
+  "part": "(6)",
+  "area": "管理技術の基礎",
+  "point": "炉壁材の蓄熱性と配置",
+  "calc": false,
+  "tag": "furnace-material"
+ },
+ {
+  "year": "R4",
+  "subject": 1,
+  "problem": 3,
+  "part": "(7)",
+  "area": "管理技術の基礎",
+  "point": "湿り蒸気の比エンタルピー",
+  "calc": true,
+  "tag": "wet_steam"
+ },
+ {
+  "year": "R4",
+  "subject": 1,
+  "problem": 3,
+  "part": "(8)",
+  "area": "判断基準",
+  "point": "熱利用設備の分散配置と蓄熱",
+  "calc": false,
+  "tag": "crit-heat-new"
+ },
+ {
+  "year": "R4",
+  "subject": 1,
+  "problem": 3,
+  "part": "(9)",
+  "area": "管理技術の基礎",
+  "point": "吸収式と電動冷凍機の一次エネルギー比較",
+  "calc": true,
+  "tag": "cop_primary"
+ },
+ {
+  "year": "R4",
+  "subject": 1,
+  "problem": 3,
+  "part": "(10)",
+  "area": "管理技術の基礎",
+  "point": "重油使用量と効率から発電量",
+  "calc": true,
+  "tag": "gen_fuel"
+ },
+ {
+  "year": "R4",
+  "subject": 1,
+  "problem": 3,
+  "part": "(11)",
+  "area": "管理技術の基礎",
+  "point": "三相負荷の有効電力",
+  "calc": true,
+  "tag": "motor_power"
+ },
+ {
+  "year": "R4",
+  "subject": 1,
+  "problem": 3,
+  "part": "(12)",
+  "area": "判断基準",
+  "point": "配電損失低減の基準",
+  "calc": false,
+  "tag": "crit-elec-loss"
+ },
+ {
+  "year": "R4",
+  "subject": 1,
+  "problem": 3,
+  "part": "(13)",
+  "area": "管理技術の基礎",
+  "point": "デマンド監視と残り時間の平均電力",
+  "calc": true,
+  "tag": "demand"
+ },
+ {
+  "year": "R4",
+  "subject": 1,
+  "problem": 3,
+  "part": "(14)",
+  "area": "管理技術の基礎",
+  "point": "電動機の軸動力とトルク",
+  "calc": false,
+  "tag": "motor_power"
+ },
+ {
+  "year": "R4",
+  "subject": 1,
+  "problem": 3,
+  "part": "(15)",
+  "area": "判断基準",
+  "point": "電動力応用設備の空転防止",
+  "calc": false,
+  "tag": "crit"
+ },
+ {
+  "year": "R4",
+  "subject": 1,
+  "problem": 3,
+  "part": "(16)",
+  "area": "判断基準",
+  "point": "電気加熱・電解設備の接触部損失",
+  "calc": false,
+  "tag": "crit-elec-loss"
+ },
+ {
+  "year": "R4",
+  "subject": 1,
+  "problem": 3,
+  "part": "(17)",
+  "area": "管理技術の基礎",
+  "point": "タスク・アンビエント照明",
+  "calc": false,
+  "tag": "crit-light-hvac"
+ },
+ {
+  "year": "R4",
+  "subject": 2,
+  "problem": 4,
+  "part": "1)",
+  "area": "熱力学",
+  "point": "ピストン付きタンクの力の釣合いと初期状態",
+  "calc": true,
+  "tag": "piston"
+ },
+ {
+  "year": "R4",
+  "subject": 2,
+  "problem": 4,
+  "part": "2)",
+  "area": "熱力学",
+  "point": "定容加熱の温度・加熱量・エントロピー変化",
+  "calc": true,
+  "tag": "isochoric"
+ },
+ {
+  "year": "R4",
+  "subject": 2,
+  "problem": 4,
+  "part": "3)",
+  "area": "熱力学",
+  "point": "可逆断熱膨張後の体積と外部仕事",
+  "calc": true,
+  "tag": "adiabatic_work"
+ },
+ {
+  "year": "R4",
+  "subject": 2,
+  "problem": 5,
+  "part": "",
+  "area": "熱力学",
+  "point": "蒸気圧縮冷凍サイクルのP-h線図と成績係数",
+  "calc": true,
+  "tag": "cop"
+ },
+ {
+  "year": "R4",
+  "subject": 2,
+  "problem": 6,
+  "part": "(1)",
+  "area": "流体工学",
+  "point": "送風機の分類とサージング",
+  "calc": false,
+  "tag": "fan-types"
+ },
+ {
+  "year": "R4",
+  "subject": 2,
+  "problem": 6,
+  "part": "(2)",
+  "area": "流体工学",
+  "point": "円管内流れの管摩擦係数とムーディ線図",
+  "calc": false,
+  "tag": "reynolds"
+ },
+ {
+  "year": "R4",
+  "subject": 2,
+  "problem": 6,
+  "part": "(3)",
+  "area": "流体工学",
+  "point": "差圧計を用いたポンプ効率の測定",
+  "calc": true,
+  "tag": "bernoulli_height"
+ },
+ {
+  "year": "R4",
+  "subject": 2,
+  "problem": 7,
+  "part": "(1)",
+  "area": "伝熱工学",
+  "point": "対流熱伝達の無次元数と境界層",
+  "calc": false,
+  "tag": "heat-boundary"
+ },
+ {
+  "year": "R4",
+  "subject": 2,
+  "problem": 7,
+  "part": "(2)",
+  "area": "伝熱工学",
+  "point": "平行2面間・囲まれた面の放射伝熱量の式",
+  "calc": false,
+  "tag": "enclosed_radiation"
+ },
+ {
+  "year": "R4",
+  "subject": 2,
+  "problem": 7,
+  "part": "(3)",
+  "area": "伝熱工学",
+  "point": "沸騰の分類と沸騰曲線",
+  "calc": false,
+  "tag": "heat-boiling"
+ },
+ {
+  "year": "R4",
+  "subject": 2,
+  "problem": 7,
+  "part": "(4)",
+  "area": "伝熱工学",
+  "point": "並流形熱交換器の対数平均温度差と交換熱量",
+  "calc": true,
+  "tag": "lmtd"
+ },
+ {
+  "year": "R4",
+  "subject": 3,
+  "problem": 8,
+  "part": "(1)",
+  "area": "燃料と燃焼管理",
+  "point": "各種燃料ガスの体積・質量当たり発熱量",
+  "calc": false,
+  "tag": "fuel-hv-compare"
+ },
+ {
+  "year": "R4",
+  "subject": 3,
+  "problem": 8,
+  "part": "(2)",
+  "area": "燃料と燃焼管理",
+  "point": "灯油・軽油・重油のJIS分類と引火点",
+  "calc": false,
+  "tag": "fuel-jis-oil"
+ },
+ {
+  "year": "R4",
+  "subject": 3,
+  "problem": 8,
+  "part": "(3)",
+  "area": "燃料と燃焼管理",
+  "point": "予混合火炎の逆火と当量比",
+  "calc": false,
+  "tag": "burner"
+ },
+ {
+  "year": "R4",
+  "subject": 3,
+  "problem": 8,
+  "part": "(4)",
+  "area": "燃料と燃焼管理",
+  "point": "NOxの生成機構(サーマル・フューエル等)",
+  "calc": false,
+  "tag": "nox-mech"
+ },
+ {
+  "year": "R4",
+  "subject": 3,
+  "problem": 9,
+  "part": "(1)",
+  "area": "燃料と燃焼管理",
+  "point": "気体燃料バーナ方式別の特徴",
+  "calc": false,
+  "tag": "burner-types2"
+ },
+ {
+  "year": "R4",
+  "subject": 3,
+  "problem": 9,
+  "part": "(2)",
+  "area": "燃料と燃焼管理",
+  "point": "重油バーナ霧化方式と高圧気流式",
+  "calc": false,
+  "tag": "fuel-oilburner"
+ },
+ {
+  "year": "R4",
+  "subject": 3,
+  "problem": 9,
+  "part": "(3)",
+  "area": "燃料と燃焼管理",
+  "point": "流動層燃焼の炉内脱硫と火格子比較",
+  "calc": false,
+  "tag": "fuel"
+ },
+ {
+  "year": "R4",
+  "subject": 3,
+  "problem": 9,
+  "part": "(4)",
+  "area": "燃料と燃焼管理",
+  "point": "赤外線分析とガスクロの比較",
+  "calc": false,
+  "tag": "gas-ir"
+ },
+ {
+  "year": "R4",
+  "subject": 3,
+  "problem": 10,
+  "part": "1)",
+  "area": "燃焼計算",
+  "point": "固体燃料の理論酸素量・空気量・燃焼ガス量",
+  "calc": true,
+  "tag": "solid_fuel"
+ },
+ {
+  "year": "R4",
+  "subject": 3,
+  "problem": 10,
+  "part": "2)",
+  "area": "燃焼計算",
+  "point": "バイオマス(セルロース)の燃焼計算",
+  "calc": true,
+  "tag": "molecular_fuel"
+ },
+ {
+  "year": "R4",
+  "subject": 3,
+  "problem": 10,
+  "part": "3)",
+  "area": "燃焼計算",
+  "point": "バイオマス混焼のCO₂削減効果",
+  "calc": true,
+  "tag": "biomass_cofire"
+ },
+ {
+  "year": "R4",
+  "subject": 4,
+  "problem": 11,
+  "part": "(1)",
+  "area": "計測と制御",
+  "point": "放射温度計の長所短所と放射率調整",
+  "calc": false,
+  "tag": "measure"
+ },
+ {
+  "year": "R4",
+  "subject": 4,
+  "problem": 11,
+  "part": "(2)",
+  "area": "計測と制御",
+  "point": "熱電対による表面温度測定の注意点",
+  "calc": false,
+  "tag": "measure-tc"
+ },
+ {
+  "year": "R4",
+  "subject": 4,
+  "problem": 11,
+  "part": "(3)",
+  "area": "計測と制御",
+  "point": "熱電対・測温抵抗体の保護管",
+  "calc": false,
+  "tag": "measure-tube"
+ },
+ {
+  "year": "R4",
+  "subject": 4,
+  "problem": 11,
+  "part": "(4)",
+  "area": "計測と制御",
+  "point": "ピトー管流速計の原理",
+  "calc": false,
+  "tag": "pitot"
+ },
+ {
+  "year": "R4",
+  "subject": 4,
+  "problem": 11,
+  "part": "(5)",
+  "area": "計測と制御",
+  "point": "差圧伝送器の検出方式",
+  "calc": false,
+  "tag": "measure-dp"
+ },
+ {
+  "year": "R4",
+  "subject": 4,
+  "problem": 12,
+  "part": "1)",
+  "area": "計測と制御",
+  "point": "ボイラ蒸気圧力のカスケード制御",
+  "calc": false,
+  "tag": "ctrl"
+ },
+ {
+  "year": "R4",
+  "subject": 4,
+  "problem": 12,
+  "part": "2)",
+  "area": "計測と制御",
+  "point": "PID制御パラメータと伝達関数",
+  "calc": false,
+  "tag": "ctrl-seq"
+ },
+ {
+  "year": "R4",
+  "subject": 4,
+  "problem": 12,
+  "part": "3)",
+  "area": "計測と制御",
+  "point": "ステップ応答法・限界感度法",
+  "calc": false,
+  "tag": "ctrl-tuning"
+ },
+ {
+  "year": "R4",
+  "subject": 4,
+  "problem": 12,
+  "part": "4)",
+  "area": "計測と制御",
+  "point": "制御応答の行き過ぎ量・減衰比",
+  "calc": false,
+  "tag": "ctrl_response"
+ },
+ {
+  "year": "R4",
+  "subject": 4,
+  "problem": 12,
+  "part": "5)",
+  "area": "計測と制御",
+  "point": "P動作のオフセット量の計算",
+  "calc": true,
+  "tag": "pb_offset"
+ },
+ {
+  "year": "R4",
+  "subject": 4,
+  "problem": 13,
+  "part": "(1)",
+  "area": "ボイラ・蒸気",
+  "point": "自然循環・強制循環ボイラと気水分離",
+  "calc": false,
+  "tag": "boiler-type"
+ },
+ {
+  "year": "R4",
+  "subject": 4,
+  "problem": 13,
+  "part": "(2)",
+  "area": "ボイラ・蒸気",
+  "point": "高温高圧化の効果と蒸気特性",
+  "calc": false,
+  "tag": "turbine-aging"
+ },
+ {
+  "year": "R4",
+  "subject": 4,
+  "problem": 13,
+  "part": "(3)",
+  "area": "ボイラ・蒸気",
+  "point": "過熱器の形式と再熱器",
+  "calc": false,
+  "tag": "boiler-superheater"
+ },
+ {
+  "year": "R4",
+  "subject": 4,
+  "problem": 13,
+  "part": "(4)",
+  "area": "ボイラ・蒸気",
+  "point": "ボイラ燃料消費量・乾き度・給水予熱",
+  "calc": true,
+  "tag": "boiler"
+ },
+ {
+  "year": "R4",
+  "subject": 4,
+  "problem": 14,
+  "part": "(1)",
+  "area": "その他設備",
+  "point": "蒸気タービンの経年劣化と効率低下",
+  "calc": false,
+  "tag": "turbine-aging"
+ },
+ {
+  "year": "R4",
+  "subject": 4,
+  "problem": 14,
+  "part": "(2)",
+  "area": "その他設備",
+  "point": "内燃機関のサイクルとNOx対策",
+  "calc": false,
+  "tag": "engine"
+ },
+ {
+  "year": "R4",
+  "subject": 4,
+  "problem": 14,
+  "part": "(3)",
+  "area": "その他設備",
+  "point": "ガスタービン燃焼器と翼の冷却",
+  "calc": false,
+  "tag": "gt-cooling"
+ },
+ {
+  "year": "R4",
+  "subject": 4,
+  "problem": 15,
+  "part": "(1)",
+  "area": "熱交換器・熱回収",
+  "point": "ドレン回収とフラッシュ蒸気量",
+  "calc": false,
+  "tag": "flash_steam"
+ },
+ {
+  "year": "R4",
+  "subject": 4,
+  "problem": 15,
+  "part": "(2)",
+  "area": "熱交換器・熱回収",
+  "point": "汚れ係数と伝熱面の洗浄",
+  "calc": false,
+  "tag": "hx-maint"
+ },
+ {
+  "year": "R4",
+  "subject": 4,
+  "problem": 15,
+  "part": "(3)",
+  "area": "熱交換器・熱回収",
+  "point": "交換熱量・出口温度・温度効率",
+  "calc": true,
+  "tag": "hx_effectiveness"
+ },
+ {
+  "year": "R4",
+  "subject": 4,
+  "problem": 16,
+  "part": "(1)",
+  "area": "冷凍・空調",
+  "point": "建物空調の省エネ(窓・外気冷房・断熱)",
+  "calc": false,
+  "tag": "hvac"
+ },
+ {
+  "year": "R4",
+  "subject": 4,
+  "problem": 16,
+  "part": "(2)",
+  "area": "冷凍・空調",
+  "point": "暖房・水噴霧加湿の空気線図",
+  "calc": false,
+  "tag": "air_mix"
+ },
+ {
+  "year": "R4",
+  "subject": 4,
+  "problem": 17,
+  "part": "(1)",
+  "area": "工業炉・熱設備材料",
+  "point": "工業炉の加熱方式と搬送方式",
+  "calc": false,
+  "tag": "furnace-types"
+ },
+ {
+  "year": "R4",
+  "subject": 4,
+  "problem": 17,
+  "part": "(2)",
+  "area": "工業炉・熱設備材料",
+  "point": "耐火物・断熱材・保温材の特性",
+  "calc": false,
+  "tag": "furnace"
+ },
+ {
+  "year": "R4",
+  "subject": 4,
+  "problem": 18,
+  "part": "(1)",
+  "area": "その他設備",
+  "point": "蒸留の気液平衡と還流比・インターナル",
+  "calc": false,
+  "tag": "dist-basic"
+ },
+ {
+  "year": "R4",
+  "subject": 4,
+  "problem": 18,
+  "part": "(2)",
+  "area": "その他設備",
+  "point": "含水率の関係式と乾燥効率・乾燥装置",
+  "calc": false,
+  "tag": "dry-types"
+ },
+ {
+  "year": "R4",
+  "subject": 4,
+  "problem": 18,
+  "part": "(3)",
+  "area": "その他設備",
+  "point": "水性ガス・シフト反応と部分燃焼の熱収支",
+  "calc": true,
+  "tag": "gasify-reaction"
+ },
+ {
+  "year": "R5",
+  "subject": 1,
+  "problem": 1,
+  "part": "(1)",
+  "area": "法規",
+  "point": "改正法の目的(電気の需要の最適化)",
+  "calc": false,
+  "tag": "law"
+ },
+ {
+  "year": "R5",
+  "subject": 1,
+  "problem": 1,
+  "part": "(2)",
+  "area": "法規",
+  "point": "エネルギー・非化石エネルギーの定義",
+  "calc": false,
+  "tag": "law"
+ },
+ {
+  "year": "R5",
+  "subject": 1,
+  "problem": 1,
+  "part": "(3)",
+  "area": "法規",
+  "point": "特定事業者等の指定と共同省エネ認定",
+  "calc": false,
+  "tag": "law-renkei"
+ },
+ {
+  "year": "R5",
+  "subject": 1,
+  "problem": 1,
+  "part": "(4)",
+  "area": "法規",
+  "point": "使用量から指定区分と管理者数を判定",
+  "calc": false,
+  "tag": "manager_count"
+ },
+ {
+  "year": "R5",
+  "subject": 1,
+  "problem": 1,
+  "part": "(5)",
+  "area": "法規",
+  "point": "エネルギー管理者・管理員の選任と業務",
+  "calc": false,
+  "tag": "law-manager-duty"
+ },
+ {
+  "year": "R5",
+  "subject": 1,
+  "problem": 1,
+  "part": "(6)",
+  "area": "法規",
+  "point": "機器・建築材料のトップランナー制度",
+  "calc": false,
+  "tag": "law"
+ },
+ {
+  "year": "R5",
+  "subject": 1,
+  "problem": 2,
+  "part": "(1)",
+  "area": "エネルギー概論・単位",
+  "point": "光束・照度の単位と照度計算",
+  "calc": true,
+  "tag": "illuminance"
+ },
+ {
+  "year": "R5",
+  "subject": 1,
+  "problem": 2,
+  "part": "(2)",
+  "area": "エネルギー概論・単位",
+  "point": "ウィーンの変位則とピーク波長",
+  "calc": true,
+  "tag": "wien"
+ },
+ {
+  "year": "R5",
+  "subject": 1,
+  "problem": 2,
+  "part": "(3)",
+  "area": "エネルギー情勢・政策",
+  "point": "再エネ発電の電源別比率",
+  "calc": false,
+  "tag": "stat-power"
+ },
+ {
+  "year": "R5",
+  "subject": 1,
+  "problem": 2,
+  "part": "(4)",
+  "area": "エネルギー情勢・政策",
+  "point": "水素の輸送・貯蔵方法",
+  "calc": true,
+  "tag": "energy-hydrogen"
+ },
+ {
+  "year": "R5",
+  "subject": 1,
+  "problem": 3,
+  "part": "(1)",
+  "area": "判断基準",
+  "point": "目標及び措置部分の対象設備と廃熱回収",
+  "calc": false,
+  "tag": "crit"
+ },
+ {
+  "year": "R5",
+  "subject": 1,
+  "problem": 3,
+  "part": "(2)",
+  "area": "管理技術の基礎",
+  "point": "熱回路と電気回路の対応",
+  "calc": false,
+  "tag": "heat-circuit"
+ },
+ {
+  "year": "R5",
+  "subject": 1,
+  "problem": 3,
+  "part": "(3)",
+  "area": "管理技術の基礎",
+  "point": "理想気体の状態変化と体積",
+  "calc": true,
+  "tag": "ideal_gas"
+ },
+ {
+  "year": "R5",
+  "subject": 1,
+  "problem": 3,
+  "part": "(4)",
+  "area": "管理技術の基礎",
+  "point": "排ガスO₂濃度から空気比",
+  "calc": true,
+  "tag": "air_ratio"
+ },
+ {
+  "year": "R5",
+  "subject": 1,
+  "problem": 3,
+  "part": "(5)",
+  "area": "管理技術の基礎",
+  "point": "拡大管の連続の式と流速",
+  "calc": true,
+  "tag": "bernoulli"
+ },
+ {
+  "year": "R5",
+  "subject": 1,
+  "problem": 3,
+  "part": "(6)",
+  "area": "管理技術の基礎",
+  "point": "湿り蒸気の乾き度の定義",
+  "calc": false,
+  "tag": "wet_steam"
+ },
+ {
+  "year": "R5",
+  "subject": 1,
+  "problem": 3,
+  "part": "(7)",
+  "area": "管理技術の基礎",
+  "point": "平板の一次元熱伝導と表面温度",
+  "calc": true,
+  "tag": "wall"
+ },
+ {
+  "year": "R5",
+  "subject": 1,
+  "problem": 3,
+  "part": "(8)",
+  "area": "管理技術の基礎",
+  "point": "キルヒホッフの法則(放射率と吸収率)",
+  "calc": false,
+  "tag": "heat-radiation"
+ },
+ {
+  "year": "R5",
+  "subject": 1,
+  "problem": 3,
+  "part": "(9)",
+  "area": "管理技術の基礎",
+  "point": "廃熱回収とエクセルギー損失",
+  "calc": false,
+  "tag": "exergy"
+ },
+ {
+  "year": "R5",
+  "subject": 1,
+  "problem": 3,
+  "part": "(10)",
+  "area": "判断基準",
+  "point": "空調設備の総合効率向上の管理",
+  "calc": false,
+  "tag": "crit"
+ },
+ {
+  "year": "R5",
+  "subject": 1,
+  "problem": 3,
+  "part": "(11)",
+  "area": "管理技術の基礎",
+  "point": "発電出力と効率から燃料ガス量",
+  "calc": true,
+  "tag": "gen_fuel"
+ },
+ {
+  "year": "R5",
+  "subject": 1,
+  "problem": 3,
+  "part": "(12)",
+  "area": "管理技術の基礎",
+  "point": "三相電動機の線電流",
+  "calc": true,
+  "tag": "motor_power"
+ },
+ {
+  "year": "R5",
+  "subject": 1,
+  "problem": 3,
+  "part": "(13)",
+  "area": "管理技術の基礎",
+  "point": "力率の定義と低力率の影響",
+  "calc": false,
+  "tag": "power_factor"
+ },
+ {
+  "year": "R5",
+  "subject": 1,
+  "problem": 3,
+  "part": "(14)",
+  "area": "管理技術の基礎",
+  "point": "デマンド管理の残り時間の平均電力",
+  "calc": true,
+  "tag": "demand"
+ },
+ {
+  "year": "R5",
+  "subject": 1,
+  "problem": 3,
+  "part": "(15)",
+  "area": "管理技術の基礎",
+  "point": "慣性モーメントと風量制御の応答",
+  "calc": false,
+  "tag": "inertia"
+ },
+ {
+  "year": "R5",
+  "subject": 1,
+  "problem": 3,
+  "part": "(16)",
+  "area": "判断基準",
+  "point": "複数電動機の台数制御と負荷配分",
+  "calc": false,
+  "tag": "crit"
+ },
+ {
+  "year": "R5",
+  "subject": 1,
+  "problem": 3,
+  "part": "(17)",
+  "area": "判断基準",
+  "point": "電動機の適正容量の選定",
+  "calc": false,
+  "tag": "crit"
+ },
+ {
+  "year": "R5",
+  "subject": 1,
+  "problem": 3,
+  "part": "(18)",
+  "area": "管理技術の基礎",
+  "point": "ファラデーの法則",
+  "calc": false,
+  "tag": "faraday"
+ },
+ {
+  "year": "R5",
+  "subject": 1,
+  "problem": 3,
+  "part": "(19)",
+  "area": "管理技術の基礎",
+  "point": "照明率と室指数・反射率",
+  "calc": false,
+  "tag": "lumen"
+ },
+ {
+  "year": "R5",
+  "subject": 2,
+  "problem": 4,
+  "part": "",
+  "area": "熱力学",
+  "point": "最大圧力・温度が等しいオットーとディーゼルの効率比較",
+  "calc": true,
+  "tag": "otto"
+ },
+ {
+  "year": "R5",
+  "subject": 2,
+  "problem": 5,
+  "part": "1)",
+  "area": "熱力学",
+  "point": "蒸気原動所サイクルの各過程の状態変化",
+  "calc": false,
+  "tag": null
+ },
+ {
+  "year": "R5",
+  "subject": 2,
+  "problem": 5,
+  "part": "2)",
+  "area": "熱力学",
+  "point": "ランキンサイクルの構成機器",
+  "calc": false,
+  "tag": "turbine"
+ },
+ {
+  "year": "R5",
+  "subject": 2,
+  "problem": 5,
+  "part": "3)",
+  "area": "熱力学",
+  "point": "タービン出口の乾き度と比エンタルピー",
+  "calc": true,
+  "tag": "wet_steam"
+ },
+ {
+  "year": "R5",
+  "subject": 2,
+  "problem": 5,
+  "part": "4)",
+  "area": "熱力学",
+  "point": "コンバインドサイクルの熱効率の式",
+  "calc": false,
+  "tag": "combined_cycle"
+ },
+ {
+  "year": "R5",
+  "subject": 2,
+  "problem": 6,
+  "part": "(1)",
+  "area": "流体工学",
+  "point": "ムーディ線図による管摩擦係数と圧力損失",
+  "calc": true,
+  "tag": "bernoulli"
+ },
+ {
+  "year": "R5",
+  "subject": 2,
+  "problem": 6,
+  "part": "(2)",
+  "area": "流体工学",
+  "point": "容器の孔からの流出速度(トリチェリ)",
+  "calc": false,
+  "tag": "bernoulli"
+ },
+ {
+  "year": "R5",
+  "subject": 2,
+  "problem": 6,
+  "part": "(3)",
+  "area": "流体工学",
+  "point": "ポンプの全揚程・性能曲線・比速度",
+  "calc": false,
+  "tag": "pump-types"
+ },
+ {
+  "year": "R5",
+  "subject": 2,
+  "problem": 7,
+  "part": "(1)",
+  "area": "伝熱工学",
+  "point": "伝熱の三形態の基本法則",
+  "calc": false,
+  "tag": "heat-conduction"
+ },
+ {
+  "year": "R5",
+  "subject": 2,
+  "problem": 7,
+  "part": "(2)",
+  "area": "伝熱工学",
+  "point": "沸騰曲線と沸騰・凝縮の形態",
+  "calc": false,
+  "tag": "heat-boiling"
+ },
+ {
+  "year": "R5",
+  "subject": 2,
+  "problem": 7,
+  "part": "(3)",
+  "area": "伝熱工学",
+  "point": "一枚ガラスと二重ガラス窓の熱通過",
+  "calc": true,
+  "tag": "wall"
+ },
+ {
+  "year": "R5",
+  "subject": 3,
+  "problem": 8,
+  "part": "(1)",
+  "area": "燃料と燃焼管理",
+  "point": "LPGの蒸気圧規定と比重・滞留危険",
+  "calc": false,
+  "tag": "fuel-lpg"
+ },
+ {
+  "year": "R5",
+  "subject": 3,
+  "problem": 8,
+  "part": "(2)",
+  "area": "燃料と燃焼管理",
+  "point": "重油のJIS分類と加熱使用の理由",
+  "calc": false,
+  "tag": "fuel"
+ },
+ {
+  "year": "R5",
+  "subject": 3,
+  "problem": 8,
+  "part": "(3)",
+  "area": "燃料と燃焼管理",
+  "point": "消炎距離と燃焼速度・酸素富化",
+  "calc": false,
+  "tag": "flame-speed"
+ },
+ {
+  "year": "R5",
+  "subject": 3,
+  "problem": 8,
+  "part": "(4)",
+  "area": "燃料と燃焼管理",
+  "point": "すす・セノスフェア生成と対策",
+  "calc": false,
+  "tag": "fuel-sootblow"
+ },
+ {
+  "year": "R5",
+  "subject": 3,
+  "problem": 9,
+  "part": "(1)",
+  "area": "燃料と燃焼管理",
+  "point": "拡散燃焼ガスバーナとノズル形式",
+  "calc": false,
+  "tag": "burner"
+ },
+ {
+  "year": "R5",
+  "subject": 3,
+  "problem": 9,
+  "part": "(2)",
+  "area": "燃料と燃焼管理",
+  "point": "油バーナ噴霧方式と火炎形状・用途",
+  "calc": false,
+  "tag": "fuel-oilburner"
+ },
+ {
+  "year": "R5",
+  "subject": 3,
+  "problem": 9,
+  "part": "(3)",
+  "area": "燃料と燃焼管理",
+  "point": "微粉炭燃焼装置の特徴と灰",
+  "calc": false,
+  "tag": "fuel-pf"
+ },
+ {
+  "year": "R5",
+  "subject": 3,
+  "problem": 9,
+  "part": "(4)",
+  "area": "燃料と燃焼管理",
+  "point": "磁気式O₂計と熱伝導率式CO₂計",
+  "calc": false,
+  "tag": "fuel-analyzer2"
+ },
+ {
+  "year": "R5",
+  "subject": 3,
+  "problem": 10,
+  "part": "1)",
+  "area": "燃焼計算",
+  "point": "天然ガスの理論酸素量と燃焼ガス量",
+  "calc": true,
+  "tag": "gas_combustion"
+ },
+ {
+  "year": "R5",
+  "subject": 3,
+  "problem": 10,
+  "part": "2)",
+  "area": "燃焼計算",
+  "point": "水素混焼時の理論酸素量と燃焼ガス量",
+  "calc": true,
+  "tag": "gas_combustion"
+ },
+ {
+  "year": "R5",
+  "subject": 3,
+  "problem": 10,
+  "part": "3)",
+  "area": "燃焼計算",
+  "point": "水素混焼による発熱量当たりCO₂削減率",
+  "calc": true,
+  "tag": "h2_cofire"
+ },
+ {
+  "year": "R5",
+  "subject": 4,
+  "problem": 11,
+  "part": "(1)",
+  "area": "計測と制御",
+  "point": "合成誤差と系統誤差",
+  "calc": false,
+  "tag": "meas_error"
+ },
+ {
+  "year": "R5",
+  "subject": 4,
+  "problem": 11,
+  "part": "(2)",
+  "area": "計測と制御",
+  "point": "熱電対の補償導線の種類",
+  "calc": false,
+  "tag": "measure-tc2"
+ },
+ {
+  "year": "R5",
+  "subject": 4,
+  "problem": 11,
+  "part": "(3)",
+  "area": "計測と制御",
+  "point": "水蒸気圧と湿度計の原理",
+  "calc": false,
+  "tag": "humidity"
+ },
+ {
+  "year": "R5",
+  "subject": 4,
+  "problem": 11,
+  "part": "(4)",
+  "area": "計測と制御",
+  "point": "差圧式流量計の絞り機構",
+  "calc": false,
+  "tag": "dp_flow"
+ },
+ {
+  "year": "R5",
+  "subject": 4,
+  "problem": 12,
+  "part": "(1)",
+  "area": "計測と制御",
+  "point": "カスケード・比率制御とP動作のオフセット",
+  "calc": false,
+  "tag": "ctrl_response"
+ },
+ {
+  "year": "R5",
+  "subject": 4,
+  "problem": 12,
+  "part": "(2)",
+  "area": "計測と制御",
+  "point": "調節弁制御とポンプ回転数制御",
+  "calc": false,
+  "tag": "measure-valve"
+ },
+ {
+  "year": "R5",
+  "subject": 4,
+  "problem": 13,
+  "part": "(1)",
+  "area": "ボイラ・蒸気",
+  "point": "過熱器の形式別温度特性と材料",
+  "calc": false,
+  "tag": "boiler-superheater"
+ },
+ {
+  "year": "R5",
+  "subject": 4,
+  "problem": 13,
+  "part": "(2)",
+  "area": "蒸気輸送・断熱",
+  "point": "スチームトラップとドレン排出",
+  "calc": false,
+  "tag": "steamline"
+ },
+ {
+  "year": "R5",
+  "subject": 4,
+  "problem": 13,
+  "part": "(3)",
+  "area": "ボイラ・蒸気",
+  "point": "ボイラ水の腐食形態と水質管理",
+  "calc": false,
+  "tag": "corrosion"
+ },
+ {
+  "year": "R5",
+  "subject": 4,
+  "problem": 13,
+  "part": "(4)",
+  "area": "ボイラ・蒸気",
+  "point": "排ガス損失と目標排ガス温度",
+  "calc": true,
+  "tag": "boiler"
+ },
+ {
+  "year": "R5",
+  "subject": 4,
+  "problem": 14,
+  "part": "(1)",
+  "area": "その他設備",
+  "point": "蒸気タービンの損失と効率の区分",
+  "calc": false,
+  "tag": "turbine_eff"
+ },
+ {
+  "year": "R5",
+  "subject": 4,
+  "problem": 14,
+  "part": "(2)",
+  "area": "その他設備",
+  "point": "ガスタービンの軸構成とサージング",
+  "calc": false,
+  "tag": "gt-structure"
+ },
+ {
+  "year": "R5",
+  "subject": 4,
+  "problem": 14,
+  "part": "(3)",
+  "area": "その他設備",
+  "point": "内燃機関の着火方式とノック対策",
+  "calc": false,
+  "tag": "engine"
+ },
+ {
+  "year": "R5",
+  "subject": 4,
+  "problem": 15,
+  "part": "(1)",
+  "area": "熱交換器・熱回収",
+  "point": "全熱交換器とシェルアンドチューブの形式",
+  "calc": false,
+  "tag": "hx-total"
+ },
+ {
+  "year": "R5",
+  "subject": 4,
+  "problem": 15,
+  "part": "(2)",
+  "area": "熱交換器・熱回収",
+  "point": "対数平均温度差と熱回収効率の計算",
+  "calc": true,
+  "tag": "lmtd"
+ },
+ {
+  "year": "R5",
+  "subject": 4,
+  "problem": 16,
+  "part": "(1)",
+  "area": "冷凍・空調",
+  "point": "冷凍サイクルのモリエ線図",
+  "calc": false,
+  "tag": "refrig"
+ },
+ {
+  "year": "R5",
+  "subject": 4,
+  "problem": 16,
+  "part": "(2)",
+  "area": "冷凍・空調",
+  "point": "冷房プロセスの冷却負荷と吹出温度差",
+  "calc": false,
+  "tag": "air_mix"
+ },
+ {
+  "year": "R5",
+  "subject": 4,
+  "problem": 17,
+  "part": "(1)",
+  "area": "工業炉・熱設備材料",
+  "point": "産業別工業炉の機能と特徴",
+  "calc": false,
+  "tag": "furnace"
+ },
+ {
+  "year": "R5",
+  "subject": 4,
+  "problem": 17,
+  "part": "(2)",
+  "area": "工業炉・熱設備材料",
+  "point": "抽出温度低減による燃料削減と炉壁蓄熱",
+  "calc": true,
+  "tag": "furnace_charge"
+ },
+ {
+  "year": "R5",
+  "subject": 4,
+  "problem": 17,
+  "part": "(3)",
+  "area": "工業炉・熱設備材料",
+  "point": "セラミックファイバ施工と保温材の浸水",
+  "calc": false,
+  "tag": "furnace"
+ },
+ {
+  "year": "R5",
+  "subject": 4,
+  "problem": 18,
+  "part": "(1)",
+  "area": "その他設備",
+  "point": "連続多段蒸留塔の物質収支と還流比",
+  "calc": true,
+  "tag": "dist"
+ },
+ {
+  "year": "R5",
+  "subject": 4,
+  "problem": 18,
+  "part": "(2)",
+  "area": "その他設備",
+  "point": "乾燥装置の種類と方式",
+  "calc": false,
+  "tag": "drying"
+ },
+ {
+  "year": "R5",
+  "subject": 4,
+  "problem": 18,
+  "part": "(3)",
+  "area": "その他設備",
+  "point": "石炭の乾留とコークス乾式消火",
+  "calc": false,
+  "tag": null
+ },
+ {
+  "year": "R6",
+  "subject": 1,
+  "problem": 1,
+  "part": "(1)",
+  "area": "法規",
+  "point": "非化石転換と電気の需要の最適化(DR)",
+  "calc": false,
+  "tag": "law"
+ },
+ {
+  "year": "R6",
+  "subject": 1,
+  "problem": 1,
+  "part": "(2)",
+  "area": "法規",
+  "point": "エネルギー管理統括者・企画推進者の選任",
+  "calc": false,
+  "tag": "law"
+ },
+ {
+  "year": "R6",
+  "subject": 1,
+  "problem": 1,
+  "part": "(3)",
+  "area": "法規",
+  "point": "報告徴収と立入検査",
+  "calc": false,
+  "tag": "law"
+ },
+ {
+  "year": "R6",
+  "subject": 1,
+  "problem": 1,
+  "part": "(4)",
+  "area": "法規",
+  "point": "法対象エネルギーと熱・電気の換算方法",
+  "calc": false,
+  "tag": "crude"
+ },
+ {
+  "year": "R6",
+  "subject": 1,
+  "problem": 1,
+  "part": "(5)",
+  "area": "法規",
+  "point": "使用量から指定区分と管理者数を判定",
+  "calc": false,
+  "tag": "manager_count"
+ },
+ {
+  "year": "R6",
+  "subject": 1,
+  "problem": 2,
+  "part": "(1)",
+  "area": "エネルギー概論・単位",
+  "point": "SI組立単位(ジュール・エントロピー等)",
+  "calc": false,
+  "tag": "units"
+ },
+ {
+  "year": "R6",
+  "subject": 1,
+  "problem": 2,
+  "part": "(2)",
+  "area": "エネルギー概論・単位",
+  "point": "氷蓄熱・二次電池とエネルギー密度換算",
+  "calc": true,
+  "tag": "storage-battery"
+ },
+ {
+  "year": "R6",
+  "subject": 1,
+  "problem": 2,
+  "part": "(3)",
+  "area": "エネルギー情勢・政策",
+  "point": "パリ協定の目標とIPCC",
+  "calc": false,
+  "tag": "climate-paris"
+ },
+ {
+  "year": "R6",
+  "subject": 1,
+  "problem": 3,
+  "part": "(1)",
+  "area": "判断基準",
+  "point": "全事業者が取り組むべき共通事項",
+  "calc": false,
+  "tag": "crit"
+ },
+ {
+  "year": "R6",
+  "subject": 1,
+  "problem": 3,
+  "part": "(2)",
+  "area": "管理技術の基礎",
+  "point": "風力発電出力と風速の関係",
+  "calc": false,
+  "tag": "wind_power"
+ },
+ {
+  "year": "R6",
+  "subject": 1,
+  "problem": 3,
+  "part": "(3)",
+  "area": "管理技術の基礎",
+  "point": "比熱比の性質",
+  "calc": false,
+  "tag": "gas_props"
+ },
+ {
+  "year": "R6",
+  "subject": 1,
+  "problem": 3,
+  "part": "(4)",
+  "area": "管理技術の基礎",
+  "point": "空気と水の粘性の温度依存",
+  "calc": false,
+  "tag": "basic-misc"
+ },
+ {
+  "year": "R6",
+  "subject": 1,
+  "problem": 3,
+  "part": "(5)",
+  "area": "管理技術の基礎",
+  "point": "ブタン燃焼の理論酸素量",
+  "calc": true,
+  "tag": "gas_combustion"
+ },
+ {
+  "year": "R6",
+  "subject": 1,
+  "problem": 3,
+  "part": "(6)",
+  "area": "管理技術の基礎",
+  "point": "炉壁の熱流束から熱伝導率",
+  "calc": true,
+  "tag": "wall"
+ },
+ {
+  "year": "R6",
+  "subject": 1,
+  "problem": 3,
+  "part": "(7)",
+  "area": "管理技術の基礎",
+  "point": "炉壁外面の対流熱損失",
+  "calc": true,
+  "tag": null
+ },
+ {
+  "year": "R6",
+  "subject": 1,
+  "problem": 3,
+  "part": "(8)",
+  "area": "管理技術の基礎",
+  "point": "水を飽和蒸気にする加熱量",
+  "calc": true,
+  "tag": "steam_heat"
+ },
+ {
+  "year": "R6",
+  "subject": 1,
+  "problem": 3,
+  "part": "(9)",
+  "area": "判断基準",
+  "point": "エクセルギー観点の熱利用改善",
+  "calc": false,
+  "tag": "crit"
+ },
+ {
+  "year": "R6",
+  "subject": 1,
+  "problem": 3,
+  "part": "(10)",
+  "area": "判断基準",
+  "point": "空調負荷低減の管理(外気利用)",
+  "calc": false,
+  "tag": "crit"
+ },
+ {
+  "year": "R6",
+  "subject": 1,
+  "problem": 3,
+  "part": "(11)",
+  "area": "管理技術の基礎",
+  "point": "発電量と燃料から発電端効率",
+  "calc": true,
+  "tag": "gen_fuel"
+ },
+ {
+  "year": "R6",
+  "subject": 1,
+  "problem": 3,
+  "part": "(12)",
+  "area": "管理技術の基礎",
+  "point": "星形結線の線間電圧と相電圧",
+  "calc": false,
+  "tag": null
+ },
+ {
+  "year": "R6",
+  "subject": 1,
+  "problem": 3,
+  "part": "(13)",
+  "area": "管理技術の基礎",
+  "point": "力率改善のコンデンサ容量",
+  "calc": true,
+  "tag": "power_factor"
+ },
+ {
+  "year": "R6",
+  "subject": 1,
+  "problem": 3,
+  "part": "(14)",
+  "area": "判断基準",
+  "point": "配電損失低減の基準",
+  "calc": false,
+  "tag": "crit"
+ },
+ {
+  "year": "R6",
+  "subject": 1,
+  "problem": 3,
+  "part": "(15)",
+  "area": "管理技術の基礎",
+  "point": "デマンド管理の残り時間の平均電力",
+  "calc": true,
+  "tag": "demand"
+ },
+ {
+  "year": "R6",
+  "subject": 1,
+  "problem": 3,
+  "part": "(16)",
+  "area": "管理技術の基礎",
+  "point": "トルクと回転数から電動機入力",
+  "calc": true,
+  "tag": "motor_power"
+ },
+ {
+  "year": "R6",
+  "subject": 1,
+  "problem": 3,
+  "part": "(17)",
+  "area": "判断基準",
+  "point": "流体機械の負荷低減の管理",
+  "calc": false,
+  "tag": "crit"
+ },
+ {
+  "year": "R6",
+  "subject": 1,
+  "problem": 3,
+  "part": "(18)",
+  "area": "管理技術の基礎",
+  "point": "誘導加熱の原理",
+  "calc": false,
+  "tag": "basic-misc"
+ },
+ {
+  "year": "R6",
+  "subject": 1,
+  "problem": 3,
+  "part": "(19)",
+  "area": "判断基準",
+  "point": "照明の照度基準と事務室推奨照度",
+  "calc": false,
+  "tag": "crit"
+ },
+ {
+  "year": "R6",
+  "subject": 2,
+  "problem": 4,
+  "part": "1)",
+  "area": "熱力学",
+  "point": "カルノーサイクルを構成する過程",
+  "calc": false,
+  "tag": "carnot"
+ },
+ {
+  "year": "R6",
+  "subject": 2,
+  "problem": 4,
+  "part": "2)",
+  "area": "熱力学",
+  "point": "カルノーサイクルの熱効率の式",
+  "calc": false,
+  "tag": "carnot"
+ },
+ {
+  "year": "R6",
+  "subject": 2,
+  "problem": 4,
+  "part": "3)",
+  "area": "熱力学",
+  "point": "カルノーサイクルの効率・仕事・エントロピー変化",
+  "calc": true,
+  "tag": "carnot"
+ },
+ {
+  "year": "R6",
+  "subject": 2,
+  "problem": 4,
+  "part": "4)",
+  "area": "熱力学",
+  "point": "逆カルノーヒートポンプの温熱量と成績係数",
+  "calc": true,
+  "tag": "cop"
+ },
+ {
+  "year": "R6",
+  "subject": 2,
+  "problem": 5,
+  "part": "1)",
+  "area": "熱力学",
+  "point": "蒸気原動所の基本サイクル名",
+  "calc": false,
+  "tag": null
+ },
+ {
+  "year": "R6",
+  "subject": 2,
+  "problem": 5,
+  "part": "2)",
+  "area": "熱力学",
+  "point": "ランキンサイクルの乾き度と理論熱効率",
+  "calc": true,
+  "tag": "rankine"
+ },
+ {
+  "year": "R6",
+  "subject": 2,
+  "problem": 5,
+  "part": "3)",
+  "area": "熱力学",
+  "point": "再熱サイクルによる効率向上",
+  "calc": false,
+  "tag": "thermo-cycle2"
+ },
+ {
+  "year": "R6",
+  "subject": 2,
+  "problem": 6,
+  "part": "(1)",
+  "area": "流体工学",
+  "point": "管路の圧力損失・水力直径・ベンチュリ管",
+  "calc": false,
+  "tag": "bernoulli"
+ },
+ {
+  "year": "R6",
+  "subject": 2,
+  "problem": 6,
+  "part": "(2)",
+  "area": "流体工学",
+  "point": "ポンプの種類・キャビテーション・相似則",
+  "calc": false,
+  "tag": "pump-types"
+ },
+ {
+  "year": "R6",
+  "subject": 2,
+  "problem": 7,
+  "part": "(1)",
+  "area": "伝熱工学",
+  "point": "炉壁の対流・多層伝導・自然対流の無次元数",
+  "calc": false,
+  "tag": "heat-dimless"
+ },
+ {
+  "year": "R6",
+  "subject": 2,
+  "problem": 7,
+  "part": "(2)",
+  "area": "伝熱工学",
+  "point": "黒体放射の法則と吸収率・反射率",
+  "calc": false,
+  "tag": "radiation"
+ },
+ {
+  "year": "R6",
+  "subject": 2,
+  "problem": 7,
+  "part": "(3)",
+  "area": "伝熱工学",
+  "point": "円柱の放熱と保温材を巻いたときの放熱量",
+  "calc": true,
+  "tag": "wall"
+ },
+ {
+  "year": "R6",
+  "subject": 3,
+  "problem": 8,
+  "part": "(1)",
+  "area": "燃料と燃焼管理",
+  "point": "液体燃料の密度基準と大小関係",
+  "calc": false,
+  "tag": "fuel"
+ },
+ {
+  "year": "R6",
+  "subject": 3,
+  "problem": 8,
+  "part": "(2)",
+  "area": "燃料と燃焼管理",
+  "point": "都市ガス13Aの組成と発熱量調整",
+  "calc": false,
+  "tag": "wobbe"
+ },
+ {
+  "year": "R6",
+  "subject": 3,
+  "problem": 8,
+  "part": "(3)",
+  "area": "燃料と燃焼管理",
+  "point": "各種混合気の層流燃焼速度と当量比",
+  "calc": false,
+  "tag": "flame-speed"
+ },
+ {
+  "year": "R6",
+  "subject": 3,
+  "problem": 8,
+  "part": "(4)",
+  "area": "燃料と燃焼管理",
+  "point": "酸素濃度・温度とすす・NOx生成",
+  "calc": false,
+  "tag": "fuel"
+ },
+ {
+  "year": "R6",
+  "subject": 3,
+  "problem": 9,
+  "part": "(1)",
+  "area": "燃料と燃焼管理",
+  "point": "気体燃料燃焼装置の誤り選択",
+  "calc": false,
+  "tag": null
+ },
+ {
+  "year": "R6",
+  "subject": 3,
+  "problem": 9,
+  "part": "(2)",
+  "area": "燃料と燃焼管理",
+  "point": "液体燃料燃焼装置・通風の誤り選択",
+  "calc": false,
+  "tag": "fuel"
+ },
+ {
+  "year": "R6",
+  "subject": 3,
+  "problem": 9,
+  "part": "(3)",
+  "area": "燃料と燃焼管理",
+  "point": "流動層燃焼の温度・流速とN₂O抑制",
+  "calc": false,
+  "tag": "fuel"
+ },
+ {
+  "year": "R6",
+  "subject": 3,
+  "problem": 9,
+  "part": "(4)",
+  "area": "燃料と燃焼管理",
+  "point": "燃焼ガス分析法の分類と干渉成分",
+  "calc": false,
+  "tag": "fuel-gasanalysis"
+ },
+ {
+  "year": "R6",
+  "subject": 3,
+  "problem": 10,
+  "part": "1)",
+  "area": "燃焼計算",
+  "point": "プロパンの理論空気量",
+  "calc": true,
+  "tag": "gas_combustion"
+ },
+ {
+  "year": "R6",
+  "subject": 3,
+  "problem": 10,
+  "part": "2)",
+  "area": "燃焼計算",
+  "point": "熱風発生装置の燃焼ガス量と混合空気量",
+  "calc": true,
+  "tag": "gas_combustion"
+ },
+ {
+  "year": "R6",
+  "subject": 3,
+  "problem": 10,
+  "part": "3)",
+  "area": "燃焼計算",
+  "point": "不完全燃焼時の排ガス組成から空気比",
+  "calc": true,
+  "tag": "air_ratio"
+ },
+ {
+  "year": "R6",
+  "subject": 4,
+  "problem": 11,
+  "part": "(1)",
+  "area": "計測と制御",
+  "point": "熱電対の測温原理(ゼーベック効果)",
+  "calc": false,
+  "tag": "thermocouple"
+ },
+ {
+  "year": "R6",
+  "subject": 4,
+  "problem": 11,
+  "part": "(2)",
+  "area": "計測と制御",
+  "point": "コリオリ式・熱式流量計の原理",
+  "calc": false,
+  "tag": "measure-flow2"
+ },
+ {
+  "year": "R6",
+  "subject": 4,
+  "problem": 11,
+  "part": "(3)",
+  "area": "計測と制御",
+  "point": "液柱式圧力計のゲージ圧と絶対圧・ブルドン管",
+  "calc": false,
+  "tag": "measure-flow2"
+ },
+ {
+  "year": "R6",
+  "subject": 4,
+  "problem": 12,
+  "part": "(1)",
+  "area": "計測と制御",
+  "point": "ボイラ制御のカスケード・比率制御",
+  "calc": false,
+  "tag": "ctrl"
+ },
+ {
+  "year": "R6",
+  "subject": 4,
+  "problem": 12,
+  "part": "(2)",
+  "area": "計測と制御",
+  "point": "PID動作の比例帯・積分・微分時間",
+  "calc": false,
+  "tag": "ctrl"
+ },
+ {
+  "year": "R6",
+  "subject": 4,
+  "problem": 13,
+  "part": "(1)",
+  "area": "ボイラ・蒸気",
+  "point": "ボイラの熱損失項目と低減策",
+  "calc": false,
+  "tag": "boiler-loss"
+ },
+ {
+  "year": "R6",
+  "subject": 4,
+  "problem": 13,
+  "part": "(2)",
+  "area": "ボイラ・蒸気",
+  "point": "蒸気中シリカのキャリーオーバ管理",
+  "calc": false,
+  "tag": "boiler-silica"
+ },
+ {
+  "year": "R6",
+  "subject": 4,
+  "problem": 13,
+  "part": "(3)",
+  "area": "ボイラ・蒸気",
+  "point": "ボイラ効率と蒸気配管放熱損失の計算",
+  "calc": true,
+  "tag": "boiler"
+ },
+ {
+  "year": "R6",
+  "subject": 4,
+  "problem": 14,
+  "part": "(1)",
+  "area": "その他設備",
+  "point": "容積形内燃機関の行程と低燃費化",
+  "calc": false,
+  "tag": "engine-heat"
+ },
+ {
+  "year": "R6",
+  "subject": 4,
+  "problem": 14,
+  "part": "(2)",
+  "area": "その他設備",
+  "point": "蒸気タービンのロータと危険速度",
+  "calc": false,
+  "tag": "turbine-ops"
+ },
+ {
+  "year": "R6",
+  "subject": 4,
+  "problem": 14,
+  "part": "(3)",
+  "area": "その他設備",
+  "point": "ガスタービンの熱効率と性能向上策",
+  "calc": false,
+  "tag": "turbine"
+ },
+ {
+  "year": "R6",
+  "subject": 4,
+  "problem": 15,
+  "part": "(1)",
+  "area": "熱交換器・熱回収",
+  "point": "隔壁式熱交換器の加熱源と形式分類",
+  "calc": false,
+  "tag": "hx-fouling"
+ },
+ {
+  "year": "R6",
+  "subject": 4,
+  "problem": 15,
+  "part": "(2)",
+  "area": "熱交換器・熱回収",
+  "point": "汚れ係数と温度効率・交換熱量計算",
+  "calc": true,
+  "tag": "hx_effectiveness"
+ },
+ {
+  "year": "R6",
+  "subject": 4,
+  "problem": 16,
+  "part": "(1)",
+  "area": "冷凍・空調",
+  "point": "空調負荷の種類と全熱交換器制御",
+  "calc": false,
+  "tag": "hvac"
+ },
+ {
+  "year": "R6",
+  "subject": 4,
+  "problem": 16,
+  "part": "(2)",
+  "area": "冷凍・空調",
+  "point": "吸収冷凍機の冷媒と構成要素",
+  "calc": false,
+  "tag": "refrig"
+ },
+ {
+  "year": "R6",
+  "subject": 4,
+  "problem": 16,
+  "part": "(3)",
+  "area": "冷凍・空調",
+  "point": "空気線図上の暖房・加湿プロセス",
+  "calc": false,
+  "tag": "air_mix"
+ },
+ {
+  "year": "R6",
+  "subject": 4,
+  "problem": 17,
+  "part": "(1)",
+  "area": "工業炉・熱設備材料",
+  "point": "カバー形炉の雰囲気ガスと省エネ",
+  "calc": false,
+  "tag": null
+ },
+ {
+  "year": "R6",
+  "subject": 4,
+  "problem": 17,
+  "part": "(2)",
+  "area": "工業炉・熱設備材料",
+  "point": "リジェネレイティブバーナの排熱回収",
+  "calc": false,
+  "tag": "furnace"
+ },
+ {
+  "year": "R6",
+  "subject": 4,
+  "problem": 17,
+  "part": "(3)",
+  "area": "工業炉・熱設備材料",
+  "point": "キャスタブルとセラミックファイバの浸食",
+  "calc": false,
+  "tag": "furnace"
+ },
+ {
+  "year": "R6",
+  "subject": 4,
+  "problem": 18,
+  "part": "(1)",
+  "area": "その他設備",
+  "point": "2成分系気液平衡と共沸混合物",
+  "calc": false,
+  "tag": "dist"
+ },
+ {
+  "year": "R6",
+  "subject": 4,
+  "problem": 18,
+  "part": "(2)",
+  "area": "その他設備",
+  "point": "回転乾燥機の蒸発水量と熱収支",
+  "calc": true,
+  "tag": "drying"
+ },
+ {
+  "year": "R6",
+  "subject": 4,
+  "problem": 18,
+  "part": "(3)",
+  "area": "その他設備",
+  "point": "バイオマスガス化の反応",
+  "calc": false,
+  "tag": "gasify-reaction"
+ },
+ {
+  "year": "R7",
+  "subject": 1,
+  "problem": 1,
+  "part": "(1)",
+  "area": "法規",
+  "point": "判断の基準と電気需要最適化指針",
+  "calc": false,
+  "tag": "law"
+ },
+ {
+  "year": "R7",
+  "subject": 1,
+  "problem": 1,
+  "part": "(2)",
+  "area": "法規",
+  "point": "指導助言と定期報告の規定",
+  "calc": false,
+  "tag": "law"
+ },
+ {
+  "year": "R7",
+  "subject": 1,
+  "problem": 1,
+  "part": "(3)",
+  "area": "法規",
+  "point": "合理化計画の指示と非化石転換の勧告",
+  "calc": false,
+  "tag": "law"
+ },
+ {
+  "year": "R7",
+  "subject": 1,
+  "problem": 1,
+  "part": "(4)",
+  "area": "法規",
+  "point": "対象エネルギー・電気換算と指定区分・管理者",
+  "calc": false,
+  "tag": "manager_count"
+ },
+ {
+  "year": "R7",
+  "subject": 1,
+  "problem": 2,
+  "part": "(1)",
+  "area": "エネルギー概論・単位",
+  "point": "SI組立単位とkWhのジュール換算",
+  "calc": true,
+  "tag": "units"
+ },
+ {
+  "year": "R7",
+  "subject": 1,
+  "problem": 2,
+  "part": "(2)",
+  "area": "エネルギー概論・単位",
+  "point": "熱力学第一法則とカルノーサイクルの構成",
+  "calc": false,
+  "tag": null
+ },
+ {
+  "year": "R7",
+  "subject": 1,
+  "problem": 2,
+  "part": "(3)",
+  "area": "エネルギー情勢・政策",
+  "point": "電動車の回生エネルギーとヒートポンプ",
+  "calc": false,
+  "tag": "energy-convert"
+ },
+ {
+  "year": "R7",
+  "subject": 1,
+  "problem": 2,
+  "part": "(4)",
+  "area": "エネルギー情勢・政策",
+  "point": "電源構成と火力燃料別の推移",
+  "calc": false,
+  "tag": "stat-power"
+ },
+ {
+  "year": "R7",
+  "subject": 1,
+  "problem": 3,
+  "part": "(1)",
+  "area": "判断基準",
+  "point": "非化石転換と合理化の両立の留意",
+  "calc": false,
+  "tag": "crit"
+ },
+ {
+  "year": "R7",
+  "subject": 1,
+  "problem": 3,
+  "part": "(2)",
+  "area": "管理技術の基礎",
+  "point": "理想気体の定圧・定容比熱の関係",
+  "calc": false,
+  "tag": "gas_props"
+ },
+ {
+  "year": "R7",
+  "subject": 1,
+  "problem": 3,
+  "part": "(3)",
+  "area": "管理技術の基礎",
+  "point": "酸素富化空気での水素燃焼空気量",
+  "calc": true,
+  "tag": "gas_combustion"
+ },
+ {
+  "year": "R7",
+  "subject": 1,
+  "problem": 3,
+  "part": "(4)",
+  "area": "管理技術の基礎",
+  "point": "放散熱流束から炉壁の必要厚さ",
+  "calc": true,
+  "tag": "wall"
+ },
+ {
+  "year": "R7",
+  "subject": 1,
+  "problem": 3,
+  "part": "(5)",
+  "area": "管理技術の基礎",
+  "point": "平板を介した熱通過の熱抵抗",
+  "calc": true,
+  "tag": "wall"
+ },
+ {
+  "year": "R7",
+  "subject": 1,
+  "problem": 3,
+  "part": "(6)",
+  "area": "管理技術の基礎",
+  "point": "灰色体表面の放射エネルギー",
+  "calc": true,
+  "tag": "radiation"
+ },
+ {
+  "year": "R7",
+  "subject": 1,
+  "problem": 3,
+  "part": "(7)",
+  "area": "管理技術の基礎",
+  "point": "湿り蒸気の乾き度の定義",
+  "calc": false,
+  "tag": "wet_steam"
+ },
+ {
+  "year": "R7",
+  "subject": 1,
+  "problem": 3,
+  "part": "(8)",
+  "area": "管理技術の基礎",
+  "point": "ボイラの換算蒸発量の式",
+  "calc": false,
+  "tag": "boiler"
+ },
+ {
+  "year": "R7",
+  "subject": 1,
+  "problem": 3,
+  "part": "(9)",
+  "area": "管理技術の基礎",
+  "point": "発電効率から重油必要量",
+  "calc": true,
+  "tag": "gen_fuel"
+ },
+ {
+  "year": "R7",
+  "subject": 1,
+  "problem": 3,
+  "part": "(10)",
+  "area": "判断基準",
+  "point": "空調熱源・空調機の総合効率管理",
+  "calc": false,
+  "tag": "crit"
+ },
+ {
+  "year": "R7",
+  "subject": 1,
+  "problem": 3,
+  "part": "(11)",
+  "area": "管理技術の基礎",
+  "point": "三相電動機の使用電力量",
+  "calc": true,
+  "tag": "motor_power"
+ },
+ {
+  "year": "R7",
+  "subject": 1,
+  "problem": 3,
+  "part": "(12)",
+  "area": "管理技術の基礎",
+  "point": "デマンド管理の残り時間の平均電力",
+  "calc": true,
+  "tag": "demand"
+ },
+ {
+  "year": "R7",
+  "subject": 1,
+  "problem": 3,
+  "part": "(13)",
+  "area": "管理技術の基礎",
+  "point": "変圧器の負荷損と負荷率",
+  "calc": false,
+  "tag": "transformer"
+ },
+ {
+  "year": "R7",
+  "subject": 1,
+  "problem": 3,
+  "part": "(14)",
+  "area": "管理技術の基礎",
+  "point": "力率改善のコンデンサ容量",
+  "calc": true,
+  "tag": "power_factor"
+ },
+ {
+  "year": "R7",
+  "subject": 1,
+  "problem": 3,
+  "part": "(15)",
+  "area": "管理技術の基礎",
+  "point": "誘導電動機の滑りと回転速度",
+  "calc": false,
+  "tag": "motor_slip"
+ },
+ {
+  "year": "R7",
+  "subject": 1,
+  "problem": 3,
+  "part": "(16)",
+  "area": "管理技術の基礎",
+  "point": "電気化学システムの電解質の役割",
+  "calc": false,
+  "tag": "faraday"
+ },
+ {
+  "year": "R7",
+  "subject": 1,
+  "problem": 3,
+  "part": "(17)",
+  "area": "管理技術の基礎",
+  "point": "光束法による必要ランプ数",
+  "calc": false,
+  "tag": "lumen"
+ },
+ {
+  "year": "R7",
+  "subject": 2,
+  "problem": 4,
+  "part": "1)",
+  "area": "熱力学",
+  "point": "理想気体の状態方程式による体積",
+  "calc": true,
+  "tag": "ideal_gas"
+ },
+ {
+  "year": "R7",
+  "subject": 2,
+  "problem": 4,
+  "part": "2)",
+  "area": "熱力学",
+  "point": "等圧冷却の仕事・内部エネルギー・エントロピー変化",
+  "calc": true,
+  "tag": "isobaric"
+ },
+ {
+  "year": "R7",
+  "subject": 2,
+  "problem": 4,
+  "part": "3)",
+  "area": "熱力学",
+  "point": "定容加熱の内部エネルギー・エントロピー変化",
+  "calc": true,
+  "tag": "isochoric"
+ },
+ {
+  "year": "R7",
+  "subject": 2,
+  "problem": 5,
+  "part": "(1)",
+  "area": "熱力学",
+  "point": "P-v線図上の相変化と飽和・湿り蒸気",
+  "calc": false,
+  "tag": "wet_steam"
+ },
+ {
+  "year": "R7",
+  "subject": 2,
+  "problem": 5,
+  "part": "(2)",
+  "area": "熱力学",
+  "point": "蒸気表による加熱量・絞り・タービン出口乾き度",
+  "calc": true,
+  "tag": "quality"
+ },
+ {
+  "year": "R7",
+  "subject": 2,
+  "problem": 6,
+  "part": "(1)",
+  "area": "流体工学",
+  "point": "ベンチュリ管とマノメータによる流量測定",
+  "calc": false,
+  "tag": "bernoulli"
+ },
+ {
+  "year": "R7",
+  "subject": 2,
+  "problem": 6,
+  "part": "(2)",
+  "area": "流体工学",
+  "point": "タンクからの流出速度と直管摩擦損失",
+  "calc": true,
+  "tag": "bernoulli"
+ },
+ {
+  "year": "R7",
+  "subject": 2,
+  "problem": 6,
+  "part": "(3)",
+  "area": "流体工学",
+  "point": "ポンプ吸込圧力とキャビテーション",
+  "calc": false,
+  "tag": "affinity"
+ },
+ {
+  "year": "R7",
+  "subject": 2,
+  "problem": 7,
+  "part": "(1)",
+  "area": "伝熱工学",
+  "point": "伝熱の三形態の基本法則",
+  "calc": false,
+  "tag": "heat-conduction"
+ },
+ {
+  "year": "R7",
+  "subject": 2,
+  "problem": 7,
+  "part": "(2)",
+  "area": "伝熱工学",
+  "point": "放射を受ける平板表面の熱バランス",
+  "calc": false,
+  "tag": "radiation"
+ },
+ {
+  "year": "R7",
+  "subject": 2,
+  "problem": 7,
+  "part": "(3)",
+  "area": "伝熱工学",
+  "point": "向流熱交換器の出口温度と平均温度差",
+  "calc": true,
+  "tag": "lmtd"
+ },
+ {
+  "year": "R7",
+  "subject": 3,
+  "problem": 8,
+  "part": "(1)",
+  "area": "燃料と燃焼管理",
+  "point": "燃料のH/C比と発熱量・CO₂削減",
+  "calc": true,
+  "tag": "hc_co2"
+ },
+ {
+  "year": "R7",
+  "subject": 3,
+  "problem": 8,
+  "part": "(2)",
+  "area": "燃料と燃焼管理",
+  "point": "オクタン価・セタン価とノック",
+  "calc": false,
+  "tag": "fuel"
+ },
+ {
+  "year": "R7",
+  "subject": 3,
+  "problem": 9,
+  "part": "(1)",
+  "area": "燃料と燃焼管理",
+  "point": "完全予混合バーナの特徴",
+  "calc": false,
+  "tag": "burner"
+ },
+ {
+  "year": "R7",
+  "subject": 3,
+  "problem": 9,
+  "part": "(2)",
+  "area": "燃料と燃焼管理",
+  "point": "小型ボイラ用油バーナと自然通風",
+  "calc": false,
+  "tag": "fuel"
+ },
+ {
+  "year": "R7",
+  "subject": 3,
+  "problem": 9,
+  "part": "(3)",
+  "area": "燃料と燃焼管理",
+  "point": "固体燃料燃焼装置の誤り選択",
+  "calc": false,
+  "tag": "fuel"
+ },
+ {
+  "year": "R7",
+  "subject": 3,
+  "problem": 9,
+  "part": "(4)",
+  "area": "燃料と燃焼管理",
+  "point": "排ガス分析計(O₂・CO₂・NOx)の原理",
+  "calc": false,
+  "tag": "fuel"
+ },
+ {
+  "year": "R7",
+  "subject": 3,
+  "problem": 10,
+  "part": "1)",
+  "area": "燃焼計算",
+  "point": "重油の理論酸素量・理論空気量",
+  "calc": true,
+  "tag": "liquid_fuel"
+ },
+ {
+  "year": "R7",
+  "subject": 3,
+  "problem": 10,
+  "part": "2)",
+  "area": "燃焼計算",
+  "point": "排ガスCO₂濃度から空気比と空気量",
+  "calc": true,
+  "tag": "co2_air_ratio"
+ },
+ {
+  "year": "R7",
+  "subject": 3,
+  "problem": 10,
+  "part": "3)",
+  "area": "燃焼計算",
+  "point": "湿り燃焼ガス量の計算",
+  "calc": true,
+  "tag": "gas_combustion"
+ },
+ {
+  "year": "R7",
+  "subject": 3,
+  "problem": 10,
+  "part": "4)",
+  "area": "燃焼計算",
+  "point": "空気予熱に伴う排ガス温度低下",
+  "calc": true,
+  "tag": "air_preheat"
+ },
+ {
+  "year": "R7",
+  "subject": 4,
+  "problem": 11,
+  "part": "(1)",
+  "area": "計測と制御",
+  "point": "熱電対の挿入長さ・表面温度測定誤差",
+  "calc": false,
+  "tag": "measure-tc"
+ },
+ {
+  "year": "R7",
+  "subject": 4,
+  "problem": 11,
+  "part": "(2)",
+  "area": "計測と制御",
+  "point": "ピトー管流速計と差圧の関係",
+  "calc": false,
+  "tag": "pitot"
+ },
+ {
+  "year": "R7",
+  "subject": 4,
+  "problem": 11,
+  "part": "(3)",
+  "area": "計測と制御",
+  "point": "面積流量計の原理と取付け",
+  "calc": false,
+  "tag": "measure-area"
+ },
+ {
+  "year": "R7",
+  "subject": 4,
+  "problem": 11,
+  "part": "(4)",
+  "area": "計測と制御",
+  "point": "圧力単位の比較とゲージ圧・絶対圧",
+  "calc": false,
+  "tag": "measure-pressure"
+ },
+ {
+  "year": "R7",
+  "subject": 4,
+  "problem": 12,
+  "part": "(1)",
+  "area": "計測と制御",
+  "point": "温水タンクのシーケンス・FB・FF制御",
+  "calc": false,
+  "tag": "ctrl-seq"
+ },
+ {
+  "year": "R7",
+  "subject": 4,
+  "problem": 12,
+  "part": "(2)",
+  "area": "計測と制御",
+  "point": "ブロック線図の伝達関数とPID",
+  "calc": false,
+  "tag": "ctrl-seq"
+ },
+ {
+  "year": "R7",
+  "subject": 4,
+  "problem": 13,
+  "part": "(1)",
+  "area": "ボイラ・蒸気",
+  "point": "ボイラのNOx抑制と排煙脱硫・脱硝",
+  "calc": false,
+  "tag": "boiler-env"
+ },
+ {
+  "year": "R7",
+  "subject": 4,
+  "problem": 13,
+  "part": "(2)",
+  "area": "蒸気輸送・断熱",
+  "point": "蒸気配管の口径選定と圧力損失",
+  "calc": false,
+  "tag": "steam_pipe"
+ },
+ {
+  "year": "R7",
+  "subject": 4,
+  "problem": 13,
+  "part": "(3)",
+  "area": "ボイラ・蒸気",
+  "point": "部分負荷時の蒸発量と排ガス熱損失",
+  "calc": true,
+  "tag": "boiler"
+ },
+ {
+  "year": "R7",
+  "subject": 4,
+  "problem": 14,
+  "part": "(1)",
+  "area": "その他設備",
+  "point": "蒸気タービンの衝動式・反動式と変圧運転",
+  "calc": false,
+  "tag": "turbine-detail"
+ },
+ {
+  "year": "R7",
+  "subject": 4,
+  "problem": 14,
+  "part": "(2)",
+  "area": "その他設備",
+  "point": "容積形内燃機関の分類と熱損失",
+  "calc": false,
+  "tag": "engine-heat"
+ },
+ {
+  "year": "R7",
+  "subject": 4,
+  "problem": 14,
+  "part": "(3)",
+  "area": "その他設備",
+  "point": "ガスタービン燃焼器とコンバインド方式",
+  "calc": false,
+  "tag": "turbine-detail"
+ },
+ {
+  "year": "R7",
+  "subject": 4,
+  "problem": 15,
+  "part": "(1)",
+  "area": "熱交換器・熱回収",
+  "point": "多管式熱交換器の形式と清掃性",
+  "calc": false,
+  "tag": "hx-fouling"
+ },
+ {
+  "year": "R7",
+  "subject": 4,
+  "problem": 15,
+  "part": "(2)",
+  "area": "熱交換器・熱回収",
+  "point": "冷却塔冷却水の水質悪化と管理",
+  "calc": false,
+  "tag": "tower"
+ },
+ {
+  "year": "R7",
+  "subject": 4,
+  "problem": 15,
+  "part": "(3)",
+  "area": "熱交換器・熱回収",
+  "point": "フィン付き伝熱板の熱通過率",
+  "calc": false,
+  "tag": "hx-fin"
+ },
+ {
+  "year": "R7",
+  "subject": 4,
+  "problem": 15,
+  "part": "(4)",
+  "area": "熱交換器・熱回収",
+  "point": "二重管熱交換器の交換熱量と温度効率",
+  "calc": true,
+  "tag": "hx_effectiveness"
+ },
+ {
+  "year": "R7",
+  "subject": 4,
+  "problem": 16,
+  "part": "(1)",
+  "area": "冷凍・空調",
+  "point": "空気線図上の全熱交換器と空調負荷",
+  "calc": false,
+  "tag": "air_mix"
+ },
+ {
+  "year": "R7",
+  "subject": 4,
+  "problem": 16,
+  "part": "(2)",
+  "area": "冷凍・空調",
+  "point": "冷凍サイクルのp-h線図と成績係数",
+  "calc": false,
+  "tag": "cop"
+ },
+ {
+  "year": "R7",
+  "subject": 4,
+  "problem": 17,
+  "part": "(1)",
+  "area": "工業炉・熱設備材料",
+  "point": "各種工業炉の機能と特徴",
+  "calc": false,
+  "tag": "furnace-ops"
+ },
+ {
+  "year": "R7",
+  "subject": 4,
+  "problem": 17,
+  "part": "(2)",
+  "area": "工業炉・熱設備材料",
+  "point": "工業炉の熱効率向上策",
+  "calc": false,
+  "tag": "furnace_balance"
+ },
+ {
+  "year": "R7",
+  "subject": 4,
+  "problem": 17,
+  "part": "(3)",
+  "area": "工業炉・熱設備材料",
+  "point": "セラミックファイバの組成と施工法",
+  "calc": false,
+  "tag": "furnace"
+ },
+ {
+  "year": "R7",
+  "subject": 4,
+  "problem": 18,
+  "part": "(1)",
+  "area": "その他設備",
+  "point": "蒸発濃縮の沸点上昇と省エネ蒸発法",
+  "calc": false,
+  "tag": "evap"
+ },
+ {
+  "year": "R7",
+  "subject": 4,
+  "problem": 18,
+  "part": "(2)",
+  "area": "その他設備",
+  "point": "乾燥特性曲線と各種含水率",
+  "calc": false,
+  "tag": "drying-curve"
+ },
+ {
+  "year": "R7",
+  "subject": 4,
+  "problem": 18,
+  "part": "(3)",
+  "area": "その他設備",
+  "point": "炭素系資源のガス化反応と炉形式",
+  "calc": false,
+  "tag": "gasify-reaction"
+ }
+]
