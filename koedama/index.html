@@ -68,7 +68,7 @@ html,body{touch-action:none;-webkit-user-select:none;user-select:none}
 "use strict";
 // ===== 定数 =====
 const W=960,H=540,PX=260,TOP=62,BOT=462,PH=BOT-TOP,R=17,RP=R/PH;
-const SPEED=250,GRAV=0.95,LERP=9;
+const SPEED=250,GRAV=0.65,LERP=9;
 const cv=document.getElementById('cv'),ctx=cv.getContext('2d');
 const qs=new URLSearchParams(location.search);
 
@@ -76,11 +76,12 @@ const qs=new URLSearchParams(location.search);
 function buildCourse(){
   const C=[];let x=520;
   const sign=t=>C.push({t:'sign',x,text:t});
-  const gate=(p,h=0.36,adv=420)=>{C.push({t:'gate',x,p,h});x+=adv;};
+  const GAP=1.5;// 隙間の倍率(声だと狙いがぶれるので広め)
+  const gate=(p,h=0.36,adv=420)=>{C.push({t:'gate',x,p,h:Math.min(0.64,h*GAP)});x+=adv;};
   const cp=()=>{C.push({t:'cp',x});x+=260;};
   const quiet=len=>{C.push({t:'quiet',x,len});x+=len+340;};
   const wall=()=>{x+=400;C.push({t:'wall',x,gauge:0,broken:false});x+=360;};
-  const tunnel=(fn,len,h)=>{const n=Math.round(len/40),pts=[];for(let i=0;i<=n;i++)pts.push(fn(i/n));C.push({t:'tun',x,pts,h,step:40,len:n*40});x+=n*40+320;};
+  const tunnel=(fn,len,h)=>{const n=Math.round(len/40),pts=[];for(let i=0;i<=n;i++)pts.push(fn(i/n));C.push({t:'tun',x,pts,h:Math.min(0.56,h*1.45),step:40,len:n*40});x+=n*40+320;};
   // 1. チュートリアル
   sign('声を出すと浮く! 黙ると落ちる');x+=320;
   gate(0.5,0.46);gate(0.58,0.44);
@@ -273,10 +274,10 @@ function update(dt){
   // 障害物
   for(const o of course){
     if(o.t==='gate'){
-      if(Math.abs(x-o.x)<23+R*0.7){if(G.p+RP*0.8>o.p+o.h/2||G.p-RP*0.8<o.p-o.h/2){die('ぶつかった!');return;}}
+      if(Math.abs(x-o.x)<23+R*0.7){if(G.p+RP*0.6>o.p+o.h/2||G.p-RP*0.6<o.p-o.h/2){die('ぶつかった!');return;}}
     }else if(o.t==='tun'){
       const c=tunnelCenter(o,x);
-      if(c!==null&&(G.p+RP*0.8>c+o.h/2||G.p-RP*0.8<c-o.h/2)){die('トンネルに激突!');return;}
+      if(c!==null&&(G.p+RP*0.6>c+o.h/2||G.p-RP*0.6<c-o.h/2)){die('トンネルに激突!');return;}
     }else if(o.t==='wall'){
       if(!o.broken&&x>o.x-400&&x<o.x){
         if(voice.rms>voice.sTh){o.gauge+=dt/0.6;G.shake=Math.max(G.shake,3);}
