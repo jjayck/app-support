@@ -361,7 +361,7 @@ function draw(){
   }
   for(const o of course){
     const X=sx(o.x);
-    if(X<-120||X>W+120&&o.t!=='tun')continue;
+    const XE=o.t==='tun'?sx(o.x+o.len):X;if(XE<-120||X>W+120)continue;
     if(o.t==='gate')drawGate(X,o.p,o.h);
     else if(o.t==='tun')drawTunnel(o,sx);
     else if(o.t==='wall'&&!o.broken)drawWall(X,o.gauge);
