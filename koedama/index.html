@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>こえだま</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=M+PLUS+Rounded+1c:wght@500;800&display=swap">
+<style>
+:root{--ink:#2b1d3a;--sky1:#ffd36e;--sky2:#ff8fa3;--accent:#ff4f6d;--calm:#5b4bd6;--paper:#fff7ea}
+html,body{margin:0;height:100%;background:#1a1226;overflow:hidden;font-family:"M PLUS Rounded 1c",system-ui,sans-serif;color:var(--ink)}
+#wrap{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
+canvas{display:block;background:var(--paper);border-radius:6px;box-shadow:0 10px 40px #0008}
+.ui{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;pointer-events:none}
+.ui>*{pointer-events:auto}
+.ui[hidden]{display:none}
+h1{font-family:"Dela Gothic One",sans-serif;font-size:clamp(48px,10vw,110px);margin:0;color:var(--accent);text-shadow:4px 4px 0 var(--ink);letter-spacing:.04em}
+.sub{font-weight:800;font-size:clamp(14px,2.4vw,22px);background:var(--ink);color:#fff;padding:6px 14px;border-radius:999px}
+.rules{font-size:clamp(12px,1.8vw,16px);line-height:1.8;background:#fff;border:3px solid var(--ink);border-radius:14px;padding:12px 20px;max-width:560px}
+button{font-family:inherit;font-weight:800;font-size:clamp(15px,2.2vw,20px);border:3px solid var(--ink);border-radius:14px;padding:10px 22px;background:var(--sky1);color:var(--ink);cursor:pointer;box-shadow:0 5px 0 var(--ink)}
+button:active{transform:translateY(3px);box-shadow:0 2px 0 var(--ink)}
+button.alt{background:#fff}
+button:focus-visible{outline:4px solid var(--calm);outline-offset:3px}
+.row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.small{font-size:12px;opacity:.8}
+#result .card{background:#fff;border:4px solid var(--ink);border-radius:18px;padding:16px 26px;min-width:300px}
+#result h2{font-family:"Dela Gothic One",sans-serif;font-size:42px;margin:0 0 8px;color:var(--accent)}
+#result table{margin:0 auto;font-size:18px;font-weight:800;border-collapse:collapse}
+#result td{padding:4px 12px;text-align:left}
+#result td:last-child{text-align:right;font-variant-numeric:tabular-nums}
+@media (orientation:landscape),(min-width:700px){#rotate{display:none}}
+@media (max-height:500px){.rules{display:none}h1{font-size:56px}}
+html,body{touch-action:none;-webkit-user-select:none;user-select:none}
+#msg{color:var(--accent);font-weight:800}
+</style>
+</head>
+<body>
+<div id="wrap"><canvas id="cv"></canvas>
+  <div class="ui" id="title">
+    <h1>こえだま</h1>
+    <div class="sub">声だけで進め。黙ると落ちる。</div>
+    <div class="rules">
+      🎤 <b>声の高さ</b>でこえだまが上下する<br>
+      🤫 <b>しーっゾーン</b>では物音ひとつ立てるな<br>
+      📣 <b>叫べ壁</b>は大声で壊せ<br>
+      <span class="small">ヘッドホン推奨(ゲーム音をマイクが拾わないように)</span>
+    </div>
+    <div class="row">
+      <button id="btnMic">🎤 マイクで遊ぶ</button>
+      <button id="btnKey" class="alt">⌨ タッチ/キーで遊ぶ</button>
+    </div>
+    <div class="small">キーボード: Space=声 / ↑↓=音程 / X=叫ぶ<br>スマホのタッチ: 押してる間=声 / 指の高さ=音程 / 2本指=叫ぶ</div>
+    <div class="small" id="rotate">📱 スマホは横向きで</div>
+    <div id="msg"></div>
+  </div>
+  <div class="ui" id="result" hidden>
+    <div class="card">
+      <h2>ゴール!</h2>
+      <table id="resTable"></table>
+    </div>
+    <div class="row">
+      <button id="btnCopy">結果をコピー</button>
+      <button id="btnAgain" class="alt">もう一回</button>
+    </div>
+    <div class="small" id="copyMsg"></div>
+  </div>
+</div>
+<script>
+"use strict";
+// ===== 定数 =====
+const W=960,H=540,PX=260,TOP=62,BOT=462,PH=BOT-TOP,R=17,RP=R/PH;
+const SPEED=250,GRAV=0.95,LERP=9;
+const cv=document.getElementById('cv'),ctx=cv.getContext('2d');
+const qs=new URLSearchParams(location.search);
+
+// ===== コース =====
+function buildCourse(){
+  const C=[];let x=520;
+  const sign=t=>C.push({t:'sign',x,text:t});
+  const gate=(p,h=0.36,adv=420)=>{C.push({t:'gate',x,p,h});x+=adv;};
+  const cp=()=>{C.push({t:'cp',x});x+=260;};
+  const quiet=len=>{C.push({t:'quiet',x,len});x+=len+340;};
+  const wall=()=>{x+=400;C.push({t:'wall',x,gauge:0,broken:false});x+=360;};
+  const tunnel=(fn,len,h)=>{const n=Math.round(len/40),pts=[];for(let i=0;i<=n;i++)pts.push(fn(i/n));C.push({t:'tun',x,pts,h,step:40,len:n*40});x+=n*40+320;};
+  // 1. チュートリアル
+  sign('声を出すと浮く! 黙ると落ちる');x+=320;
+  gate(0.5,0.46);gate(0.58,0.44);
+  sign('高い声で上へ');x+=160;gate(0.8,0.42);
+  sign('低い声で下へ');x+=160;gate(0.22,0.42);
+  cp();
+  // 2. ジグザグ
+  sign('高い! 低い! 高い! 低い!');x+=220;
+  gate(0.82,0.38,390);gate(0.2,0.38,390);gate(0.86,0.36,390);gate(0.14,0.36,390);gate(0.5,0.32);
+  cp();
+  // 3. しーっ
+  sign('しーっ… 怪物が寝ている');x+=260;quiet(900);gate(0.5,0.42);
+  cp();
+  // 4. 叫べ壁
+  sign('壁は叫んで壊せ');x+=120;wall();x+=80;gate(0.4,0.4);
+  cp();
+  // 5. うねりトンネル
+  sign('うねる声のトンネル「う〜〜ぉ〜〜」');x+=260;
+  tunnel(t=>0.5+0.3*Math.sin(t*Math.PI*2),1600,0.36);
+  cp();
+  // 6. コンボ
+  sign('裏声 → 黙る → 叫ぶ → 低音');x+=260;
+  gate(0.86,0.36,360);quiet(700);wall();x+=60;gate(0.14,0.38);
+  cp();
+  // 7. ラスト
+  sign('ラスト!!');x+=260;
+  gate(0.88,0.34,340);gate(0.12,0.34,340);gate(0.88,0.34,360);
+  tunnel(t=>0.85-0.65*t,800,0.34);
+  quiet(1200);wall();wall();x+=60;
+  gate(0.5,0.28,400);
+  C.push({t:'goal',x});
+  return C;
+}
+let course=buildCourse();
+const GOAL_X=course.find(o=>o.t==='goal').x;
+
+// ===== 声の入力 =====
+const voice={mode:'none',rms:0,hz:0,voiced:false,p:0.5,lo:110,hi:660,noise:0.003,vTh:0.01,sTh:0.12,hist:[]};
+let ac=null,an=null,buf=null;
+async function startMic(){
+  const stream=await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:true,noiseSuppression:false,autoGainControl:false}});
+  ac=new (window.AudioContext||window.webkitAudioContext)();
+  const src=ac.createMediaStreamSource(stream);
+  if(ac.state==='suspended')await ac.resume();
+  an=ac.createAnalyser();an.fftSize=2048;src.connect(an);
+  buf=new Float32Array(an.fftSize);
+  voice.mode='mic';
+}
+function detectPitch(b,sr){
+  const N=b.length;let e=0;for(let i=0;i<N;i++)e+=b[i]*b[i];
+  const rms=Math.sqrt(e/N);
+  const minL=Math.floor(sr/1200),maxL=Math.min(Math.floor(sr/65),N>>1),Wn=N-maxL;
+  if(rms<0.004)return{rms,hz:0,clar:0};
+  const n=new Float32Array(maxL+2);let best=0;
+  for(let L=minL;L<=maxL+1;L++){
+    let r=0,m=0;
+    for(let j=0;j<Wn;j++){const a=b[j],c=b[j+L];r+=a*c;m+=a*a+c*c;}
+    n[L]=m>0?2*r/m:0;if(L<=maxL&&n[L]>best)best=n[L];
+  }
+  let pick=-1;
+  for(let L=minL+1;L<=maxL;L++){if(n[L]>=n[L-1]&&n[L]>n[L+1]&&n[L]>=best*0.9){pick=L;break;}}
+  if(pick<0)return{rms,hz:0,clar:0};
+  const a=n[pick-1],c=n[pick+1],bb=n[pick],d=a-2*bb+c;
+  const sh=d!==0?0.5*(a-c)/d:0;
+  return{rms,hz:sr/(pick+sh),clar:bb};
+}
+function hzToP(hz){return (Math.log(hz)-Math.log(voice.lo))/(Math.log(voice.hi)-Math.log(voice.lo));}
+function pToHz(p){return voice.lo*Math.pow(voice.hi/voice.lo,p);}
+const NOTES=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'];
+function noteName(hz){if(!hz)return'-';const m=Math.round(12*Math.log2(hz/440)+69);return NOTES[(m%12+12)%12]+(Math.floor(m/12)-1);}
+function readMic(){
+  an.getFloatTimeDomainData(buf);
+  const r=detectPitch(buf,ac.sampleRate);
+  voice.rms=voice.rms*0.4+r.rms*0.6;
+  let hz=0;
+  if(r.hz>60&&r.hz<1300&&r.clar>0.55&&r.rms>voice.vTh){
+    voice.hist.push(r.hz);if(voice.hist.length>3)voice.hist.shift();
+    hz=[...voice.hist].sort((a,b)=>a-b)[voice.hist.length>>1];
+  }
+  voice.hz=hz;
+  voice.voiced=voice.rms>voice.vTh;
+  if(hz)voice.p=Math.max(-0.08,Math.min(1.08,hzToP(hz)));
+  return r;
+}
+// キーボード
+const keys={};
+addEventListener('keydown',e=>{keys[e.code]=true;if(['Space','ArrowUp','ArrowDown'].includes(e.code))e.preventDefault();});
+addEventListener('keyup',e=>{keys[e.code]=false;});
+const touch={n:0,y:0};
+function onTouch(e){
+  if(voice.mode!=='key')return;e.preventDefault();
+  touch.n=e.touches.length;
+  if(touch.n){const r=cv.getBoundingClientRect(),t=e.touches[0];touch.y=(t.clientY-r.top)/r.height*H;}
+}
+['touchstart','touchmove','touchend','touchcancel'].forEach(k=>cv.addEventListener(k,onTouch,{passive:false}));
+function readKeys(dt){
+  if(touch.n){voice.voiced=true;voice.p=Math.max(-0.05,Math.min(1.05,1-(touch.y-TOP)/PH));voice.rms=touch.n>1?0.3:0.05;voice.hz=pToHz(voice.p);return;}
+  const on=keys.Space||keys.KeyX||keys.ArrowUp||keys.ArrowDown;
+  if(keys.ArrowUp)voice.p=Math.min(1.05,voice.p+1.3*dt);
+  if(keys.ArrowDown)voice.p=Math.max(-0.05,voice.p-1.3*dt);
+  voice.voiced=!!on;
+  voice.rms=keys.KeyX?0.3:(on?0.05:0);
+  voice.hz=on?pToHz(voice.p):0;
+}
+
+// ===== 声域測定 =====
+const CAL=[
+  {k:'noise',label:'しずかに…',hint:'まわりの音をはかります',dur:1.6},
+  {k:'low',label:'いちばん低い声で「あ〜〜」',hint:'ガラガラ声OK',dur:2.6},
+  {k:'high',label:'いちばん高い声で「あ〜〜」',hint:'裏声OK',dur:2.6},
+  {k:'shout',label:'思いっきり叫べ!!',hint:'',dur:1.6},
+];
+const cal={i:0,t:0,prep:true,data:{noise:[],low:[],high:[],shout:[],vr:[]}};
+function pct(a,q){if(!a.length)return 0;const s=[...a].sort((x,y)=>x-y);return s[Math.min(s.length-1,Math.floor(q*s.length))];}
+function updateCal(dt){
+  const r=readMic();cal.t+=dt;
+  const st=CAL[cal.i];
+  if(cal.prep){if(cal.t>1.1){cal.prep=false;cal.t=0;}return;}
+  const d=cal.data;
+  if(st.k==='noise')d.noise.push(r.rms);
+  if(st.k==='low'||st.k==='high'){if(r.hz>60&&r.hz<1300&&r.clar>0.6&&r.rms>0.006){d[st.k].push(r.hz);d.vr.push(r.rms);}}
+  if(st.k==='shout')d.shout.push(r.rms);
+  if(cal.t>=st.dur){
+    cal.i++;cal.t=0;cal.prep=true;
+    if(cal.i>=CAL.length)finishCal();
+  }
+}
+function finishCal(){
+  const d=cal.data;
+  voice.noise=pct(d.noise,0.9);
+  voice.vTh=Math.max(voice.noise*2.5,0.006);
+  let lo=pct(d.low,0.3)||110,hi=pct(d.high,0.7)||440;
+  if(hi/lo<1.6){const g=Math.sqrt(hi*lo);lo=g/1.27;hi=g*1.27;}
+  voice.lo=lo;voice.hi=hi;
+  const vm=pct(d.vr,0.5)||0.03,sp=pct(d.shout,0.8)||vm*2;
+  voice.sTh=Math.max(vm*1.35,Math.min((vm+sp)/2,sp*0.8),voice.vTh*2);
+  stats.calLo=lo;stats.calHi=hi;
+  startRun();
+}
+
+// ===== ゲーム状態 =====
+let state='title';
+const G={wx:0,p:0.5,vp:0,dead:0,deadReason:'',cpX:0,deaths:0,time:0,ready:0,quietLoud:0,shake:0,wake:0,parts:[],won:false};
+const stats={maxHz:0,minHz:0,maxRms:0,calLo:0,calHi:0};
+function startRun(){
+  course=buildCourse();
+  Object.assign(G,{wx:0,p:0.5,vp:0,dead:0,cpX:0,deaths:0,time:0,ready:1.2,quietLoud:0,shake:0,wake:0,parts:[],won:false});
+  Object.assign(stats,{maxHz:0,minHz:0,maxRms:0});
+  state='play';
+  document.getElementById('title').hidden=true;
+  document.getElementById('result').hidden=true;
+}
+function respawn(){
+  G.wx=Math.max(0,G.cpX-180);G.p=0.5;G.vp=0;G.ready=1.0;G.quietLoud=0;G.wake=0;
+  for(const o of course)if(o.t==='wall'&&o.x>G.cpX){o.gauge=0;o.broken=false;}
+}
+function die(reason){
+  if(G.dead>0)return;
+  G.dead=1.3;G.deadReason=reason;G.deaths++;G.shake=14;sfx('die');
+}
+const px=()=>G.wx+PX;
+function quietAt(x){for(const o of course)if(o.t==='quiet'&&x>=o.x&&x<=o.x+o.len)return o;return null;}
+function tunnelCenter(o,x){const f=(x-o.x)/o.step,i=Math.floor(f);if(i<0||i>=o.pts.length-1)return null;const t=f-i;return o.pts[i]*(1-t)+o.pts[i+1]*t;}
+
+function update(dt){
+  if(G.dead>0){G.dead-=dt;if(G.dead<=0)respawn();return;}
+  G.time+=dt;
+  if(G.ready>0){G.ready-=dt;G.vp=0;return;}
+  const x0=px();
+  G.wx+=SPEED*dt;
+  const x=px();
+  // 統計
+  if(voice.voiced&&voice.hz){stats.maxHz=Math.max(stats.maxHz,voice.hz);stats.minHz=stats.minHz?Math.min(stats.minHz,voice.hz):voice.hz;}
+  stats.maxRms=Math.max(stats.maxRms,voice.rms);
+  // 移動
+  const q=quietAt(x);
+  if(q){
+    G.vp=0;
+    const grace=(x-q.x)<70;
+    if(!grace&&voice.rms>voice.vTh*1.3){G.quietLoud+=dt;if(G.quietLoud>0.18){G.wake=1;die('起こしちゃった!');return;}}
+    else G.quietLoud=Math.max(0,G.quietLoud-dt*0.5);
+  }else if(voice.voiced){
+    G.vp=0;G.p+=(voice.p-G.p)*Math.min(1,LERP*dt);
+    if(Math.random()<dt*12)G.parts.push({x,y:G.p,vx:-60-Math.random()*60,vy:(Math.random()-.5)*0.2,life:1,ch:voice.rms>voice.sTh?'!':'♪'});
+  }else{
+    G.vp-=GRAV*dt;G.p+=G.vp*dt;
+  }
+  if(G.p<-0.07){die('息切れ… 落ちた');return;}
+  if(G.p>1.1)G.p=1.1;
+  // 障害物
+  for(const o of course){
+    if(o.t==='gate'){
+      if(Math.abs(x-o.x)<23+R*0.7){if(G.p+RP*0.8>o.p+o.h/2||G.p-RP*0.8<o.p-o.h/2){die('ぶつかった!');return;}}
+    }else if(o.t==='tun'){
+      const c=tunnelCenter(o,x);
+      if(c!==null&&(G.p+RP*0.8>c+o.h/2||G.p-RP*0.8<c-o.h/2)){die('トンネルに激突!');return;}
+    }else if(o.t==='wall'){
+      if(!o.broken&&x>o.x-400&&x<o.x){
+        if(voice.rms>voice.sTh){o.gauge+=dt/0.6;G.shake=Math.max(G.shake,3);}
+        if(o.gauge>=1){o.broken=true;G.shake=10;sfx('break');}
+      }
+      if(!o.broken&&x0<o.x-R&&x>=o.x-R){die('声が足りない!');return;}
+    }else if(o.t==='cp'){
+      if(x0<o.x&&x>=o.x&&G.cpX<o.x){G.cpX=o.x;sfx('cp');}
+    }else if(o.t==='goal'){
+      if(x>=o.x){win();return;}
+    }
+  }
+}
+function win(){
+  state='result';G.won=true;sfx('goal');
+  if(qs.has('selftest'))return;
+  const t=document.getElementById('resTable');
+  const rows=[
+    ['タイム',fmtTime(G.time)],
+    ['死亡回数',G.deaths+' 回'],
+    ['最高音',stats.maxHz?noteName(stats.maxHz)+'('+Math.round(stats.maxHz)+'Hz)':'-'],
+    ['最低音',stats.minHz?noteName(stats.minHz)+'('+Math.round(stats.minHz)+'Hz)':'-'],
+    ['声域',stats.maxHz&&stats.minHz?(Math.log2(stats.maxHz/stats.minHz)).toFixed(1)+' オクターブ':'-'],
+  ];
+  t.innerHTML='';
+  for(const[a,b]of rows){const tr=document.createElement('tr');const t1=document.createElement('td');t1.textContent=a;const t2=document.createElement('td');t2.textContent=b;tr.append(t1,t2);t.append(tr);}
+  document.getElementById('result').hidden=false;
+}
+function fmtTime(s){const m=Math.floor(s/60),r=(s%60).toFixed(1).padStart(4,'0');return m+':'+r;}
+function shareText(){
+  return `こえだま クリア!\nタイム ${fmtTime(G.time)} / 死亡 ${G.deaths}回\n声域 ${noteName(stats.minHz)}〜${noteName(stats.maxHz)}\n#こえだま`;
+}
+
+// ===== 効果音(短く、マイクに拾われにくい) =====
+function sfx(k){
+  if(!ac||qs.has('selftest'))return;
+  const o=ac.createOscillator(),g=ac.createGain();o.connect(g);g.connect(ac.destination);
+  const t=ac.currentTime;
+  const f={die:[300,80,0.35,'sawtooth'],break:[120,40,0.3,'square'],cp:[660,990,0.2,'triangle'],goal:[520,1040,0.6,'triangle']}[k];
+  o.type=f[3];o.frequency.setValueAtTime(f[0],t);o.frequency.exponentialRampToValueAtTime(f[1],t+f[2]);
+  g.gain.setValueAtTime(0.12,t);g.gain.exponentialRampToValueAtTime(0.001,t+f[2]);
+  o.start(t);o.stop(t+f[2]);
+}
+
+// ===== 描画 =====
+const yOf=p=>TOP+(1-p)*PH;
+function rr(x,y,w,h,r){ctx.beginPath();ctx.roundRect(x,y,w,h,r);}
+function draw(){
+  ctx.save();
+  if(G.shake>0){ctx.translate((Math.random()-.5)*G.shake,(Math.random()-.5)*G.shake);G.shake*=0.86;if(G.shake<0.3)G.shake=0;}
+  // 空
+  const g=ctx.createLinearGradient(0,0,0,H);g.addColorStop(0,'#ffe9a8');g.addColorStop(1,'#ffb3c1');
+  ctx.fillStyle=g;ctx.fillRect(-20,-20,W+40,H+40);
+  // 遠景の丘
+  ctx.fillStyle='#ffc6a5';
+  for(let i=-1;i<6;i++){const bx=i*260-(G.wx*0.2)%260;ctx.beginPath();ctx.ellipse(bx+130,BOT+40,170,90,0,Math.PI,0);ctx.fill();}
+  // 音名の目盛り
+  ctx.font='800 12px "M PLUS Rounded 1c"';ctx.textBaseline='middle';
+  const m0=Math.ceil(12*Math.log2(voice.lo/440)+69),m1=Math.floor(12*Math.log2(voice.hi/440)+69);
+  for(let m=m0;m<=m1;m++){
+    const n=((m%12)+12)%12;if(n!==0&&n!==4&&n!==7&&n!==9)continue;
+    const hz=440*Math.pow(2,(m-69)/12),y=yOf(hzToP(hz));
+    ctx.strokeStyle=n===0?'#2b1d3a33':'#2b1d3a14';ctx.lineWidth=n===0?2:1;
+    ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);ctx.stroke();
+    ctx.fillStyle='#2b1d3a88';ctx.fillText(noteName(hz),6,y);
+  }
+  // 地面
+  ctx.fillStyle='#7a5c8f';ctx.fillRect(0,BOT+R+6,W,H);
+  const sx=x=>x-G.wx;
+  for(const o of course){
+    const X=sx(o.x);
+    if(o.t==='quiet'){
+      const X2=sx(o.x+o.len);if(X2<-50||X>W+50)continue;
+      ctx.fillStyle='#3b2d7acc';ctx.fillRect(X,0,o.len,BOT+R+6);
+      ctx.fillStyle='#ffffff10';for(let i=0;i<o.len;i+=60)ctx.fillRect(X+i,0,2,BOT);
+      drawMonster(X+o.len/2,BOT-10,G.wake&&quietAt(px())===o);
+      ctx.fillStyle='#fff';ctx.font='42px "Dela Gothic One"';ctx.textAlign='center';
+      ctx.fillText('し ー っ',X+o.len/2,TOP+30);ctx.textAlign='left';
+      // 音量メーター警告
+      if(quietAt(px())===o&&G.quietLoud>0){ctx.fillStyle='#ff4f6d';ctx.font='28px "Dela Gothic One"';ctx.textAlign='center';ctx.fillText('…ん?',X+o.len/2+80,BOT-150);ctx.textAlign='left';}
+    }
+  }
+  for(const o of course){
+    const X=sx(o.x);
+    if(X<-120||X>W+120&&o.t!=='tun')continue;
+    if(o.t==='gate')drawGate(X,o.p,o.h);
+    else if(o.t==='tun')drawTunnel(o,sx);
+    else if(o.t==='wall'&&!o.broken)drawWall(X,o.gauge);
+    else if(o.t==='wall'&&o.broken){ctx.fillStyle='#b5523b55';for(let i=0;i<8;i++)ctx.fillRect(X+i*9-20,BOT+R-(i%3)*10,14,10);}
+    else if(o.t==='cp'){ctx.fillStyle='#2b1d3a';ctx.fillRect(X,BOT-80,5,80+R);ctx.fillStyle=G.cpX>=o.x?'#4bd67a':'#fff';ctx.beginPath();ctx.moveTo(X+5,BOT-80);ctx.lineTo(X+45,BOT-66);ctx.lineTo(X+5,BOT-52);ctx.fill();}
+    else if(o.t==='goal'){for(let i=0;i<14;i++){ctx.fillStyle=i%2?'#2b1d3a':'#fff';ctx.fillRect(X,TOP+i*(PH/14),26,PH/14);}ctx.fillStyle='#ff4f6d';ctx.font='36px "Dela Gothic One"';ctx.fillText('GOAL',X+34,TOP+40);}
+    else if(o.t==='sign'&&X>-400&&X<W){ctx.font='800 22px "M PLUS Rounded 1c"';const w=ctx.measureText(o.text).width+28;ctx.fillStyle='#fff';rr(X,TOP-22,w,36,12);ctx.fill();ctx.strokeStyle='#2b1d3a';ctx.lineWidth=3;ctx.stroke();ctx.fillStyle='#2b1d3a';ctx.fillText(o.text,X+14,TOP-4);}
+  }
+  // パーティクル
+  for(const q of G.parts){q.life-=1/60;q.x+=q.vx/60;q.y+=q.vy/60;ctx.globalAlpha=Math.max(0,q.life);ctx.fillStyle=q.ch==='!'?'#ff4f6d':'#5b4bd6';ctx.font='800 20px sans-serif';ctx.fillText(q.ch,sx(q.x)-PX+PX-30,yOf(q.y));}
+  ctx.globalAlpha=1;G.parts=G.parts.filter(q=>q.life>0);
+  // プレイヤー
+  drawPlayer(PX,yOf(G.p));
+  ctx.restore();
+  drawHUD();
+}
+function drawGate(X,p,h){
+  const yt=yOf(p+h/2),yb=yOf(p-h/2);
+  ctx.fillStyle='#5b4bd6';ctx.strokeStyle='#2b1d3a';ctx.lineWidth=4;
+  rr(X-23,-20,46,yt+20,10);ctx.fill();ctx.stroke();
+  rr(X-23,yb,46,H-yb+20,10);ctx.fill();ctx.stroke();
+  ctx.fillStyle='#2b1d3a';ctx.font='800 16px "M PLUS Rounded 1c"';ctx.textAlign='center';
+  ctx.fillText('♪'+noteName(pToHz(p)),X,(yt+yb)/2);ctx.textAlign='left';
+}
+function drawTunnel(o,sx){
+  ctx.fillStyle='#5b4bd6';ctx.strokeStyle='#2b1d3a';ctx.lineWidth=4;
+  for(const side of[1,-1]){
+    ctx.beginPath();
+    o.pts.forEach((c,i)=>{const X=sx(o.x+i*o.step),Y=yOf(c+side*o.h/2);i?ctx.lineTo(X,Y):ctx.moveTo(X,Y);});
+    const Xe=sx(o.x+o.len),Xs=sx(o.x),edge=side>0?-20:H+20;
+    ctx.lineTo(Xe,edge);ctx.lineTo(Xs,edge);ctx.closePath();ctx.fill();ctx.stroke();
+  }
+}
+function drawWall(X,gauge){
+  ctx.fillStyle='#d9744f';ctx.strokeStyle='#2b1d3a';ctx.lineWidth=3;
+  for(let r=0;r<12;r++){const y=TOP-40+r*42;for(let c=0;c<2;c++){const bx=X-30+c*30+(r%2?-15:0);ctx.fillRect(bx,y,30,40);ctx.strokeRect(bx,y,30,40);}}
+  ctx.fillStyle='#fff';rr(X-50,BOT+R-4,100,14,7);ctx.fill();
+  ctx.fillStyle='#ff4f6d';rr(X-50,BOT+R-4,100*Math.min(1,gauge),14,7);ctx.fill();
+  ctx.save();ctx.translate(X,(TOP+BOT)/2);ctx.rotate(-Math.PI/2);ctx.font='40px "Dela Gothic One"';ctx.textAlign='center';ctx.lineWidth=6;ctx.strokeStyle='#2b1d3a';ctx.strokeText('叫 べ !!',0,14);ctx.fillStyle='#fff';ctx.fillText('叫 べ !!',0,14);ctx.restore();
+  if(gauge>0.3){ctx.strokeStyle='#2b1d3a';ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(X-10,TOP+60);ctx.lineTo(X+8,TOP+160);ctx.lineTo(X-12,TOP+250);if(gauge>0.65){ctx.lineTo(X+14,TOP+340);ctx.lineTo(X-6,BOT);}ctx.stroke();}
+}
+function drawMonster(x,y,awake){
+  ctx.fillStyle=awake?'#ff4f6d':'#8f7ad6';ctx.strokeStyle='#2b1d3a';ctx.lineWidth=4;
+  ctx.beginPath();ctx.ellipse(x,y-40,130,70,0,Math.PI,0);ctx.lineTo(x+130,y+10);ctx.lineTo(x-130,y+10);ctx.closePath();ctx.fill();ctx.stroke();
+  ctx.fillStyle='#2b1d3a';
+  if(awake){ctx.fillStyle='#fff';ctx.beginPath();ctx.arc(x-40,y-50,22,0,7);ctx.arc(x+40,y-50,22,0,7);ctx.fill();ctx.fillStyle='#2b1d3a';ctx.beginPath();ctx.arc(x-40,y-50,9,0,7);ctx.arc(x+40,y-50,9,0,7);ctx.fill();
+    ctx.font='54px "Dela Gothic One"';ctx.fillStyle='#ff4f6d';ctx.textAlign='center';ctx.fillText('うるさい!!',x,y-150);ctx.textAlign='left';}
+  else{ctx.lineWidth=4;ctx.beginPath();ctx.arc(x-40,y-48,14,0.2,Math.PI-0.2);ctx.stroke();ctx.beginPath();ctx.arc(x+40,y-48,14,0.2,Math.PI-0.2);ctx.stroke();
+    ctx.font='800 26px "M PLUS Rounded 1c"';ctx.fillStyle='#fff';const z=(performance.now()/600)%3;ctx.fillText('Z'.repeat(1+Math.floor(z)),x+90,y-110-z*8);}
+}
+function drawPlayer(x,y){
+  const loud=voice.rms>voice.sTh,mouth=Math.min(1,voice.rms/Math.max(voice.sTh,0.01));
+  const dead=G.dead>0;
+  ctx.fillStyle=loud?'#ff4f6d':(voice.voiced?'#ffcf3f':'#ffe27a');ctx.strokeStyle='#2b1d3a';ctx.lineWidth=4;
+  ctx.beginPath();ctx.arc(x,y,R+(loud?3:0),0,7);ctx.fill();ctx.stroke();
+  ctx.fillStyle='#2b1d3a';
+  if(dead){ctx.font='800 14px sans-serif';ctx.textAlign='center';ctx.fillText('× ×',x+2,y-3);ctx.textAlign='left';}
+  else{ctx.beginPath();ctx.arc(x+4,y-5,3,0,7);ctx.arc(x+12,y-5,3,0,7);ctx.fill();}
+  ctx.beginPath();ctx.ellipse(x+9,y+6,4,1+7*(voice.voiced?mouth:0),0,0,7);ctx.fill();
+}
+function drawHUD(){
+  // 進捗
+  ctx.fillStyle='#2b1d3a';rr(240,14,480,14,7);ctx.fill();
+  ctx.fillStyle='#ffcf3f';rr(242,16,476*Math.min(1,px()/GOAL_X),10,5);ctx.fill();
+  ctx.font='800 22px "M PLUS Rounded 1c"';ctx.fillStyle='#2b1d3a';
+  ctx.fillText('⏱ '+fmtTime(G.time),20,30);
+  ctx.textAlign='right';ctx.font='30px "Dela Gothic One"';ctx.fillText('💀 '+G.deaths,W-20,36);ctx.textAlign='left';
+  // 声メーター
+  const mx=20,my=BOT+R+16,mw=260;
+  ctx.fillStyle='#2b1d3a';rr(mx,my,mw,14,7);ctx.fill();
+  const lv=Math.min(1,voice.rms/(voice.sTh*1.6));
+  ctx.fillStyle=voice.rms>voice.sTh?'#ff4f6d':(voice.voiced?'#ffcf3f':'#9a8fb0');rr(mx+2,my+2,(mw-4)*lv,10,5);ctx.fill();
+  ctx.fillStyle='#fff';ctx.fillRect(mx+mw*(voice.vTh/(voice.sTh*1.6)),my-2,2,18);ctx.fillRect(mx+mw/1.6,my-2,2,18);
+  ctx.font='800 13px "M PLUS Rounded 1c"';ctx.fillStyle='#fff';
+  ctx.fillText(voice.voiced?(voice.rms>voice.sTh?'叫び!!':'♪ '+noteName(voice.hz)+(voice.hz?' '+Math.round(voice.hz)+'Hz':'')):'しーん…',mx+mw+12,my+11);
+  if(voice.mode==='key'){ctx.textAlign='right';ctx.fillText(matchMedia('(pointer:coarse)').matches?'押す=声 指の高さ=音程 2本指=叫ぶ':'Space=声 ↑↓=音程 X=叫ぶ',W-20,my+11);ctx.textAlign='left';}
+  // 中央メッセージ
+  ctx.textAlign='center';
+  if(G.dead>0){ctx.font='56px "Dela Gothic One"';ctx.fillStyle='#2b1d3a';ctx.fillText(G.deadReason,W/2+3,H/2+3);ctx.fillStyle='#ff4f6d';ctx.fillText(G.deadReason,W/2,H/2);}
+  else if(G.ready>0&&state==='play'){ctx.font='48px "Dela Gothic One"';ctx.fillStyle='#2b1d3a';ctx.fillText(G.ready>0.5?'よーい…':'声を出せ!',W/2,H/2);}
+  ctx.textAlign='left';
+}
+function drawCal(){
+  ctx.fillStyle='#fff7ea';ctx.fillRect(0,0,W,H);
+  const st=CAL[Math.min(cal.i,CAL.length-1)];
+  ctx.textAlign='center';ctx.fillStyle='#2b1d3a';
+  ctx.font='800 20px "M PLUS Rounded 1c"';ctx.fillText('声域測定 '+(cal.i+1)+' / '+CAL.length,W/2,90);
+  ctx.font='44px "Dela Gothic One"';ctx.fillStyle=cal.prep?'#2b1d3a66':'#ff4f6d';ctx.fillText(st.label,W/2,H/2-20);
+  ctx.font='800 18px "M PLUS Rounded 1c"';ctx.fillStyle='#2b1d3a';ctx.fillText(cal.prep?'じゅんび…':st.hint,W/2,H/2+30);
+  if(!cal.prep){ctx.fillStyle='#2b1d3a';rr(W/2-200,H/2+60,400,16,8);ctx.fill();ctx.fillStyle='#ffcf3f';rr(W/2-198,H/2+62,396*Math.min(1,cal.t/st.dur),12,6);ctx.fill();}
+  const lv=Math.min(1,voice.rms/0.25);ctx.fillStyle='#5b4bd6';rr(W/2-100,H/2+110,200*lv,10,5);ctx.fill();
+  ctx.font='800 22px "M PLUS Rounded 1c"';ctx.fillStyle='#2b1d3a';ctx.fillText(voice.hz?noteName(voice.hz)+'  '+Math.round(voice.hz)+'Hz':'',W/2,H/2+160);
+  ctx.textAlign='left';
+}
+
+// ===== ループ =====
+function fit(){
+  const s=Math.min(innerWidth/W,innerHeight/H)*0.98,d=devicePixelRatio||1;
+  cv.style.width=W*s+'px';cv.style.height=H*s+'px';cv.width=W*d;cv.height=H*d;ctx.setTransform(d,0,0,d,0,0);
+}
+addEventListener('resize',fit);fit();
+let last=performance.now();
+function loop(now){
+  const dt=Math.min(0.05,(now-last)/1000);last=now;
+  if(state==='calib'){updateCal(dt);drawCal();}
+  else{
+    if(state==='play'){if(voice.mode==='mic')readMic();else readKeys(dt);update(dt);}
+    draw();
+  }
+  requestAnimationFrame(loop);
+}
+
+// ===== ボタン =====
+document.getElementById('btnMic').onclick=async()=>{
+  try{await startMic();state='calib';Object.assign(cal,{i:0,t:0,prep:true,data:{noise:[],low:[],high:[],shout:[],vr:[]}});document.getElementById('title').hidden=true;}
+  catch(e){document.getElementById('msg').textContent='マイクが使えませんでした。ブラウザのマイク許可を確認してください。';}
+};
+document.getElementById('btnKey').onclick=()=>{voice.mode='key';voice.lo=110;voice.hi=660;voice.vTh=0.01;voice.sTh=0.12;startRun();};
+document.getElementById('btnAgain').onclick=()=>startRun();
+document.getElementById('btnCopy').onclick=()=>{
+  const m=document.getElementById('copyMsg');
+  navigator.clipboard.writeText(shareText()).then(()=>m.textContent='コピーしました',()=>m.textContent=shareText());
+};
+
+// ===== 自動テスト(?selftest=1): 理想的な声で最後まで通れるか =====
+function botInput(){
+  const x=px();
+  voice.hz=0;
+  if(quietAt(x)||quietAt(x+18)){voice.voiced=false;voice.rms=0;return;}
+  let target=null,shout=false;
+  for(const o of course){
+    if(o.t==='wall'&&!o.broken&&x>o.x-400&&x<o.x)shout=true;
+    if(o.t==='tun'&&x+60>=o.x&&x<o.x+o.len){const c=tunnelCenter(o,Math.min(x+30,o.x+o.len-1));if(c!==null){target=c;break;}}
+    if(o.t==='gate'&&o.x+30>x){target=o.p;break;}
+  }
+  voice.voiced=true;voice.rms=shout?voice.sTh*1.5:voice.vTh*2;
+  if(target!==null)voice.p=target;
+  voice.hz=pToHz(voice.p);
+}
+if(qs.has('selftest')){
+  voice.mode='bot';startRun();
+  const dt=1/60;let steps=0;const log=[];let lastDeaths=0;
+  while(state==='play'&&steps<60*600){botInput();update(dt);if(G.deaths>lastDeaths){log.push(G.deadReason+'@'+Math.round(px()));lastDeaths=G.deaths;}steps++;}
+  document.body.setAttribute('data-result',JSON.stringify({won:G.won,deaths:G.deaths,time:+G.time.toFixed(1),goal:GOAL_X,log:log.slice(0,10)}));
+}else if(qs.has('shot')){voice.mode='key';startRun();G.wx=+qs.get('shot');G.ready=0;G.p=+(qs.get('p')||0.5);voice.voiced=true;voice.rms=+(qs.get('rms')||0.05);voice.hz=pToHz(G.p);if(qs.has('wake'))G.wake=1;draw();document.body.dataset.png=cv.toDataURL();}
+else requestAnimationFrame(loop);
+</script>
+</body>
+</html>
