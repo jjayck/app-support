@@ -77,7 +77,7 @@ function buildCourse(){
   const C=[];let x=520;
   const sign=t=>C.push({t:'sign',x,text:t});
   const GAP=1.5;// 隙間の倍率(声だと狙いがぶれるので広め)
-  const gate=(p,h=0.36,adv=420)=>{C.push({t:'gate',x,p,h:Math.min(0.64,h*GAP)});x+=adv;};
+  const gate=(p,h=0.36,adv=540)=>{C.push({t:'gate',x,p,h:Math.min(0.64,h*GAP)});x+=adv;};
   const cp=()=>{C.push({t:'cp',x});x+=260;};
   const quiet=len=>{C.push({t:'quiet',x,len});x+=len+340;};
   const wall=()=>{x+=400;C.push({t:'wall',x,gauge:0,broken:false});x+=360;};
@@ -90,7 +90,7 @@ function buildCourse(){
   cp();
   // 2. ジグザグ
   sign('高い! 低い! 高い! 低い!');x+=220;
-  gate(0.82,0.38,390);gate(0.2,0.38,390);gate(0.86,0.36,390);gate(0.14,0.36,390);gate(0.5,0.32);
+  gate(0.8,0.38,520);gate(0.22,0.38);cp();gate(0.84,0.36,520);gate(0.16,0.36,520);gate(0.5,0.32);
   cp();
   // 3. しーっ
   sign('しーっ… 怪物が寝ている');x+=260;quiet(900);gate(0.5,0.42);
@@ -100,7 +100,7 @@ function buildCourse(){
   cp();
   // 5. うねりトンネル
   sign('うねる声のトンネル「う〜〜ぉ〜〜」');x+=260;
-  tunnel(t=>0.5+0.3*Math.sin(t*Math.PI*2),1600,0.36);
+  tunnel(t=>0.5+0.24*Math.sin(t*Math.PI*2),1800,0.38);
   cp();
   // 6. コンボ
   sign('裏声 → 黙る → 叫ぶ → 低音');x+=260;
@@ -108,8 +108,8 @@ function buildCourse(){
   cp();
   // 7. ラスト
   sign('ラスト!!');x+=260;
-  gate(0.88,0.34,340);gate(0.12,0.34,340);gate(0.88,0.34,360);
-  tunnel(t=>0.85-0.65*t,800,0.34);
+  gate(0.84,0.34,480);gate(0.16,0.34,480);gate(0.84,0.34,480);
+  tunnel(t=>0.8-0.55*t,1000,0.36);
   quiet(1200);wall();wall();x+=60;
   gate(0.5,0.28,400);
   C.push({t:'goal',x});
@@ -119,7 +119,7 @@ let course=buildCourse();
 const GOAL_X=course.find(o=>o.t==='goal').x;
 
 // ===== 声の入力 =====
-const voice={mode:'none',rms:0,hz:0,voiced:false,p:0.5,lo:110,hi:660,noise:0.003,vTh:0.01,sTh:0.12,hist:[]};
+const voice={mode:'none',rms:0,hz:0,voiced:false,p:0.5,lo:110,hi:660,noise:0.003,vTh:0.01,sTh:0.12,hist:[],jump:0,lastHz:0};
 let ac=null,an=null,buf=null;
 async function startMic(){
   const stream=await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:true,noiseSuppression:false,autoGainControl:false}});
@@ -158,8 +158,11 @@ function readMic(){
   voice.rms=voice.rms*0.4+r.rms*0.6;
   let hz=0;
   if(r.hz>60&&r.hz<1300&&r.clar>0.55&&r.rms>voice.vTh){
-    voice.hist.push(r.hz);if(voice.hist.length>3)voice.hist.shift();
-    hz=[...voice.hist].sort((a,b)=>a-b)[voice.hist.length>>1];
+    const prev=voice.hz||voice.lastHz;
+    if(prev&&Math.abs(Math.log2(r.hz/prev))>0.6&&voice.jump<4){voice.jump++;hz=prev;}
+    else{voice.jump=0;voice.hist.push(r.hz);if(voice.hist.length>5)voice.hist.shift();
+      hz=[...voice.hist].sort((a,b)=>a-b)[voice.hist.length>>1];}
+    voice.lastHz=hz;
   }
   voice.hz=hz;
   voice.voiced=voice.rms>voice.vTh;
@@ -215,7 +218,7 @@ function finishCal(){
   voice.vTh=Math.max(voice.noise*2.5,0.006);
   let lo=pct(d.low,0.3)||110,hi=pct(d.high,0.7)||440;
   if(hi/lo<1.6){const g=Math.sqrt(hi*lo);lo=g/1.27;hi=g*1.27;}
-  voice.lo=lo;voice.hi=hi;
+  const span=Math.log(hi/lo);voice.lo=lo*Math.exp(span*0.1);voice.hi=hi/Math.exp(span*0.12);
   const vm=pct(d.vr,0.5)||0.03,sp=pct(d.shout,0.8)||vm*2;
   voice.sTh=Math.max(vm*1.35,Math.min((vm+sp)/2,sp*0.8),voice.vTh*2);
   stats.calLo=lo;stats.calHi=hi;
@@ -267,9 +270,9 @@ function update(dt){
     G.vp=0;G.p+=(voice.p-G.p)*Math.min(1,LERP*dt);
     if(Math.random()<dt*12)G.parts.push({x,y:G.p,vx:-60-Math.random()*60,vy:(Math.random()-.5)*0.2,life:1,ch:voice.rms>voice.sTh?'!':'♪'});
   }else{
-    G.vp-=GRAV*dt;G.p+=G.vp*dt;
+    G.vp=Math.max(-0.4,G.vp-GRAV*dt);G.p+=G.vp*dt;
   }
-  if(G.p<-0.07){die('息切れ… 落ちた');return;}
+  if(G.p<-0.04){G.p=-0.04;G.vp=0;}// 床で止まる(死なない)
   if(G.p>1.1)G.p=1.1;
   // 障害物
   for(const o of course){
@@ -488,25 +491,38 @@ document.getElementById('btnCopy').onclick=()=>{
 };
 
 // ===== 自動テスト(?selftest=1): 理想的な声で最後まで通れるか =====
+// 人間っぽいボット: 反応遅れ・音程のぶれ・息継ぎ。?selftest=1&human=1
+let seed=+(qs.get('seed')||1);const rnd=()=>{seed=(seed*16807)%2147483647;return seed/2147483647;};
+const HUMAN=qs.has('human');const bot={aim:0.5,breath:0,nextBreath:3,drift:0,oct:0,octDir:0};
 function botInput(){
-  const x=px();
+  const x=px(),dt=1/60;
   voice.hz=0;
   if(quietAt(x)||quietAt(x+18)){voice.voiced=false;voice.rms=0;return;}
   let target=null,shout=false;
   for(const o of course){
     if(o.t==='wall'&&!o.broken&&x>o.x-400&&x<o.x)shout=true;
-    if(o.t==='tun'&&x+60>=o.x&&x<o.x+o.len){const c=tunnelCenter(o,Math.min(x+30,o.x+o.len-1));if(c!==null){target=c;break;}}
+    if(o.t==='tun'&&x<o.x+o.len){const c=tunnelCenter(o,Math.max(o.x,Math.min(x+30,o.x+o.len-1)));if(c!==null){target=c;break;}}
     if(o.t==='gate'&&o.x+30>x){target=o.p;break;}
   }
   voice.voiced=true;voice.rms=shout?voice.sTh*1.5:voice.vTh*2;
-  if(target!==null)voice.p=target;
+  if(target===null)target=voice.p;
+  if(!HUMAN){voice.p=target;voice.hz=pToHz(voice.p);return;}
+  // 反応の遅れ(約0.35秒)+ゆっくりしたズレ+細かいぶれ
+  const reach=Math.max(0.15,Math.min(0.85,target));// 声域の端は出しにくい
+  bot.aim+=(reach-bot.aim)*Math.min(1,dt/0.5);
+  bot.drift+=((rnd()-0.5)*1.2-bot.drift*1.5)*dt;
+  voice.p=bot.aim+bot.drift+(rnd()-0.5)*0.2;
+  if(bot.oct>0){bot.oct--;voice.p+=bot.octDir;}else if(rnd()<dt*0.5){bot.oct=4;bot.octDir=rnd()<0.5?0.4:-0.4;}// オクターブ誤検出
+  // 息継ぎ: 3〜5秒ごとに0.4秒黙る
+  if(!G.ready){bot.nextBreath-=dt;if(bot.nextBreath<0){bot.breath=0.4;bot.nextBreath=3+rnd()*2;}}
+  if(bot.breath>0){bot.breath-=dt;voice.voiced=false;voice.rms=0;return;}
   voice.hz=pToHz(voice.p);
 }
 if(qs.has('selftest')){
   voice.mode='bot';startRun();
   const dt=1/60;let steps=0;const log=[];let lastDeaths=0;
   while(state==='play'&&steps<60*600){botInput();update(dt);if(G.deaths>lastDeaths){log.push(G.deadReason+'@'+Math.round(px()));lastDeaths=G.deaths;}steps++;}
-  document.body.setAttribute('data-result',JSON.stringify({won:G.won,deaths:G.deaths,time:+G.time.toFixed(1),goal:GOAL_X,log:log.slice(0,10)}));
+  document.body.setAttribute('data-result',JSON.stringify({won:G.won,deaths:G.deaths,firstDeaths:log.slice(0,6),time:+G.time.toFixed(1),goal:GOAL_X,log:log.slice(0,10)}));
 }else if(qs.has('shot')){voice.mode='key';startRun();G.wx=+qs.get('shot');G.ready=0;G.p=+(qs.get('p')||0.5);voice.voiced=true;voice.rms=+(qs.get('rms')||0.05);voice.hz=pToHz(G.p);if(qs.has('wake'))G.wake=1;draw();document.body.dataset.png=cv.toDataURL();}
 else requestAnimationFrame(loop);
 </script>
