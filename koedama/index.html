@@ -41,9 +41,11 @@ html,body{touch-action:none;-webkit-user-select:none;user-select:none}
     <div class="rules">
       🎤 <b>声の高さ</b>でこえだまが上下する<br>
       🤫 <b>しーっゾーン</b>では物音ひとつ立てるな<br>
-      📣 <b>叫べ壁</b>は大声で壊せ<br>
+      <span id="ruleWall">📣 <b>叫べ壁</b>は大声で壊せ</span><br>
       <span class="small">ヘッドホン推奨(ゲーム音をマイクが拾わないように)</span>
     </div>
+    <div class="row"><button id="btnNight" class="alt">🏠 夜モード: OFF</button></div>
+    <div class="small" id="nightNote">夜モードは叫ばずに遊べます(壁は声を長くのばして壊す)</div>
     <div class="row">
       <button id="btnMic">🎤 マイクで遊ぶ</button>
       <button id="btnKey" class="alt">⌨ タッチ/キーで遊ぶ</button>
@@ -71,6 +73,10 @@ const W=960,H=540,PX=260,TOP=62,BOT=462,PH=BOT-TOP,R=17,RP=R/PH;
 const SPEED=250,GRAV=0.65,LERP=9;
 const cv=document.getElementById('cv'),ctx=cv.getContext('2d');
 const qs=new URLSearchParams(location.search);
+// 夜モード: 叫ばない。叫べ壁は「声をのばす」で壊れる(近所迷惑にならないように)
+let NIGHT=false;
+try{NIGHT=localStorage.getItem('koedama_night')==='1';}catch(e){}
+if(qs.get('night')==='1')NIGHT=true;
 
 // ===== コース =====
 function buildCourse(){
@@ -96,14 +102,14 @@ function buildCourse(){
   sign('しーっ… 怪物が寝ている');x+=260;quiet(900);gate(0.5,0.42);
   cp();
   // 4. 叫べ壁
-  sign('壁は叫んで壊せ');x+=120;wall();x+=80;gate(0.4,0.4);
+  sign(NIGHT?'壁は声をのばして壊せ「あ〜〜〜」':'壁は叫んで壊せ');x+=120;wall();x+=80;gate(0.4,0.4);
   cp();
   // 5. うねりトンネル
   sign('うねる声のトンネル「う〜〜ぉ〜〜」');x+=260;
   tunnel(t=>0.5+0.24*Math.sin(t*Math.PI*2),1800,0.38);
   cp();
   // 6. コンボ
-  sign('裏声 → 黙る → 叫ぶ → 低音');x+=260;
+  sign(NIGHT?'裏声 → 黙る → のばす → 低音':'裏声 → 黙る → 叫ぶ → 低音');x+=260;
   gate(0.86,0.36,360);quiet(700);wall();x+=60;gate(0.14,0.38);
   cp();
   // 7. ラスト
@@ -197,11 +203,12 @@ const CAL=[
   {k:'high',label:'いちばん高い声で「あ〜〜」',hint:'裏声OK',dur:2.6},
   {k:'shout',label:'思いっきり叫べ!!',hint:'',dur:1.6},
 ];
+function calSteps(){return NIGHT?CAL.filter(c=>c.k!=='shout'):CAL;}
 const cal={i:0,t:0,prep:true,data:{noise:[],low:[],high:[],shout:[],vr:[]}};
 function pct(a,q){if(!a.length)return 0;const s=[...a].sort((x,y)=>x-y);return s[Math.min(s.length-1,Math.floor(q*s.length))];}
 function updateCal(dt){
   const r=readMic();cal.t+=dt;
-  const st=CAL[cal.i];
+  const st=calSteps()[cal.i];
   if(cal.prep){if(cal.t>1.1){cal.prep=false;cal.t=0;}return;}
   const d=cal.data;
   if(st.k==='noise')d.noise.push(r.rms);
@@ -209,7 +216,7 @@ function updateCal(dt){
   if(st.k==='shout')d.shout.push(r.rms);
   if(cal.t>=st.dur){
     cal.i++;cal.t=0;cal.prep=true;
-    if(cal.i>=CAL.length)finishCal();
+    if(cal.i>=calSteps().length)finishCal();
   }
 }
 function finishCal(){
@@ -283,7 +290,7 @@ function update(dt){
       if(c!==null&&(G.p+RP*0.6>c+o.h/2||G.p-RP*0.6<c-o.h/2)){die('トンネルに激突!');return;}
     }else if(o.t==='wall'){
       if(!o.broken&&x>o.x-400&&x<o.x){
-        if(voice.rms>voice.sTh){o.gauge+=dt/0.6;G.shake=Math.max(G.shake,3);}
+        if(NIGHT?voice.voiced:voice.rms>voice.sTh){o.gauge+=dt/(NIGHT?1.1:0.6);G.shake=Math.max(G.shake,NIGHT?2:3);}
         if(o.gauge>=1){o.broken=true;G.shake=10;sfx('break');}
       }
       if(!o.broken&&x0<o.x-R&&x>=o.x-R){die('声が足りない!');return;}
@@ -404,7 +411,7 @@ function drawWall(X,gauge){
   for(let r=0;r<12;r++){const y=TOP-40+r*42;for(let c=0;c<2;c++){const bx=X-30+c*30+(r%2?-15:0);ctx.fillRect(bx,y,30,40);ctx.strokeRect(bx,y,30,40);}}
   ctx.fillStyle='#fff';rr(X-50,BOT+R-4,100,14,7);ctx.fill();
   ctx.fillStyle='#ff4f6d';rr(X-50,BOT+R-4,100*Math.min(1,gauge),14,7);ctx.fill();
-  ctx.save();ctx.translate(X,(TOP+BOT)/2);ctx.rotate(-Math.PI/2);ctx.font='40px "Dela Gothic One"';ctx.textAlign='center';ctx.lineWidth=6;ctx.strokeStyle='#2b1d3a';ctx.strokeText('叫 べ !!',0,14);ctx.fillStyle='#fff';ctx.fillText('叫 べ !!',0,14);ctx.restore();
+  ctx.save();ctx.translate(X,(TOP+BOT)/2);ctx.rotate(-Math.PI/2);ctx.font='40px "Dela Gothic One"';ctx.textAlign='center';ctx.lineWidth=6;ctx.strokeStyle='#2b1d3a';const wl=NIGHT?'の ば せ 〜':'叫 べ !!';ctx.strokeText(wl,0,14);ctx.fillStyle='#fff';ctx.fillText(wl,0,14);ctx.restore();
   if(gauge>0.3){ctx.strokeStyle='#2b1d3a';ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(X-10,TOP+60);ctx.lineTo(X+8,TOP+160);ctx.lineTo(X-12,TOP+250);if(gauge>0.65){ctx.lineTo(X+14,TOP+340);ctx.lineTo(X-6,BOT);}ctx.stroke();}
 }
 function drawMonster(x,y,awake){
@@ -450,7 +457,7 @@ function drawHUD(){
 }
 function drawCal(){
   ctx.fillStyle='#fff7ea';ctx.fillRect(0,0,W,H);
-  const st=CAL[Math.min(cal.i,CAL.length-1)];
+  const CS=calSteps(),st=CS[Math.min(cal.i,CS.length-1)];
   ctx.textAlign='center';ctx.fillStyle='#2b1d3a';
   ctx.font='800 20px "M PLUS Rounded 1c"';ctx.fillText('声域測定 '+(cal.i+1)+' / '+CAL.length,W/2,90);
   ctx.font='44px "Dela Gothic One"';ctx.fillStyle=cal.prep?'#2b1d3a66':'#ff4f6d';ctx.fillText(st.label,W/2,H/2-20);
@@ -485,6 +492,12 @@ document.getElementById('btnMic').onclick=async()=>{
 };
 document.getElementById('btnKey').onclick=()=>{voice.mode='key';voice.lo=110;voice.hi=660;voice.vTh=0.01;voice.sTh=0.12;startRun();};
 document.getElementById('btnAgain').onclick=()=>startRun();
+function showNight(){
+  document.getElementById('btnNight').textContent='🏠 夜モード: '+(NIGHT?'ON':'OFF');
+  document.getElementById('ruleWall').innerHTML=NIGHT?'🧱 <b>のばせ壁</b>は声を長くのばして壊せ(叫ばなくてOK)':'📣 <b>叫べ壁</b>は大声で壊せ';
+}
+document.getElementById('btnNight').onclick=()=>{NIGHT=!NIGHT;try{localStorage.setItem('koedama_night',NIGHT?'1':'0');}catch(e){}showNight();};
+showNight();
 document.getElementById('btnCopy').onclick=()=>{
   const m=document.getElementById('copyMsg');
   navigator.clipboard.writeText(shareText()).then(()=>m.textContent='コピーしました',()=>m.textContent=shareText());
