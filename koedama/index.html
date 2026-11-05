@@ -31,6 +31,13 @@ button:focus-visible{outline:4px solid var(--calm);outline-offset:3px}
 @media (max-height:500px){.rules{display:none}h1{font-size:56px}}
 html,body{touch-action:none;-webkit-user-select:none;user-select:none}
 #msg{color:var(--accent);font-weight:800}
+#stages{background:#2b1d3acc}
+.stH{font-family:"Dela Gothic One",sans-serif;color:#fff;font-size:clamp(24px,4vw,36px);margin:0}
+#stGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;max-width:760px;width:92%}
+#stGrid button{display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 6px;font-size:clamp(12px,1.8vw,16px);min-height:72px;justify-content:center}
+#stGrid button .n{font-family:"Dela Gothic One",sans-serif;font-size:clamp(18px,3vw,26px)}
+#stGrid button .b{font-size:11px;opacity:.75;font-weight:500}
+#stGrid button:disabled{background:#8a7d9a;opacity:.6;box-shadow:0 5px 0 #0006;cursor:default}
 </style>
 </head>
 <body>
@@ -50,18 +57,25 @@ html,body{touch-action:none;-webkit-user-select:none;user-select:none}
       <button id="btnMic">🎤 マイクで遊ぶ</button>
       <button id="btnKey" class="alt">⌨ タッチ/キーで遊ぶ</button>
     </div>
-    <div class="small">キーボード: Space=声 / ↑↓=音程 / X=叫ぶ<br>スマホのタッチ: 押してる間=声 / 指の高さ=音程 / 2本指=叫ぶ</div>
+    <div class="small" id="keyHint">キーボード: Space=声 / ↑↓=音程 / X=叫ぶ<br>スマホのタッチ: 押してる間=声 / 指の高さ=音程 / 2本指=叫ぶ</div>
     <div class="small" id="rotate">📱 スマホは横向きで</div>
     <div id="msg"></div>
   </div>
+  <div class="ui" id="stages" hidden>
+    <h2 class="stH">ステージをえらぶ</h2>
+    <div id="stGrid"></div>
+    <div class="row"><button id="btnHome" class="alt">タイトルへ</button></div>
+  </div>
   <div class="ui" id="result" hidden>
     <div class="card">
-      <h2>ゴール!</h2>
+      <h2 id="resTitle">ゴール!</h2>
       <table id="resTable"></table>
     </div>
     <div class="row">
       <button id="btnCopy">結果をコピー</button>
+      <button id="btnNext">次のステージ ▶</button>
       <button id="btnAgain" class="alt">もう一回</button>
+      <button id="btnSel" class="alt">ステージ選択</button>
     </div>
     <div class="small" id="copyMsg"></div>
   </div>
@@ -79,6 +93,13 @@ try{NIGHT=localStorage.getItem('koedama_night')==='1';}catch(e){}
 if(qs.get('night')==='1')NIGHT=true;
 
 // ===== コース =====
+// ===== ステージ =====
+const STAGES=['はじめての声','ジグザグ','しーっの森','叫べ壁','高低ジャンプ','うねりトンネル','ジェットコースター','ぜんぶのせ'];
+let STAGE=Math.max(1,Math.min(STAGES.length,+(qs.get('stage')||1)));
+const stageName=n=>(n===4&&NIGHT)?'のばせ壁':STAGES[n-1];
+let prog={clear:0,best:{}};
+try{const v=JSON.parse(localStorage.getItem('koedama_prog')||'null');if(v&&typeof v.clear==='number')prog={clear:v.clear,best:v.best||{}};}catch(e){}
+function saveProg(){try{localStorage.setItem('koedama_prog',JSON.stringify(prog));}catch(e){}}
 function buildCourse(){
   const C=[];let x=520;
   const sign=t=>C.push({t:'sign',x,text:t});
@@ -88,6 +109,65 @@ function buildCourse(){
   const quiet=len=>{C.push({t:'quiet',x,len});x+=len+340;};
   const wall=()=>{x+=400;C.push({t:'wall',x,gauge:0,broken:false});x+=360;};
   const tunnel=(fn,len,h)=>{const n=Math.round(len/40),pts=[];for(let i=0;i<=n;i++)pts.push(fn(i/n));C.push({t:'tun',x,pts,h:Math.min(0.56,h*1.45),step:40,len:n*40});x+=n*40+320;};
+  const WALLSIGN=NIGHT?'壁は声をのばして壊せ「あ〜〜〜」':'壁は叫んで壊せ';
+  const goal=()=>{C.push({t:'goal',x});return C;};
+  if(STAGE===1){
+    sign('声を出すと浮く! 黙ると落ちる');x+=320;
+    gate(0.5,0.5);gate(0.55,0.48);cp();
+    sign('高い声で上へ');x+=160;gate(0.75,0.46);gate(0.8,0.44);cp();
+    sign('低い声で下へ');x+=160;gate(0.25,0.46);gate(0.2,0.44);cp();
+    sign('真ん中に戻れ');x+=160;gate(0.5,0.42);gate(0.7,0.42);gate(0.3,0.42);
+    return goal();
+  }
+  if(STAGE===2){
+    sign('高い! 低い! 高い! 低い!');x+=220;
+    gate(0.78,0.42,520);gate(0.22,0.42);cp();
+    gate(0.8,0.38,500);gate(0.2,0.38,500);gate(0.8,0.38,500);gate(0.2,0.38);cp();
+    sign('だんだん速く');x+=200;
+    gate(0.7,0.38,420);gate(0.3,0.38,420);gate(0.7,0.38,420);gate(0.3,0.38,420);gate(0.5,0.34);
+    return goal();
+  }
+  if(STAGE===3){
+    sign('しーっ… 怪物が寝ている');x+=260;quiet(700);gate(0.5,0.44);cp();
+    sign('黙ると落ちる。底につく前に声を');x+=240;quiet(500);gate(0.3,0.42);quiet(600);gate(0.7,0.42);cp();
+    sign('長いしーっ');x+=200;gate(0.85,0.4);quiet(1100);gate(0.4,0.42);cp();
+    quiet(450);gate(0.6,0.4,400);quiet(450);gate(0.3,0.4);
+    return goal();
+  }
+  if(STAGE===4){
+    sign(WALLSIGN);x+=120;wall();x+=80;gate(0.5,0.42);cp();
+    sign('壁のあとはすぐ穴');x+=160;wall();x+=40;gate(0.75,0.4);gate(0.25,0.4);cp();
+    sign('2枚つづき');x+=160;wall();wall();x+=60;gate(0.5,0.38);cp();
+    gate(0.8,0.38,360);wall();x+=40;gate(0.2,0.38);
+    return goal();
+  }
+  if(STAGE===6){
+    sign('うねる声のトンネル「う〜〜ぉ〜〜」');x+=260;
+    tunnel(t=>0.5+0.18*Math.sin(t*Math.PI*2),1400,0.5);cp();
+    sign('上り坂');x+=200;tunnel(t=>0.25+0.5*t,1000,0.46);cp();
+    sign('下り坂');x+=200;tunnel(t=>0.75-0.5*t,1000,0.46);cp();
+    sign('波を2回');x+=200;tunnel(t=>0.5+0.18*Math.sin(t*Math.PI*4),2400,0.48);
+    return goal();
+  }
+  if(STAGE===5){
+    sign('裏声と低音を行ったり来たり');x+=260;
+    gate(0.86,0.38,460);gate(0.14,0.38,460);gate(0.86,0.38,460);gate(0.14,0.38);cp();
+    sign('せまくなる');x+=200;
+    gate(0.84,0.32,480);gate(0.16,0.32,480);gate(0.5,0.3,420);gate(0.84,0.32,480);gate(0.16,0.32);cp();
+    sign('上・真ん中・下');x+=200;
+    gate(0.85,0.32,380);gate(0.5,0.3,380);gate(0.15,0.32,380);gate(0.5,0.3,380);gate(0.85,0.32);
+    return goal();
+  }
+  if(STAGE===7){
+    sign('ジェットコースター');x+=260;
+    tunnel(t=>0.3+0.45*Math.abs(Math.sin(t*Math.PI*1.5)),1800,0.44);cp();
+    sign('降りたら、しーっ');x+=200;tunnel(t=>0.75-0.45*t,700,0.44);quiet(600);gate(0.5,0.42);cp();
+    sign(NIGHT?'のばして壊して、また歌え':'叫んで壊して、また歌え');x+=200;wall();x+=40;
+    tunnel(t=>0.5+0.22*Math.sin(t*Math.PI*3),1500,0.42);cp();
+    gate(0.84,0.34,440);quiet(500);gate(0.2,0.36);
+    return goal();
+  }
+  // 8. ぜんぶのせ(最初の版のコース)
   // 1. チュートリアル
   sign('声を出すと浮く! 黙ると落ちる');x+=320;
   gate(0.5,0.46);gate(0.58,0.44);
@@ -102,7 +182,7 @@ function buildCourse(){
   sign('しーっ… 怪物が寝ている');x+=260;quiet(900);gate(0.5,0.42);
   cp();
   // 4. 叫べ壁
-  sign(NIGHT?'壁は声をのばして壊せ「あ〜〜〜」':'壁は叫んで壊せ');x+=120;wall();x+=80;gate(0.4,0.4);
+  sign(WALLSIGN);x+=120;wall();x+=80;gate(0.4,0.4);
   cp();
   // 5. うねりトンネル
   sign('うねる声のトンネル「う〜〜ぉ〜〜」');x+=260;
@@ -122,7 +202,7 @@ function buildCourse(){
   return C;
 }
 let course=buildCourse();
-const GOAL_X=course.find(o=>o.t==='goal').x;
+let GOAL_X=course.find(o=>o.t==='goal').x;
 
 // ===== 声の入力 =====
 const voice={mode:'none',rms:0,hz:0,voiced:false,p:0.5,lo:110,hi:660,noise:0.003,vTh:0.01,sTh:0.12,hist:[],jump:0,lastHz:0};
@@ -229,7 +309,7 @@ function finishCal(){
   const vm=pct(d.vr,0.5)||0.03,sp=pct(d.shout,0.8)||vm*2;
   voice.sTh=Math.max(vm*1.35,Math.min((vm+sp)/2,sp*0.8),voice.vTh*2);
   stats.calLo=lo;stats.calHi=hi;
-  startRun();
+  showStages();
 }
 
 // ===== ゲーム状態 =====
@@ -237,7 +317,8 @@ let state='title';
 const G={wx:0,p:0.5,vp:0,dead:0,deadReason:'',cpX:0,deaths:0,time:0,ready:0,quietLoud:0,shake:0,wake:0,parts:[],won:false};
 const stats={maxHz:0,minHz:0,maxRms:0,calLo:0,calHi:0};
 function startRun(){
-  course=buildCourse();
+  course=buildCourse();GOAL_X=course.find(o=>o.t==='goal').x;
+  document.getElementById('stages').hidden=true;
   Object.assign(G,{wx:0,p:0.5,vp:0,dead:0,cpX:0,deaths:0,time:0,ready:1.2,quietLoud:0,shake:0,wake:0,parts:[],won:false});
   Object.assign(stats,{maxHz:0,minHz:0,maxRms:0});
   state='play';
@@ -304,9 +385,15 @@ function update(dt){
 function win(){
   state='result';G.won=true;sfx('goal');
   if(qs.has('selftest'))return;
+  const prev=prog.best[STAGE],isBest=!prev||G.time<prev;
+  if(isBest)prog.best[STAGE]=+G.time.toFixed(1);
+  prog.clear=Math.max(prog.clear,STAGE);saveProg();
+  document.getElementById('resTitle').textContent=(STAGE===STAGES.length?'全クリア!':'ステージ'+STAGE+' クリア!');
+  document.getElementById('btnNext').hidden=STAGE>=STAGES.length;
   const t=document.getElementById('resTable');
   const rows=[
-    ['タイム',fmtTime(G.time)],
+    ['ステージ',STAGE+'. '+stageName(STAGE)],
+    ['タイム',fmtTime(G.time)+(isBest?' ★ベスト':'')],
     ['死亡回数',G.deaths+' 回'],
     ['最高音',stats.maxHz?noteName(stats.maxHz)+'('+Math.round(stats.maxHz)+'Hz)':'-'],
     ['最低音',stats.minHz?noteName(stats.minHz)+'('+Math.round(stats.minHz)+'Hz)':'-'],
@@ -318,7 +405,7 @@ function win(){
 }
 function fmtTime(s){const m=Math.floor(s/60),r=(s%60).toFixed(1).padStart(4,'0');return m+':'+r;}
 function shareText(){
-  return `こえだま クリア!\nタイム ${fmtTime(G.time)} / 死亡 ${G.deaths}回\n声域 ${noteName(stats.minHz)}〜${noteName(stats.maxHz)}\n#こえだま`;
+  return `こえだま ステージ${STAGE}「${stageName(STAGE)}」クリア!\nタイム ${fmtTime(G.time)} / 死亡 ${G.deaths}回\n声域 ${noteName(stats.minHz)}〜${noteName(stats.maxHz)}\n#こえだま`;
 }
 
 // ===== 効果音(短く、マイクに拾われにくい) =====
@@ -490,7 +577,24 @@ document.getElementById('btnMic').onclick=async()=>{
   try{await startMic();state='calib';Object.assign(cal,{i:0,t:0,prep:true,data:{noise:[],low:[],high:[],shout:[],vr:[]}});document.getElementById('title').hidden=true;}
   catch(e){document.getElementById('msg').textContent='マイクが使えませんでした。ブラウザのマイク許可を確認してください。';}
 };
-document.getElementById('btnKey').onclick=()=>{voice.mode='key';voice.lo=110;voice.hi=660;voice.vTh=0.01;voice.sTh=0.12;startRun();};
+document.getElementById('btnKey').onclick=()=>{voice.mode='key';voice.lo=110;voice.hi=660;voice.vTh=0.01;voice.sTh=0.12;showStages();};
+function showStages(){
+  state='select';
+  for(const id of ['title','result'])document.getElementById(id).hidden=true;
+  const g=document.getElementById('stGrid');g.innerHTML='';
+  STAGES.forEach((_,i)=>{
+    const n=i+1,b=document.createElement('button');
+    const open=n<=prog.clear+1;b.disabled=!open;b.className=n===STAGE?'':'alt';
+    const a=document.createElement('span');a.className='n';a.textContent=open?n:'🔒';
+    const t=document.createElement('span');t.textContent=stageName(n);
+    const c=document.createElement('span');c.className='b';c.textContent=prog.best[n]?'ベスト '+fmtTime(prog.best[n]):(open?'未クリア':'');
+    b.append(a,t,c);b.onclick=()=>{STAGE=n;startRun();};g.append(b);
+  });
+  document.getElementById('stages').hidden=false;
+}
+document.getElementById('btnNext').onclick=()=>{STAGE=Math.min(STAGES.length,STAGE+1);startRun();};
+document.getElementById('btnSel').onclick=()=>showStages();
+document.getElementById('btnHome').onclick=()=>{state='title';document.getElementById('stages').hidden=true;document.getElementById('title').hidden=false;};
 document.getElementById('btnAgain').onclick=()=>startRun();
 function showNight(){
   document.getElementById('btnNight').textContent='🏠 夜モード: '+(NIGHT?'ON':'OFF');
@@ -498,6 +602,11 @@ function showNight(){
 }
 document.getElementById('btnNight').onclick=()=>{NIGHT=!NIGHT;try{localStorage.setItem('koedama_night',NIGHT?'1':'0');}catch(e){}showNight();};
 showNight();
+if(window.KOEDAMA_APP){// iPhoneアプリ: キーボードの説明は出さない
+  document.getElementById('keyHint').textContent='タッチ: 押してる間=声 / 指の高さ=音程 / 2本指=叫ぶ';
+  document.getElementById('btnKey').textContent='👆 タッチで遊ぶ';
+  document.getElementById('rotate').hidden=true;
+}
 document.getElementById('btnCopy').onclick=()=>{
   const m=document.getElementById('copyMsg');
   navigator.clipboard.writeText(shareText()).then(()=>m.textContent='コピーしました',()=>m.textContent=shareText());
@@ -537,7 +646,7 @@ if(qs.has('selftest')){
   while(state==='play'&&steps<60*600){botInput();update(dt);if(G.deaths>lastDeaths){log.push(G.deadReason+'@'+Math.round(px()));lastDeaths=G.deaths;}steps++;}
   document.body.setAttribute('data-result',JSON.stringify({won:G.won,deaths:G.deaths,firstDeaths:log.slice(0,6),time:+G.time.toFixed(1),goal:GOAL_X,log:log.slice(0,10)}));
 }else if(qs.has('shot')){voice.mode='key';startRun();G.wx=+qs.get('shot');G.ready=0;G.p=+(qs.get('p')||0.5);voice.voiced=true;voice.rms=+(qs.get('rms')||0.05);voice.hz=pToHz(G.p);if(qs.has('wake'))G.wake=1;draw();document.body.dataset.png=cv.toDataURL();}
-else requestAnimationFrame(loop);
+else{requestAnimationFrame(loop);if(qs.has('select')){voice.mode='key';showStages();}}// select=撮影用
 </script>
 </body>
 </html>
