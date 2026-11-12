@@ -5,12 +5,16 @@ const SUBJECTS = {1:'エネルギー総合管理及び法規',2:'熱と流体の
 const ROMAN = ['', 'Ⅰ', 'Ⅱ', 'Ⅲ', 'Ⅳ'];
 const KANA = ['ア','イ','ウ','エ','オ','カ'];
 const BUY_URL = window.ENEKAN_BUY_URL || 'https://coconala.com/users/2355868';
-const PRICE = window.ENEKAN_PRICE || '1,480';
+const PRICE = window.ENEKAN_PRICE || '1,500';
 const $ = (s, el=document) => el.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const base = id => id.replace(/-\d+$/, '');
 
-const D = {q:[], byId:{}, guides:{}, intros:{}, pintros:{}, past:[], notes:{}, keys:[]};
+const D = {q:[], byId:{}, guides:{}, intros:{}, pintros:{}, past:[], notes:{}, keys:[], seo:{}};
+const IS_IOS = /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+const APP_STORE = 'https://apps.apple.com/jp/app/id6826752834';
+// 静的な解説ページ(kamoku/ bunya/ ronten/)へのリンク。data/seo.json がなければ出さない
+const seoUrl = (kind, key) => ((D.seo || {})[kind] || {})[key] || '';
 const REC_KEY = 'enekan_rec', PRO_KEY = 'enekan_pro';
 let rec = {}; try { rec = JSON.parse(localStorage.getItem(REC_KEY) || '{}'); } catch (e) { rec = {}; }
 function saveRec() { try { localStorage.setItem(REC_KEY, JSON.stringify(rec)); } catch (e) {} }
@@ -24,6 +28,7 @@ async function load() {
     ['questions','calc_guides','intros','point_intros','past','blank_notes','keys'].map(get));
   D.q = q; q.forEach(x => D.byId[x.id] = x);
   Object.assign(D, {guides, intros, pintros, past, notes, keys});
+  try { D.seo = await (await fetch('data/seo.json', {cache:'no-cache'})).json(); } catch (e) { D.seo = {}; }
 }
 const ofSubject = s => D.q.filter(x => x.subject === s);
 function topics(s) { const seen = []; ofSubject(s).forEach(x => { if (!seen.includes(x.topic)) seen.push(x.topic); }); return seen; }
@@ -140,6 +145,7 @@ function viewHome() {
   app.innerHTML = `
     <h1>エネルギー管理士(熱分野)<br>論点別 練習問題 ${D.q.length}問</h1>
     <p class="lead">本番と同じマーク形式(数値は桁ごと・語句は解答群)。計算 ${Object.keys(D.guides).length} 型すべてに「やさしい解き方」つき。ログイン不要、記録はこのブラウザの中だけ。</p>
+    ${IS_IOS && !isPro() ? `<div class="card" style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:12px"><div style="flex:1;min-width:200px"><b>iPhone アプリ版があります</b><span class="note">(App Store・無料ダウンロード)。全 ${D.q.length} 問の解禁はアプリ内の買い切りで、その場で購入できます。</span></div><a class="btn heat sm" href="${APP_STORE}" rel="noopener">App Store で見る</a></div>` : ''}
     ${isPro() ? '' : `<div class="card" style="display:flex;gap:12px;align-items:center;flex-wrap:wrap"><div style="flex:1;min-width:200px"><b>無料で ${D.q.filter(x=>x.free).length} 問</b> を解けます。<span class="note">全 ${D.q.length} 問・弱点演習・ミニ模試は「全部解禁」(買い切り ¥${PRICE})で。</span></div><a class="btn gold sm" href="#/pro">全部解禁について</a></div>`}
     <div class="grid two" style="margin-top:12px">${cards}</div>
     <h2>出題傾向(過去問 R3〜R7)</h2>
@@ -152,13 +158,14 @@ function viewHome() {
   $('#reset').onclick = () => { if (confirm('このブラウザの学習記録をすべて消します。よろしいですか?')) { rec = {}; saveRec(); route(); } };
 }
 function seoBlock() {
-  const li = [1,2,3,4].map(s => `<h3>課目${ROMAN[s]} ${esc(SUBJECTS[s])}</h3><ul>${topics(s).map(t => `<li><a href="#/t/${s}/${encodeURIComponent(t)}">${esc(t)}</a>(${ofSubject(s).filter(x=>x.topic===t).length}問)</li>`).join('')}</ul>`).join('');
-  return `<section class="seo"><h2>収録している論点</h2>${li}
+  const sub = s => seoUrl('subjects', String(s));
+  const li = [1,2,3,4].map(s => `<h3>${sub(s) ? `<a href="${sub(s)}">課目${ROMAN[s]} ${esc(SUBJECTS[s])}</a>` : `課目${ROMAN[s]} ${esc(SUBJECTS[s])}`}</h3><ul>${topics(s).map(t => `<li><a href="${seoUrl('topics', t) || `#/t/${s}/${encodeURIComponent(t)}`}">${esc(t)}</a>(${ofSubject(s).filter(x=>x.topic===t).length}問)</li>`).join('')}</ul>`).join('');
+  return `<section class="seo"><h2>収録している論点(要点と練習問題のページ)</h2>${li}
   <h2>このサイトについて</h2>
   <p class="note">エネルギー管理士試験(熱分野)の課目Ⅰ〜Ⅳを、令和3〜7年度の過去問の論点から作ったオリジナル問題で練習できます。問題文は過去問をそのまま載せていません。試験の実施機関(一般財団法人省エネルギーセンター)とは関係のない個人制作で、合格を保証するものではありません。法令・試験の内容は最新の公式情報もあわせて確認してください。<a href="#/about">くわしく</a></p></section>`;
 }
 function footer() {
-  return `<div class="foot">エネ管 熱 合格ナビ Web版 ・ <a href="#/about">このサイトについて</a> ・ <a href="../privacy.html">プライバシーポリシー</a> ・ <a href="../support.html">お問い合わせ</a></div>`;
+  return `<div class="foot">エネ管 熱 合格ナビ Web版 ・ ${seoUrl('subjects', '1') ? `<a href="${seoUrl('subjects', '1')}">論点別の要点ページ</a> ・ ` : ''}<a href="${APP_STORE}" rel="noopener">iPhone 版(App Store)</a> ・ <a href="#/about">このサイトについて</a> ・ <a href="../privacy.html">プライバシーポリシー</a> ・ <a href="../support.html">お問い合わせ</a></div>`;
 }
 
 function viewSubject(s) {
@@ -205,7 +212,8 @@ function viewTopic(s, t) {
     ${intro ? `<div class="card intro"><div class="one">${esc(intro.one)}</div><div class="image">たとえると: ${esc(intro.image)}</div>
       <ol>${(intro.flow||[]).map(f => `<li>${esc(f)}</li>`).join('')}</ol><div class="exam">試験のねらい目: ${esc(intro.exam)}</div></div>` : ''}
     <div class="actions" style="margin:12px 0"><a class="btn heat sm" href="#/p/t/${s}/${encodeURIComponent(t)}">この分野を順番に解く(${qs.length}問)</a>
-      <a class="btn ghost sm" href="#/textbook/${s}/${encodeURIComponent(t)}">教科書(例題と解き方)</a></div>
+      <a class="btn ghost sm" href="#/textbook/${s}/${encodeURIComponent(t)}">教科書(例題と解き方)</a>
+      ${seoUrl('topics', t) ? `<a class="btn ghost sm" href="${seoUrl('topics', t)}">要点のページ</a>` : ''}</div>
     <h2>論点</h2>
     <div class="list">${pts}</div>
     ${footer()}`;
@@ -225,7 +233,7 @@ function viewTextbook(s, t) {
       body += g ? guideHTML(g, explanationLines(rep)) : `<div class="exp">${explanationLines(rep).map(lineHTML).join('')}</div>`;
     } else body += `<div class="note" style="margin-top:8px">🔒 この論点の例題は「全部解禁」で読めます。</div>`;
     return `<div class="card"><h3 style="margin-top:0">${pq.some(isCalc) ? '<span class="chip calc">計算</span>' : ''}${esc(p)}</h3>${body}
-      <div class="actions"><a class="btn sm" href="#/p/pt/${s}/${encodeURIComponent(t)}/${encodeURIComponent(p)}">この論点を解く(${pq.length}問)</a></div></div>`;
+      <div class="actions"><a class="btn sm" href="#/p/pt/${s}/${encodeURIComponent(t)}/${encodeURIComponent(p)}">この論点を解く(${pq.length}問)</a>${seoUrl('points', p) ? `<a class="btn ghost sm" href="${seoUrl('points', p)}">この論点のページ</a>` : ''}</div></div>`;
   }).join('');
   app.innerHTML = `<div class="crumb"><a href="#/">ホーム</a><a href="#/s/${s}">課目${ROMAN[s]}</a><a href="#/t/${s}/${encodeURIComponent(t)}">${esc(t)}</a>教科書</div>
     <h1>${esc(t)} の教科書</h1><p class="lead">論点ごとに代表の例題を、正解を入れた形で読めます。計算の論点は「やさしい解き方」つき。</p>${secs}${footer()}`;
@@ -375,7 +383,7 @@ function explainHTML(q) {
     ${tabs}
     <div id="tab-g" ${g?'':'hidden'}>${g ? guideHTML(g, lines) : ''}</div>
     <div id="tab-e" ${g?'hidden':''}><div class="exp">${lines.map(lineHTML).join('')}</div></div>
-    <div class="actions"><a class="btn ghost sm" href="#/textbook/${q.subject}/${encodeURIComponent(q.topic)}">${esc(q.topic)} の教科書を開く</a></div>
+    <div class="actions"><a class="btn ghost sm" href="#/textbook/${q.subject}/${encodeURIComponent(q.topic)}">${esc(q.topic)} の教科書を開く</a>${seoUrl('points', q.point) ? `<a class="btn ghost sm" href="${seoUrl('points', q.point)}">この論点の要点ページ</a>` : ''}</div>
   </div>`;
   setTimeout(() => { app.querySelectorAll('.tabs button').forEach(b => b.onclick = () => { app.querySelectorAll('.tabs button').forEach(x => x.classList.toggle('on', x === b)); $('#tab-g').hidden = b.dataset.t !== 'g'; $('#tab-e').hidden = b.dataset.t !== 'e'; }); }, 0);
   return html;
@@ -433,15 +441,18 @@ function viewPro(from) {
   app.innerHTML = `<div class="crumb"><a href="#/">ホーム</a>全部解禁</div>
     <h1>全部解禁(買い切り)</h1>
     ${from ? `<p class="lead">「${esc(from)}」は全部解禁の機能です。</p>` : ''}
+    ${IS_IOS && !pro ? `<div class="card" style="margin-bottom:12px"><b>iPhone・iPad の方は App Store のアプリ版がかんたんです</b>
+      <p class="note">アプリは無料でダウンロードでき、全 ${D.q.length} 問の解禁はアプリ内の買い切りでその場で購入できます(キーの受け渡しは不要)。Web 版のキーとアプリ内購入は別々です。</p>
+      <a class="btn heat block" href="${APP_STORE}" rel="noopener">App Store で iPhone 版を見る</a></div>` : ''}
     <div class="card">
       ${pro ? `<div class="msg ok">✓ このブラウザでは全部解禁が有効です</div><p class="note">別の端末で使うときは、同じキーをその端末で入力してください。</p>` :
       `<div class="row" style="align-items:baseline;gap:12px"><span class="price">¥${PRICE}<small> 税込・1回だけ</small></span><span class="note">月額なし</span></div>
       <div class="feat">
-        <div><b>全 ${D.q.length} 問</b>無料95問 → 課目Ⅰ〜Ⅳ すべての論点</div>
+        <div><b>全 ${D.q.length} 問</b>無料${D.q.filter(x => x.free).length}問 → 課目Ⅰ〜Ⅳ すべての論点</div>
         <div><b>やさしい解き方 ${Object.keys(D.guides).length} 型</b>計算問題の全部に 1行ずつの説明</div>
         <div><b>弱点演習</b>まちがえた問題だけをくり返す</div>
         <div><b>ミニ模試</b>課目ごと 20 問ランダム・合格ラインとの差</div>
-        <div><b>教科書の例題</b>207 論点すべての例題と解き方</div>
+        <div><b>教科書の例題</b>${new Set(D.q.map(x => x.point)).size} 論点すべての例題と解き方</div>
         <div><b>端末を選ばない</b>スマホ・PC どちらでも同じキーで</div>
       </div>
       <h3>買い方</h3>
@@ -459,8 +470,8 @@ function viewPro(from) {
     </div>
     <h2>よくある質問</h2>
     <div class="card note">
-      <p><b>iPhone アプリ版はありますか?</b><br>準備中です。Web 版はスマホのブラウザでそのまま使え、ホーム画面に追加するとアプリのように開けます。</p>
-      <p><b>返金は?</b><br>キーをお渡しした後の返金はできません。無料 95 問で使い心地を確かめてからご購入ください。</p>
+      <p><b>iPhone アプリ版はありますか?</b><br>あります。<a href="${APP_STORE}" rel="noopener">App Store で配信中</a>です(iPhone 用。iPad でも使えます)。アプリは無料でダウンロードでき、全部解禁はアプリ内の買い切りです。Web 版のキーとアプリ内購入は別々なので、iPhone で使うならアプリ版がおすすめです。Android・PC の方は Web 版をブラウザでそのまま使え、ホーム画面に追加するとアプリのように開けます。</p>
+      <p><b>返金は?</b><br>キーをお渡しした後の返金はできません。無料 ${D.q.filter(x => x.free).length} 問で使い心地を確かめてからご購入ください。</p>
       <p><b>内容の更新は?</b><br>問題や解き方の追加・修正は同じキーのまま使えます。</p>
     </div>${footer()}`;
   $('#act').onclick = async () => { const r = await activate($('#key').value); const m = $('#kmsg'); m.className = 'msg ' + (r.ok ? 'ok' : 'ng'); m.textContent = r.ok ? '✓ 全部解禁が有効になりました' : r.msg; if (r.ok) setTimeout(() => route(), 800); };
@@ -481,7 +492,7 @@ function viewAbout() {
 // ---------- calculator (本番と同じ普通の電卓) ----------
 function setupCalc() {
   const fab = document.createElement('button'); fab.className = 'calcfab'; fab.title = '電卓'; fab.textContent = '🧮';
-  const box = document.createElement('div'); box.className = 'calc';
+  const box = document.createElement('div'); box.className = 'calcbox';
   box.innerHTML = `<div class="disp" id="cd">0</div><div class="keys">
     ${['MC','MR','M+','C','7','8','9','÷','4','5','6','×','1','2','3','−','0','.','√','+','%','←','=',''].map(k => k ? `<button class="${'÷×−+'.includes(k)?'op':k==='='?'eq':''}" data-k="${k}">${k}</button>` : '<span></span>').join('')}
   </div><div class="note">本番は関数電卓不可。四則・√・%・メモリだけ</div>`;

@@ -157,11 +157,50 @@ table.qt td:first-child,table.qt th:first-child{text-align:left}
 .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 16px;border-radius:99px;font-weight:700;font-size:14px;box-shadow:var(--shadow);opacity:0;transition:opacity .2s;pointer-events:none;z-index:20}
 .toast.show{opacity:1}
 .calcfab{position:fixed;right:16px;bottom:18px;width:52px;height:52px;border-radius:50%;background:var(--ink);color:#fff;border:0;font-size:22px;box-shadow:var(--shadow);cursor:pointer;z-index:15}
-.calc{position:fixed;right:16px;bottom:80px;width:250px;background:var(--sheet);border:1px solid var(--line);border-radius:16px;box-shadow:0 12px 40px rgba(31,41,69,.25);padding:12px;z-index:16;display:none}
-.calc.open{display:block}
-.calc .disp{font-family:ui-monospace,Menlo,monospace;font-size:24px;text-align:right;background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 10px;overflow:hidden;white-space:nowrap}
-.calc .keys{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:8px}
-.calc .keys button{border:1px solid var(--line);background:#fff;border-radius:8px;padding:10px 0;font-weight:700;cursor:pointer;font-size:15px}
-.calc .keys button.op{background:rgba(31,41,69,.06)}
-.calc .keys button.eq{background:var(--heat);color:#fff;border-color:var(--heat)}
-.calc .note{font-size:10px;margin-top:6px}
+.calcbox{position:fixed;right:16px;bottom:80px;width:250px;background:var(--sheet);border:1px solid var(--line);border-radius:16px;box-shadow:0 12px 40px rgba(31,41,69,.25);padding:12px;z-index:16;display:none}
+.calcbox.open{display:block}
+.calcbox .disp{font-family:ui-monospace,Menlo,monospace;font-size:24px;text-align:right;background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 10px;overflow:hidden;white-space:nowrap}
+.calcbox .keys{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:8px}
+.calcbox .keys button{border:1px solid var(--line);background:#fff;border-radius:8px;padding:10px 0;font-weight:700;cursor:pointer;font-size:15px}
+.calcbox .keys button.op{background:rgba(31,41,69,.06)}
+.calcbox .keys button.eq{background:var(--heat);color:#fff;border-color:var(--heat)}
+.calcbox .note{font-size:10px;margin-top:6px}
+/* ---------- 静的な解説ページ(kamoku/ bunya/ ronten/) ---------- */
+body.static h1 small{display:block;font-size:13px;color:var(--sub);font-weight:700;margin-top:4px}
+body.static .crumb{display:flex;flex-wrap:wrap;gap:0 2px}
+body.static .crumb span{color:var(--ink)}
+body.static h2.h-in{margin:0 0 6px;font-size:16px}
+body.static h2 a,body.static h3 a{color:inherit}
+body.static h4{font-size:14px;margin:14px 0 6px;font-weight:900}
+body.static .card p{margin:6px 0}
+body.static .stem{font-size:16px;line-height:1.85;overflow-wrap:anywhere}
+body.static sup,body.static sub{font-size:.72em;line-height:0}
+body.static .formula,body.static .exp .line span:last-child,body.static .guide li,body.static .why{overflow-wrap:anywhere}
+.sblank{margin-top:10px;background:var(--sheet);border:1px solid var(--line);border-radius:12px;padding:10px 14px}
+.sblank .lab{display:flex;align-items:center;gap:8px;font-weight:900;font-size:14px;flex-wrap:wrap}
+.sblank .lab .l,.anslist .l{display:inline-flex;width:24px;height:24px;border-radius:7px;background:var(--heat);color:#fff;align-items:center;justify-content:center;font-size:12px;flex:none}
+.sblank .lab .u{color:var(--sub);font-weight:700}
+.sopts{list-style:none;padding:0;margin:8px 0 0;display:grid;gap:6px;grid-template-columns:1fr}
+@media(min-width:560px){.sopts{grid-template-columns:1fr 1fr}}
+.sopts li{display:flex;gap:8px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:9px;padding:6px 10px;font-size:15px}
+.sopts .k{width:22px;height:22px;border-radius:50%;border:1.5px solid var(--line);display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:900;flex:none}
+details.answer{margin-top:14px;background:var(--sheet);border:1px solid var(--line);border-radius:var(--radius);padding:4px 16px;box-shadow:var(--shadow)}
+details.answer>summary{cursor:pointer;font-weight:900;color:var(--heat);padding:10px 0;list-style-position:inside}
+details.answer[open]>summary{border-bottom:1px solid var(--line);margin-bottom:8px}
+.anslist{list-style:none;padding:0;margin:6px 0;display:flex;flex-direction:column;gap:6px}
+.anslist li{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.anslist b{color:var(--ok);font-size:16px}
+.past-ref{font-size:14px;padding-left:20px}
+.cta{margin-top:22px;border:1.5px solid var(--heat)}
+.cta .cta-h{font-weight:900;font-size:16px}
+.only-ios{display:none}
+html.is-ios .only-ios{display:block}
+html.is-ios .only-web{display:none}
+body.static .pt h3{margin:0 0 4px}
+body.static .tp details summary{cursor:pointer;font-size:13px;font-weight:700;color:var(--sub)}
+.plist{font-size:14px;padding-left:20px;margin:6px 0}
+.snav{margin-top:28px}
+body.static .item .t .s{white-space:normal}
+header.top .brand,header.top nav{white-space:nowrap}
+@media(max-width:420px){header.top .brand{font-size:15px}header.top nav a{margin-left:9px;font-size:12px}header.top nav a.nav-pages{display:none}}
+.grid>.card+.card{margin-top:0}

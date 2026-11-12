@@ -1,0 +1,974 @@
+{
+"": {
+"h": "c11946a981beed0a6c28608851757af796fb2e5a3baf16a8407376536140ef1c",
+"d": "2026-11-13"
+},
+"kamoku/1/": {
+"h": "81ce73349f3c8e43b8732aefec22d5efefdbe94ded8be3bfa007f36c2f324eb8",
+"d": "2026-11-13"
+},
+"bunya/law-purpose/": {
+"h": "2b908bc731dc931759cbd0f7bafc94f67061bf02ddf38f6c543b35d9abbce579",
+"d": "2026-11-13"
+},
+"ronten/law-define/": {
+"h": "fc7b1bf4d28f2baaa5cbd61518c151ab6d08bb003427340f93e386dee5ef2f1c",
+"d": "2026-11-13"
+},
+"ronten/law-purpose/": {
+"h": "a56a53bfa0aabdfd06f535206aacf06491cb5021b82d1cff28bdad20f714bf22",
+"d": "2026-11-13"
+},
+"ronten/law-policy/": {
+"h": "9de075169c69d4297b769c54adfa079b610c7fdc403ba688eec968248d4f7fc4",
+"d": "2026-11-13"
+},
+"ronten/law-dr/": {
+"h": "804d62a7dc661c82301b2b7e7f2f97e66e43ec0efc524a15bea00dd8359bf854",
+"d": "2026-11-13"
+},
+"bunya/designation/": {
+"h": "dc4eeb03fd05faf3a039d1f719a2a3cf460a230b721ee5efd07791ccaa4ec5a0",
+"d": "2026-11-13"
+},
+"ronten/law-threshold/": {
+"h": "e1b3ee8f6b1cce1b044d3b7c9c1fc18feab6161f3b337a311d2342661880bade",
+"d": "2026-11-13"
+},
+"ronten/law-renkei/": {
+"h": "c5f58158231f243c071781119f32ae398ea9af06648b3686523ad4761d1187e0",
+"d": "2026-11-13"
+},
+"ronten/energy-count/": {
+"h": "95666ea0bb2f41fed71cde09efc4980a28943ffadcae659afd32e4b02f8a3819",
+"d": "2026-11-13"
+},
+"ronten/crude/": {
+"h": "b985b9c56c8d07e4c81e794f91738b18e41ce0656fcb1035385146cf848b1334",
+"d": "2026-11-13"
+},
+"bunya/management/": {
+"h": "bb020d005d60d174eb3072f7052040b044cffbae5548ac13c4589f95c23d3a38",
+"d": "2026-11-13"
+},
+"ronten/law-roles/": {
+"h": "d54cb9b9351d18ef9523240f8fb0f28bfef34be86e142eaddf8119225d6e7610",
+"d": "2026-11-13"
+},
+"ronten/law-duty/": {
+"h": "f47aff49130a103dca4448f1722dc4e992242eb7b0ac98c76eacec4d4828fb9b",
+"d": "2026-11-13"
+},
+"ronten/law-manager-duty/": {
+"h": "e7359192b2a070a1fe5c86b1bdfb634b365000e6b810f8d541e05530b1248a24",
+"d": "2026-11-13"
+},
+"ronten/law-roles2/": {
+"h": "4d82189a61026a9b2abfbec08116e504e544ad5fff04bfb6f32715ab464e2756",
+"d": "2026-11-13"
+},
+"ronten/manager-count/": {
+"h": "3cddef83bfc4482f5d08219d7fe632f56f8e747e4ef737a89f6097e22d26037e",
+"d": "2026-11-13"
+},
+"bunya/reports/": {
+"h": "0e5c8e33a0a8b515713e2cfa7d7db08913eba5a1c11a23bc015e66881ac82dea",
+"d": "2026-11-13"
+},
+"ronten/law-deadline/": {
+"h": "0b497bd90bd3a6199c6169edbbe625756de279c0c75eb87cfa9a0d5d34bdea77",
+"d": "2026-11-13"
+},
+"ronten/law-instruct/": {
+"h": "d43d031b172d160f295779b4b9340af02b5ebf2a257e696df4f30ed471741628",
+"d": "2026-11-13"
+},
+"ronten/law-nonfossil/": {
+"h": "b3e0dd2839d2c9eebcfb7ebc7a79960c88a99b6e66626677170cf9ce58e05543",
+"d": "2026-11-13"
+},
+"ronten/law-report/": {
+"h": "4f1b03ae7eed4b3a654325b34c4a83fb87210e0b1f64ac7660df7d90a2c42d93",
+"d": "2026-11-13"
+},
+"bunya/criteria/": {
+"h": "db2a99aafd16cfd62c0abe8d5e9a950e1cc22a703ac12da076543dc4cdd44b2b",
+"d": "2026-11-13"
+},
+"ronten/law-criteria/": {
+"h": "24b8f39ee8feaf6a00edb220f208091a90f1d14979676642d86fbfa165e08c45",
+"d": "2026-11-13"
+},
+"ronten/law-target/": {
+"h": "e3d9ed6c56f4d3071138047df564a7fe0547a05c5317665535895eeac4c8251d",
+"d": "2026-11-13"
+},
+"ronten/crit-common/": {
+"h": "0cddfe1688de06ab962abe7d945ad7d170ceca5b2490de9cacc25ba4ea8ca9c4",
+"d": "2026-11-13"
+},
+"ronten/crit-standard/": {
+"h": "fc84548f792f4401889700a92ce3cb8ff957f35882af04a73d6c396e259a2ab8",
+"d": "2026-11-13"
+},
+"ronten/crit-pf/": {
+"h": "659501288ac195f6b73982dee91cc3b3c093d59b45435568dd71fc5a0cbcb743",
+"d": "2026-11-13"
+},
+"ronten/crit-motor/": {
+"h": "944ed60cd64514ac19a358f4937d19ceb37e953678eea193c9b27136dee9c219",
+"d": "2026-11-13"
+},
+"ronten/crit-target/": {
+"h": "7c2ad3f83db95fe345304f8286ab0f231d2265e3a37e881ba140641446579067",
+"d": "2026-11-13"
+},
+"ronten/crit-heat-new/": {
+"h": "c03e51b4f596115b539bdd2feb15c865fb7a6f2108203a4c4b55029f753d9ed0",
+"d": "2026-11-13"
+},
+"ronten/crit-elec-loss/": {
+"h": "72795abf17a99b17e78259bc0fc23183544e6c097f0dc47c1742de206c4dd47f",
+"d": "2026-11-13"
+},
+"ronten/crit-light-hvac/": {
+"h": "16513f429c976cdfcf37fd6a92cd17ecb86c11847d97cbc7120d4b449449fa0b",
+"d": "2026-11-13"
+},
+"ronten/crit-waste-fems/": {
+"h": "814057a39d008ba50be004d895d15ae9e50c9aaffc40b5aafae1783b67c98cf0",
+"d": "2026-11-13"
+},
+"ronten/crit-office/": {
+"h": "0ac824afbf8a0e64e5ae52d741fcd9f2a8879e107306bec662a45c48e5196072",
+"d": "2026-11-13"
+},
+"bunya/top-runner/": {
+"h": "3c774762bb1835ea4793940d00ac1496b9ed213f04729703d750e728cdc37343",
+"d": "2026-11-13"
+},
+"ronten/law-toprunner/": {
+"h": "c7472d3ec7e39e7986f96115c66f103c5ad413bf6d095732d6f449090b7c3a2f",
+"d": "2026-11-13"
+},
+"bunya/energy-basics/": {
+"h": "50d46bb30691a9e539987504b074338f879dadfc7da12e8e66153906af498e7b",
+"d": "2026-11-13"
+},
+"ronten/units-si/": {
+"h": "7867eb6201510272153507e92c316ad2315724d397aa36dc551a55db1e9e33f1",
+"d": "2026-11-13"
+},
+"ronten/energy-convert/": {
+"h": "690394f716a09f96bf4e70f6c3dabc087fffbdbe8203d9eba12727c2a0a15bef",
+"d": "2026-11-13"
+},
+"ronten/storage-battery/": {
+"h": "790fb91dacba35223407fbfd45b731150da23e940ae4162568ace2e89b75e948",
+"d": "2026-11-13"
+},
+"ronten/basic-misc/": {
+"h": "3fdbedc93b9cf39d2a1d49e9ebb53a374615b3543c4b31f23f0504f39ea35766",
+"d": "2026-11-13"
+},
+"ronten/heat-circuit/": {
+"h": "f35dd288dae21e82c0c7ddf50a4f5b4d98b5758d9e7d92af9d7cd80ad30e1c26",
+"d": "2026-11-13"
+},
+"ronten/units-elec/": {
+"h": "b0d24cbeea7966f9e7ebc57a9cd392fcbd3772f0f92fd49cbe24b38bc0f66d8a",
+"d": "2026-11-13"
+},
+"ronten/exergy-rate/": {
+"h": "34b3f1e75b6421b8a587d3bfc7ada942be22794edba2d85d4bd9bbdce84c1733",
+"d": "2026-11-13"
+},
+"ronten/cop-primary/": {
+"h": "426d58c12e2672a83c1b0913fdf7aed7808532a3211dc31458ce6ba31b4e5949",
+"d": "2026-11-13"
+},
+"ronten/exergy/": {
+"h": "429aed92689d46c2f8e841bbff87d28b090651f97d506173e450be6ad11340d0",
+"d": "2026-11-13"
+},
+"ronten/wien/": {
+"h": "f5dc6b71d66b20e5def1ccadf5f29e2553ab4cddb45be47a4c816cac490ce995",
+"d": "2026-11-13"
+},
+"ronten/wind-power/": {
+"h": "3031b3887a6925e6f42093c2ab0dcad67b592984d86edf4375d60868f9891bfb",
+"d": "2026-11-13"
+},
+"bunya/energy-policy/": {
+"h": "f5c2f2caa3f6dd70ef4b3972727e92f82d86308943b202c3689a585994d5a98d",
+"d": "2026-11-13"
+},
+"ronten/stat-power/": {
+"h": "713475ee98abe39399e5c05c4e9ad2be2199d225c072eae6768f8397cdce3d35",
+"d": "2026-11-13"
+},
+"ronten/climate-paris/": {
+"h": "ff8cb27dec7b9f5c63f845cbf4f8e9cb5f75849321a3b15a2200963716f14a7f",
+"d": "2026-11-13"
+},
+"ronten/energy-hydrogen/": {
+"h": "3f147662e3d399db36873bf55fa9f8ea1fe642ad4c7c02a365a9f7db2c712302",
+"d": "2026-11-13"
+},
+"ronten/stat-final/": {
+"h": "7508209e280235b6a94edc3b63e15250cdf18919d3a9c8ac41bbd39c7c929bdf",
+"d": "2026-11-13"
+},
+"ronten/stat-import/": {
+"h": "c3065c71f5ff501617d35c23a1146ec809d3970d57ce704122c95b7bd3c84d34",
+"d": "2026-11-13"
+},
+"ronten/energy-ccus/": {
+"h": "b2d67c1dc24edef0c3e2a404ecc2851df9d10c21b6678ee3198611126737f915",
+"d": "2026-11-13"
+},
+"bunya/electricity/": {
+"h": "30450ff1d4a8b19bdba09a65b3e54f56540c3da1aaef0838f02fd5f413ef01a4",
+"d": "2026-11-13"
+},
+"ronten/lighting-eff/": {
+"h": "8b28247983f5a555411231c41c89ad0ad6808c188773589493f0f9af94d77b39",
+"d": "2026-11-13"
+},
+"ronten/power-factor/": {
+"h": "f3230df1b0fb5e5dabebd967fe06865411b7984d3712fb8fef32649331967b23",
+"d": "2026-11-13"
+},
+"ronten/demand/": {
+"h": "9241fa306094894ed6ae2813ddbef96117ba3ad2048e8b51290cc5ab6f37feb0",
+"d": "2026-11-13"
+},
+"ronten/transformer/": {
+"h": "42b265eafb1aa835c14ffd18e9c9ac26548dd8b72e1a9fb944b48dd5c4efc1d9",
+"d": "2026-11-13"
+},
+"ronten/motor-slip/": {
+"h": "fa7764dd0bd7d0bd94c809b511c1c5ccb5af2272fb02ecc83396e9cc4505670d",
+"d": "2026-11-13"
+},
+"ronten/motor-power/": {
+"h": "943dd011514b3a4782074e5f572b11702dcf86be2b94d6c40d879391d9f7ef22",
+"d": "2026-11-13"
+},
+"ronten/lumen/": {
+"h": "26f5befe5f0db01af83b7bf6ae05451ca0a85a89233e552e8b5d6406297fd2bc",
+"d": "2026-11-13"
+},
+"ronten/gen-fuel/": {
+"h": "15e6e0b655fa8a1b71825bf82e9128b9a63260b494cda1a49d909f20bdb7a7b9",
+"d": "2026-11-13"
+},
+"ronten/illuminance/": {
+"h": "b901b95b8f31603e3b623bab4c70c062994bd87fb30509bfb870c90b2c791151",
+"d": "2026-11-13"
+},
+"ronten/inertia/": {
+"h": "fefea26e914c4180d9dd150dddc432d4481e367b8d7f433b6ec31312109c33d3",
+"d": "2026-11-13"
+},
+"ronten/faraday/": {
+"h": "0e92db9aeca3a68add7ae3ecf616b04586e836a4ce796bcab842d7caf547e0c2",
+"d": "2026-11-13"
+},
+"kamoku/2/": {
+"h": "1120401ffea1361a36e47afe71423fef37015c7acf63a8c59bf6d355f8dac3b6",
+"d": "2026-11-13"
+},
+"bunya/heat-transfer/": {
+"h": "463af49f5df722a71c3aaf1ee12aee18dc6fdb82c28cbc89e44731ecfb539b57",
+"d": "2026-11-13"
+},
+"ronten/heat-boiling/": {
+"h": "0b29da2741d865196e290487e70566fa0ff778cb729596b38f9bdee91b8a7ce8",
+"d": "2026-11-13"
+},
+"ronten/heat-dimless/": {
+"h": "1f01521335633af5371326bde7cd586b6edc68e2436123ec083c27cffbe29938",
+"d": "2026-11-13"
+},
+"ronten/heat-conduction/": {
+"h": "06624347cbab7c930c022c3c9d722b46028077557be01eacb95f95f9872615ec",
+"d": "2026-11-13"
+},
+"ronten/heat-radiation/": {
+"h": "040d72d824ff50b0c5d0845c72efd604c29af806a7875404cf49d13f0cbb1e4a",
+"d": "2026-11-13"
+},
+"ronten/heat-boundary/": {
+"h": "e5ae9886232632b6bd7486267dc927b5d18ab653fb06c70404596fe5fa39ff25",
+"d": "2026-11-13"
+},
+"ronten/tube-convection/": {
+"h": "011c832b20de628a6bfde5d4a8b5b6e2830d16afe78092ec513875d82b8dcd35",
+"d": "2026-11-13"
+},
+"ronten/pipe-insulation/": {
+"h": "50f93332094e9a802fdff29b9eafa9c4f022496d1a27d25b991e66516f58be24",
+"d": "2026-11-13"
+},
+"ronten/view-factor/": {
+"h": "f6d799dae353be18228de31cbc9581d1cde68d57fc829c53b15573c75971e3f4",
+"d": "2026-11-13"
+},
+"ronten/enclosed-radiation/": {
+"h": "5338e42cf9385f09db6ece1d694c6ad16890b91321f6bbe6dc9d5006ef5911c5",
+"d": "2026-11-13"
+},
+"ronten/wall/": {
+"h": "1025fec6e98a0822ea504a1a69fe2d873fa590512e41deeaabff743e0511504c",
+"d": "2026-11-13"
+},
+"ronten/radiation/": {
+"h": "3c1b286d2f15983081927d41c9704222b0d28b58ef29acf62fa9ff495b98be07",
+"d": "2026-11-13"
+},
+"bunya/fluid/": {
+"h": "1b22f75a5c4e13ae70d5653295f4a4b9f8bd35ad5f5cf0565ab8643c2f651e29",
+"d": "2026-11-13"
+},
+"ronten/pump-trouble/": {
+"h": "df8ca3f2ea23e7e53ef32ad677f80faf59da8fd24cd972a1026b40f1b4fc44ae",
+"d": "2026-11-13"
+},
+"ronten/pump-types/": {
+"h": "98cb3d273c9bd2438c5def42d35ae17869e047e48ae2c8bdc8b9f00ea2f42ca9",
+"d": "2026-11-13"
+},
+"ronten/fan-types/": {
+"h": "589f5aef0928a272c5e8f2c6bbd5296b4a21b201460d7a947c6038992f57fc83",
+"d": "2026-11-13"
+},
+"ronten/pump-power/": {
+"h": "1ffdb8dff5f05459053475c578a76c66263999654dc8ba042074bd6fe95c3339",
+"d": "2026-11-13"
+},
+"ronten/venturi/": {
+"h": "40c888f76cba16654d572fb67db9d5b3bd4f85fa765da4a5cc4293849648b2c8",
+"d": "2026-11-13"
+},
+"ronten/outflow/": {
+"h": "90883ebfc41dd8b621f094de56ebe0c57e1065cd7d3c34e5a6891324700cb808",
+"d": "2026-11-13"
+},
+"ronten/equiv-diameter/": {
+"h": "2ad43dcc1a7ccaa6a7eb02ed34b4521b821c28b97fd8b6f4f99242733a1b25b6",
+"d": "2026-11-13"
+},
+"ronten/blasius/": {
+"h": "fea268b3de6a3a283b541c953c0e0af58e1d52e38e435aa139dbf16cd4ca8109",
+"d": "2026-11-13"
+},
+"ronten/pressurized-outflow/": {
+"h": "28af8f71f88c27d8a0af35223e2b6164585cd51070068bf35d70dd3096409157",
+"d": "2026-11-13"
+},
+"ronten/bernoulli-height/": {
+"h": "55ce14690eee2c9eefecaad2feb743089d5361f356e8a385e0871fe4e6189bfd",
+"d": "2026-11-13"
+},
+"ronten/bernoulli/": {
+"h": "20c62a01b0799d51fbcf8a4da215c7a5db1af8a74c38691086ddfee71cb5250e",
+"d": "2026-11-13"
+},
+"ronten/reynolds/": {
+"h": "af5dd21c4409368b6d8669da8db125622decf158bcc777f479e0b6b8e17b0418",
+"d": "2026-11-13"
+},
+"bunya/thermodynamics/": {
+"h": "1514b8e1efeb89b10d8f0569843f852d2bcf658e02f83990cb26112142ddf504",
+"d": "2026-11-13"
+},
+"ronten/thermo-cycle2/": {
+"h": "3441a38f6532cc511372767a1d84025bc9be991084f0977f4be4710d6dd0629a",
+"d": "2026-11-13"
+},
+"ronten/refrig-ph/": {
+"h": "a42647252c5bf69551043428c6bcb2d5d583578220a20b819dc86cac14a0a223",
+"d": "2026-11-13"
+},
+"ronten/rankine/": {
+"h": "e530b5e2da1cb166ea77324e35cc560f3b9bcd25122b9b9390c9e69d027b0818",
+"d": "2026-11-13"
+},
+"ronten/wet-steam/": {
+"h": "31d0c37da7b1ae180151e10ca7f8d8a3b1ac2958cbdb1875e9b126e832d5b071",
+"d": "2026-11-13"
+},
+"ronten/quality/": {
+"h": "311de826c12598daa740cc630bc0a0b65aadc615ca0b9c1e7ec2dd890aa6f13c",
+"d": "2026-11-13"
+},
+"ronten/ideal-gas/": {
+"h": "cb60404cf25bbd6c6b545006e1bc34a27b1861953162cd340deadb0f409c8fe3",
+"d": "2026-11-13"
+},
+"ronten/isobaric/": {
+"h": "9fc130ec3b609cd3c322a9d79cb04c33db73b3a4c20c8fb11182a5139b193e44",
+"d": "2026-11-13"
+},
+"ronten/isochoric/": {
+"h": "2909f6e2abc167dfa688492bcbe327d5938eed5a16fd090baf3cc3067ce06eff",
+"d": "2026-11-13"
+},
+"ronten/gas-props/": {
+"h": "55750f689e518d23d0292168b6675b99a7f5ee23dcdf2781b7af7e8644d1a583",
+"d": "2026-11-13"
+},
+"ronten/steam-heat/": {
+"h": "ab61288dc37dd285d1bc7a11b7ac9a48c681c650722a51f462b5ec48945a874f",
+"d": "2026-11-13"
+},
+"ronten/table-wet/": {
+"h": "57bff896f097658e1bf2b97394736e1b04f9f6574f582cc41762569caaa4b185",
+"d": "2026-11-13"
+},
+"ronten/table-interp/": {
+"h": "d7e5e140dc057ea10d0a95408ce2ec683b84e25152f592c7d0b5c813d397186a",
+"d": "2026-11-13"
+},
+"ronten/diesel/": {
+"h": "1d140d67e4ea7bc17b4b2c47a2ba34f7c46aa43bd6388715dbfda349b089478e",
+"d": "2026-11-13"
+},
+"ronten/combined-cycle/": {
+"h": "cc3b1ea9966159f1b4cee8d4ae78b35361b6dd9288708c2dac30f6d9a0830105",
+"d": "2026-11-13"
+},
+"ronten/adiabatic-work/": {
+"h": "f92260c224f2965576f1698ab49bb027909cae19c5905af1e942a9b5a0aa799e",
+"d": "2026-11-13"
+},
+"ronten/piston/": {
+"h": "d7f1fcadb3a0235dbef15cbf09fcc9897a9becf1c62f75031163ca0b733bbb7f",
+"d": "2026-11-13"
+},
+"ronten/carnot/": {
+"h": "b442422dcc678f909e97fd30e99098f6f776964957ea2070e6b689a805f9c58f",
+"d": "2026-11-13"
+},
+"ronten/adiabatic/": {
+"h": "295f4597cf470769dee1afabeff2f406305ee008e386842ac8ca446ce783a384",
+"d": "2026-11-13"
+},
+"ronten/otto/": {
+"h": "e67b0ac2e0b9f76678fc67532939bbc04e55f650b7eb1c0d1bb705a8aead86ef",
+"d": "2026-11-13"
+},
+"kamoku/3/": {
+"h": "028b1a7808669c7f19c0772396415620941748ddeaafa4be61f89e3598dde64f",
+"d": "2026-11-13"
+},
+"bunya/combustion-control/": {
+"h": "3b54e49405bef24eca19d8f5fd933254983b62b227884c1b7c7097aa316376f4",
+"d": "2026-11-13"
+},
+"ronten/burner-premix/": {
+"h": "6ef44f9b73debc9e6d40a722e4d2fe51a4f715e29e866492fc214b4e615664b7",
+"d": "2026-11-13"
+},
+"ronten/burner-nox/": {
+"h": "7edc5ba69f7d3cfadeb23a3991faa418d952a4cb1f24664af17a3c380825212e",
+"d": "2026-11-13"
+},
+"ronten/air-ratio/": {
+"h": "d55e023f69464c04837f4a6576ce4f3221cac54e82bee6bdce45f140bfc89d4a",
+"d": "2026-11-13"
+},
+"bunya/fuels/": {
+"h": "f74260052532b867f8c78f0b26874310e8d4afda5783e3fa7e76949de726f402",
+"d": "2026-11-13"
+},
+"ronten/fuel-knock/": {
+"h": "96d02e772718259dc72bd69d6e2d640a0112d97e2bcd164ae8afbaa0655335ad",
+"d": "2026-11-13"
+},
+"ronten/fuel-oil/": {
+"h": "5816f99d88f00c5848c493cbb79637eb624c471f03ab20cbdc7e45cbd32144a9",
+"d": "2026-11-13"
+},
+"ronten/fuel-soot/": {
+"h": "7b536574619912cc2d85f69d3250f4d002e91531687ae89b1859f8abab29944b",
+"d": "2026-11-13"
+},
+"ronten/fuel-analyzer/": {
+"h": "0a6c3f7e060b73bec52267a9e847a0584a425850c0d64a9b5e79be7c76a31f09",
+"d": "2026-11-13"
+},
+"ronten/fuel-solid/": {
+"h": "ca9a151dc16c1ca672bff6c3ee0772e7c0bb17efb6ce0d5fb9f731582aef2fcb",
+"d": "2026-11-13"
+},
+"ronten/fuel-burner/": {
+"h": "a8f548598f84731b985acf2698eb117b50d23ca2d6651e437c634548376d45f3",
+"d": "2026-11-13"
+},
+"ronten/flame-speed/": {
+"h": "af3cec888f1156007464d6a3919e3a5a964c2076cf021d9915a4a1ffba929c68",
+"d": "2026-11-13"
+},
+"ronten/fuel-fbc/": {
+"h": "8fcfb1d9e3eb844ec61a08b3ba3628cff004404a0a38805d3909e8a227d98f0c",
+"d": "2026-11-13"
+},
+"ronten/fuel-gasanalysis/": {
+"h": "0402add284350a7074b68d469d00651bee1c396d42f70cb82a467b152b519485",
+"d": "2026-11-13"
+},
+"ronten/fuel-gasfuel/": {
+"h": "5aadc699696548365694b75ab2fc444d22fc6dd59e56c7c886cdc0633acba9b9",
+"d": "2026-11-13"
+},
+"ronten/fuel-lpg/": {
+"h": "66ae5f6af2cb4e7c3f1f8eb23a78f7efa3654bce3bbfa62a620c0ab2583886db",
+"d": "2026-11-13"
+},
+"ronten/fuel-sootblow/": {
+"h": "4f3e29bcbd1eb67914dd3ac94315ef92d1da89913cbbbf3c951916e277007e98",
+"d": "2026-11-13"
+},
+"ronten/fuel-oilburner/": {
+"h": "985499ab6a58db719a1479c3bc030afb91d0aed047ecb8b840707f093e60bd29",
+"d": "2026-11-13"
+},
+"ronten/fuel-pf/": {
+"h": "037af32cd22a3e834cb22090395fa8775e05c56bcec31bd31911daa2d1aa0ab5",
+"d": "2026-11-13"
+},
+"ronten/fuel-analyzer2/": {
+"h": "ce0a2f1e0cc771d325e7db869c61a84e33a748e24d77c04dd531796bfe50c459",
+"d": "2026-11-13"
+},
+"ronten/fuel-jis-oil/": {
+"h": "4a1cb7eb22ae92a74cf02bc3b726c3b2f4a2127aaa4e79588ffa65165a097a1d",
+"d": "2026-11-13"
+},
+"ronten/fuel-hv-compare/": {
+"h": "ae6944c53348e8537ad2014981b058acc382a708503ac0abf9d07e5aaf37c11c",
+"d": "2026-11-13"
+},
+"ronten/nox-mech/": {
+"h": "1a8691d7c4f133cec28ecfe857ca3b4b82732d40356530e96eadd28ecf420d65",
+"d": "2026-11-13"
+},
+"ronten/burner-types2/": {
+"h": "0509a6313222afa29a9fd7b2757c1afe45d3a423bc2cf93472312f02e454b8e1",
+"d": "2026-11-13"
+},
+"ronten/gas-ir/": {
+"h": "41a58047c7351dee26fefd8d35fbbbdd228d03461f56b0ed0684a47ae9f15da3",
+"d": "2026-11-13"
+},
+"ronten/droplet/": {
+"h": "53035e1a0cd4acfedeb7c2d43912f17ffd7e6bcb0b379406468f9217502dec4b",
+"d": "2026-11-13"
+},
+"ronten/wobbe/": {
+"h": "1d0256736f46e9ba8acb650c6f12a31408614fb90657b307513af6725438b2e1",
+"d": "2026-11-13"
+},
+"bunya/combustion-calc/": {
+"h": "dac2be652ef95f12513535ea15846ef54deda483deca4105102ccffe75d22718",
+"d": "2026-11-13"
+},
+"ronten/liquid-fuel/": {
+"h": "69c0332afcd320d126b3cd294c6a0da66d907bf12b61808f8627723eb9992f4d",
+"d": "2026-11-13"
+},
+"ronten/solid-fuel/": {
+"h": "c33d236b7553c1bfddb235a1b5d68470e8c823075c8db82bf101d460505e433b",
+"d": "2026-11-13"
+},
+"ronten/co2-air-ratio/": {
+"h": "2b146e1b0aa3448eb01904e6da12b00e010d2a20f47fcf5446d7f33f61fa1913",
+"d": "2026-11-13"
+},
+"ronten/air-preheat/": {
+"h": "52cb92c192608d2a0bc0bac579ffd83c2f7a2c5b9b24988176fb352dd30e33ab",
+"d": "2026-11-13"
+},
+"ronten/hc-co2/": {
+"h": "371f87c67fe87d530f6bf4ec4184005b204ba7e1853b59cb3790c26fabbae821",
+"d": "2026-11-13"
+},
+"ronten/molecular-fuel/": {
+"h": "2d721ed72959e83257ac1b72f57bff08277ea475370f9baf48feaa83f9c44c83",
+"d": "2026-11-13"
+},
+"ronten/h2-cofire/": {
+"h": "50b128353a318c09722c0e331d7fbd488b16bc976966b476631259e125d0d49a",
+"d": "2026-11-13"
+},
+"ronten/biomass-cofire/": {
+"h": "77f4d584f0b66e38bff316164a94d6ea594af43735874f7088707e5f9b782ce8",
+"d": "2026-11-13"
+},
+"ronten/co-air-ratio/": {
+"h": "48e99a69b3acd99cde956d64bfc7ecf6542f81b9d78eda959233af5da772b9cb",
+"d": "2026-11-13"
+},
+"ronten/gas-combustion/": {
+"h": "041cc3ab02524b375ec2196258ed5ec9bd93923d27b5259b5d13687aa055c51d",
+"d": "2026-11-13"
+},
+"kamoku/4/": {
+"h": "a45079f8a73ae935e8225676354cf559bd98f300fae1e1fde2603b5fd5d45640",
+"d": "2026-11-13"
+},
+"bunya/measurement-control/": {
+"h": "100bd96efe7a6a494a7502e2c1a9d93fc0e3036daf2f00102b978b9ccd0cc527",
+"d": "2026-11-13"
+},
+"ronten/ctrl-cascade/": {
+"h": "cf89a23d478f840fa79dae74b1c3735e97e1fd9878db1cea391911b8f342ef35",
+"d": "2026-11-13"
+},
+"ronten/measure-sensor/": {
+"h": "54a6755bb1a5321e6e2060ea94f5ab00b3a7e56b819cf1bf04f43fee5d13738e",
+"d": "2026-11-13"
+},
+"ronten/measure-pressure/": {
+"h": "ac0eb175076a46ff644fe3bfc9b98d058940c4f639d01ba5cef8188145f6df01",
+"d": "2026-11-13"
+},
+"ronten/measure-valve/": {
+"h": "2421fce7fc2f6791e6c36496dcce32a935fbdd160e00015cae83f8b9e818855b",
+"d": "2026-11-13"
+},
+"ronten/measure-tc/": {
+"h": "c80ceeadecf4eb82de1e06b9df8a1a2e8e1f42fe6b621907a94c9b913c404c4e",
+"d": "2026-11-13"
+},
+"ronten/measure-area/": {
+"h": "bb8624ac6c179887d1ccf3a4b10087af1bc9714dc03cc3f923f2ab59084d0f4c",
+"d": "2026-11-13"
+},
+"ronten/ctrl-seq/": {
+"h": "3d2d42ff30941b7ea739908cca60b69bf3af98068eb8de539a7c5c1dc9096f3c",
+"d": "2026-11-13"
+},
+"ronten/measure-flow2/": {
+"h": "4efd446802092cf4589f46d43cacdf482707673e307df21644c51ff9144590e0",
+"d": "2026-11-13"
+},
+"ronten/measure-tc2/": {
+"h": "de033920abc66c90b9d9e8442de5ed7d280edd193a981759ec5aaef8a7b75340",
+"d": "2026-11-13"
+},
+"ronten/measure-tube/": {
+"h": "e8184448a274d9a482d7c180f4ca4c24cf006c1884ece72855d158ed0f926f0e",
+"d": "2026-11-13"
+},
+"ronten/measure-dp/": {
+"h": "23abf1d3b119c6d72f3af833206e07ddd1844ffca028754b113501155df38934",
+"d": "2026-11-13"
+},
+"ronten/ctrl-tuning/": {
+"h": "d91ecf7bbec5f30064485adc5f42ef85ad959247bd5acbe5a227db543bea59d0",
+"d": "2026-11-13"
+},
+"ronten/valve-structure/": {
+"h": "e3ed1cb40dfa6042395b44554e392b7ec3ad4630f33f40246558b97e6b0a9f63",
+"d": "2026-11-13"
+},
+"ronten/measure-values/": {
+"h": "f81c764f1c57306b3466bab7439db12af7b552b49ace84ba8132e51d4c9c0f6e",
+"d": "2026-11-13"
+},
+"ronten/ctrl-class/": {
+"h": "8b96f1380fcbd68fb082ef4d7cec830180a8c57e41702a2783d00d2c21cac6a9",
+"d": "2026-11-13"
+},
+"ronten/pitot/": {
+"h": "45f2864058fbf5425f5fb0f2db745756659d1313152dd4508109db9f9dd94078",
+"d": "2026-11-13"
+},
+"ronten/ctrl-response/": {
+"h": "e7c1aa87ebeb079ee8cfdab4022b9a2e48d7db2c36accdcfc703c134ce21b0da",
+"d": "2026-11-13"
+},
+"ronten/meas-error/": {
+"h": "3079955b1aa1a585d9e052ee05064a599c7601e94cc42e3bdbfe6f8d2a755405",
+"d": "2026-11-13"
+},
+"ronten/pb-offset/": {
+"h": "bace7b7f90d66dcf43226a63dc8b68225f6442f4719df1ea7f8267cae24bd418",
+"d": "2026-11-13"
+},
+"ronten/thermocouple/": {
+"h": "0d49d74e51ef176547eec115922dbcfe9dd24d5c7dd92380c4b6b770c20cf518",
+"d": "2026-11-13"
+},
+"ronten/dp-flow/": {
+"h": "def6f80bbf06fb9549e5bcf2af2a5dd49e115cf59cfa2efbc9aba445a82f3417",
+"d": "2026-11-13"
+},
+"ronten/rtd/": {
+"h": "2e7d6883fb482b17bb09fd93e76c9f0c70de80f00ed0c2431dc537a09d3387a0",
+"d": "2026-11-13"
+},
+"bunya/furnaces/": {
+"h": "990c51e71f50c0def1fa9b176cedcf05b2f901bcc0a2e73580e9bab2a1b10a9d",
+"d": "2026-11-13"
+},
+"ronten/furnace-wall/": {
+"h": "95194771ebba48c19b2cdc311492a7bcd1620c929c4a9127eb9deaecb0714948",
+"d": "2026-11-13"
+},
+"ronten/furnace-material/": {
+"h": "71faa86438ea6d306f1fd8693dc0a7a30cc18e9d9207a4bc97ee3fe75fce5053",
+"d": "2026-11-13"
+},
+"ronten/furnace-types/": {
+"h": "303a146bc9758156615e0fbf2192a26e6b7e3410622a6b62d2246cc301fefa4f",
+"d": "2026-11-13"
+},
+"ronten/furnace-fiber/": {
+"h": "087dbdce98248731f1b83b7cf2d37d43d3cb7163780740d91f381ed8fb7479ff",
+"d": "2026-11-13"
+},
+"ronten/furnace-balance/": {
+"h": "66baff6075da86e983a589b993587a383fc10c28c92e915f9eff3906061e31cc",
+"d": "2026-11-13"
+},
+"ronten/furnace-recup/": {
+"h": "1e252d325944a23f138591de0ea1bd8feb1adf6bae76dcf58a990adf1401bc07",
+"d": "2026-11-13"
+},
+"ronten/furnace-charge/": {
+"h": "8683d8f8925356373cfe825992bd1e21b449c3660fa6e8f7884ae24384539ac8",
+"d": "2026-11-13"
+},
+"ronten/furnace-ops/": {
+"h": "63ac3cda31c3584900b11489efe7869eaf9c34f86c4fc3db5dd2aa3b2fc7fd82",
+"d": "2026-11-13"
+},
+"bunya/turbines/": {
+"h": "1b123c3caa15c509d65f75a0a194359d15d6349a08f4f405aa8aba4c049a80e6",
+"d": "2026-11-13"
+},
+"ronten/turbine-rankine/": {
+"h": "7af2dbfae3a8a3d76e4ac7c480022b41427051da7e90a50aebdc8bb6fdffa39c",
+"d": "2026-11-13"
+},
+"ronten/engine-ice/": {
+"h": "c4cbd1eb95043a3e5802518960294f743974f706a702cb6521375aaf3f723e99",
+"d": "2026-11-13"
+},
+"ronten/turbine-detail/": {
+"h": "960c94ecf03313648018efd352dc8d9253c0863b2d602fa42a0f52639a6cc835",
+"d": "2026-11-13"
+},
+"ronten/turbine-ops/": {
+"h": "c426e1a4ac5b9eb88206ea0d4c3c2e7ce626b7a98d16dddac76a27ba8ce7adce",
+"d": "2026-11-13"
+},
+"ronten/gt-structure/": {
+"h": "e0c138ba497b8271516ec993f916131066694b3571dca48e13474b59ef3d5a97",
+"d": "2026-11-13"
+},
+"ronten/gt-cooling/": {
+"h": "921835e09a30b8feee323a964491d6f2b351b14766fda11635ee7588e0a58826",
+"d": "2026-11-13"
+},
+"ronten/turbine-aging/": {
+"h": "da60406d67955a19bbd67afbbe95d0c6ae400afdd29abfbcc2fbeccd16905b6c",
+"d": "2026-11-13"
+},
+"ronten/gt-performance/": {
+"h": "72410c071913723d0faa64bf1bbdb95911bb4041894b1407c08ee5e09b22de32",
+"d": "2026-11-13"
+},
+"ronten/turbine-eff/": {
+"h": "ad2dc8b40e5fac0b0151979e3849692468ee899bb57cc53b2f82d1c74102b6b5",
+"d": "2026-11-13"
+},
+"ronten/engine-heat/": {
+"h": "34cbaa91be3e38854c64bee43779551b787ee37c853de16ab9f306ab872951ca",
+"d": "2026-11-13"
+},
+"bunya/refrigeration-hvac/": {
+"h": "64e26ff6a4e6268b6128d60b6f173a12291e4f824a2e190d440c93d36210f33f",
+"d": "2026-11-13"
+},
+"ronten/refrig-cycle/": {
+"h": "d544925a2b9c656ecc696f2644ea9dba25a413973956741c96c6d78f92cce229",
+"d": "2026-11-13"
+},
+"ronten/hvac-load/": {
+"h": "bd1524b88f2d4ac36438c5711dae8c337f627a0fb4e9d40f053d663afb194c2e",
+"d": "2026-11-13"
+},
+"ronten/hx-total/": {
+"h": "374d703011b7fd86bc58cb61162a66b8d451296d615ca7cf6c96c8533cd8468f",
+"d": "2026-11-13"
+},
+"ronten/air-mix/": {
+"h": "989dd246cde7aed6b7e9d0f4bc56c40e4475e84aad33d0f47752caa761d28e7a",
+"d": "2026-11-13"
+},
+"ronten/humidity/": {
+"h": "41a36c32fa778a191b6265f5616a153e138719be62348a4d5c374d38190a5aa2",
+"d": "2026-11-13"
+},
+"ronten/cop/": {
+"h": "a3b06a88952c54f7fe0d8635e850062712c84918c73d88e3cc33aa8c79bd15bd",
+"d": "2026-11-13"
+},
+"bunya/boilers/": {
+"h": "348ef4e68b58f2fa225ab199a648d336af8234736e767b892d6140fb7e65e003",
+"d": "2026-11-13"
+},
+"ronten/steamline-trap/": {
+"h": "afcf1ab030f817c476f5cd86cd1b6d2738d2c82aa06b74275b37e6ce287fdea1",
+"d": "2026-11-13"
+},
+"ronten/boiler-water/": {
+"h": "67714db5336e7b494f91e81e385772440016616160b48074a48d27922e7a1eee",
+"d": "2026-11-13"
+},
+"ronten/boiler-loss/": {
+"h": "d8881b7b413ac926445dcee652f8df2b7eb8c3b323d4c877e13e8b8f5e33cdbf",
+"d": "2026-11-13"
+},
+"ronten/boiler-type/": {
+"h": "eadecdd25a44b6f865b449a1d06d34cbe15efa8fb456b33325e8b6c633ceae20",
+"d": "2026-11-13"
+},
+"ronten/boiler-env/": {
+"h": "d7c26ee8e26c96de25c59e0750fdbe5e63ceb79ac71e86d36a74bc728f4d315e",
+"d": "2026-11-13"
+},
+"ronten/boiler-silica/": {
+"h": "5ffcce77dd74a3f2c3fff9307d5d7a8290628f2564215b69616ad9b546d83bb4",
+"d": "2026-11-13"
+},
+"ronten/boiler-superheater/": {
+"h": "03d3844a6c68dd0874621119ad63b9734c41cb82417936095de48e1d01a9a169",
+"d": "2026-11-13"
+},
+"ronten/corrosion/": {
+"h": "34fba0a109155617ec88471503ebff8eed8ea7040893ee223bc1214a82cd9a6d",
+"d": "2026-11-13"
+},
+"ronten/steam-drain/": {
+"h": "4c03ea4d18be4c62e9de5c5392f3b3369cd7bcf421148c7ab7034661d8d52b2c",
+"d": "2026-11-13"
+},
+"ronten/boiler-control/": {
+"h": "35488cb3422c914fd310d88d899187108a95d11af8e3a758c842d1f8c0efef96",
+"d": "2026-11-13"
+},
+"ronten/boiler-eco/": {
+"h": "1ec4f30e9ffcb4d01649b6027c5e5e576182c3fea16a44f6ee017b4738ba5ed8",
+"d": "2026-11-13"
+},
+"ronten/efficiency-saving/": {
+"h": "d32a228fe9fd550f405a84d829797d59ccca602fd398258c8f74d7b6316e12eb",
+"d": "2026-11-13"
+},
+"ronten/equiv-evap/": {
+"h": "dcbaf6447ebb01b84fcd7e59fb9a1367b0fda42b701a12ff338905d5bf997f10",
+"d": "2026-11-13"
+},
+"ronten/table-boiler/": {
+"h": "589f87118305796afed58563c0a302aeaee97a9f3c15f73ca9b3c591ce3dcfbc",
+"d": "2026-11-13"
+},
+"ronten/table-superheat/": {
+"h": "88444bb20181a498a22de56d2466e44de91d11090a5da52f2f526d84503bfb8a",
+"d": "2026-11-13"
+},
+"ronten/boiler/": {
+"h": "979a25736ffe683b90ba04dfe7c311032d2858ef96452830907e90b05f7a71d9",
+"d": "2026-11-13"
+},
+"ronten/blowdown/": {
+"h": "3277456b075a4d35e94a7915cd933cb2997727c4207ae12d1147f5daff791f5a",
+"d": "2026-11-13"
+},
+"ronten/flash-steam/": {
+"h": "439d0c5fdacee29bc5fc851019163bf6473b4072bd6625aae7e5bbb8b761e9d4",
+"d": "2026-11-13"
+},
+"ronten/steam-pipe/": {
+"h": "5942727e056c90f4d1d0fdb51af763ca7b3a629eff1f94c5c3b7f7d589f3065e",
+"d": "2026-11-13"
+},
+"bunya/drying-distillation/": {
+"h": "5ba1791244e08a499f081ae6fa97bf9fb2bb61e66b8adaba3fa7eceaaeb00b4a",
+"d": "2026-11-13"
+},
+"ronten/dist-reflux/": {
+"h": "4936d5ef2e8bf9e9104b652e8ddca3e6a9a93a32250fde2fe77f7dcdef4f6f5c",
+"d": "2026-11-13"
+},
+"ronten/evap-mvr/": {
+"h": "0724c5d6491f2f20ff7a53da8d103043b2c1743ab597d56474972970abebc3f4",
+"d": "2026-11-13"
+},
+"ronten/gasify-reaction/": {
+"h": "ecb6e568357bf833fad098ec2ce29723b3b6274b4151e0bf79049263eb4cdbd4",
+"d": "2026-11-13"
+},
+"ronten/drying-curve/": {
+"h": "0156312a9dfed3d5ee176f43fc1b6589a28394adbce724133a5a00f1bef5c080",
+"d": "2026-11-13"
+},
+"ronten/dist-basic/": {
+"h": "5612ca1abf8ed28a7a64c3231076fda51ff461912847c82c58b949e50d11a414",
+"d": "2026-11-13"
+},
+"ronten/dry-types/": {
+"h": "e95c78beb9e64cc67f78056ebdc719d22f6e3aff85e4c7766afd3fe5cc99475f",
+"d": "2026-11-13"
+},
+"ronten/drying/": {
+"h": "bfc3ed0df15d78a3ecc59436fa43fcd9a846e5df4e470cac2e780dc2d09460a2",
+"d": "2026-11-13"
+},
+"ronten/dist-balance/": {
+"h": "b893937bb28e09a3fb613ee247b1004bba26580e3a2211ebe13cc307ce6e35f7",
+"d": "2026-11-13"
+},
+"bunya/heat-exchangers/": {
+"h": "133aeb5f5f3acbc48506bd5fd3e0ac9273cddc487a87112b004840e125f2c372",
+"d": "2026-11-13"
+},
+"ronten/tower-cooling/": {
+"h": "a43680d861e13b5cd43c2e04fa9f853236e8da9eafb647c2895f46c2d66d6849",
+"d": "2026-11-13"
+},
+"ronten/hx-fouling/": {
+"h": "b54cd59290ede8d44c9ec08db7e7cb31f9663fa428bb64199a1d253373b1cfbd",
+"d": "2026-11-13"
+},
+"ronten/hx-fin/": {
+"h": "0e2ddb0f0d048ddfb8f39801303c4ff3c0a3371fcd24888533cab2e463ad4a5e",
+"d": "2026-11-13"
+},
+"ronten/hx-maint/": {
+"h": "a40734ec4138a6693f8e54bc47857b34df067a3418bf579594da4e1e1060bea9",
+"d": "2026-11-13"
+},
+"ronten/hx-effectiveness/": {
+"h": "538336a2bb9227b4e1ec69bc179fadaf2533b2d949ee374fd02b17d3736d8be6",
+"d": "2026-11-13"
+},
+"ronten/lmtd/": {
+"h": "cc9bd5588b51ce156838b4c70d659853e42181975444be592441b62043a70454",
+"d": "2026-11-13"
+},
+"bunya/pumps-fans/": {
+"h": "5811aa5649056ca8c35509bd1d843262f065e98d6ec38d6af5ac082eb19d554d",
+"d": "2026-11-13"
+},
+"ronten/affinity/": {
+"h": "49cbdffe6111bf6489beb439a09d2710b4d769565163b12d54f1675d5746f84c",
+"d": "2026-11-13"
+}
+}

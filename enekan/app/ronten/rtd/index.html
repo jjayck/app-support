@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>測温抵抗体の抵抗と導線の誤差|練習問題とやさしい解き方・エネ管(熱)課目Ⅳ 計測と制御</title>
+<meta name="description" content="白金の抵抗は温度とともに増える。Pt100 は 0 ℃ で 100 Ω。導線の抵抗も足されてしまうので3導線式で打ち消す。 エネルギー管理士(熱分野)課目Ⅳ「計測と制御」の論点。オリジナルの練習問題1問と答え・解説つき。">
+<link rel="canonical" href="https://jjayck.github.io/app-support/enekan/app/ronten/rtd/">
+<meta property="og:title" content="測温抵抗体の抵抗と導線の誤差|練習問題とやさしい解き方・エネ管(熱)課目Ⅳ 計測と制御">
+<meta property="og:description" content="白金の抵抗は温度とともに増える。Pt100 は 0 ℃ で 100 Ω。導線の抵抗も足されてしまうので3導線式で打ち消す。 エネルギー管理士(熱分野)課目Ⅳ「計測と制御」の論点。オリジナルの練習問題1問と答え・解説つき。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://jjayck.github.io/app-support/enekan/app/ronten/rtd/">
+<meta property="og:site_name" content="エネ管 熱 合格ナビ">
+<meta name="apple-itunes-app" content="app-id=6826752834">
+<meta name="theme-color" content="#f6f1e7">
+<link rel="icon" href="../../../icon.png">
+<link rel="apple-touch-icon" href="../../../icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap">
+<link rel="stylesheet" href="../../style.css?v=202611130320">
+<script>(function(){var u=navigator.userAgent,i=/iPhone|iPad|iPod/.test(u)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);document.documentElement.className+=i?' is-ios':' not-ios';})();</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "合格ナビ", "item": "https://jjayck.github.io/app-support/enekan/app/"}, {"@type": "ListItem", "position": 2, "name": "課目Ⅳ", "item": "https://jjayck.github.io/app-support/enekan/app/kamoku/4/"}, {"@type": "ListItem", "position": 3, "name": "計測と制御", "item": "https://jjayck.github.io/app-support/enekan/app/bunya/measurement-control/"}, {"@type": "ListItem", "position": 4, "name": "測温抵抗体の抵抗と導線の誤差", "item": "https://jjayck.github.io/app-support/enekan/app/ronten/rtd/"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "測温抵抗体の抵抗と導線の誤差", "description": "白金の抵抗は温度とともに増える。Pt100 は 0 ℃ で 100 Ω。導線の抵抗も足されてしまうので3導線式で打ち消す。 エネルギー管理士(熱分野)課目Ⅳ「計測と制御」の論点。オリジナルの練習問題1問と答え・解説つき。", "inLanguage": "ja", "learningResourceType": "練習問題", "educationalLevel": "エネルギー管理士試験(熱分野)", "about": "計測と制御", "isAccessibleForFree": true, "url": "https://jjayck.github.io/app-support/enekan/app/ronten/rtd/", "isPartOf": {"@type": "WebSite", "name": "エネ管 熱 合格ナビ", "url": "https://jjayck.github.io/app-support/enekan/app/"}}</script>
+</head>
+<body class="static">
+<header class="top"><div class="in">
+  <a class="brand" href="../../"><span class="mark">熱</span>エネ管 合格ナビ</a>
+  <span class="sp"></span>
+  <nav><a href="../../">問題を解く</a><a href="../../kamoku/1/">論点一覧</a><a href="../../#/pro">全部解禁</a></nav>
+</div></header>
+<main class="wrap">
+<nav class="crumb" aria-label="パンくずリスト"><a href="../../">合格ナビ</a><a href="../../kamoku/4/">課目Ⅳ</a><a href="../../bunya/measurement-control/">計測と制御</a><span>測温抵抗体の抵抗と導線の誤差</span></nav>
+<h1>測温抵抗体の抵抗と導線の誤差</h1>
+<p class="lead"><span class="chip ink">課目Ⅳ</span><span class="chip ink">計測と制御</span><span class="chip calc">計算</span></p>
+<section class="card point-one"><h2 class="h-in">ひとことで言うと</h2><p>白金の抵抗は温度とともに増える。Pt100 は 0 ℃ で 100 Ω。導線の抵抗も足されてしまうので3導線式で打ち消す。</p></section>
+<section><h2>練習問題</h2>
+<p class="note">空欄 A・B・C に入るものを答えてください。</p>
+<div class="stem" data-qid="rtd-01">白金測温抵抗体 Pt100(0 ℃ で 100 Ω)の抵抗が 146.20 Ω であった。抵抗の温度係数を 0 ℃〜100 ℃ の平均値 0.00385 /K とし、抵抗は温度に比例して変わるとみなすと、温度は <span class="bl">A</span> ℃ である。2導線式で配線し、導線の往復の抵抗が 1.5 Ω あると、指示温度は <span class="bl">B</span> K 高くなる。導線の抵抗の影響を打ち消すため工業計測で広く使う結線は <span class="bl">C</span> である。</div><div class="sblank"><div class="lab"><span class="l">A</span>数値(4桁・□□□.□)<span class="u">℃</span></div></div><div class="sblank"><div class="lab"><span class="l">B</span>数値(2桁・□.□)<span class="u">K</span></div></div><div class="sblank"><div class="lab"><span class="l">C</span>解答群</div><ol class="sopts"><li><span class="k">ア</span>補償導線式</li><li><span class="k">イ</span>2導線式</li><li><span class="k">ウ</span>基準接点式</li><li><span class="k">エ</span>3導線式</li></ol></div><details class="answer"><summary>答えとやさしい解き方を見る</summary><ul class="anslist"><li><span class="l">A</span><b>120.0</b> ℃</li><li><span class="l">B</span><b>3.9</b> K</li><li><span class="l">C</span><b>エ 3導線式</b> </li></ul><p class="note">数値の答えは本番と同じ「桁ごとのマーク」です。桁が余るときは先頭に 0 を入れます。</p><div class="guide"><div class="g-goal"><b>何を聞かれている?</b><br>白金測温抵抗体 Pt100 の抵抗の値から温度を出し、配線の抵抗による誤差を出す問題。</div><h4>記号と単位</h4><ul><li>R₀ … 0 ℃ のときの抵抗(Pt100 は 100 Ω)</li><li>α … 温度係数。1 ℃ 上がるごとに抵抗が R₀ の何倍増えるか</li></ul><h4>解き方</h4><div class="step"><span class="no">1</span><div><div class="why">R = R₀(1 + αt) を t について解く。R を 100 で割って 1 を引き、α で割る。</div><div class=formula>R = R₀(1 + αt) → t = (R/R₀ − 1)/α = (146.20/100 − 1)/0.00385 = 120.000 → 120.0 ℃</div></div></div><div class="step"><span class="no">2</span><div><div class="why">導線の抵抗は素子の抵抗に足されて、そのぶん高い温度に見える。1 ℃ あたり 100 × α Ω 増えるので、導線の抵抗をそれで割ると温度の誤差。</div><div class=formula>導線の抵抗 1.5 Ω が素子の抵抗に足される:温度の誤差 = 1.5/(100 × 0.00385) = 3.896 → 3.9 K(1 Ω でおよそ 2.6 K)</div></div></div><h4>あわせて覚える</h4><ul><li>3導線式はブリッジの隣り合う辺に導線を1本ずつ入れて、導線の抵抗を打ち消す。より精密には4導線式。</li><li>測温抵抗体は熱電対より低い温度域で精度よく測れ、基準接点の補償がいらない。</li></ul><div class="trap"><b>つまずきやすいところ</b><br>R₀ で割り忘れて、抵抗そのものを α で割ってしまう。</div></div></details>
+</section>
+
+<aside class="cta card">
+  <div class="cta-h">この論点の問題は全 8 問(無料 1 問)</div>
+  <p class="note">本番と同じマーク形式(数値は桁ごと・語句は解答群)で解けます。計算は数値を変えた類題をくり返し練習できます。</p>
+  <div class="only-ios">
+    <a class="btn heat block" href="https://apps.apple.com/jp/app/id6826752834" rel="noopener">App Store で iPhone 版を入手(無料)</a>
+    <p class="note">全 834 問の解禁はアプリ内の買い切りです。<a href="../../#/p/pt/4/%E8%A8%88%E6%B8%AC%E3%81%A8%E5%88%B6%E5%BE%A1/%E6%B8%AC%E6%B8%A9%E6%8A%B5%E6%8A%97%E4%BD%93%E3%81%AE%E6%8A%B5%E6%8A%97%E3%81%A8%E5%B0%8E%E7%B7%9A%E3%81%AE%E8%AA%A4%E5%B7%AE">ブラウザで無料問題を解く</a></p>
+  </div>
+  <div class="only-web">
+    <div class="actions"><a class="btn heat" href="../../#/p/pt/4/%E8%A8%88%E6%B8%AC%E3%81%A8%E5%88%B6%E5%BE%A1/%E6%B8%AC%E6%B8%A9%E6%8A%B5%E6%8A%97%E4%BD%93%E3%81%AE%E6%8A%B5%E6%8A%97%E3%81%A8%E5%B0%8E%E7%B7%9A%E3%81%AE%E8%AA%A4%E5%B7%AE">この続きを Web 版で解く</a><a class="btn ghost" href="../../#/pro">全部解禁(買い切り)</a></div>
+    <p class="note">iPhone をお使いなら <a href="https://apps.apple.com/jp/app/id6826752834" rel="noopener">App Store のアプリ版</a> もあります。</p>
+  </div>
+</aside>
+<section><h2>「計測と制御」のイメージ</h2>
+<div class="card intro"><div class="one">温度・圧力・流量を測り、目標とずれたら自動で調整するしくみ。</div><p class="note" style="margin:8px 0 0"><a href="../../bunya/measurement-control/">計測と制御の要点と全論点を見る ›</a></p></div></section>
+<section><h2>同じ分野の論点</h2><div class="list"><a class="item" href="../../bunya/measurement-control/#ctrl-pid"><div class="t"><div class="n">PID制御の各動作</div><div class="s">P=ずれに比例して動かす、I=ずれの合計を見てずれを消す、D=ずれの変化の速さを見て先回りする。</div></div></a><a class="item" href="../../ronten/ctrl-cascade/"><div class="t"><div class="n">カスケード・比率・フィードフォワード制御</div><div class="s">カスケード=一方の調節計の出力を別の調節計の目標にする。比率=2つの流量の比を一定に保つ。フィードフォワード=外乱を先に測って動かす。</div></div></a><a class="item" href="../../ronten/measure-sensor/"><div class="t"><div class="n">熱電対と差圧式流量計</div><div class="s">熱電対=2種類の金属の接点の温度差で電圧が出る。差圧式=絞りの前後の圧力差から流量を出す(流量は差圧の平方根に比例)。</div></div></a><a class="item" href="../../ronten/measure-pressure/"><div class="t"><div class="n">絶対圧・ゲージ圧と真空計</div><div class="s">絶対圧=真空を0とした圧力。ゲージ圧=大気圧を0とした圧力。絶対圧 = ゲージ圧 + 大気圧。</div></div></a><a class="item" href="../../ronten/measure-valve/"><div class="t"><div class="n">調節弁の容量係数と流量特性</div><div class="s">Cv値=弁の流しやすさ。開度と流量の関係(リニア・イコールパーセント等)が流量特性。</div></div></a><a class="item" href="../../ronten/measure-tc/"><div class="t"><div class="n">熱電対の取り付けと表面温度の測定誤差</div><div class="s">熱電対の線を伝って熱が逃げると、実際より低く測れる。表面に沿わせて取り付ける。</div></div></a><a class="item" href="../../ronten/measure-area/"><div class="t"><div class="n">面積式流量計(フロート形)</div><div class="s">テーパの付いた管の中でフロートが浮き上がる高さで流量を読む。</div></div></a><a class="item" href="../../ronten/ctrl-seq/"><div class="t"><div class="n">シーケンス制御・伝達関数・PIDの式</div><div class="s">シーケンス=決められた順番どおりに動かす制御。伝達関数=入力と出力の関係を式で表したもの。</div></div></a><a class="item" href="../../ronten/measure-flow2/"><div class="t"><div class="n">コリオリ式流量計とブルドン管圧力計</div><div class="s">コリオリ式=振動する管の中を流れる力で質量流量を直接測る。ブルドン管=曲げた管が圧力で伸びる量を針に伝える。</div></div></a><a class="item" href="../../ronten/measure-tc2/"><div class="t"><div class="n">補償導線の形式と基準接点</div><div class="s">熱電対から計器まで、熱電対と同じ性質の線で延ばす。基準接点の温度をもとに測る。</div></div></a><a class="item" href="../../ronten/measure-tube/"><div class="t"><div class="n">熱電対の保護管と放射温度計の放射率</div><div class="s">保護管で熱電対を守るが、応答は遅くなる。放射温度計は物の放射率を正しく設定しないと誤差が出る。</div></div></a><a class="item" href="../../ronten/measure-dp/"><div class="t"><div class="n">差圧伝送器の検出方式と伝送信号</div><div class="s">圧力差を電気の信号(4〜20 mA など)に変えて送る。</div></div></a><a class="item" href="../../ronten/ctrl-tuning/"><div class="t"><div class="n">ステップ応答法・限界感度法と強制循環ボイラ・オットー機関</div><div class="s">PIDの調整値の決め方。ステップ応答法は入力を一度だけ変えたときの応答から、限界感度法は振動し始める点から決める。</div></div></a><a class="item" href="../../ronten/valve-structure/"><div class="t"><div class="n">調節弁の構造(単座・複座)とCv値</div><div class="s">単座弁は閉めたときの漏れが少ない。複座弁は流体の力がつり合うので小さい力で動かせるが、漏れは多め。</div></div></a><a class="item" href="../../ronten/measure-values/"><div class="t"><div class="n">熱電対・測温抵抗体の数値と真空計</div><div class="s">白金測温抵抗体は温度で抵抗が変わる性質を使う。種類ごとに使える温度の範囲がある。</div></div></a><a class="item" href="../../ronten/ctrl-class/"><div class="t"><div class="n">定値制御・追値制御・プログラム制御と主調節計・従調節計</div><div class="s">目標が一定(定値)、目標が別の値に追従して変わる(追値)、目標を時間の予定どおりに変える(プログラム)。</div></div></a><a class="item" href="../../ronten/pitot/"><div class="t"><div class="n"><span class="chip calc">計算</span>ピトー管の差圧と流速</div><div class="s">流れを正面で受けた圧力と横の圧力の差から流速を出す。流速は差圧の平方根に比例する。</div></div></a><a class="item" href="../../ronten/ctrl-response/"><div class="t"><div class="n"><span class="chip calc">計算</span>P動作のオフセットと行き過ぎ量・減衰比</div><div class="s">P動作だけでは少しずれが残る(オフセット)。行き過ぎ量=目標を超えた分、減衰比=揺れがどれだけ早くおさまるか。</div></div></a><a class="item" href="../../ronten/meas-error/"><div class="t"><div class="n"><span class="chip calc">計算</span>測定誤差の合成と系統誤差・偶然誤差</div><div class="s">系統誤差=いつも同じ向きにずれる(補正できる)。偶然誤差=ばらつく。合成は2乗和の平方根。</div></div></a><a class="item" href="../../ronten/pb-offset/"><div class="t"><div class="n"><span class="chip calc">計算</span>比例帯とオフセットの計算</div><div class="s">比例帯が広いほど動きはおだやかだが、オフセットは大きくなる。</div></div></a><a class="item" href="../../ronten/thermocouple/"><div class="t"><div class="n"><span class="chip calc">計算</span>熱電対の基準接点補償と温度の読み取り</div><div class="s">熱電対の電圧は2つの接点の温度差で決まる。表は 0 ℃ 基準なので、端子の温度ぶんの電圧を足してから読む。</div></div></a><a class="item" href="../../ronten/dp-flow/"><div class="t"><div class="n"><span class="chip calc">計算</span>差圧式流量計の開平と差圧伝送器</div><div class="s">オリフィスの差圧は流量の2乗に比例する。だから流量は差圧の平方根(開平)で出す。</div></div></a></div></section>
+<nav class="snav" aria-label="課目"><h2>課目から探す</h2><div class="list"><a class="item" href="../../kamoku/1/"><div class="t"><div class="n">課目Ⅰ</div><div class="s">エネルギー総合管理及び法規</div></div><span class="cnt">›</span></a><a class="item" href="../../kamoku/2/"><div class="t"><div class="n">課目Ⅱ</div><div class="s">熱と流体の流れの基礎</div></div><span class="cnt">›</span></a><a class="item" href="../../kamoku/3/"><div class="t"><div class="n">課目Ⅲ</div><div class="s">燃料と燃焼</div></div><span class="cnt">›</span></a><a class="item" href="../../kamoku/4/"><div class="t"><div class="n">課目Ⅳ</div><div class="s">熱利用設備及びその管理</div></div><span class="cnt">›</span></a></div></nav>
+<footer class="foot">エネ管 熱 合格ナビ Web版 ・ <a href="../../#/about">このサイトについて</a> ・ <a href="../../../privacy.html">プライバシーポリシー</a> ・ <a href="../../../support.html">お問い合わせ</a><br>
+問題はすべて過去問の論点をもとにしたオリジナルです(過去問の問題文は載せていません)。試験の実施機関とは関係のない個人制作です。</footer>
+</main>
+</body>
+</html>
