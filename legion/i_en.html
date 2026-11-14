@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../style.css">
+<title>Element Legion Invite</title>
+<style>.code{font-size:32px;font-weight:700;letter-spacing:.12em;margin:8px 0 20px;user-select:all;-webkit-user-select:all}.go{display:block;width:100%;box-sizing:border-box;padding:16px;border:0;border-radius:12px;background:#0a84ff;color:#fff;font-size:18px;font-weight:700;font-family:inherit}</style>
+</head>
+<body>
+<main>
+<div class="app"><img src="icon.png" alt=""><div><b>Element Legion</b><span>Invite</span></div></div>
+<p>Invite code</p>
+<div class="code" id="c">-</div>
+<button class="go" id="go">Copy and open the App Store</button>
+<p>Paste it in the App under "How to Play" → Invite to get 800 Crystals (within 7 days of starting).</p>
+</main>
+<script>
+const c=(new URLSearchParams(location.search).get('c')||'').toUpperCase().replace(/[^A-Z0-9]/g,'').slice(0,8);
+document.getElementById('c').textContent=c||'-';
+document.getElementById('go').onclick=async()=>{try{if(c)await navigator.clipboard.writeText(c)}catch(e){}location.href='https://apps.apple.com/app/id6832966034'};
+</script>
+</body>
+</html>
