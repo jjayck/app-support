@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>計量規準型一回抜取検査(σ 既知)|QC検定2級 手法 抜取検査の練習問題とやさしい解き方</title>
+<meta name="description" content="測った値の平均で判定する。正規分布表の値から n と k を決め、平均 ≤ Sᵤ − kσ なら合格。 QC検定2級「抜取検査」の論点。オリジナルの練習問題1問と答え・解説つき。">
+<link rel="canonical" href="https://jjayck.github.io/app-support/enekan/app/qc2/ronten/var-sampling/">
+<meta property="og:title" content="計量規準型一回抜取検査(σ 既知)|QC検定2級 手法 抜取検査の練習問題とやさしい解き方">
+<meta property="og:description" content="測った値の平均で判定する。正規分布表の値から n と k を決め、平均 ≤ Sᵤ − kσ なら合格。 QC検定2級「抜取検査」の論点。オリジナルの練習問題1問と答え・解説つき。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://jjayck.github.io/app-support/enekan/app/qc2/ronten/var-sampling/">
+<meta property="og:site_name" content="合格ナビ QC検定2級">
+<meta name="apple-itunes-app" content="app-id=6826752834">
+<meta name="theme-color" content="#f6f1e7">
+<link rel="icon" href="../../../../icon.png">
+<link rel="apple-touch-icon" href="../../../../icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap">
+<link rel="stylesheet" href="../../../style.css?v=202611151153">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "QC検定2級", "item": "https://jjayck.github.io/app-support/enekan/app/qc2/"}, {"@type": "ListItem", "position": 2, "name": "抜取検査", "item": "https://jjayck.github.io/app-support/enekan/app/qc2/bunya/sampling-inspection/"}, {"@type": "ListItem", "position": 3, "name": "計量規準型一回抜取検査(σ 既知)", "item": "https://jjayck.github.io/app-support/enekan/app/qc2/ronten/var-sampling/"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Quiz", "name": "計量規準型一回抜取検査(σ 既知)", "description": "測った値の平均で判定する。正規分布表の値から n と k を決め、平均 ≤ Sᵤ − kσ なら合格。 QC検定2級「抜取検査」の論点。オリジナルの練習問題1問と答え・解説つき。", "inLanguage": "ja", "learningResourceType": "練習問題", "educationalLevel": "QC検定2級", "about": "抜取検査", "isAccessibleForFree": true, "url": "https://jjayck.github.io/app-support/enekan/app/qc2/ronten/var-sampling/", "isPartOf": {"@type": "WebSite", "name": "合格ナビ QC検定2級", "url": "https://jjayck.github.io/app-support/enekan/app/qc2/"}, "hasPart": [{"@type": "Question", "eduQuestionType": "Multiple choice", "name": "空欄D", "text": "上限規格 Sᵤ = 80 の特性について、標準偏差 σ = 0.8 が既知の計量規準型一回抜取検査(ロットの平均値ではなく不適合品率を保証する方式)を設計する。なるべく合格させたいロットの不適合品率 p₀ = 2 %(α = 0.05)、なるべく不合格にしたい不適合品率 p₁ = 10 %(β = 0.10)とする。n = ((K_α + K_β)/(K_p₀ − K_p₁))²(小数は切り上げ)、k = (K_p₀·K_β + K_p₁·K_α)/(K_α + K_β) で求めると、n = [A]、k = [B](小数 2 桁に丸める)である。上限合格判定値 X̄ᵤ = Sᵤ − kσ は [C] であり、抜き取った n 個の平均が 78.38 だったので、[D]。付表の正規分布表を用いよ。 空欄[D]に入るものを解答群から選べ。", "acceptedAnswer": {"@type": "Answer", "text": "ロットを合格とする"}, "suggestedAnswer": [{"@type": "Answer", "text": "ロットを不合格とする"}]}], "educationalAlignment": {"@type": "AlignmentObject", "alignmentType": "educationalSubject", "targetName": "抜取検査"}}</script>
+</head>
+<body class="static">
+<header class="top"><div class="in">
+  <a class="brand" href="../../../qc2/"><span class="mark">QC</span>QC検定2級 合格ナビ</a>
+  <span class="sp"></span>
+  <nav><a href="../../../qc2/">論点一覧</a><a href="https://apps.apple.com/jp/app/id6826752834" rel="noopener">アプリで解く</a></nav>
+</div></header>
+<main class="wrap">
+<nav class="crumb" aria-label="パンくずリスト"><a href="../../../qc2/">QC検定2級</a><a href="../../../qc2/bunya/sampling-inspection/">抜取検査</a><span>計量規準型一回抜取検査(σ 既知)</span></nav>
+<h1>計量規準型一回抜取検査(σ 既知)</h1>
+<p class="lead"><span class="chip ink">手法</span><span class="chip ink">抜取検査</span><span class="chip calc">計算</span></p>
+<section class="card point-one"><h2 class="h-in">ひとことで言うと</h2><p>測った値の平均で判定する。正規分布表の値から n と k を決め、平均 ≤ Sᵤ − kσ なら合格。</p></section>
+<section><h2>練習問題</h2>
+<p class="note">空欄 A・B・C・D に入るものを答えてください。</p>
+<div class="stem" data-qid="qc2-var_sampling-01">上限規格 Sᵤ = 80 の特性について、標準偏差 σ = 0.8 が既知の計量規準型一回抜取検査(ロットの平均値ではなく不適合品率を保証する方式)を設計する。なるべく合格させたいロットの不適合品率 p₀ = 2 %(α = 0.05)、なるべく不合格にしたい不適合品率 p₁ = 10 %(β = 0.10)とする。n = ((K_α + K_β)/(K<sub>p</sub>₀ − K<sub>p</sub>₁))²(小数は切り上げ)、k = (K<sub>p</sub>₀·K_β + K<sub>p</sub>₁·K_α)/(K_α + K_β) で求めると、n = <span class="bl">A</span>、k = <span class="bl">B</span>(小数 2 桁に丸める)である。上限合格判定値 X̄ᵤ = Sᵤ − kσ は <span class="bl">C</span> であり、抜き取った n 個の平均が 78.38 だったので、<span class="bl">D</span>。付表の正規分布表を用いよ。<div class="tbl-wrap"><div class="tbl-title">正規分布表(P から K<sub>P</sub> を求める)の抜粋</div><table class="qt"><thead><tr><th>P</th><th>K<sub>P</sub></th></tr></thead><tbody><tr><td>0.1</td><td>1.282</td></tr><tr><td>0.05</td><td>1.645</td></tr><tr><td>0.02</td><td>2.054</td></tr></tbody></table><div class="tbl-note">K<sub>P</sub> は上側確率が P になる点</div></div></div><div class="sblank"><div class="lab"><span class="l">A</span>数値(2桁・□□)<span class="u">個</span></div></div><div class="sblank"><div class="lab"><span class="l">B</span>数値(3桁・□.□□)<span class="u"></span></div></div><div class="sblank"><div class="lab"><span class="l">C</span>数値(5桁・□□□.□□)<span class="u"></span></div></div><div class="sblank"><div class="lab"><span class="l">D</span>解答群</div><ol class="sopts"><li><span class="k">ア</span>ロットを不合格とする</li><li><span class="k">イ</span>ロットを合格とする</li></ol></div><details class="answer"><summary>答えとやさしい解き方を見る</summary><ul class="anslist"><li><span class="l">A</span><b>15</b> 個</li><li><span class="l">B</span><b>1.62</b> </li><li><span class="l">C</span><b>078.70</b> </li><li><span class="l">D</span><b>イ ロットを合格とする</b> </li></ul><p class="note">数値の答えは本番と同じ「桁ごとのマーク」です。桁が余るときは先頭に 0 を入れます。</p><div class="guide"><div class="g-goal"><b>何を聞かれている?</b><br>標準偏差が分かっている特性で、抜き取る数 n と合格判定の係数 k を決め、ロットの合否を判定する問題。</div><h4>記号と単位</h4><ul><li>K_α・K_β … α = 0.05、β = 0.10 の正規分布表の値</li><li>K<sub>p</sub>₀・K<sub>p</sub>₁ … p₀・p₁ の正規分布表の値</li><li>X̄ᵤ … 上限合格判定値</li></ul><h4>解き方</h4><div class="step"><span class="no">1</span><div><div class="why">必要な 4 つの K を正規分布表で読む。</div><div class=formula>表から K_α = K₀.₀₅ = 1.645、K_β = K₀.₁₀ = 1.282、K<sub>p</sub>₀ = K<sub>0</sub>.02 = 2.054、K<sub>p</sub>₁ = K<sub>0</sub>.1 = 1.282。</div></div></div><div class="step"><span class="no">2</span><div><div class="why">式に入れて n を出し、小数は切り上げる(少ないと狙いの精度が出ない)。</div><div class=formula>n = ((1.645 + 1.282)/(2.054 − 1.282))² = (2.927/0.772)² = 14.3751 → 切り上げて 15 → 15。</div></div></div><div class="step"><span class="no">3</span><div><div class="why">k も式に入れて小数 2 桁に丸める。</div><div class=formula>k = (2.054 × 1.282 + 1.282 × 1.645)/2.927 = 1.6201 → 1.62。</div></div></div><div class="step"><span class="no">4</span><div><div class="why">上限規格から k × σ を引くと、合格判定値。</div><div class=formula>X̄ᵤ = Sᵤ − kσ = 80 − 1.62 × 0.8 = 78.704 → 78.70。</div></div></div><div class="step"><span class="no">5</span><div><div class="why">抜き取った平均が判定値以下なら合格。</div><div class=formula>平均 78.38 は X̄ᵤ 78.704 以下 → 合格。上限規格では「x̄ ≤ X̄ᵤ なら合格」。</div></div></div><div class="trap"><b>つまずきやすいところ</b><br>n を四捨五入してしまう(切り上げ)/判定値を上限 + kσ にしてしまう。</div></div></details>
+</section>
+<aside class="cta card">
+  <div class="cta-h">この論点の問題は全 8 問(無料 1 問)</div>
+  <p class="note">iPhone・iPad のアプリ「合格ナビ」で、QC検定2級の全 680 問を分野・論点ごとに続けて解けます。本番と同じマーク形式で、計算は数値を変えた類題をくり返し練習できます。</p>
+  <a class="btn heat block" href="https://apps.apple.com/jp/app/id6826752834" rel="noopener">App Store で入手(無料)</a>
+  <p class="note">どの論点にも無料問題があります。全問の解禁はアプリ内の買い切り(¥1,200)です。ブラウザ版は今のところエネルギー管理士(熱分野)だけです。</p>
+</aside>
+<section><h2>「抜取検査」のイメージ</h2>
+<div class="card intro"><div class="one">ロットから一部だけを調べて、ロット全体を合格にするか決める方法。</div><p class="note" style="margin:8px 0 0"><a href="../../bunya/sampling-inspection/">抜取検査の要点と全論点を見る ›</a></p></div></section>
+<section><h2>同じ分野の論点</h2><div class="list"><a class="item" href="../../../qc2/ronten/oc-curve/"><div class="t"><div class="n"><span class="chip calc">計算</span>OC 曲線とロットの合格確率</div><div class="s">不良率ごとのロットの合格の確率。よいロットを落とす α と、悪いロットを通す β で評価する。</div></div></a><a class="item" href="../../../qc2/ronten/attr-plan/"><div class="t"><div class="n"><span class="chip calc">計算</span>計数規準型一回抜取検査の考え方</div><div class="s">良いロットを落とす確率(α)と悪いロットを通す確率(β)の両方を、決めた値以下にする n と c を選ぶ。</div></div></a></div></section>
+<nav class="snav" aria-label="分野"><h2>分野から探す</h2><div class="list"><a class="item" href="../../../qc2/#s1"><div class="t"><div class="n">手法</div><div class="s">品質管理の手法</div></div><span class="cnt">›</span></a><a class="item" href="../../../qc2/#s2"><div class="t"><div class="n">実践</div><div class="s">品質管理の実践</div></div><span class="cnt">›</span></a></div></nav>
+<footer class="foot">合格ナビ QC検定2級 ・ <a href="../../../">エネルギー管理士(熱分野)の Web 版</a> ・ <a href="../../../../privacy.html">プライバシーポリシー</a> ・ <a href="../../../../support.html">お問い合わせ</a><br>
+問題はすべてオリジナルの類似問題で、過去問の問題文は載せていません。本サイトは一般財団法人日本規格協会(品質管理検定センター)および一般財団法人日本科学技術連盟とは関係のない個人制作です。「QC検定」は一般財団法人日本規格協会の登録商標です。</footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>分割表による検定|QC検定2級 手法 計数値の検定と推定の練習問題とやさしい解き方</title>
+<meta name="description" content="期待度数 = 行の計 × 列の計/総数。(実際 − 期待)²/期待 の合計を χ² 表と比べる。 QC検定2級「計数値の検定と推定」の論点。オリジナルの練習問題1問と答え・解説つき。">
+<link rel="canonical" href="https://jjayck.github.io/app-support/enekan/app/qc2/ronten/contingency/">
+<meta property="og:title" content="分割表による検定|QC検定2級 手法 計数値の検定と推定の練習問題とやさしい解き方">
+<meta property="og:description" content="期待度数 = 行の計 × 列の計/総数。(実際 − 期待)²/期待 の合計を χ² 表と比べる。 QC検定2級「計数値の検定と推定」の論点。オリジナルの練習問題1問と答え・解説つき。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://jjayck.github.io/app-support/enekan/app/qc2/ronten/contingency/">
+<meta property="og:site_name" content="合格ナビ QC検定2級">
+<meta name="apple-itunes-app" content="app-id=6826752834">
+<meta name="theme-color" content="#f6f1e7">
+<link rel="icon" href="../../../../icon.png">
+<link rel="apple-touch-icon" href="../../../../icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap">
+<link rel="stylesheet" href="../../../style.css?v=202611151153">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "QC検定2級", "item": "https://jjayck.github.io/app-support/enekan/app/qc2/"}, {"@type": "ListItem", "position": 2, "name": "計数値の検定と推定", "item": "https://jjayck.github.io/app-support/enekan/app/qc2/bunya/tests-discrete/"}, {"@type": "ListItem", "position": 3, "name": "分割表による検定", "item": "https://jjayck.github.io/app-support/enekan/app/qc2/ronten/contingency/"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Quiz", "name": "分割表による検定", "description": "期待度数 = 行の計 × 列の計/総数。(実際 − 期待)²/期待 の合計を χ² 表と比べる。 QC検定2級「計数値の検定と推定」の論点。オリジナルの練習問題1問と答え・解説つき。", "inLanguage": "ja", "learningResourceType": "練習問題", "educationalLevel": "QC検定2級", "about": "計数値の検定と推定", "isAccessibleForFree": true, "url": "https://jjayck.github.io/app-support/enekan/app/qc2/ronten/contingency/", "isPartOf": {"@type": "WebSite", "name": "合格ナビ QC検定2級", "url": "https://jjayck.github.io/app-support/enekan/app/qc2/"}, "hasPart": [{"@type": "Question", "eduQuestionType": "Multiple choice", "name": "空欄D", "text": "表は、機械ごとに製品の等級を分類した結果である。機械によって等級の分布に違いがあるかを、分割表の χ² 検定(有意水準 5 %)で調べる。機械 2 の不適合品の期待度数は [A]、χ₀² = [B]、自由度は [C] であり、判定は [D]。 空欄[D]に入るものを解答群から選べ。", "acceptedAnswer": {"@type": "Answer", "text": "有意である(帰無仮説 H₀ を棄却する)(機械によって品質の分布が違う)"}, "suggestedAnswer": [{"@type": "Answer", "text": "有意でない(帰無仮説 H₀ を棄却できない)(違うとはいえない)"}]}], "educationalAlignment": {"@type": "AlignmentObject", "alignmentType": "educationalSubject", "targetName": "計数値の検定と推定"}}</script>
+</head>
+<body class="static">
+<header class="top"><div class="in">
+  <a class="brand" href="../../../qc2/"><span class="mark">QC</span>QC検定2級 合格ナビ</a>
+  <span class="sp"></span>
+  <nav><a href="../../../qc2/">論点一覧</a><a href="https://apps.apple.com/jp/app/id6826752834" rel="noopener">アプリで解く</a></nav>
+</div></header>
+<main class="wrap">
+<nav class="crumb" aria-label="パンくずリスト"><a href="../../../qc2/">QC検定2級</a><a href="../../../qc2/bunya/tests-discrete/">計数値の検定と推定</a><span>分割表による検定</span></nav>
+<h1>分割表による検定</h1>
+<p class="lead"><span class="chip ink">手法</span><span class="chip ink">計数値の検定と推定</span><span class="chip calc">計算</span></p>
+<section class="card point-one"><h2 class="h-in">ひとことで言うと</h2><p>期待度数 = 行の計 × 列の計/総数。(実際 − 期待)²/期待 の合計を χ² 表と比べる。</p></section>
+<section><h2>練習問題</h2>
+<p class="note">空欄 A・B・C・D に入るものを答えてください。</p>
+<div class="stem" data-qid="qc2-contingency-01">表は、機械ごとに製品の等級を分類した結果である。機械によって等級の分布に違いがあるかを、分割表の χ² 検定(有意水準 5 %)で調べる。機械 2 の不適合品の期待度数は <span class="bl">A</span>、χ₀² = <span class="bl">B</span>、自由度は <span class="bl">C</span> であり、判定は <span class="bl">D</span>。<div class="tbl-wrap"><div class="tbl-title">機械別の等級の度数</div><table class="qt"><thead><tr><th></th><th>適合品</th><th>不適合品</th><th>計</th></tr></thead><tbody><tr><td>機械 1</td><td>12</td><td>15</td><td>27</td></tr><tr><td>機械 2</td><td>26</td><td>11</td><td>37</td></tr><tr><td>機械 3</td><td>45</td><td>13</td><td>58</td></tr><tr><td>計</td><td>83</td><td>39</td><td>122</td></tr></tbody></table></div><div class="tbl-wrap"><div class="tbl-title">χ² 表の抜粋</div><table class="qt"><thead><tr><th>φ</th><th>P = 0.05</th><th>P = 0.01</th></tr></thead><tbody><tr><td>1</td><td>3.84</td><td>6.63</td></tr><tr><td>2</td><td>5.99</td><td>9.21</td></tr><tr><td>3</td><td>7.81</td><td>11.34</td></tr><tr><td>4</td><td>9.49</td><td>13.28</td></tr></tbody></table><div class="tbl-note">χ²(φ, P):自由度 φ で、上側確率が P になる χ² の値</div></div></div><div class="sblank"><div class="lab"><span class="l">A</span>数値(4桁・□□.□□)<span class="u"></span></div></div><div class="sblank"><div class="lab"><span class="l">B</span>数値(4桁・□□.□□)<span class="u"></span></div></div><div class="sblank"><div class="lab"><span class="l">C</span>数値(1桁・□)<span class="u"></span></div></div><div class="sblank"><div class="lab"><span class="l">D</span>解答群</div><ol class="sopts"><li><span class="k">ア</span>有意でない(帰無仮説 H₀ を棄却できない)(違うとはいえない)</li><li><span class="k">イ</span>有意である(帰無仮説 H₀ を棄却する)(機械によって品質の分布が違う)</li></ol></div><details class="answer"><summary>答えとやさしい解き方を見る</summary><ul class="anslist"><li><span class="l">A</span><b>11.83</b> </li><li><span class="l">B</span><b>09.43</b> </li><li><span class="l">C</span><b>2</b> </li><li><span class="l">D</span><b>イ 有意である(帰無仮説 H₀ を棄却する)(機械によって品質の分布が違う)</b> </li></ul><p class="note">数値の答えは本番と同じ「桁ごとのマーク」です。桁が余るときは先頭に 0 を入れます。</p><div class="guide"><div class="g-goal"><b>何を聞かれている?</b><br>表(分割表)の数が、機械によって偏っているかを χ² 検定で判定する問題。</div><h4>記号と単位</h4><ul><li>期待度数 … 関係がないとしたときに入るはずの数</li><li>観測度数 … 実際に数えた数</li></ul><h4>解き方</h4><div class="step"><span class="no">1</span><div><div class="why">関係がないなら、各マスの数は「行の合計 × 列の合計 ÷ 総数」になるはず。</div><div class=formula>H₀「機械と等級は無関係」が正しければ、各マスの期待度数 = (行の計 × 列の計)/総数。</div></div></div><div class="step"><span class="no">2</span><div><div class="why">聞かれたマスで計算する。</div><div class=formula>機械 2 の不適合品:37 × 39/122 = 11.8279 → 11.83。</div></div></div><div class="step"><span class="no">3</span><div><div class="why">全マスで (実際 − 期待)² ÷ 期待 を出して足す。</div><div class=formula>全マスで (観測度数 − 期待度数)²/期待度数 を足す:(12 − 18.37)²/18.37 + (15 − 8.63)²/8.63 + (26 − 25.17)²/25.17 + (11 − 11.83)²/11.83 + (45 − 39.46)²/39.46 + (13 − 18.54)²/18.54 = 9.4269 → 9.43。</div></div></div><div class="step"><span class="no">4</span><div><div class="why">自由度は (行の数 − 1) × (列の数 − 1)。合計の行・列は数えない。</div><div class=formula>自由度 = (行の数 − 1)(列の数 − 1) = (3 − 1)(2 − 1) = 2 → 2。</div></div></div><div class="step"><span class="no">5</span><div><div class="why">χ² 表の P = 0.05 の値以上なら有意。</div><div class=formula>χ²(2, 0.05) = 5.99。χ₀² = 9.4269 ≥ 5.99 → 有意。</div></div></div><div class="trap"><b>つまずきやすいところ</b><br>自由度を「マスの数 − 1」にしてしまう/合計の行・列まで数える。</div></div></details>
+</section>
+<aside class="cta card">
+  <div class="cta-h">この論点の問題は全 8 問(無料 1 問)</div>
+  <p class="note">iPhone・iPad のアプリ「合格ナビ」で、QC検定2級の全 680 問を分野・論点ごとに続けて解けます。本番と同じマーク形式で、計算は数値を変えた類題をくり返し練習できます。</p>
+  <a class="btn heat block" href="https://apps.apple.com/jp/app/id6826752834" rel="noopener">App Store で入手(無料)</a>
+  <p class="note">どの論点にも無料問題があります。全問の解禁はアプリ内の買い切り(¥1,200)です。ブラウザ版は今のところエネルギー管理士(熱分野)だけです。</p>
+</aside>
+<section><h2>「計数値の検定と推定」のイメージ</h2>
+<div class="card intro"><div class="one">数えたデータ(不良品の数・きずの数)から、不良率や不適合数が変わったかを判定する。</div><p class="note" style="margin:8px 0 0"><a href="../../bunya/tests-discrete/">計数値の検定と推定の要点と全論点を見る ›</a></p></div></section>
+<section><h2>同じ分野の論点</h2><div class="list"><a class="item" href="../../../qc2/ronten/p-one/"><div class="t"><div class="n"><span class="chip calc">計算</span>母不適合品率の検定と推定</div><div class="s">不良率のばらつきは √(P(1 − P)/n)。検定は基準の P₀、推定は調べた p を使う。</div></div></a><a class="item" href="../../../qc2/ronten/p-two/"><div class="t"><div class="n"><span class="chip calc">計算</span>2 つの母不適合品率の違いの検定</div><div class="s">合わせた不良率 p̄ = 不良の合計/調べた数の合計 を使って差を標準化する。</div></div></a><a class="item" href="../../../qc2/ronten/c-one/"><div class="t"><div class="n"><span class="chip calc">計算</span>母不適合数の検定と推定</div><div class="s">不適合数はポアソン分布。1 単位あたりの数のばらつきは √(λ/n)。</div></div></a><a class="item" href="../../../qc2/ronten/c-two/"><div class="t"><div class="n"><span class="chip calc">計算</span>2 つの母不適合数の違いの検定</div><div class="s">合わせた λ̄ を使って、差 ÷ √(λ̄(1/n₁ + 1/n₂))。</div></div></a></div></section>
+<nav class="snav" aria-label="分野"><h2>分野から探す</h2><div class="list"><a class="item" href="../../../qc2/#s1"><div class="t"><div class="n">手法</div><div class="s">品質管理の手法</div></div><span class="cnt">›</span></a><a class="item" href="../../../qc2/#s2"><div class="t"><div class="n">実践</div><div class="s">品質管理の実践</div></div><span class="cnt">›</span></a></div></nav>
+<footer class="foot">合格ナビ QC検定2級 ・ <a href="../../../">エネルギー管理士(熱分野)の Web 版</a> ・ <a href="../../../../privacy.html">プライバシーポリシー</a> ・ <a href="../../../../support.html">お問い合わせ</a><br>
+問題はすべてオリジナルの類似問題で、過去問の問題文は載せていません。本サイトは一般財団法人日本規格協会(品質管理検定センター)および一般財団法人日本科学技術連盟とは関係のない個人制作です。「QC検定」は一般財団法人日本規格協会の登録商標です。</footer>
+</main>
+</body>
+</html>

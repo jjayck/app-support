@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>確率分布の要点と練習問題|QC検定2級 品質管理の手法</title>
+<meta name="description" content="データのばらつき方には決まった形があり、その形を使うと「どのくらいの確率で起きるか」が計算できる。 QC検定2級「確率分布」の6論点を、ひとことの要点と練習問題で確認。">
+<link rel="canonical" href="https://jjayck.github.io/app-support/enekan/app/qc2/bunya/distributions/">
+<meta property="og:title" content="確率分布の要点と練習問題|QC検定2級 品質管理の手法">
+<meta property="og:description" content="データのばらつき方には決まった形があり、その形を使うと「どのくらいの確率で起きるか」が計算できる。 QC検定2級「確率分布」の6論点を、ひとことの要点と練習問題で確認。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://jjayck.github.io/app-support/enekan/app/qc2/bunya/distributions/">
+<meta property="og:site_name" content="合格ナビ QC検定2級">
+<meta name="apple-itunes-app" content="app-id=6826752834">
+<meta name="theme-color" content="#f6f1e7">
+<link rel="icon" href="../../../../icon.png">
+<link rel="apple-touch-icon" href="../../../../icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap">
+<link rel="stylesheet" href="../../../style.css?v=202611151153">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "QC検定2級", "item": "https://jjayck.github.io/app-support/enekan/app/qc2/"}, {"@type": "ListItem", "position": 2, "name": "確率分布", "item": "https://jjayck.github.io/app-support/enekan/app/qc2/bunya/distributions/"}]}</script>
+</head>
+<body class="static">
+<header class="top"><div class="in">
+  <a class="brand" href="../../../qc2/"><span class="mark">QC</span>QC検定2級 合格ナビ</a>
+  <span class="sp"></span>
+  <nav><a href="../../../qc2/">論点一覧</a><a href="https://apps.apple.com/jp/app/id6826752834" rel="noopener">アプリで解く</a></nav>
+</div></header>
+<main class="wrap">
+<nav class="crumb" aria-label="パンくずリスト"><a href="../../../qc2/">QC検定2級</a><span>確率分布</span></nav>
+<h1>確率分布<small>QC検定2級 手法(品質管理の手法)</small></h1>
+<p class="lead">手法(品質管理の手法) ・ 6論点(うち計算 6) ・ 問題 48問</p>
+<section class="card intro"><div class="one">データのばらつき方には決まった形があり、その形を使うと「どのくらいの確率で起きるか」が計算できる。</div><div class="image">たとえると: 身長のように真ん中が多く両側が少ない山形(正規分布)、不良品の数(二項分布)、まれに起きるきずの数(ポアソン分布)。</div>
+<ol><li>正規分布は平均 μ と標準偏差 σ で決まる。(x − μ)/σ で標準化すれば、1 枚の正規分布表で確率が読める。</li><li>不良率 p の工程から n 個とったときの不良数は二項分布、平均 np・分散 np(1 − p)。</li><li>きずや故障の回数はポアソン分布、平均も分散も λ。</li><li>独立な量の和や差の分散は足し算。n 個の平均の標準偏差は σ/√n(中心極限定理で、平均はほぼ正規分布になる)。</li></ol><div class="exam">試験のねらい目: 正規分布表の読み方(上側確率・対称性)、二項・ポアソンの確率、分散の加法性、平均値の分布。</div></section>
+<section><h2>論点(ひとことで要点)</h2><div class="card pt" id="normal-prob"><h3><a href="../../../qc2/ronten/normal-prob/"><span class="chip calc">計算</span>正規分布の確率</a></h3><p>(x − μ)/σ で標準化すれば、正規分布表 1 枚でどんな正規分布の確率も読める。</p><p class="note"><a href="../../../qc2/ronten/normal-prob/">練習問題と解き方を見る ›</a></p></div><div class="card pt" id="normal-inverse"><h3><a href="../../../qc2/ronten/normal-inverse/"><span class="chip calc">計算</span>確率から値を求める(正規分布)</a></h3><p>上から 5 % の点は K = 1.645。値に戻すときは μ + Kσ。</p><p class="note"><a href="../../../qc2/ronten/normal-inverse/">練習問題と解き方を見る ›</a></p></div><div class="card pt" id="binomial"><h3><a href="../../../qc2/ronten/binomial/"><span class="chip calc">計算</span>二項分布の確率</a></h3><p>n 個中 x 個が不良の確率。0 個は (1 − p)ⁿ、平均 np、分散 np(1 − p)。</p><p class="note"><a href="../../../qc2/ronten/binomial/">練習問題と解き方を見る ›</a></p></div><div class="card pt" id="poisson"><h3><a href="../../../qc2/ronten/poisson/"><span class="chip calc">計算</span>ポアソン分布の確率</a></h3><p>まれに起きることの回数。0 回の確率は e<sup>−λ</sup>、平均も分散も λ。</p><p class="note"><a href="../../../qc2/ronten/poisson/">練習問題と解き方を見る ›</a></p></div><div class="card pt" id="additivity"><h3><a href="../../../qc2/ronten/additivity/"><span class="chip calc">計算</span>期待値と分散の加法性</a></h3><p>和でも差でも、独立なら分散は足し算。標準偏差は足さない。</p><p class="note"><a href="../../../qc2/ronten/additivity/">練習問題と解き方を見る ›</a></p></div><div class="card pt" id="xbar-dist"><h3><a href="../../../qc2/ronten/xbar-dist/"><span class="chip calc">計算</span>平均値の分布と中心極限定理</a></h3><p>n 個の平均のばらつきは σ/√n。平均はもとの分布によらずほぼ正規分布になる。</p><p class="note"><a href="../../../qc2/ronten/xbar-dist/">練習問題と解き方を見る ›</a></p></div></section>
+<aside class="cta card">
+  <div class="cta-h">この分野の問題は全 48 問(無料 6 問)</div>
+  <p class="note">iPhone・iPad のアプリ「合格ナビ」で、QC検定2級の全 680 問を分野・論点ごとに続けて解けます。本番と同じマーク形式で、計算は数値を変えた類題をくり返し練習できます。</p>
+  <a class="btn heat block" href="https://apps.apple.com/jp/app/id6826752834" rel="noopener">App Store で入手(無料)</a>
+  <p class="note">どの論点にも無料問題があります。全問の解禁はアプリ内の買い切り(¥1,200)です。ブラウザ版は今のところエネルギー管理士(熱分野)だけです。</p>
+</aside>
+<section><h2>品質管理の手法のほかの分野</h2><div class="list"><a class="item" href="../data-summary/"><div class="t"><div class="n">データのまとめ方</div><div class="s">たくさんの数字を、「真ん中」と「ばらつき」の 2 つの数にまとめる。</div></div></a><a class="item" href="../process-capability/"><div class="t"><div class="n">工程能力</div><div class="s">規格の幅に対して、工程のばらつきが十分に小さいかを 1 つの数で表す。</div></div></a><a class="item" href="../tests-continuous/"><div class="t"><div class="n">計量値の検定と推定</div><div class="s">測った値(長さ・重さ・強さ)のデータから、「平均やばらつきが変わったか」を確率で判定し、本当の値の範囲を見積もる。</div></div></a><a class="item" href="../tests-discrete/"><div class="t"><div class="n">計数値の検定と推定</div><div class="s">数えたデータ(不良品の数・きずの数)から、不良率や不適合数が変わったかを判定する。</div></div></a><a class="item" href="../control-charts/"><div class="t"><div class="n">管理図</div><div class="s">工程が「いつもどおり」かを、中心線と上下の管理限界の線で見張るグラフ。</div></div></a><a class="item" href="../sampling-inspection/"><div class="t"><div class="n">抜取検査</div><div class="s">ロットから一部だけを調べて、ロット全体を合格にするか決める方法。</div></div></a><a class="item" href="../doe/"><div class="t"><div class="n">実験計画法</div><div class="s">条件を計画的に変えて実験し、結果のばらつきを「条件のせい」と「偶然のせい」に分けて、効果を判定する。</div></div></a><a class="item" href="../correlation/"><div class="t"><div class="n">相関分析</div><div class="s">2 つの量が一緒に増えたり減ったりする関係の強さを、相関係数 r(−1〜1)で表す。</div></div></a><a class="item" href="../regression/"><div class="t"><div class="n">単回帰分析</div><div class="s">x から y を予測する直線を、データにいちばん合うように引く。</div></div></a><a class="item" href="../reliability/"><div class="t"><div class="n">信頼性工学</div><div class="s">製品がどれだけ長く故障せずに働けるかを、確率と時間で表す。</div></div></a><a class="item" href="../new-qc-tools/"><div class="t"><div class="n">新QC七つ道具</div><div class="s">言葉のデータ(意見・事実)や日程を整理するための 7 つの図。</div></div></a></div></section>
+<nav class="snav" aria-label="分野"><h2>分野から探す</h2><div class="list"><a class="item" href="../../../qc2/#s1"><div class="t"><div class="n">手法</div><div class="s">品質管理の手法</div></div><span class="cnt">›</span></a><a class="item" href="../../../qc2/#s2"><div class="t"><div class="n">実践</div><div class="s">品質管理の実践</div></div><span class="cnt">›</span></a></div></nav>
+<footer class="foot">合格ナビ QC検定2級 ・ <a href="../../../">エネルギー管理士(熱分野)の Web 版</a> ・ <a href="../../../../privacy.html">プライバシーポリシー</a> ・ <a href="../../../../support.html">お問い合わせ</a><br>
+問題はすべてオリジナルの類似問題で、過去問の問題文は載せていません。本サイトは一般財団法人日本規格協会(品質管理検定センター)および一般財団法人日本科学技術連盟とは関係のない個人制作です。「QC検定」は一般財団法人日本規格協会の登録商標です。</footer>
+</main>
+</body>
+</html>

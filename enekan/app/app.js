@@ -6,11 +6,15 @@ const ROMAN = ['', 'Ⅰ', 'Ⅱ', 'Ⅲ', 'Ⅳ'];
 const KANA = ['ア','イ','ウ','エ','オ','カ'];
 const BUY_URL = window.ENEKAN_BUY_URL || 'https://coconala.com/users/2355868';
 const PRICE = window.ENEKAN_PRICE || '1,500';
+// 全部解禁の購入先(build.py の SALES / SALES_CHANNEL で切り替える)
+const SALES = window.ENEKAN_SALES || {id: 'coconala', name: 'ココナラ', url: BUY_URL, button: '購入ページを開く(ココナラ)',
+  steps: ['下のボタンから購入ページ(ココナラ)を開き、「エネ管 熱 合格ナビ Web版 ライセンスキー」を購入', 'トークルームにライセンスキー(ENK-XXXX-XXXX-XXXX)が届きます(通常 当日中・最長 24 時間)', 'このページの入力欄にキーを入れて「有効にする」'],
+  note: 'キーはご本人の端末で使うためのものです。', refund: 'キーをお渡しした後の返金はできません。', newdevice: '別の端末で使うときは、同じキーをその端末で入力してください。'};
 const $ = (s, el=document) => el.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const base = id => id.replace(/-\d+$/, '');
 
-const D = {q:[], byId:{}, guides:{}, intros:{}, pintros:{}, past:[], notes:{}, keys:[], seo:{}};
+const D = {q:[], byId:{}, guides:{}, intros:{}, pintros:{}, past:[], notes:{}, keys:[], retired:[], seo:{}};
 const IS_IOS = /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
 const APP_STORE = 'https://apps.apple.com/jp/app/id6826752834';
 // 静的な解説ページ(kamoku/ bunya/ ronten/)へのリンク。data/seo.json がなければ出さない
@@ -29,6 +33,7 @@ async function load() {
   D.q = q; q.forEach(x => D.byId[x.id] = x);
   Object.assign(D, {guides, intros, pintros, past, notes, keys});
   try { D.seo = await (await fetch('data/seo.json', {cache:'no-cache'})).json(); } catch (e) { D.seo = {}; }
+  try { D.retired = await (await fetch('data/keys_retired.json', {cache:'no-cache'})).json(); } catch (e) { D.retired = []; }
 }
 const ofSubject = s => D.q.filter(x => x.subject === s);
 function topics(s) { const seen = []; ofSubject(s).forEach(x => { if (!seen.includes(x.topic)) seen.push(x.topic); }); return seen; }
@@ -117,7 +122,7 @@ function route() {
     if (p === 't') return viewTopic(+r[0], r[1]);
     if (p === 'p') return viewPractice(r);
     if (p === 'past') return viewPast(r[0]);
-    if (p === 'pro') return viewPro();
+    if (p === 'pro') return viewPro('', r[0]);
     if (p === 'textbook') return viewTextbook(+r[0], r[1]);
     if (p === 'exam') return startExam(+r[0]);
     if (p === 'weak') return startWeak(+r[0]);
@@ -125,7 +130,8 @@ function route() {
   } catch (e) { console.error(e); app.innerHTML = `<div class="card">読み込みに失敗しました。再読み込みしてください。</div>`; }
   viewHome();
 }
-window.addEventListener('hashchange', route);
+let READY = false;   // データを読み込む前のハッシュ変更では描画しない(読み込み後に route() する)
+window.addEventListener('hashchange', () => { if (READY) route(); });
 
 // ---------- views ----------
 function viewHome() {
@@ -434,10 +440,13 @@ async function activate(k) {
   if (!crypto.subtle) return {ok: false, msg: 'このブラウザでは照合できません(https で開いてください)'};
   const h = await sha256('enekan:' + nk);
   if (D.keys.includes(h)) { try { localStorage.setItem(PRO_KEY, nk); } catch (e) { return {ok:false, msg:'保存できませんでした(プライベートブラウズ?)'}; } return {ok: true}; }
+  if ((D.retired || []).includes(h)) return {ok: false, msg: 'このキーは新しいキーに入れ替え済みです。購入したページ(BOOTH の購入履歴など)から最新のファイルをダウンロードし直して、新しいキーを入れてください'};
   return {ok: false, msg: 'このキーは登録されていません。大文字小文字・O と 0 を確認してください'};
 }
-function viewPro(from) {
+function viewPro(from, linkKey) {
   const pro = isPro();
+  // 配布 PDF の「開くだけで解禁できるリンク」(#/pro/ENK-XXXX-XXXX-XXXX)。キーは URL のハッシュなのでサーバーには送られない
+  linkKey = linkKey && /^[A-Za-z0-9-]{12,30}$/.test(linkKey) ? linkKey : '';
   app.innerHTML = `<div class="crumb"><a href="#/">ホーム</a>全部解禁</div>
     <h1>全部解禁(買い切り)</h1>
     ${from ? `<p class="lead">「${esc(from)}」は全部解禁の機能です。</p>` : ''}
@@ -445,7 +454,7 @@ function viewPro(from) {
       <p class="note">アプリは無料でダウンロードでき、全 ${D.q.length} 問の解禁はアプリ内の買い切りでその場で購入できます(キーの受け渡しは不要)。Web 版のキーとアプリ内購入は別々です。</p>
       <a class="btn heat block" href="${APP_STORE}" rel="noopener">App Store で iPhone 版を見る</a></div>` : ''}
     <div class="card">
-      ${pro ? `<div class="msg ok">✓ このブラウザでは全部解禁が有効です</div><p class="note">別の端末で使うときは、同じキーをその端末で入力してください。</p>` :
+      ${pro ? `<div class="msg ok">✓ このブラウザでは全部解禁が有効です</div><p class="note">${esc(SALES.newdevice)}</p>` :
       `<div class="row" style="align-items:baseline;gap:12px"><span class="price">¥${PRICE}<small> 税込・1回だけ</small></span><span class="note">月額なし</span></div>
       <div class="feat">
         <div><b>全 ${D.q.length} 問</b>無料${D.q.filter(x => x.free).length}問 → 課目Ⅰ〜Ⅳ すべての論点</div>
@@ -457,24 +466,23 @@ function viewPro(from) {
       </div>
       <h3>買い方</h3>
       <ol class="note" style="padding-left:20px">
-        <li>下のボタンから購入ページ(ココナラ)を開き、「エネ管 熱 合格ナビ Web版 ライセンスキー」を購入</li>
-        <li>トークルームにライセンスキー(ENK-XXXX-XXXX-XXXX)が届きます(通常 当日中・最長 24 時間)</li>
-        <li>このページの入力欄にキーを入れて「有効にする」</li>
+        ${SALES.steps.map(x => `<li>${esc(x)}</li>`).join('')}
       </ol>
-      <a class="btn gold block" target="_blank" rel="noopener" href="${esc(BUY_URL)}">購入ページを開く(ココナラ)</a>
-      <p class="note" style="margin-top:8px">キーはご本人の端末で使うためのものです。学習記録はこのブラウザの中だけに保存されます(端末間の同期はありません)。</p>`}
+      <a class="btn gold block" target="_blank" rel="noopener" href="${esc(SALES.url)}">${esc(SALES.button)}</a>
+      <p class="note" style="margin-top:8px">${esc(SALES.note)}学習記録はこのブラウザの中だけに保存されます(端末間の同期はありません)。</p>`}
       <h3>ライセンスキーを入力</h3>
-      <div class="keyin"><input id="key" placeholder="ENK-XXXX-XXXX-XXXX" value="${pro ? esc(localStorage.getItem(PRO_KEY)) : ''}"><button class="btn" id="act">${pro ? '確認する' : '有効にする'}</button></div>
+      <div class="keyin"><input id="key" placeholder="ENK-XXXX-XXXX-XXXX" value="${linkKey ? esc(linkKey) : pro ? esc(localStorage.getItem(PRO_KEY)) : ''}"><button class="btn" id="act">${pro ? '確認する' : '有効にする'}</button></div>
       <div id="kmsg" class="msg"></div>
       ${pro ? `<div class="actions"><button class="btn ghost sm" id="deact">この端末の解禁を解除</button></div>` : ''}
     </div>
     <h2>よくある質問</h2>
     <div class="card note">
       <p><b>iPhone アプリ版はありますか?</b><br>あります。<a href="${APP_STORE}" rel="noopener">App Store で配信中</a>です(iPhone 用。iPad でも使えます)。アプリは無料でダウンロードでき、全部解禁はアプリ内の買い切りです。Web 版のキーとアプリ内購入は別々なので、iPhone で使うならアプリ版がおすすめです。Android・PC の方は Web 版をブラウザでそのまま使え、ホーム画面に追加するとアプリのように開けます。</p>
-      <p><b>返金は?</b><br>キーをお渡しした後の返金はできません。無料 ${D.q.filter(x => x.free).length} 問で使い心地を確かめてからご購入ください。</p>
+      <p><b>返金は?</b><br>${esc(SALES.refund)}無料 ${D.q.filter(x => x.free).length} 問で使い心地を確かめてからご購入ください。</p>
       <p><b>内容の更新は?</b><br>問題や解き方の追加・修正は同じキーのまま使えます。</p>
     </div>${footer()}`;
-  $('#act').onclick = async () => { const r = await activate($('#key').value); const m = $('#kmsg'); m.className = 'msg ' + (r.ok ? 'ok' : 'ng'); m.textContent = r.ok ? '✓ 全部解禁が有効になりました' : r.msg; if (r.ok) setTimeout(() => route(), 800); };
+  $('#act').onclick = async () => { const r = await activate($('#key').value); const m = $('#kmsg'); m.className = 'msg ' + (r.ok ? 'ok' : 'ng'); m.textContent = r.ok ? '✓ 全部解禁が有効になりました' : r.msg; if (r.ok) setTimeout(() => { if (location.hash !== '#/pro') location.hash = '#/pro'; else route(); }, 1500); };
+  if (linkKey && !pro) $('#act').click();
   const dc = $('#deact'); if (dc) dc.onclick = () => { localStorage.removeItem(PRO_KEY); route(); };
 }
 
@@ -520,6 +528,6 @@ function setupCalc() {
 let toastT; function toast(m) { let t = $('.toast'); if (!t) { t = document.createElement('div'); t.className = 'toast'; document.body.append(t); } t.textContent = m; t.classList.add('show'); clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove('show'), 1800); }
 
 // ---------- boot ----------
-load().then(() => { setupCalc(); route(); const pb = $('#probadge'); if (pb) pb.hidden = !isPro(); })
+load().then(() => { READY = true; setupCalc(); route(); const pb = $('#probadge'); if (pb) pb.hidden = !isPro(); })
   .catch(e => { console.error(e); app.innerHTML = `<div class="card">問題データを読み込めませんでした。通信状態を確認して再読み込みしてください。</div>`; });
 })();

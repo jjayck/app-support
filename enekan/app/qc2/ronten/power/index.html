@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>検出力と第 2 種の誤り|QC検定2級 手法 計量値の検定と推定の練習問題とやさしい解き方</title>
+<meta name="description" content="差があるのに見逃す確率が β(第 2 種の誤り)。見つけられる確率 1 − β が検出力。 QC検定2級「計量値の検定と推定」の論点。オリジナルの練習問題1問と答え・解説つき。">
+<link rel="canonical" href="https://jjayck.github.io/app-support/enekan/app/qc2/ronten/power/">
+<meta property="og:title" content="検出力と第 2 種の誤り|QC検定2級 手法 計量値の検定と推定の練習問題とやさしい解き方">
+<meta property="og:description" content="差があるのに見逃す確率が β(第 2 種の誤り)。見つけられる確率 1 − β が検出力。 QC検定2級「計量値の検定と推定」の論点。オリジナルの練習問題1問と答え・解説つき。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://jjayck.github.io/app-support/enekan/app/qc2/ronten/power/">
+<meta property="og:site_name" content="合格ナビ QC検定2級">
+<meta name="apple-itunes-app" content="app-id=6826752834">
+<meta name="theme-color" content="#f6f1e7">
+<link rel="icon" href="../../../../icon.png">
+<link rel="apple-touch-icon" href="../../../../icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap">
+<link rel="stylesheet" href="../../../style.css?v=202611151153">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "QC検定2級", "item": "https://jjayck.github.io/app-support/enekan/app/qc2/"}, {"@type": "ListItem", "position": 2, "name": "計量値の検定と推定", "item": "https://jjayck.github.io/app-support/enekan/app/qc2/bunya/tests-continuous/"}, {"@type": "ListItem", "position": 3, "name": "検出力と第 2 種の誤り", "item": "https://jjayck.github.io/app-support/enekan/app/qc2/ronten/power/"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Quiz", "name": "検出力と第 2 種の誤り", "description": "差があるのに見逃す確率が β(第 2 種の誤り)。見つけられる確率 1 − β が検出力。 QC検定2級「計量値の検定と推定」の論点。オリジナルの練習問題1問と答え・解説つき。", "inLanguage": "ja", "learningResourceType": "練習問題", "educationalLevel": "QC検定2級", "about": "計量値の検定と推定", "isAccessibleForFree": true, "url": "https://jjayck.github.io/app-support/enekan/app/qc2/ronten/power/", "isPartOf": {"@type": "WebSite", "name": "合格ナビ QC検定2級", "url": "https://jjayck.github.io/app-support/enekan/app/qc2/"}, "hasPart": [{"@type": "Question", "eduQuestionType": "Multiple choice", "name": "空欄D", "text": "母標準偏差 σ = 2 が既知の工程で、母平均 μ₀ = 100 から変化したかを、n = 16 個の平均 x̄ を使って有意水準 5 % の両側検定(u 検定)で調べる。本当の母平均が 101.1 に変わっていたとする。変化の大きさは x̄ の標準偏差の [A] 倍であり、この変化を見逃す確率 β は [B]、検出力 1 − β は [C] である(反対側の棄却域に入る確率は無視する)。β の確率で起きる誤りを [D] という。付表の正規分布表を用いよ。 空欄[D]に入るものを解答群から選べ。", "acceptedAnswer": {"@type": "Answer", "text": "第 2 種の誤り(H₀ が正しくないのに棄却しない誤り)"}, "suggestedAnswer": [{"@type": "Answer", "text": "有意水準"}, {"@type": "Answer", "text": "信頼率"}, {"@type": "Answer", "text": "第 1 種の誤り(H₀ が正しいのに棄却する誤り)"}]}], "educationalAlignment": {"@type": "AlignmentObject", "alignmentType": "educationalSubject", "targetName": "計量値の検定と推定"}}</script>
+</head>
+<body class="static">
+<header class="top"><div class="in">
+  <a class="brand" href="../../../qc2/"><span class="mark">QC</span>QC検定2級 合格ナビ</a>
+  <span class="sp"></span>
+  <nav><a href="../../../qc2/">論点一覧</a><a href="https://apps.apple.com/jp/app/id6826752834" rel="noopener">アプリで解く</a></nav>
+</div></header>
+<main class="wrap">
+<nav class="crumb" aria-label="パンくずリスト"><a href="../../../qc2/">QC検定2級</a><a href="../../../qc2/bunya/tests-continuous/">計量値の検定と推定</a><span>検出力と第 2 種の誤り</span></nav>
+<h1>検出力と第 2 種の誤り</h1>
+<p class="lead"><span class="chip ink">手法</span><span class="chip ink">計量値の検定と推定</span><span class="chip calc">計算</span></p>
+<section class="card point-one"><h2 class="h-in">ひとことで言うと</h2><p>差があるのに見逃す確率が β(第 2 種の誤り)。見つけられる確率 1 − β が検出力。</p></section>
+<section><h2>練習問題</h2>
+<p class="note">空欄 A・B・C・D に入るものを答えてください。</p>
+<div class="stem" data-qid="qc2-power-01">母標準偏差 σ = 2 が既知の工程で、母平均 μ₀ = 100 から変化したかを、n = 16 個の平均 x̄ を使って有意水準 5 % の両側検定(u 検定)で調べる。本当の母平均が 101.1 に変わっていたとする。変化の大きさは x̄ の標準偏差の <span class="bl">A</span> 倍であり、この変化を見逃す確率 β は <span class="bl">B</span>、検出力 1 − β は <span class="bl">C</span> である(反対側の棄却域に入る確率は無視する)。β の確率で起きる誤りを <span class="bl">D</span> という。付表の正規分布表を用いよ。<div class="tbl-wrap"><div class="tbl-title">正規分布表(K<sub>P</sub> から P を求める)の抜粋</div><table class="qt"><thead><tr><th>K<sub>P</sub></th><th>P</th></tr></thead><tbody><tr><td>0.24</td><td>0.4052</td></tr><tr><td>0.34</td><td>0.3669</td></tr><tr><td>1.96</td><td>0.0250</td></tr><tr><td>2.20</td><td>0.0139</td></tr></tbody></table><div class="tbl-note">P は標準正規分布で K<sub>P</sub> より大きい値が出る確率(上側確率)</div></div></div><div class="sblank"><div class="lab"><span class="l">A</span>数値(3桁・□.□□)<span class="u"></span></div></div><div class="sblank"><div class="lab"><span class="l">B</span>数値(5桁・□.□□□□)<span class="u"></span></div></div><div class="sblank"><div class="lab"><span class="l">C</span>数値(5桁・□.□□□□)<span class="u"></span></div></div><div class="sblank"><div class="lab"><span class="l">D</span>解答群</div><ol class="sopts"><li><span class="k">ア</span>有意水準</li><li><span class="k">イ</span>第 2 種の誤り(H₀ が正しくないのに棄却しない誤り)</li><li><span class="k">ウ</span>信頼率</li><li><span class="k">エ</span>第 1 種の誤り(H₀ が正しいのに棄却する誤り)</li></ol></div><details class="answer"><summary>答えとやさしい解き方を見る</summary><ul class="anslist"><li><span class="l">A</span><b>2.20</b> </li><li><span class="l">B</span><b>0.4052</b> </li><li><span class="l">C</span><b>0.5948</b> </li><li><span class="l">D</span><b>イ 第 2 種の誤り(H₀ が正しくないのに棄却しない誤り)</b> </li></ul><p class="note">数値の答えは本番と同じ「桁ごとのマーク」です。桁が余るときは先頭に 0 を入れます。</p><div class="guide"><div class="g-goal"><b>何を聞かれている?</b><br>本当に平均が変わっていたとき、検定がそれを見つけられる確率(検出力)と、見逃す確率 β を出す問題。</div><h4>記号と単位</h4><ul><li>λ … ずれが x̄ の標準偏差の何倍か</li><li>β … 第 2 種の誤り(見逃し)の確率</li><li>1 − β … 検出力</li></ul><h4>解き方</h4><div class="step"><span class="no">1</span><div><div class="why">ずれ ÷ (σ/√n) で、ずれを「平均値の標準偏差」の何倍かに直す。</div><div class=formula>x̄ の標準偏差 σ/√n = 2/√16 = 0.5。変化の大きさ 1.1 はその λ = 1.1/0.5 = 2.20 倍 → 2.20。</div></div></div><div class="step"><span class="no">2</span><div><div class="why">有意になるのは u₀ が 1.96 を超えるとき。本当の平均では u₀ の中心が λ に動くので、1.96 − λ より上に出る確率を考える。</div><div class=formula>棄却されるのは u₀ ≥ 1.96。本当の平均が μ₁ のとき u₀ は平均 λ = 2.20・標準偏差 1 の正規分布に従うので、検出力 = P(Z ≥ 1.96 − 2.20) = P(Z ≥ −0.24)。</div></div></div><div class="step"><span class="no">3</span><div><div class="why">1.96 − λ が負なら対称性で 1 − 表の値、正ならそのまま表の値。</div><div class=formula>1.96 − λ が負なので、対称性から 検出力 = 1 − P(Z ≥ 0.24) = 1 − 0.4052 = 0.5948 → 0.5948。</div></div></div><div class="step"><span class="no">4</span><div><div class="why">見逃す確率は 1 から検出力を引く。</div><div class=formula>β = 1 − 検出力 = 0.4052 → 0.4052。H₀ が正しくないのに棄却できない誤りが第 2 種の誤り(見逃し)。</div></div></div><div class="trap"><b>つまずきやすいところ</b><br>α(あわてものの誤り)と β(ぼんやりものの誤り)の取りちがえ。</div></div></details>
+</section>
+<aside class="cta card">
+  <div class="cta-h">この論点の問題は全 8 問(無料 1 問)</div>
+  <p class="note">iPhone・iPad のアプリ「合格ナビ」で、QC検定2級の全 680 問を分野・論点ごとに続けて解けます。本番と同じマーク形式で、計算は数値を変えた類題をくり返し練習できます。</p>
+  <a class="btn heat block" href="https://apps.apple.com/jp/app/id6826752834" rel="noopener">App Store で入手(無料)</a>
+  <p class="note">どの論点にも無料問題があります。全問の解禁はアプリ内の買い切り(¥1,200)です。ブラウザ版は今のところエネルギー管理士(熱分野)だけです。</p>
+</aside>
+<section><h2>「計量値の検定と推定」のイメージ</h2>
+<div class="card intro"><div class="one">測った値(長さ・重さ・強さ)のデータから、「平均やばらつきが変わったか」を確率で判定し、本当の値の範囲を見積もる。</div><p class="note" style="margin:8px 0 0"><a href="../../bunya/tests-continuous/">計量値の検定と推定の要点と全論点を見る ›</a></p></div></section>
+<section><h2>同じ分野の論点</h2><div class="list"><a class="item" href="../../../qc2/ronten/z-test/"><div class="t"><div class="n"><span class="chip calc">計算</span>母平均の検定と推定(σ 既知)</div><div class="s">σ が分かっていれば u 検定。ずれ ÷ (σ/√n) を 1.645(片側)や 1.960(両側)と比べる。</div></div></a><a class="item" href="../../../qc2/ronten/t-test/"><div class="t"><div class="n"><span class="chip calc">計算</span>母平均の検定と推定(σ 未知)</div><div class="s">σ が分からなければ √V で代用して t 検定。自由度 n − 1、t 表は両側確率。</div></div></a><a class="item" href="../../../qc2/ronten/chi2-var/"><div class="t"><div class="n"><span class="chip calc">計算</span>母分散の検定と推定</div><div class="s">ばらつきを基準と比べるなら χ₀² = S/σ₀²。小さくなったかは左側、大きくなったかは右側で判定。</div></div></a><a class="item" href="../../../qc2/ronten/f-test/"><div class="t"><div class="n"><span class="chip calc">計算</span>2 つの母分散の比の検定</div><div class="s">ばらつき 2 つを比べるなら F 検定。大きいほうを分子にして、両側なら 0.025 の表。</div></div></a><a class="item" href="../../../qc2/ronten/two-mean/"><div class="t"><div class="n"><span class="chip calc">計算</span>2 つの母平均の差の検定と推定</div><div class="s">等分散なら平方和をまとめた V で t 検定。自由度は n₁ + n₂ − 2。</div></div></a><a class="item" href="../../../qc2/ronten/paired-t/"><div class="t"><div class="n"><span class="chip calc">計算</span>対応のあるデータの検定</div><div class="s">同じものの前後を比べるなら、差 d をとって 1 つの平均の t 検定にする。</div></div></a><a class="item" href="../../../qc2/ronten/which-test/"><div class="t"><div class="n">検定の選び方</div><div class="s">平均かばらつきか → 1 つか 2 つか → σ 既知か・対応ありか、の順で選ぶ。</div></div></a><a class="item" href="../../../qc2/ronten/welch/"><div class="t"><div class="n"><span class="chip calc">計算</span>2 つの母平均の差(ウェルチの方法)</div><div class="s">まず F 検定で分散が等しいかを見る。等しいといえなければ、それぞれの分散を使うウェルチの方法。</div></div></a></div></section>
+<nav class="snav" aria-label="分野"><h2>分野から探す</h2><div class="list"><a class="item" href="../../../qc2/#s1"><div class="t"><div class="n">手法</div><div class="s">品質管理の手法</div></div><span class="cnt">›</span></a><a class="item" href="../../../qc2/#s2"><div class="t"><div class="n">実践</div><div class="s">品質管理の実践</div></div><span class="cnt">›</span></a></div></nav>
+<footer class="foot">合格ナビ QC検定2級 ・ <a href="../../../">エネルギー管理士(熱分野)の Web 版</a> ・ <a href="../../../../privacy.html">プライバシーポリシー</a> ・ <a href="../../../../support.html">お問い合わせ</a><br>
+問題はすべてオリジナルの類似問題で、過去問の問題文は載せていません。本サイトは一般財団法人日本規格協会(品質管理検定センター)および一般財団法人日本科学技術連盟とは関係のない個人制作です。「QC検定」は一般財団法人日本規格協会の登録商標です。</footer>
+</main>
+</body>
+</html>

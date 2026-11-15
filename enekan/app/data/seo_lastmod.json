@@ -1,7 +1,7 @@
 {
 "": {
-"h": "ffe78615e97aed3ff3190f3a3c19b038288624e260a86987f16698f88bccffc7",
-"d": "2026-11-13"
+"h": "848901c14d33347db58d85b64cdc581bbc0baffb42c20c6075c8d8ad86c02f76",
+"d": "2026-11-15"
 },
 "kamoku/1/": {
 "h": "81ce73349f3c8e43b8732aefec22d5efefdbe94ded8be3bfa007f36c2f324eb8",
@@ -970,5 +970,449 @@
 "ronten/affinity/": {
 "h": "5ae0473ab4a69243a1cff07c63ad4583f9f508644ef821e33a9ed93542ef050c",
 "d": "2026-11-13"
+},
+"qc2/": {
+"h": "0cd913dbac7e52c338f763fb7df8460deee9b5d1a9ee49455831a2836c9b1ba5",
+"d": "2026-11-15"
+},
+"qc2/bunya/data-summary/": {
+"h": "3c7ce252a80943f6ab53c638761ed7552880ce042b01f8726f3135a93bff2a33",
+"d": "2026-11-15"
+},
+"qc2/ronten/basic-stats/": {
+"h": "73e665200a2bad47911cda94e90e7df1f687ab4b70ff9ca0164d77258cf746bc",
+"d": "2026-11-15"
+},
+"qc2/ronten/coding/": {
+"h": "d6bfe216939b20dc02821a1c706b2aafc8d32b20d97a87b1296d3d546a8383f5",
+"d": "2026-11-15"
+},
+"qc2/ronten/pareto/": {
+"h": "7a8dee4ecea8ddf78d859b5b0a8df690dc09175f3cef6362e63eba2dc2d2146b",
+"d": "2026-11-15"
+},
+"qc2/ronten/sampling-kind/": {
+"h": "1df7e5e08cb6d3ac33ac1247c054e1c2269473016d8033ffc9886ba8d0fef9df",
+"d": "2026-11-15"
+},
+"qc2/ronten/data-kind/": {
+"h": "e7201d54a245f649259e90cd2bfaf5da683cfca95a16e2ce0d59b47934db6b92",
+"d": "2026-11-15"
+},
+"qc2/ronten/qc7/": {
+"h": "4e0368f53738ebd44890f5fa12f4a8258d25636f98c6cd077aaeaaf9c1a1bfc2",
+"d": "2026-11-15"
+},
+"qc2/bunya/process-capability/": {
+"h": "98b37e7f5cdd42fc4fa260441779ffc95af23a6e0f820de06ba98db4ce18001c",
+"d": "2026-11-15"
+},
+"qc2/ronten/cp-cpk/": {
+"h": "817a6b7898c04f8f71618a19e22502c4c78216039e820325d1f98e5dbda1393d",
+"d": "2026-11-15"
+},
+"qc2/ronten/cpk-one-side/": {
+"h": "29663c22a710bb608c743e9d73899fee3ebcdc03045c5afcb9c3f9aee51e7e3a",
+"d": "2026-11-15"
+},
+"qc2/ronten/spec-out/": {
+"h": "78ba188a60acdb4cfc66eb19eb68c923f7909e99f9df89d72ef444ac1cf8990a",
+"d": "2026-11-15"
+},
+"qc2/bunya/distributions/": {
+"h": "85c63bf76fd8a62b28dfdee0eb462ec5770dffe63d9c08442c5513d3d1d1eb42",
+"d": "2026-11-15"
+},
+"qc2/ronten/normal-prob/": {
+"h": "7063c5a71e7bbf36d79f1412777d037ec6a3331c94bcb7554399783617ea1a0a",
+"d": "2026-11-15"
+},
+"qc2/ronten/normal-inverse/": {
+"h": "2fe2f52ee21499a161244fd15e98214ae87e313ca58c53014be3b157718c00e7",
+"d": "2026-11-15"
+},
+"qc2/ronten/binomial/": {
+"h": "a0b5a25c8bb953b57bbe56fafa240770c8e8f3ef459952fe2c4ade59c52c5334",
+"d": "2026-11-15"
+},
+"qc2/ronten/poisson/": {
+"h": "f33aeda6e812c7ebb6bb7b71dfe22dbb4cd8e9c7d15d4226df14ee0897a7d2fb",
+"d": "2026-11-15"
+},
+"qc2/ronten/additivity/": {
+"h": "45cb29fbb778cb07f4f37f7af337f1c9864011f9712d75b1aae8a9c21aa87340",
+"d": "2026-11-15"
+},
+"qc2/ronten/xbar-dist/": {
+"h": "dd6bbd7b2c7743aa08a16f9adcd68d8f4567ce897d3e737fc6615f5a595326c4",
+"d": "2026-11-15"
+},
+"qc2/bunya/tests-continuous/": {
+"h": "367a1c3887b65fdc1ba22c5b75748159b883b9d651f467c4eb6eaf27940e9a73",
+"d": "2026-11-15"
+},
+"qc2/ronten/z-test/": {
+"h": "4034e46b8976e43fb832b291f2a1c67207d501c7622e460c4db9bd54b3f43ad6",
+"d": "2026-11-15"
+},
+"qc2/ronten/t-test/": {
+"h": "bb71f0545c484bc965c825f38ef75da6f48c2346d6e1a80649098f0af6b7f60f",
+"d": "2026-11-15"
+},
+"qc2/ronten/chi2-var/": {
+"h": "04f4ea936aa93d6a9a5ce7f8079dd0aa15f5873466e4396599fb4969f650cd15",
+"d": "2026-11-15"
+},
+"qc2/ronten/f-test/": {
+"h": "ae9733ffe502d57377acacd053c6a44143d19f06cda0fb006e2a81f9ebb71e47",
+"d": "2026-11-15"
+},
+"qc2/ronten/two-mean/": {
+"h": "78ead4f646333df17aaa80c9fd9a43fbdd132dc95acaa4a33279aa1dc5367b1b",
+"d": "2026-11-15"
+},
+"qc2/ronten/paired-t/": {
+"h": "afc5d9af66ac4bbdf8aca201c43f45af6a05d37843f52931b4ca96dfbe620336",
+"d": "2026-11-15"
+},
+"qc2/ronten/which-test/": {
+"h": "53ddb655433679ea6366fd4f1168a2fd192e543102ff7e457e6589d402784f5a",
+"d": "2026-11-15"
+},
+"qc2/ronten/power/": {
+"h": "28c9c62f77c43cd730329b8b41e3a04a982a440df67433d62c04bbef631c3ae1",
+"d": "2026-11-15"
+},
+"qc2/ronten/welch/": {
+"h": "92c75f74656c1befa5d120f61f1d7d007d5f91dae8e11e67c8382f06a5ded9e4",
+"d": "2026-11-15"
+},
+"qc2/bunya/tests-discrete/": {
+"h": "bddcdcfc6c0551bc28d67dc3006ae4ca3f0c5d06485177afdc28d4d0a3cae4a3",
+"d": "2026-11-15"
+},
+"qc2/ronten/p-one/": {
+"h": "9350dfbc1ec0d0af36f0acbe98651cee9d0d4c7571364449bffd77fa6d598330",
+"d": "2026-11-15"
+},
+"qc2/ronten/p-two/": {
+"h": "88cb1323fab599654db09ff029cf23d8a779ca34942ae3e2f361c31528ff0e53",
+"d": "2026-11-15"
+},
+"qc2/ronten/c-one/": {
+"h": "507881eed20d7fb562871f2ab943f90a6d563572734f5ad084bf20b830198ca4",
+"d": "2026-11-15"
+},
+"qc2/ronten/c-two/": {
+"h": "0f25f7942d37ba32c2f3340fa6351d75b5d577e67dcd659c0bff49618866576d",
+"d": "2026-11-15"
+},
+"qc2/ronten/contingency/": {
+"h": "870894aaa3cba2fdd4ee76470c8962138224faeb23eb5ad0d1bd437e860604f4",
+"d": "2026-11-15"
+},
+"qc2/bunya/control-charts/": {
+"h": "e20863cbc33bd7e1802945f56ba8ad860c3088a9bc3a0cedfc8722b828483075",
+"d": "2026-11-15"
+},
+"qc2/ronten/xbar-r/": {
+"h": "01ab29ed2896ae8ea380cc9f72f4d1f088b0bfc1f7aabb4642a0807680c156ef",
+"d": "2026-11-15"
+},
+"qc2/ronten/xbar-s/": {
+"h": "7104de66945110e096ebe76f0ebdad82f37aa8d0c601a82c30cc897599a07d01",
+"d": "2026-11-15"
+},
+"qc2/ronten/x-rs/": {
+"h": "635ea14f9aa77fc48f8d6595124c1e53d286bcdaf972d73d00298ff85d0970b1",
+"d": "2026-11-15"
+},
+"qc2/ronten/p-chart/": {
+"h": "21651983035f821d43ee2f83b7e5affc2f8dd1c483de0291f5eb17add62d7a82",
+"d": "2026-11-15"
+},
+"qc2/ronten/np-chart/": {
+"h": "f70e2c7651c978ae3ef866185768362ffb3823f05391855369cbdb2998e77883",
+"d": "2026-11-15"
+},
+"qc2/ronten/c-chart/": {
+"h": "d6097f2e3ed31ce8b7bd12ce2255bec5fac020b7c38c7265afa54551a3a17f5d",
+"d": "2026-11-15"
+},
+"qc2/ronten/u-chart/": {
+"h": "d51f8e08aebdc5761dbc43712713ae652d7d3e7699350e63547f8b29bf80d54d",
+"d": "2026-11-15"
+},
+"qc2/ronten/chart-rules/": {
+"h": "12be08e30d8ebe8b1049af6b8910d5d9bd80469c3f5360ae805730c2dcce1f51",
+"d": "2026-11-15"
+},
+"qc2/ronten/chart-concept/": {
+"h": "fc54d133d7736a0f61316dd7a603c9be4ef0425a28ab66ba94a8d62b26b1d248",
+"d": "2026-11-15"
+},
+"qc2/bunya/sampling-inspection/": {
+"h": "014d2aa3c31fbb92bfdd46d57c34e1f8c0887d465620cdb798cc11a19703dc14",
+"d": "2026-11-15"
+},
+"qc2/ronten/oc-curve/": {
+"h": "6dd834abb7936c0d0346994f5f6e5bc190efc30e24d1e93899fb7c419abe9702",
+"d": "2026-11-15"
+},
+"qc2/ronten/var-sampling/": {
+"h": "225ee6ec5a315678096b260ec4c9a1236d35ca54479d2efff8bdce38fbd11cf8",
+"d": "2026-11-15"
+},
+"qc2/ronten/attr-plan/": {
+"h": "20c8f2cf7626910f7df31519281501c3db97493d9029e5b8ffb5b780f0a4b071",
+"d": "2026-11-15"
+},
+"qc2/bunya/doe/": {
+"h": "75e0add3820a17450b7f40fd11bd07c95b8dbc27c83e9bf91b45de8ca6cd635a",
+"d": "2026-11-15"
+},
+"qc2/ronten/oneway/": {
+"h": "046c0f921297028d4553803087de44b65008a2115016e9dfb171b428727fe18a",
+"d": "2026-11-15"
+},
+"qc2/ronten/oneway-est/": {
+"h": "ce25b516f454b4b12c814657f0801803ae4fbebd505e8fc0bfadaebeb9431caa",
+"d": "2026-11-15"
+},
+"qc2/ronten/twoway-norep/": {
+"h": "411702a97012b1e5745292711beeeee695caf556b8644a49ee05d318eef10657",
+"d": "2026-11-15"
+},
+"qc2/ronten/twoway-rep/": {
+"h": "3b4091cced0e97fd0e1f70c60732aadcc5fadd5e532bde41906c24f04bb5209c",
+"d": "2026-11-15"
+},
+"qc2/ronten/pooling/": {
+"h": "33c9a5eecf7cb846ce5557bd96d5b02c88a47631e0bbb567a64d895c8e28d13f",
+"d": "2026-11-15"
+},
+"qc2/bunya/correlation/": {
+"h": "25850db68f5866d48022ace788171e1b34e2655cf4144aeef3c2b19e6f4a2918",
+"d": "2026-11-15"
+},
+"qc2/ronten/correlation/": {
+"h": "e998db8e4da5bf4013cc7a7a22a58666f9884e361e73a809ac247de8bb325512",
+"d": "2026-11-15"
+},
+"qc2/ronten/serial-corr/": {
+"h": "891814a6858110a954935d985f56eb2e528d7fd232b67503698dd13ce92e4e98",
+"d": "2026-11-15"
+},
+"qc2/bunya/regression/": {
+"h": "2fb9ae8ae8313f31708f5d93f6d819d5fff55955d3d55bfc8d8771072c8e542b",
+"d": "2026-11-15"
+},
+"qc2/ronten/reg-line/": {
+"h": "92b7f720d74f936656f46780e60da14c400f8e21456723d740cc4d1274df20b6",
+"d": "2026-11-15"
+},
+"qc2/ronten/reg-anova/": {
+"h": "24e4013f1887031f65c26b1f586e3dd58cf95df2a58083ce141071340edeb1f7",
+"d": "2026-11-15"
+},
+"qc2/bunya/reliability/": {
+"h": "fbfba573a6e5ef4cc577aa3922eb7c85cbdb63b8928434865347e798bd08b0c9",
+"d": "2026-11-15"
+},
+"qc2/ronten/sys-rel/": {
+"h": "6ff851cdc0d4c8b39b4e16f5abf1eed05539cb130b559eeb0c46a3f2c614842b",
+"d": "2026-11-15"
+},
+"qc2/ronten/exp-rel/": {
+"h": "d63dea118736cc8e1f5109cc67df0eee40a436345f45ca0af5df1cf0c99c7f1d",
+"d": "2026-11-15"
+},
+"qc2/ronten/availability/": {
+"h": "04b72245f1ac19e0d1dae65a839d78215b0e70e1d13ba7156bfd5bf517daacba",
+"d": "2026-11-15"
+},
+"qc2/ronten/bathtub/": {
+"h": "cb74b154e962ddfaf22213d5e4c98af774cd31ba7403bd3b3801d9013ad3184c",
+"d": "2026-11-15"
+},
+"qc2/ronten/rel-words/": {
+"h": "74d4b582f9a1acafeba328f1744d5661878e6d97a5843ccee2aac13114e2a6f1",
+"d": "2026-11-15"
+},
+"qc2/bunya/new-qc-tools/": {
+"h": "144a8c633af1770e8c5afe9331869a9c890a31b32e7730b54acb893983b9b045",
+"d": "2026-11-15"
+},
+"qc2/ronten/arrow/": {
+"h": "aa966bbfe2333c514b6181e4829be0c6522453700c6607cfbfc0ef07f023d579",
+"d": "2026-11-15"
+},
+"qc2/ronten/new7/": {
+"h": "3d823f3ea4d7741cb825a21bd5a5ba10860cceb96552badccd0849c77ab72f57",
+"d": "2026-11-15"
+},
+"qc2/bunya/qc-thinking/": {
+"h": "62792c0bcb545c67b57627ccfff427cecac51c6c84e37072539761f8fc0cbc52",
+"d": "2026-11-15"
+},
+"qc2/ronten/view-customer/": {
+"h": "89281a77afa54c6099ba667aadab4784e3a2145d8924f225769ae04402e93009",
+"d": "2026-11-15"
+},
+"qc2/ronten/qcd-psme/": {
+"h": "6b37f4728bc1a34e317a71df6799c1da66e84c58b96e84bf5fb5a40a8ac91f6b",
+"d": "2026-11-15"
+},
+"qc2/ronten/view-prevent/": {
+"h": "1f933e0f29595675de51964f0c2b25a6f909e104110bc9428fbba1bf01552c23",
+"d": "2026-11-15"
+},
+"qc2/ronten/four-m/": {
+"h": "9a7491ddce8bfbf6e051d45c6b8137d1d4e3710527d78a327381dcbd6ceeeaef",
+"d": "2026-11-15"
+},
+"qc2/bunya/quality-concepts/": {
+"h": "5b267d9dc6005c3d6ac157ee5093e22fb534b6c15d672862f3bf31c317ab0963",
+"d": "2026-11-15"
+},
+"qc2/ronten/quality-def/": {
+"h": "b6ea128129e7124d5704811d4069fb0a495f9b0b41bdf15a07f26ee9272c4fd3",
+"d": "2026-11-15"
+},
+"qc2/ronten/kano/": {
+"h": "e0310f75d3140c0cd822b82d5f7bf8b71104bec51278d78e82aaa7c789709d8d",
+"d": "2026-11-15"
+},
+"qc2/ronten/quality-kind/": {
+"h": "49b9bf5f311e369095a7e85140043b2c4a97d7ae3161abc7999e79113eea6730",
+"d": "2026-11-15"
+},
+"qc2/bunya/management-methods/": {
+"h": "68cb5b878f4071bd8d73f880675317a35b9c303725f9d7aa7b869f5cea0bc3e2",
+"d": "2026-11-15"
+},
+"qc2/ronten/pdca/": {
+"h": "11b37d8f7ed17225d8f3bedcfbf650c26f522730db755c2daee9af6f8ae63414",
+"d": "2026-11-15"
+},
+"qc2/ronten/maintain-improve/": {
+"h": "29c7980756c645b2b72acab620aa838c25639cd7a3a4bdcbb46c70c9cac5ea9f",
+"d": "2026-11-15"
+},
+"qc2/bunya/qa-new-product/": {
+"h": "cdbb781990319ba7bb484b2b45777182f5f2852772136d69d7ce100d7e545e91",
+"d": "2026-11-15"
+},
+"qc2/ronten/qa-tools/": {
+"h": "6fe956e5700f02cb89f2dc100287c504a185477b2a37c73ad26ed020b344d8ce",
+"d": "2026-11-15"
+},
+"qc2/ronten/pl-law/": {
+"h": "496b279d345ce46027de997726b462d1b1ddd51010202ac62213340f1dbd4193",
+"d": "2026-11-15"
+},
+"qc2/ronten/qfd-terms/": {
+"h": "495dc43947685d6bfc5c5f0a5d3eaa94a68b5f6f6957862280b489db49da8c4f",
+"d": "2026-11-15"
+},
+"qc2/bunya/qa-process/": {
+"h": "8b81b486493aa0885eceb8c57a25d7c48be24fbead83ae894a1f9717a3436b84",
+"d": "2026-11-15"
+},
+"qc2/ronten/process-assurance/": {
+"h": "8c89e507af122852a7eb668dbc0e43490205ea09bff4ced4f47bf375475460f4",
+"d": "2026-11-15"
+},
+"qc2/ronten/inspection/": {
+"h": "d25cd76c14a2eeb0c692c19a2eaca9b6cbf210c2081cd7fbdf644982ea9f4472",
+"d": "2026-11-15"
+},
+"qc2/bunya/policy-management/": {
+"h": "3d4e24e0a787f428401c489e7f099fb41ad72967df745ec220367275609ac5d6",
+"d": "2026-11-15"
+},
+"qc2/ronten/policy/": {
+"h": "b49da9e08fcf8e5728e583268393232ef575de848100c50a70a887fc620d35b8",
+"d": "2026-11-15"
+},
+"qc2/ronten/policy-daily/": {
+"h": "552e53a1ade4c85fc7798000403c6cb82439cdbb8e324c49a4381dba41731c95",
+"d": "2026-11-15"
+},
+"qc2/bunya/cross-functional/": {
+"h": "e402dc0d67b41f90ca2213d3e420bc3515963832c6ab761656e4b00c8f547cf6",
+"d": "2026-11-15"
+},
+"qc2/ronten/cross-function/": {
+"h": "0ae678283c335e93b16ee5b7eaeb5f3c53b20fff3c4207840716aecf1f75ece5",
+"d": "2026-11-15"
+},
+"qc2/bunya/daily-management/": {
+"h": "4a748f2abeea0e9a83efc7f18ec7b916a6722337f24e751e4337666742bad3f8",
+"d": "2026-11-15"
+},
+"qc2/ronten/daily/": {
+"h": "48083c0da76edb5d04dc8995a00a9f995f6f79024e8fdd2ac81d8e61d1d99236",
+"d": "2026-11-15"
+},
+"qc2/bunya/standardization/": {
+"h": "105866844e64d5e6e24a83b3087000eb06f63f5daf049d17e02199827943430d",
+"d": "2026-11-15"
+},
+"qc2/ronten/standard/": {
+"h": "7c8961a9227c3b87b2471a9c4023eb0757b31e6e4b5cc895154852de4b5a7212",
+"d": "2026-11-15"
+},
+"qc2/bunya/audit-training/": {
+"h": "6fada9e0effa502580b4684c6e7c4ce789b896c68695527c22f36dac04eaea52",
+"d": "2026-11-15"
+},
+"qc2/ronten/audit/": {
+"h": "a789c7a642a82e85d8abf512be51d17ea5a081f3c5b3a8862180b83c21a6d1c4",
+"d": "2026-11-15"
+},
+"qc2/bunya/qms/": {
+"h": "4db0fc502bb05af06b140b8728b9edf09f98d2b1cb3df92e9c49aa61bf42e3a6",
+"d": "2026-11-15"
+},
+"qc2/ronten/qm-principles/": {
+"h": "438bab9ce8e8c685b0061583e4db62d812e15f7518d7c5fdf8cee693fc258969",
+"d": "2026-11-15"
+},
+"qc2/ronten/qms-action/": {
+"h": "2a56f1ed13b9c617bae93b73b86c86e7a9d6e8838957b65173fd572265327497",
+"d": "2026-11-15"
+},
+"qc2/ronten/qms-terms/": {
+"h": "d10752cb42f4ed1a22fa016885cadf21d72fd2f5b1b0b00be1dcf8501b3b3c75",
+"d": "2026-11-15"
+},
+"qc2/ronten/qms-terms2/": {
+"h": "6912a730c554e568433afe15e28214a223c780da84874164bf2c26e0f1e1e6f2",
+"d": "2026-11-15"
+},
+"qc2/ronten/nonconform-disp/": {
+"h": "4873ca7ee5428651cfdffd4bf6ed7a7b69baa90c2f0071791be01918a77efa18",
+"d": "2026-11-15"
+},
+"qc2/bunya/ethics-csr/": {
+"h": "a39588728d6091a27a55d759c7c14f615654ee26101206ec6a103e0d2208e68e",
+"d": "2026-11-15"
+},
+"qc2/ronten/sr/": {
+"h": "113907d83e34be041975e39f6a327e1525d899b856852073e70041b9fe17c78b",
+"d": "2026-11-15"
+},
+"qc2/bunya/related-practices/": {
+"h": "c8c1d6f8fb4bdc4f72aa993968003be48a571f00ee282a52f399d5b4511f85e3",
+"d": "2026-11-15"
+},
+"qc2/ronten/maintenance/": {
+"h": "897a793924c71d2fa81c015201f7ac96b99d13bb340b20405cb35d41dd5c4430",
+"d": "2026-11-15"
+},
+"qc2/ronten/five-s/": {
+"h": "4859f9efeccd86bbead2eb6fb5527986812c29e500c432c27196f1b6365cebee",
+"d": "2026-11-15"
 }
 }

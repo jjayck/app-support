@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ポアソン分布の確率|QC検定2級 手法 確率分布の練習問題とやさしい解き方</title>
+<meta name="description" content="まれに起きることの回数。0 回の確率は e^(−λ)、平均も分散も λ。 QC検定2級「確率分布」の論点。オリジナルの練習問題1問と答え・解説つき。">
+<link rel="canonical" href="https://jjayck.github.io/app-support/enekan/app/qc2/ronten/poisson/">
+<meta property="og:title" content="ポアソン分布の確率|QC検定2級 手法 確率分布の練習問題とやさしい解き方">
+<meta property="og:description" content="まれに起きることの回数。0 回の確率は e^(−λ)、平均も分散も λ。 QC検定2級「確率分布」の論点。オリジナルの練習問題1問と答え・解説つき。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://jjayck.github.io/app-support/enekan/app/qc2/ronten/poisson/">
+<meta property="og:site_name" content="合格ナビ QC検定2級">
+<meta name="apple-itunes-app" content="app-id=6826752834">
+<meta name="theme-color" content="#f6f1e7">
+<link rel="icon" href="../../../../icon.png">
+<link rel="apple-touch-icon" href="../../../../icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap">
+<link rel="stylesheet" href="../../../style.css?v=202611151153">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "QC検定2級", "item": "https://jjayck.github.io/app-support/enekan/app/qc2/"}, {"@type": "ListItem", "position": 2, "name": "確率分布", "item": "https://jjayck.github.io/app-support/enekan/app/qc2/bunya/distributions/"}, {"@type": "ListItem", "position": 3, "name": "ポアソン分布の確率", "item": "https://jjayck.github.io/app-support/enekan/app/qc2/ronten/poisson/"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Quiz", "name": "ポアソン分布の確率", "description": "まれに起きることの回数。0 回の確率は e^(−λ)、平均も分散も λ。 QC検定2級「確率分布」の論点。オリジナルの練習問題1問と答え・解説つき。", "inLanguage": "ja", "learningResourceType": "練習問題", "educationalLevel": "QC検定2級", "about": "確率分布", "isAccessibleForFree": true, "url": "https://jjayck.github.io/app-support/enekan/app/qc2/ronten/poisson/", "isPartOf": {"@type": "WebSite", "name": "合格ナビ QC検定2級", "url": "https://jjayck.github.io/app-support/enekan/app/qc2/"}, "hasPart": [{"@type": "Question", "eduQuestionType": "Multiple choice", "name": "空欄D", "text": "1 日あたりの設備の停止回数 X は、平均 λ = 1.5 のポアソン分布に従う。P(X = 0) = [A]、P(X = 1) = [B]、P(X ≤ 2) = [C] である。ポアソン分布は [D] である。ただし e^(−1.5) = 0.2231 とする。 空欄[D]に入るものを解答群から選べ。", "acceptedAnswer": {"@type": "Answer", "text": "平均も分散も λ"}, "suggestedAnswer": [{"@type": "Answer", "text": "平均は λ、分散は λ²"}, {"@type": "Answer", "text": "平均は λ、分散は λ(1 − λ)"}, {"@type": "Answer", "text": "平均は λ、分散は √λ"}]}], "educationalAlignment": {"@type": "AlignmentObject", "alignmentType": "educationalSubject", "targetName": "確率分布"}}</script>
+</head>
+<body class="static">
+<header class="top"><div class="in">
+  <a class="brand" href="../../../qc2/"><span class="mark">QC</span>QC検定2級 合格ナビ</a>
+  <span class="sp"></span>
+  <nav><a href="../../../qc2/">論点一覧</a><a href="https://apps.apple.com/jp/app/id6826752834" rel="noopener">アプリで解く</a></nav>
+</div></header>
+<main class="wrap">
+<nav class="crumb" aria-label="パンくずリスト"><a href="../../../qc2/">QC検定2級</a><a href="../../../qc2/bunya/distributions/">確率分布</a><span>ポアソン分布の確率</span></nav>
+<h1>ポアソン分布の確率</h1>
+<p class="lead"><span class="chip ink">手法</span><span class="chip ink">確率分布</span><span class="chip calc">計算</span></p>
+<section class="card point-one"><h2 class="h-in">ひとことで言うと</h2><p>まれに起きることの回数。0 回の確率は e<sup>−λ</sup>、平均も分散も λ。</p></section>
+<section><h2>練習問題</h2>
+<p class="note">空欄 A・B・C・D に入るものを答えてください。</p>
+<div class="stem" data-qid="qc2-poisson-01">1 日あたりの設備の停止回数 X は、平均 λ = 1.5 のポアソン分布に従う。P(X = 0) = <span class="bl">A</span>、P(X = 1) = <span class="bl">B</span>、P(X ≤ 2) = <span class="bl">C</span> である。ポアソン分布は <span class="bl">D</span> である。ただし e<sup>−1.5</sup> = 0.2231 とする。</div><div class="sblank"><div class="lab"><span class="l">A</span>数値(5桁・□.□□□□)<span class="u"></span></div></div><div class="sblank"><div class="lab"><span class="l">B</span>数値(5桁・□.□□□□)<span class="u"></span></div></div><div class="sblank"><div class="lab"><span class="l">C</span>数値(5桁・□.□□□□)<span class="u"></span></div></div><div class="sblank"><div class="lab"><span class="l">D</span>解答群</div><ol class="sopts"><li><span class="k">ア</span>平均も分散も λ</li><li><span class="k">イ</span>平均は λ、分散は λ²</li><li><span class="k">ウ</span>平均は λ、分散は λ(1 − λ)</li><li><span class="k">エ</span>平均は λ、分散は √λ</li></ol></div><details class="answer"><summary>答えとやさしい解き方を見る</summary><ul class="anslist"><li><span class="l">A</span><b>0.2231</b> </li><li><span class="l">B</span><b>0.3347</b> </li><li><span class="l">C</span><b>0.8087</b> </li><li><span class="l">D</span><b>ア 平均も分散も λ</b> </li></ul><p class="note">数値の答えは本番と同じ「桁ごとのマーク」です。桁が余るときは先頭に 0 を入れます。</p><div class="guide"><div class="g-goal"><b>何を聞かれている?</b><br>きずの数や故障回数のように、まれに起きることの回数の確率をポアソン分布で出す問題。</div><h4>記号と単位</h4><ul><li>λ(ラムダ)… 平均の回数</li><li>e<sup>−λ</sup> … 問題文で与えられる値(0 回の確率そのもの)</li></ul><h4>解き方</h4><div class="step"><span class="no">1</span><div><div class="why">式:P(x) = e<sup>−λ</sup> × λˣ ÷ x!。x! は 1 × 2 × … × x。</div><div class=formula>ポアソン分布:P(X = x) = e<sup>−λ</sup> λˣ / x!。</div></div></div><div class="step"><span class="no">2</span><div><div class="why">e<sup>−λ</sup> は自分で計算せず、問題文の値をそのまま使う。</div><div class=formula>e<sup>−λ</sup> は関数電卓を使わず、問題文で与えた e<sup>−1.5</sup> = 0.2231 の値を使う。</div></div></div><div class="step"><span class="no">3</span><div><div class="why">0 回の確率は e<sup>−λ</sup> そのもの。</div><div class=formula>P(X = 0) = e<sup>−1.5</sup> = 0.2231 → 0.2231。</div></div></div><div class="step"><span class="no">4</span><div><div class="why">1 回は λ を 1 回掛ける。</div><div class=formula>P(X = 1) = 1.5 × 0.2231 = 0.33465 → 0.3347。</div></div></div><div class="step"><span class="no">5</span><div><div class="why">2 回は λ² を 2 で割って掛ける。0〜2 回を足すと「2 回以下」。</div><div class=formula>P(X = 2) = 1.5²/2 × 0.2231 = 0.25099。P(X ≤ 2) = 0.2231 + 0.33465 + 0.25099 = 0.80874 → 0.8087。</div></div></div><div class="step"><span class="no">6</span><div><div class="why">平均と分散がどちらも λ なのがポアソン分布の特徴。</div><div class=formula>ポアソン分布は平均と分散がどちらも λ。</div></div></div><div class="trap"><b>つまずきやすいところ</b><br>x! で割り忘れる(2 回のとき ÷ 2)/「2 以下」に 2 を入れ忘れる。</div></div></details>
+</section>
+<aside class="cta card">
+  <div class="cta-h">この論点の問題は全 8 問(無料 1 問)</div>
+  <p class="note">iPhone・iPad のアプリ「合格ナビ」で、QC検定2級の全 680 問を分野・論点ごとに続けて解けます。本番と同じマーク形式で、計算は数値を変えた類題をくり返し練習できます。</p>
+  <a class="btn heat block" href="https://apps.apple.com/jp/app/id6826752834" rel="noopener">App Store で入手(無料)</a>
+  <p class="note">どの論点にも無料問題があります。全問の解禁はアプリ内の買い切り(¥1,200)です。ブラウザ版は今のところエネルギー管理士(熱分野)だけです。</p>
+</aside>
+<section><h2>「確率分布」のイメージ</h2>
+<div class="card intro"><div class="one">データのばらつき方には決まった形があり、その形を使うと「どのくらいの確率で起きるか」が計算できる。</div><p class="note" style="margin:8px 0 0"><a href="../../bunya/distributions/">確率分布の要点と全論点を見る ›</a></p></div></section>
+<section><h2>同じ分野の論点</h2><div class="list"><a class="item" href="../../../qc2/ronten/normal-prob/"><div class="t"><div class="n"><span class="chip calc">計算</span>正規分布の確率</div><div class="s">(x − μ)/σ で標準化すれば、正規分布表 1 枚でどんな正規分布の確率も読める。</div></div></a><a class="item" href="../../../qc2/ronten/normal-inverse/"><div class="t"><div class="n"><span class="chip calc">計算</span>確率から値を求める(正規分布)</div><div class="s">上から 5 % の点は K = 1.645。値に戻すときは μ + Kσ。</div></div></a><a class="item" href="../../../qc2/ronten/binomial/"><div class="t"><div class="n"><span class="chip calc">計算</span>二項分布の確率</div><div class="s">n 個中 x 個が不良の確率。0 個は (1 − p)ⁿ、平均 np、分散 np(1 − p)。</div></div></a><a class="item" href="../../../qc2/ronten/additivity/"><div class="t"><div class="n"><span class="chip calc">計算</span>期待値と分散の加法性</div><div class="s">和でも差でも、独立なら分散は足し算。標準偏差は足さない。</div></div></a><a class="item" href="../../../qc2/ronten/xbar-dist/"><div class="t"><div class="n"><span class="chip calc">計算</span>平均値の分布と中心極限定理</div><div class="s">n 個の平均のばらつきは σ/√n。平均はもとの分布によらずほぼ正規分布になる。</div></div></a></div></section>
+<nav class="snav" aria-label="分野"><h2>分野から探す</h2><div class="list"><a class="item" href="../../../qc2/#s1"><div class="t"><div class="n">手法</div><div class="s">品質管理の手法</div></div><span class="cnt">›</span></a><a class="item" href="../../../qc2/#s2"><div class="t"><div class="n">実践</div><div class="s">品質管理の実践</div></div><span class="cnt">›</span></a></div></nav>
+<footer class="foot">合格ナビ QC検定2級 ・ <a href="../../../">エネルギー管理士(熱分野)の Web 版</a> ・ <a href="../../../../privacy.html">プライバシーポリシー</a> ・ <a href="../../../../support.html">お問い合わせ</a><br>
+問題はすべてオリジナルの類似問題で、過去問の問題文は載せていません。本サイトは一般財団法人日本規格協会(品質管理検定センター)および一般財団法人日本科学技術連盟とは関係のない個人制作です。「QC検定」は一般財団法人日本規格協会の登録商標です。</footer>
+</main>
+</body>
+</html>

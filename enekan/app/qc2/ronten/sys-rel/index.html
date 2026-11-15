@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>直列系・並列系の信頼度|QC検定2級 手法 信頼性工学の練習問題とやさしい解き方</title>
+<meta name="description" content="直列は掛け算、並列は 1 − (壊れる確率の積)。 QC検定2級「信頼性工学」の論点。オリジナルの練習問題1問と答え・解説つき。">
+<link rel="canonical" href="https://jjayck.github.io/app-support/enekan/app/qc2/ronten/sys-rel/">
+<meta property="og:title" content="直列系・並列系の信頼度|QC検定2級 手法 信頼性工学の練習問題とやさしい解き方">
+<meta property="og:description" content="直列は掛け算、並列は 1 − (壊れる確率の積)。 QC検定2級「信頼性工学」の論点。オリジナルの練習問題1問と答え・解説つき。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://jjayck.github.io/app-support/enekan/app/qc2/ronten/sys-rel/">
+<meta property="og:site_name" content="合格ナビ QC検定2級">
+<meta name="apple-itunes-app" content="app-id=6826752834">
+<meta name="theme-color" content="#f6f1e7">
+<link rel="icon" href="../../../../icon.png">
+<link rel="apple-touch-icon" href="../../../../icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap">
+<link rel="stylesheet" href="../../../style.css?v=202611151153">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "QC検定2級", "item": "https://jjayck.github.io/app-support/enekan/app/qc2/"}, {"@type": "ListItem", "position": 2, "name": "信頼性工学", "item": "https://jjayck.github.io/app-support/enekan/app/qc2/bunya/reliability/"}, {"@type": "ListItem", "position": 3, "name": "直列系・並列系の信頼度", "item": "https://jjayck.github.io/app-support/enekan/app/qc2/ronten/sys-rel/"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Quiz", "name": "直列系・並列系の信頼度", "description": "直列は掛け算、並列は 1 − (壊れる確率の積)。 QC検定2級「信頼性工学」の論点。オリジナルの練習問題1問と答え・解説つき。", "inLanguage": "ja", "learningResourceType": "練習問題", "educationalLevel": "QC検定2級", "about": "信頼性工学", "isAccessibleForFree": true, "url": "https://jjayck.github.io/app-support/enekan/app/qc2/ronten/sys-rel/", "isPartOf": {"@type": "WebSite", "name": "合格ナビ QC検定2級", "url": "https://jjayck.github.io/app-support/enekan/app/qc2/"}, "hasPart": [{"@type": "Question", "eduQuestionType": "Multiple choice", "name": "空欄C", "text": "部品 A(信頼度 0.92)と B(0.8)を直列につないだ系に、部品 C(0.92)を並列に追加したシステムがある。各部品は互いに独立に故障する。A・B の直列部分の信頼度は [A]、システム全体の信頼度は [B] である。一部が故障しても全体の機能が保たれるように、同じ働きの部品を並べておく構成を [C] という。 空欄[C]に入るものを解答群から選べ。", "acceptedAnswer": {"@type": "Answer", "text": "冗長系(並列冗長)"}, "suggestedAnswer": [{"@type": "Answer", "text": "直列系"}, {"@type": "Answer", "text": "直交系"}, {"@type": "Answer", "text": "分岐系"}]}], "educationalAlignment": {"@type": "AlignmentObject", "alignmentType": "educationalSubject", "targetName": "信頼性工学"}}</script>
+</head>
+<body class="static">
+<header class="top"><div class="in">
+  <a class="brand" href="../../../qc2/"><span class="mark">QC</span>QC検定2級 合格ナビ</a>
+  <span class="sp"></span>
+  <nav><a href="../../../qc2/">論点一覧</a><a href="https://apps.apple.com/jp/app/id6826752834" rel="noopener">アプリで解く</a></nav>
+</div></header>
+<main class="wrap">
+<nav class="crumb" aria-label="パンくずリスト"><a href="../../../qc2/">QC検定2級</a><a href="../../../qc2/bunya/reliability/">信頼性工学</a><span>直列系・並列系の信頼度</span></nav>
+<h1>直列系・並列系の信頼度</h1>
+<p class="lead"><span class="chip ink">手法</span><span class="chip ink">信頼性工学</span><span class="chip calc">計算</span></p>
+<section class="card point-one"><h2 class="h-in">ひとことで言うと</h2><p>直列は掛け算、並列は 1 − (壊れる確率の積)。</p></section>
+<section><h2>練習問題</h2>
+<p class="note">空欄 A・B・C に入るものを答えてください。</p>
+<div class="stem" data-qid="qc2-sys_rel-01">部品 A(信頼度 0.92)と B(0.8)を直列につないだ系に、部品 C(0.92)を並列に追加したシステムがある。各部品は互いに独立に故障する。A・B の直列部分の信頼度は <span class="bl">A</span>、システム全体の信頼度は <span class="bl">B</span> である。一部が故障しても全体の機能が保たれるように、同じ働きの部品を並べておく構成を <span class="bl">C</span> という。</div><div class="sblank"><div class="lab"><span class="l">A</span>数値(5桁・□.□□□□)<span class="u"></span></div></div><div class="sblank"><div class="lab"><span class="l">B</span>数値(5桁・□.□□□□)<span class="u"></span></div></div><div class="sblank"><div class="lab"><span class="l">C</span>解答群</div><ol class="sopts"><li><span class="k">ア</span>直列系</li><li><span class="k">イ</span>冗長系(並列冗長)</li><li><span class="k">ウ</span>直交系</li><li><span class="k">エ</span>分岐系</li></ol></div><details class="answer"><summary>答えとやさしい解き方を見る</summary><ul class="anslist"><li><span class="l">A</span><b>0.7360</b> </li><li><span class="l">B</span><b>0.9789</b> </li><li><span class="l">C</span><b>イ 冗長系(並列冗長)</b> </li></ul><p class="note">数値の答えは本番と同じ「桁ごとのマーク」です。桁が余るときは先頭に 0 を入れます。</p><div class="guide"><div class="g-goal"><b>何を聞かれている?</b><br>部品を直列・並列に組み合わせたシステムの信頼度(故障しない確率)を出す問題。</div><h4>記号と単位</h4><ul><li>R … 信頼度(故障しない確率)</li><li>1 − R … 故障する確率</li></ul><h4>解き方</h4><div class="step"><span class="no">1</span><div><div class="why">直列は全部が動く必要があるので掛け算。</div><div class=formula>冗長系:同じ働きの部品を並列に置き、一部が故障しても機能を保つ構成(並列冗長)。</div></div></div><div class="step"><span class="no">2</span><div><div class="why">並列は全部が壊れたときだけ止まるので、1 −(壊れる確率の積)。</div><div class=formula>直列:全部が動いて初めて動く → 信頼度を掛ける。</div></div></div><div class="step"><span class="no">3</span><div><div class="why">まず内側のかたまりを 1 つの部品にまとめる。</div><div class=formula>並列:全部が壊れたときだけ止まる → 1 − (壊れる確率の積)。</div></div></div><div class="step"><span class="no">4</span><div><div class="why">まとめた部品と残りをつなぐ。</div><div class=formula>A と B の直列部分:R<sub>A</sub>B = R<sub>A</sub>·R<sub>B</sub> = 0.92 × 0.8 = 0.736 → 0.7360。</div></div></div><h4>あわせて覚える</h4><ul><li>それと C の並列:R = 1 − (1 − R<sub>A</sub>B)(1 − R<sub>C</sub>) = 1 − 0.264 × 0.08 = 0.9789 → 0.9789。</li></ul><div class="trap"><b>つまずきやすいところ</b><br>並列の信頼度を足してしまう(1 を超えることもあり得ない)。</div></div></details>
+</section>
+<aside class="cta card">
+  <div class="cta-h">この論点の問題は全 8 問(無料 1 問)</div>
+  <p class="note">iPhone・iPad のアプリ「合格ナビ」で、QC検定2級の全 680 問を分野・論点ごとに続けて解けます。本番と同じマーク形式で、計算は数値を変えた類題をくり返し練習できます。</p>
+  <a class="btn heat block" href="https://apps.apple.com/jp/app/id6826752834" rel="noopener">App Store で入手(無料)</a>
+  <p class="note">どの論点にも無料問題があります。全問の解禁はアプリ内の買い切り(¥1,200)です。ブラウザ版は今のところエネルギー管理士(熱分野)だけです。</p>
+</aside>
+<section><h2>「信頼性工学」のイメージ</h2>
+<div class="card intro"><div class="one">製品がどれだけ長く故障せずに働けるかを、確率と時間で表す。</div><p class="note" style="margin:8px 0 0"><a href="../../bunya/reliability/">信頼性工学の要点と全論点を見る ›</a></p></div></section>
+<section><h2>同じ分野の論点</h2><div class="list"><a class="item" href="../../../qc2/ronten/exp-rel/"><div class="t"><div class="n"><span class="chip calc">計算</span>故障率・MTBF と指数分布</div><div class="s">故障率 = 故障数/動作時間。一定なら MTBF = 1/λ、信頼度は e^(−λt)。</div></div></a><a class="item" href="../../../qc2/ronten/availability/"><div class="t"><div class="n"><span class="chip calc">計算</span>MTBF・MTTR とアベイラビリティ</div><div class="s">使える時間の割合 = MTBF/(MTBF + MTTR)。壊れにくく、直しやすく。</div></div></a><a class="item" href="../../../qc2/ronten/bathtub/"><div class="t"><div class="n">バスタブ曲線と故障のタイプ</div><div class="s">初期(減少)はスクリーニング、偶発(一定)は冗長化、摩耗(増加)は予防保全。</div></div></a><a class="item" href="../../../qc2/ronten/rel-words/"><div class="t"><div class="n">信頼性・保全性の用語</div><div class="s">故障しても安全=フェールセーフ、人の誤りに強い=フールプルーフ、予備の持ち方=冗長、負荷を下げる=ディレーティング。</div></div></a></div></section>
+<nav class="snav" aria-label="分野"><h2>分野から探す</h2><div class="list"><a class="item" href="../../../qc2/#s1"><div class="t"><div class="n">手法</div><div class="s">品質管理の手法</div></div><span class="cnt">›</span></a><a class="item" href="../../../qc2/#s2"><div class="t"><div class="n">実践</div><div class="s">品質管理の実践</div></div><span class="cnt">›</span></a></div></nav>
+<footer class="foot">合格ナビ QC検定2級 ・ <a href="../../../">エネルギー管理士(熱分野)の Web 版</a> ・ <a href="../../../../privacy.html">プライバシーポリシー</a> ・ <a href="../../../../support.html">お問い合わせ</a><br>
+問題はすべてオリジナルの類似問題で、過去問の問題文は載せていません。本サイトは一般財団法人日本規格協会(品質管理検定センター)および一般財団法人日本科学技術連盟とは関係のない個人制作です。「QC検定」は一般財団法人日本規格協会の登録商標です。</footer>
+</main>
+</body>
+</html>

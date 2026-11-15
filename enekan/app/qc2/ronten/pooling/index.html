@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>交互作用のプーリング|QC検定2級 手法 実験計画法の練習問題とやさしい解き方</title>
+<meta name="description" content="効果の小さい交互作用は、平方和と自由度を誤差に足し込んで、誤差分散を求め直す。 QC検定2級「実験計画法」の論点。オリジナルの練習問題1問と答え・解説つき。">
+<link rel="canonical" href="https://jjayck.github.io/app-support/enekan/app/qc2/ronten/pooling/">
+<meta property="og:title" content="交互作用のプーリング|QC検定2級 手法 実験計画法の練習問題とやさしい解き方">
+<meta property="og:description" content="効果の小さい交互作用は、平方和と自由度を誤差に足し込んで、誤差分散を求め直す。 QC検定2級「実験計画法」の論点。オリジナルの練習問題1問と答え・解説つき。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://jjayck.github.io/app-support/enekan/app/qc2/ronten/pooling/">
+<meta property="og:site_name" content="合格ナビ QC検定2級">
+<meta name="apple-itunes-app" content="app-id=6826752834">
+<meta name="theme-color" content="#f6f1e7">
+<link rel="icon" href="../../../../icon.png">
+<link rel="apple-touch-icon" href="../../../../icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap">
+<link rel="stylesheet" href="../../../style.css?v=202611151153">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "QC検定2級", "item": "https://jjayck.github.io/app-support/enekan/app/qc2/"}, {"@type": "ListItem", "position": 2, "name": "実験計画法", "item": "https://jjayck.github.io/app-support/enekan/app/qc2/bunya/doe/"}, {"@type": "ListItem", "position": 3, "name": "交互作用のプーリング", "item": "https://jjayck.github.io/app-support/enekan/app/qc2/ronten/pooling/"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Quiz", "name": "交互作用のプーリング", "description": "効果の小さい交互作用は、平方和と自由度を誤差に足し込んで、誤差分散を求め直す。 QC検定2級「実験計画法」の論点。オリジナルの練習問題1問と答え・解説つき。", "inLanguage": "ja", "learningResourceType": "練習問題", "educationalLevel": "QC検定2級", "about": "実験計画法", "isAccessibleForFree": true, "url": "https://jjayck.github.io/app-support/enekan/app/qc2/ronten/pooling/", "isPartOf": {"@type": "WebSite", "name": "合格ナビ QC検定2級", "url": "https://jjayck.github.io/app-support/enekan/app/qc2/"}, "hasPart": [{"@type": "Question", "eduQuestionType": "Multiple choice", "name": "空欄E", "text": "繰返し 2 回の二元配置実験(A 3 水準、B 4 水準)の平方和と自由度が表のように得られた。交互作用 A×B の分散比は F₀ = [A] と小さく、技術的にも交互作用はないと考えられるので、A×B を誤差にプールする。プール後の誤差の自由度は [B]、誤差分散は V_e′ = [C] となり、A の分散比は F₀ = [D] である。B は有意水準 5 % で [E]。 空欄[E]に入るものを解答群から選べ。", "acceptedAnswer": {"@type": "Answer", "text": "有意である(因子の効果がある)"}, "suggestedAnswer": [{"@type": "Answer", "text": "有意でない(効果があるとはいえない)"}]}], "educationalAlignment": {"@type": "AlignmentObject", "alignmentType": "educationalSubject", "targetName": "実験計画法"}}</script>
+</head>
+<body class="static">
+<header class="top"><div class="in">
+  <a class="brand" href="../../../qc2/"><span class="mark">QC</span>QC検定2級 合格ナビ</a>
+  <span class="sp"></span>
+  <nav><a href="../../../qc2/">論点一覧</a><a href="https://apps.apple.com/jp/app/id6826752834" rel="noopener">アプリで解く</a></nav>
+</div></header>
+<main class="wrap">
+<nav class="crumb" aria-label="パンくずリスト"><a href="../../../qc2/">QC検定2級</a><a href="../../../qc2/bunya/doe/">実験計画法</a><span>交互作用のプーリング</span></nav>
+<h1>交互作用のプーリング</h1>
+<p class="lead"><span class="chip ink">手法</span><span class="chip ink">実験計画法</span><span class="chip calc">計算</span></p>
+<section class="card point-one"><h2 class="h-in">ひとことで言うと</h2><p>効果の小さい交互作用は、平方和と自由度を誤差に足し込んで、誤差分散を求め直す。</p></section>
+<section><h2>練習問題</h2>
+<p class="note">空欄 A・B・C・D・E に入るものを答えてください。</p>
+<div class="stem" data-qid="qc2-pooling-01">繰返し 2 回の二元配置実験(A 3 水準、B 4 水準)の平方和と自由度が表のように得られた。交互作用 A×B の分散比は F₀ = <span class="bl">A</span> と小さく、技術的にも交互作用はないと考えられるので、A×B を誤差にプールする。プール後の誤差の自由度は <span class="bl">B</span>、誤差分散は V<sub>e</sub>′ = <span class="bl">C</span> となり、A の分散比は F₀ = <span class="bl">D</span> である。B は有意水準 5 % で <span class="bl">E</span>。<div class="tbl-wrap"><div class="tbl-title">平方和と自由度</div><table class="qt"><thead><tr><th>要因</th><th>平方和 S</th><th>自由度 φ</th></tr></thead><tbody><tr><td>A</td><td>36</td><td>2</td></tr><tr><td>B</td><td>15.8</td><td>3</td></tr><tr><td>A×B</td><td>5.4</td><td>6</td></tr><tr><td>e</td><td>18</td><td>12</td></tr></tbody></table></div><div class="tbl-wrap"><div class="tbl-title">F 表(P = 0.05)の抜粋</div><table class="qt"><thead><tr><th>φ2 \ φ1</th><th>2</th><th>3</th><th>6</th></tr></thead><tbody><tr><td>12</td><td>3.89</td><td>3.49</td><td>3.00</td></tr><tr><td>18</td><td>3.55</td><td>3.16</td><td>2.66</td></tr></tbody></table><div class="tbl-note">F(φ1, φ2; 0.05):分子の自由度 φ1、分母の自由度 φ2 で、上側確率が 0.05 になる F の値</div></div></div><div class="sblank"><div class="lab"><span class="l">A</span>数値(3桁・□.□□)<span class="u"></span></div></div><div class="sblank"><div class="lab"><span class="l">B</span>数値(2桁・□□)<span class="u"></span></div></div><div class="sblank"><div class="lab"><span class="l">C</span>数値(4桁・□.□□□)<span class="u"></span></div></div><div class="sblank"><div class="lab"><span class="l">D</span>数値(4桁・□□□.□)<span class="u"></span></div></div><div class="sblank"><div class="lab"><span class="l">E</span>解答群</div><ol class="sopts"><li><span class="k">ア</span>有意である(因子の効果がある)</li><li><span class="k">イ</span>有意でない(効果があるとはいえない)</li></ol></div><details class="answer"><summary>答えとやさしい解き方を見る</summary><ul class="anslist"><li><span class="l">A</span><b>0.60</b> </li><li><span class="l">B</span><b>18</b> </li><li><span class="l">C</span><b>1.300</b> </li><li><span class="l">D</span><b>013.8</b> </li><li><span class="l">E</span><b>ア 有意である(因子の効果がある)</b> </li></ul><p class="note">数値の答えは本番と同じ「桁ごとのマーク」です。桁が余るときは先頭に 0 を入れます。</p><div class="guide"><div class="g-goal"><b>何を聞かれている?</b><br>効果が小さい交互作用を誤差にまとめ(プーリング)、分散分析をやり直す問題。</div><h4>記号と単位</h4><ul><li>V<sub>e</sub>′ … プーリング後の誤差分散</li><li>φ_e′ … プーリング後の誤差の自由度</li></ul><h4>解き方</h4><div class="step"><span class="no">1</span><div><div class="why">交互作用の分散 ÷ 誤差の分散を出し、小さいことを確かめる。</div><div class=formula>V<sub>e</sub> = 18/12 = 1.5、V<sub>A</sub>×B = 5.4/6 = 0.9、F₀ = 0.6 → 0.60(1 に近いか小さい)。</div></div></div><div class="step"><span class="no">2</span><div><div class="why">自由度を足す。</div><div class=formula>プーリング:交互作用の平方和と自由度を誤差に足し込む。φ_e′ = 12 + 6 = 18 → 18。</div></div></div><div class="step"><span class="no">3</span><div><div class="why">平方和を足してから、足した自由度で割る(分散どうしを平均しない)。</div><div class=formula>V<sub>e</sub>′ = (S<sub>e</sub> + S<sub>A</sub>×B)/φ_e′ = (18 + 5.4)/18 = 1.3 → 1.300。</div></div></div><div class="step"><span class="no">4</span><div><div class="why">A の分散を新しい誤差分散で割る。</div><div class=formula>F₀(A) = (S<sub>A</sub>/φ_A)/V<sub>e</sub>′ = (36/2)/1.3 = 13.8462 → 13.8。</div></div></div><div class="step"><span class="no">5</span><div><div class="why">F 表は新しい自由度の行を読む。</div><div class=formula>F₀(B) = (15.8/3)/1.3 = 4.0513。F(3, 18; 0.05) = 3.16 → 有意。</div></div></div><h4>あわせて覚える</h4><ul><li>プールすると誤差の自由度が増え、検出力が上がる。目安は F₀ が 2 程度以下で、技術的に効果がないと考えられるとき。</li></ul><div class="trap"><b>つまずきやすいところ</b><br>分散(V)どうしを足して 2 で割ってしまう。足すのは平方和と自由度。</div></div></details>
+</section>
+<aside class="cta card">
+  <div class="cta-h">この論点の問題は全 8 問(無料 1 問)</div>
+  <p class="note">iPhone・iPad のアプリ「合格ナビ」で、QC検定2級の全 680 問を分野・論点ごとに続けて解けます。本番と同じマーク形式で、計算は数値を変えた類題をくり返し練習できます。</p>
+  <a class="btn heat block" href="https://apps.apple.com/jp/app/id6826752834" rel="noopener">App Store で入手(無料)</a>
+  <p class="note">どの論点にも無料問題があります。全問の解禁はアプリ内の買い切り(¥1,200)です。ブラウザ版は今のところエネルギー管理士(熱分野)だけです。</p>
+</aside>
+<section><h2>「実験計画法」のイメージ</h2>
+<div class="card intro"><div class="one">条件を計画的に変えて実験し、結果のばらつきを「条件のせい」と「偶然のせい」に分けて、効果を判定する。</div><p class="note" style="margin:8px 0 0"><a href="../../bunya/doe/">実験計画法の要点と全論点を見る ›</a></p></div></section>
+<section><h2>同じ分野の論点</h2><div class="list"><a class="item" href="../../../qc2/ronten/oneway/"><div class="t"><div class="n"><span class="chip calc">計算</span>一元配置の分散分析</div><div class="s">全体のばらつきを、因子のぶんと誤差のぶんに分け、F₀ = V_A/V_e を F 表と比べる。</div></div></a><a class="item" href="../../../qc2/ronten/oneway-est/"><div class="t"><div class="n"><span class="chip calc">計算</span>一元配置の母平均の推定</div><div class="s">水準の平均 ± t(φ_e, 0.05)√(V_e/r)。差の推定では √(2V_e/r)。</div></div></a><a class="item" href="../../../qc2/ronten/twoway-norep/"><div class="t"><div class="n"><span class="chip calc">計算</span>繰返しのない二元配置</div><div class="s">A と B のぶんを引いた残りが誤差。交互作用は誤差と分けられない。</div></div></a><a class="item" href="../../../qc2/ronten/twoway-rep/"><div class="t"><div class="n"><span class="chip calc">計算</span>繰返しのある二元配置と交互作用</div><div class="s">組合せごとの平均のばらつき S_AB から A と B のぶんを引くと交互作用。</div></div></a></div></section>
+<nav class="snav" aria-label="分野"><h2>分野から探す</h2><div class="list"><a class="item" href="../../../qc2/#s1"><div class="t"><div class="n">手法</div><div class="s">品質管理の手法</div></div><span class="cnt">›</span></a><a class="item" href="../../../qc2/#s2"><div class="t"><div class="n">実践</div><div class="s">品質管理の実践</div></div><span class="cnt">›</span></a></div></nav>
+<footer class="foot">合格ナビ QC検定2級 ・ <a href="../../../">エネルギー管理士(熱分野)の Web 版</a> ・ <a href="../../../../privacy.html">プライバシーポリシー</a> ・ <a href="../../../../support.html">お問い合わせ</a><br>
+問題はすべてオリジナルの類似問題で、過去問の問題文は載せていません。本サイトは一般財団法人日本規格協会(品質管理検定センター)および一般財団法人日本科学技術連盟とは関係のない個人制作です。「QC検定」は一般財団法人日本規格協会の登録商標です。</footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>OC 曲線とロットの合格確率|QC検定2級 手法 抜取検査の練習問題とやさしい解き方</title>
+<meta name="description" content="不良率ごとのロットの合格の確率。よいロットを落とす α と、悪いロットを通す β で評価する。 QC検定2級「抜取検査」の論点。オリジナルの練習問題1問と答え・解説つき。">
+<link rel="canonical" href="https://jjayck.github.io/app-support/enekan/app/qc2/ronten/oc-curve/">
+<meta property="og:title" content="OC 曲線とロットの合格確率|QC検定2級 手法 抜取検査の練習問題とやさしい解き方">
+<meta property="og:description" content="不良率ごとのロットの合格の確率。よいロットを落とす α と、悪いロットを通す β で評価する。 QC検定2級「抜取検査」の論点。オリジナルの練習問題1問と答え・解説つき。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://jjayck.github.io/app-support/enekan/app/qc2/ronten/oc-curve/">
+<meta property="og:site_name" content="合格ナビ QC検定2級">
+<meta name="apple-itunes-app" content="app-id=6826752834">
+<meta name="theme-color" content="#f6f1e7">
+<link rel="icon" href="../../../../icon.png">
+<link rel="apple-touch-icon" href="../../../../icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap">
+<link rel="stylesheet" href="../../../style.css?v=202611151153">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "QC検定2級", "item": "https://jjayck.github.io/app-support/enekan/app/qc2/"}, {"@type": "ListItem", "position": 2, "name": "抜取検査", "item": "https://jjayck.github.io/app-support/enekan/app/qc2/bunya/sampling-inspection/"}, {"@type": "ListItem", "position": 3, "name": "OC 曲線とロットの合格確率", "item": "https://jjayck.github.io/app-support/enekan/app/qc2/ronten/oc-curve/"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Quiz", "name": "OC 曲線とロットの合格確率", "description": "不良率ごとのロットの合格の確率。よいロットを落とす α と、悪いロットを通す β で評価する。 QC検定2級「抜取検査」の論点。オリジナルの練習問題1問と答え・解説つき。", "inLanguage": "ja", "learningResourceType": "練習問題", "educationalLevel": "QC検定2級", "about": "抜取検査", "isAccessibleForFree": true, "url": "https://jjayck.github.io/app-support/enekan/app/qc2/ronten/oc-curve/", "isPartOf": {"@type": "WebSite", "name": "合格ナビ QC検定2級", "url": "https://jjayck.github.io/app-support/enekan/app/qc2/"}, "hasPart": [{"@type": "Question", "eduQuestionType": "Multiple choice", "name": "空欄D", "text": "ロットから n = 80 個をランダムに抜き取り、不適合品が 1 個以下ならロットを合格とする抜取検査(n = 80、c = 1)を考える。ポアソン分布で近似すると、不適合品率 1 % のロットが合格する確率は [A] で、このロットが不合格になる確率(生産者危険)は [B] である。また、不適合品率 4 % のロットが合格してしまう確率(消費者危険)は [C] である。c を一定にして n を大きくすると、OC 曲線は [D]。ただし e^(−0.8) = 0.4493、e^(−3.2) = 0.0408 とする。 空欄[D]に入るものを解答群から選べ。", "acceptedAnswer": {"@type": "Answer", "text": "傾きが急になり、良いロットと悪いロットを見分けやすくなる"}, "suggestedAnswer": [{"@type": "Answer", "text": "形は変わらない"}, {"@type": "Answer", "text": "合格する確率がどの p でも 1 に近づく"}, {"@type": "Answer", "text": "傾きがなだらかになる"}]}], "educationalAlignment": {"@type": "AlignmentObject", "alignmentType": "educationalSubject", "targetName": "抜取検査"}}</script>
+</head>
+<body class="static">
+<header class="top"><div class="in">
+  <a class="brand" href="../../../qc2/"><span class="mark">QC</span>QC検定2級 合格ナビ</a>
+  <span class="sp"></span>
+  <nav><a href="../../../qc2/">論点一覧</a><a href="https://apps.apple.com/jp/app/id6826752834" rel="noopener">アプリで解く</a></nav>
+</div></header>
+<main class="wrap">
+<nav class="crumb" aria-label="パンくずリスト"><a href="../../../qc2/">QC検定2級</a><a href="../../../qc2/bunya/sampling-inspection/">抜取検査</a><span>OC 曲線とロットの合格確率</span></nav>
+<h1>OC 曲線とロットの合格確率</h1>
+<p class="lead"><span class="chip ink">手法</span><span class="chip ink">抜取検査</span><span class="chip calc">計算</span></p>
+<section class="card point-one"><h2 class="h-in">ひとことで言うと</h2><p>不良率ごとのロットの合格の確率。よいロットを落とす α と、悪いロットを通す β で評価する。</p></section>
+<section><h2>練習問題</h2>
+<p class="note">空欄 A・B・C・D に入るものを答えてください。</p>
+<div class="stem" data-qid="qc2-oc_curve-01">ロットから n = 80 個をランダムに抜き取り、不適合品が 1 個以下ならロットを合格とする抜取検査(n = 80、c = 1)を考える。ポアソン分布で近似すると、不適合品率 1 % のロットが合格する確率は <span class="bl">A</span> で、このロットが不合格になる確率(生産者危険)は <span class="bl">B</span> である。また、不適合品率 4 % のロットが合格してしまう確率(消費者危険)は <span class="bl">C</span> である。c を一定にして n を大きくすると、OC 曲線は <span class="bl">D</span>。ただし e<sup>−0.8</sup> = 0.4493、e<sup>−3.2</sup> = 0.0408 とする。</div><div class="sblank"><div class="lab"><span class="l">A</span>数値(5桁・□.□□□□)<span class="u"></span></div></div><div class="sblank"><div class="lab"><span class="l">B</span>数値(5桁・□.□□□□)<span class="u"></span></div></div><div class="sblank"><div class="lab"><span class="l">C</span>数値(5桁・□.□□□□)<span class="u"></span></div></div><div class="sblank"><div class="lab"><span class="l">D</span>解答群</div><ol class="sopts"><li><span class="k">ア</span>傾きが急になり、良いロットと悪いロットを見分けやすくなる</li><li><span class="k">イ</span>形は変わらない</li><li><span class="k">ウ</span>合格する確率がどの p でも 1 に近づく</li><li><span class="k">エ</span>傾きがなだらかになる</li></ol></div><details class="answer"><summary>答えとやさしい解き方を見る</summary><ul class="anslist"><li><span class="l">A</span><b>0.8087</b> </li><li><span class="l">B</span><b>0.1913</b> </li><li><span class="l">C</span><b>0.1714</b> </li><li><span class="l">D</span><b>ア 傾きが急になり、良いロットと悪いロットを見分けやすくなる</b> </li></ul><p class="note">数値の答えは本番と同じ「桁ごとのマーク」です。桁が余るときは先頭に 0 を入れます。</p><div class="guide"><div class="g-goal"><b>何を聞かれている?</b><br>抜取検査の方式(n, c)で、ある不良率のロットが合格する確率を出す問題。</div><h4>記号と単位</h4><ul><li>n … 抜き取る数</li><li>c … 合格にできる不良の最大数</li><li>m … 抜き取った中の平均の不良数 np</li><li>α・β … 生産者危険・消費者危険</li></ul><h4>解き方</h4><div class="step"><span class="no">1</span><div><div class="why">合格の確率は、不良が 0〜c 個になる確率の合計。</div><div class=formula>c を一定にして n を大きくすると、OC 曲線の傾きが急になり、良いロットと悪いロットを見分ける力(識別力)が上がる。</div></div></div><div class="step"><span class="no">2</span><div><div class="why">良いロット(p₀)で m = np を出して、0〜c 個の確率を足す。</div><div class=formula>合格する確率 L(p) = P(不適合品数 ≤ c)。ポアソン近似では m = np として L = e<sup>−m</sup>+m·e<sup>−m</sup>。</div></div></div><div class="step"><span class="no">3</span><div><div class="why">良いロットなのに不合格になる確率が α。</div><div class=formula>p = 0.01:m = 80 × 0.01 = 0.8。L = 0.4493 + 0.8 × 0.4493 = 0.80874 → 0.8087。</div></div></div><div class="step"><span class="no">4</span><div><div class="why">悪いロット(p₁)で同じように計算した合格の確率が β。</div><div class=formula>生産者危険 α = 1 − L = 1 − 0.80874 = 0.19126 → 0.1913(良いロットが不合格にされる確率)。</div></div></div><h4>あわせて覚える</h4><ul><li>p = 0.04:m = 80 × 0.04 = 3.2。L = 0.0408 + 3.2 × 0.0408 = 0.17136 → 0.1714(消費者危険 β)。</li></ul><div class="trap"><b>つまずきやすいところ</b><br>c 個までを足すのに、c 個ちょうどの確率だけにしてしまう。</div></div></details>
+</section>
+<aside class="cta card">
+  <div class="cta-h">この論点の問題は全 8 問(無料 1 問)</div>
+  <p class="note">iPhone・iPad のアプリ「合格ナビ」で、QC検定2級の全 680 問を分野・論点ごとに続けて解けます。本番と同じマーク形式で、計算は数値を変えた類題をくり返し練習できます。</p>
+  <a class="btn heat block" href="https://apps.apple.com/jp/app/id6826752834" rel="noopener">App Store で入手(無料)</a>
+  <p class="note">どの論点にも無料問題があります。全問の解禁はアプリ内の買い切り(¥1,200)です。ブラウザ版は今のところエネルギー管理士(熱分野)だけです。</p>
+</aside>
+<section><h2>「抜取検査」のイメージ</h2>
+<div class="card intro"><div class="one">ロットから一部だけを調べて、ロット全体を合格にするか決める方法。</div><p class="note" style="margin:8px 0 0"><a href="../../bunya/sampling-inspection/">抜取検査の要点と全論点を見る ›</a></p></div></section>
+<section><h2>同じ分野の論点</h2><div class="list"><a class="item" href="../../../qc2/ronten/var-sampling/"><div class="t"><div class="n"><span class="chip calc">計算</span>計量規準型一回抜取検査(σ 既知)</div><div class="s">測った値の平均で判定する。正規分布表の値から n と k を決め、平均 ≤ Sᵤ − kσ なら合格。</div></div></a><a class="item" href="../../../qc2/ronten/attr-plan/"><div class="t"><div class="n"><span class="chip calc">計算</span>計数規準型一回抜取検査の考え方</div><div class="s">良いロットを落とす確率(α)と悪いロットを通す確率(β)の両方を、決めた値以下にする n と c を選ぶ。</div></div></a></div></section>
+<nav class="snav" aria-label="分野"><h2>分野から探す</h2><div class="list"><a class="item" href="../../../qc2/#s1"><div class="t"><div class="n">手法</div><div class="s">品質管理の手法</div></div><span class="cnt">›</span></a><a class="item" href="../../../qc2/#s2"><div class="t"><div class="n">実践</div><div class="s">品質管理の実践</div></div><span class="cnt">›</span></a></div></nav>
+<footer class="foot">合格ナビ QC検定2級 ・ <a href="../../../">エネルギー管理士(熱分野)の Web 版</a> ・ <a href="../../../../privacy.html">プライバシーポリシー</a> ・ <a href="../../../../support.html">お問い合わせ</a><br>
+問題はすべてオリジナルの類似問題で、過去問の問題文は載せていません。本サイトは一般財団法人日本規格協会(品質管理検定センター)および一般財団法人日本科学技術連盟とは関係のない個人制作です。「QC検定」は一般財団法人日本規格協会の登録商標です。</footer>
+</main>
+</body>
+</html>

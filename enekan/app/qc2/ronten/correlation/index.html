@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>相関係数|QC検定2級 手法 相関分析の練習問題とやさしい解き方</title>
+<meta name="description" content="r = Sₓᵧ/√(Sₓₓ·Sᵧᵧ)。−1〜1 で、直線の関係の強さだけを表す。 QC検定2級「相関分析」の論点。オリジナルの練習問題1問と答え・解説つき。">
+<link rel="canonical" href="https://jjayck.github.io/app-support/enekan/app/qc2/ronten/correlation/">
+<meta property="og:title" content="相関係数|QC検定2級 手法 相関分析の練習問題とやさしい解き方">
+<meta property="og:description" content="r = Sₓᵧ/√(Sₓₓ·Sᵧᵧ)。−1〜1 で、直線の関係の強さだけを表す。 QC検定2級「相関分析」の論点。オリジナルの練習問題1問と答え・解説つき。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://jjayck.github.io/app-support/enekan/app/qc2/ronten/correlation/">
+<meta property="og:site_name" content="合格ナビ QC検定2級">
+<meta name="apple-itunes-app" content="app-id=6826752834">
+<meta name="theme-color" content="#f6f1e7">
+<link rel="icon" href="../../../../icon.png">
+<link rel="apple-touch-icon" href="../../../../icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap">
+<link rel="stylesheet" href="../../../style.css?v=202611151153">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "QC検定2級", "item": "https://jjayck.github.io/app-support/enekan/app/qc2/"}, {"@type": "ListItem", "position": 2, "name": "相関分析", "item": "https://jjayck.github.io/app-support/enekan/app/qc2/bunya/correlation/"}, {"@type": "ListItem", "position": 3, "name": "相関係数", "item": "https://jjayck.github.io/app-support/enekan/app/qc2/ronten/correlation/"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Quiz", "name": "相関係数", "description": "r = Sₓᵧ/√(Sₓₓ·Sᵧᵧ)。−1〜1 で、直線の関係の強さだけを表す。 QC検定2級「相関分析」の論点。オリジナルの練習問題1問と答え・解説つき。", "inLanguage": "ja", "learningResourceType": "練習問題", "educationalLevel": "QC検定2級", "about": "相関分析", "isAccessibleForFree": true, "url": "https://jjayck.github.io/app-support/enekan/app/qc2/ronten/correlation/", "isPartOf": {"@type": "WebSite", "name": "合格ナビ QC検定2級", "url": "https://jjayck.github.io/app-support/enekan/app/qc2/"}, "hasPart": [{"@type": "Question", "eduQuestionType": "Multiple choice", "name": "空欄D", "text": "表は、ある工程の加熱時間 x(分)と硬さ y の 8 組のデータである。x の平方和 Sₓₓ = [A]、x と y の偏差積和 Sₓᵧ = [B]、相関係数 r = [C] である。相関係数の性質として正しいものは、[D]。 空欄[D]に入るものを解答群から選べ。", "acceptedAnswer": {"@type": "Answer", "text": "r = 0 でも、曲線的な関係がある場合がある"}, "suggestedAnswer": [{"@type": "Answer", "text": "r が 1 に近いほど、y が x の原因であることが証明される"}, {"@type": "Answer", "text": "r = 0 なら x と y はまったく無関係である"}, {"@type": "Answer", "text": "r は −2 から 2 の値をとる"}]}], "educationalAlignment": {"@type": "AlignmentObject", "alignmentType": "educationalSubject", "targetName": "相関分析"}}</script>
+</head>
+<body class="static">
+<header class="top"><div class="in">
+  <a class="brand" href="../../../qc2/"><span class="mark">QC</span>QC検定2級 合格ナビ</a>
+  <span class="sp"></span>
+  <nav><a href="../../../qc2/">論点一覧</a><a href="https://apps.apple.com/jp/app/id6826752834" rel="noopener">アプリで解く</a></nav>
+</div></header>
+<main class="wrap">
+<nav class="crumb" aria-label="パンくずリスト"><a href="../../../qc2/">QC検定2級</a><a href="../../../qc2/bunya/correlation/">相関分析</a><span>相関係数</span></nav>
+<h1>相関係数</h1>
+<p class="lead"><span class="chip ink">手法</span><span class="chip ink">相関分析</span><span class="chip calc">計算</span></p>
+<section class="card point-one"><h2 class="h-in">ひとことで言うと</h2><p>r = Sₓᵧ/√(Sₓₓ·Sᵧᵧ)。−1〜1 で、直線の関係の強さだけを表す。</p></section>
+<section><h2>練習問題</h2>
+<p class="note">空欄 A・B・C・D に入るものを答えてください。</p>
+<div class="stem" data-qid="qc2-correlation-01">表は、ある工程の加熱時間 x(分)と硬さ y の 8 組のデータである。x の平方和 Sₓₓ = <span class="bl">A</span>、x と y の偏差積和 Sₓᵧ = <span class="bl">B</span>、相関係数 r = <span class="bl">C</span> である。相関係数の性質として正しいものは、<span class="bl">D</span>。<div class="tbl-wrap"><div class="tbl-title">加熱時間と硬さ</div><table class="qt"><thead><tr><th>No.</th><th>x(分)</th><th>y</th></tr></thead><tbody><tr><td>1</td><td>7</td><td>15</td></tr><tr><td>2</td><td>12</td><td>22</td></tr><tr><td>3</td><td>9</td><td>15</td></tr><tr><td>4</td><td>11</td><td>25</td></tr><tr><td>5</td><td>2</td><td>9</td></tr><tr><td>6</td><td>10</td><td>17</td></tr><tr><td>7</td><td>8</td><td>15</td></tr><tr><td>8</td><td>5</td><td>15</td></tr></tbody></table></div></div><div class="sblank"><div class="lab"><span class="l">A</span>数値(5桁・□□□.□□)<span class="u"></span></div></div><div class="sblank"><div class="lab"><span class="l">B</span>数値(5桁・□□□.□□)<span class="u"></span></div></div><div class="sblank"><div class="lab"><span class="l">C</span>数値(4桁・□.□□□)<span class="u"></span></div></div><div class="sblank"><div class="lab"><span class="l">D</span>解答群</div><ol class="sopts"><li><span class="k">ア</span>r が 1 に近いほど、y が x の原因であることが証明される</li><li><span class="k">イ</span>r = 0 なら x と y はまったく無関係である</li><li><span class="k">ウ</span>r は −2 から 2 の値をとる</li><li><span class="k">エ</span>r = 0 でも、曲線的な関係がある場合がある</li></ol></div><details class="answer"><summary>答えとやさしい解き方を見る</summary><ul class="anslist"><li><span class="l">A</span><b>076.00</b> </li><li><span class="l">B</span><b>098.00</b> </li><li><span class="l">C</span><b>0.868</b> </li><li><span class="l">D</span><b>エ r = 0 でも、曲線的な関係がある場合がある</b> </li></ul><p class="note">数値の答えは本番と同じ「桁ごとのマーク」です。桁が余るときは先頭に 0 を入れます。</p><div class="guide"><div class="g-goal"><b>何を聞かれている?</b><br>2 つの量のデータから、直線的な関係の強さ(相関係数 r)を出す問題。</div><h4>記号と単位</h4><ul><li>Sₓₓ・Sᵧᵧ … x と y の平方和</li><li>Sₓᵧ … 偏差積和(x のずれ × y のずれ の合計)</li><li>r … 相関係数(−1〜1)</li></ul><h4>解き方</h4><div class="step"><span class="no">1</span><div><div class="why">表から 5 つの合計(Σx・Σy・Σx²・Σy²・Σxy)を出す。</div><div class=formula>Σx = 64、Σy = 133、Σx² = 588、Σy² = 2379、Σxy = 1162。</div></div></div><div class="step"><span class="no">2</span><div><div class="why">Sₓₓ = Σx² − (Σx)²/n。</div><div class=formula>Sₓₓ = Σx² − (Σx)²/n = 588 − 64²/8 = 76 → 76.00。</div></div></div><div class="step"><span class="no">3</span><div><div class="why">Sᵧᵧ も同じ形。</div><div class=formula>Sᵧᵧ = Σy² − (Σy)²/n = 2379 − 133²/8 = 167.875。</div></div></div><div class="step"><span class="no">4</span><div><div class="why">Sₓᵧ = Σxy − (Σx)(Σy)/n。</div><div class=formula>Sₓᵧ = Σxy − (Σx)(Σy)/n = 1162 − 64 × 133/8 = 98 → 空欄は 98.00。</div></div></div><div class="step"><span class="no">5</span><div><div class="why">Sₓᵧ ÷ √(Sₓₓ × Sᵧᵧ)。</div><div class=formula>r = Sₓᵧ/√(Sₓₓ·Sᵧᵧ) = 98/√(76 × 167.875) = 0.8676 → 空欄は 0.868(正の相関)。</div></div></div><h4>あわせて覚える</h4><ul><li>r は −1〜1。直線的な関係の強さだけを表す(x と y を入れ替えても、単位を変えても同じ。外れ値には弱い)。因果関係までは言えない。</li></ul><div class="trap"><b>つまずきやすいところ</b><br>Σxy を Σx × Σy にしてしまう(1 組ずつ掛けてから足す)。</div></div></details>
+</section>
+<aside class="cta card">
+  <div class="cta-h">この論点の問題は全 8 問(無料 1 問)</div>
+  <p class="note">iPhone・iPad のアプリ「合格ナビ」で、QC検定2級の全 680 問を分野・論点ごとに続けて解けます。本番と同じマーク形式で、計算は数値を変えた類題をくり返し練習できます。</p>
+  <a class="btn heat block" href="https://apps.apple.com/jp/app/id6826752834" rel="noopener">App Store で入手(無料)</a>
+  <p class="note">どの論点にも無料問題があります。全問の解禁はアプリ内の買い切り(¥1,200)です。ブラウザ版は今のところエネルギー管理士(熱分野)だけです。</p>
+</aside>
+<section><h2>「相関分析」のイメージ</h2>
+<div class="card intro"><div class="one">2 つの量が一緒に増えたり減ったりする関係の強さを、相関係数 r(−1〜1)で表す。</div><p class="note" style="margin:8px 0 0"><a href="../../bunya/correlation/">相関分析の要点と全論点を見る ›</a></p></div></section>
+<section><h2>同じ分野の論点</h2><div class="list"><a class="item" href="../../../qc2/ronten/serial-corr/"><div class="t"><div class="n"><span class="chip calc">計算</span>系列相関(大波・小波)と符号検定</div><div class="s">大波はメディアンからのずれ、小波は前との差の符号の積。少ないほうの個数を表と比べる。</div></div></a></div></section>
+<nav class="snav" aria-label="分野"><h2>分野から探す</h2><div class="list"><a class="item" href="../../../qc2/#s1"><div class="t"><div class="n">手法</div><div class="s">品質管理の手法</div></div><span class="cnt">›</span></a><a class="item" href="../../../qc2/#s2"><div class="t"><div class="n">実践</div><div class="s">品質管理の実践</div></div><span class="cnt">›</span></a></div></nav>
+<footer class="foot">合格ナビ QC検定2級 ・ <a href="../../../">エネルギー管理士(熱分野)の Web 版</a> ・ <a href="../../../../privacy.html">プライバシーポリシー</a> ・ <a href="../../../../support.html">お問い合わせ</a><br>
+問題はすべてオリジナルの類似問題で、過去問の問題文は載せていません。本サイトは一般財団法人日本規格協会(品質管理検定センター)および一般財団法人日本科学技術連盟とは関係のない個人制作です。「QC検定」は一般財団法人日本規格協会の登録商標です。</footer>
+</main>
+</body>
+</html>

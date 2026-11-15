@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>計数規準型一回抜取検査の考え方|QC検定2級 手法 抜取検査の練習問題とやさしい解き方</title>
+<meta name="description" content="良いロットを落とす確率(α)と悪いロットを通す確率(β)の両方を、決めた値以下にする n と c を選ぶ。 QC検定2級「抜取検査」の論点。オリジナルの練習問題1問と答え・解説つき。">
+<link rel="canonical" href="https://jjayck.github.io/app-support/enekan/app/qc2/ronten/attr-plan/">
+<meta property="og:title" content="計数規準型一回抜取検査の考え方|QC検定2級 手法 抜取検査の練習問題とやさしい解き方">
+<meta property="og:description" content="良いロットを落とす確率(α)と悪いロットを通す確率(β)の両方を、決めた値以下にする n と c を選ぶ。 QC検定2級「抜取検査」の論点。オリジナルの練習問題1問と答え・解説つき。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://jjayck.github.io/app-support/enekan/app/qc2/ronten/attr-plan/">
+<meta property="og:site_name" content="合格ナビ QC検定2級">
+<meta name="apple-itunes-app" content="app-id=6826752834">
+<meta name="theme-color" content="#f6f1e7">
+<link rel="icon" href="../../../../icon.png">
+<link rel="apple-touch-icon" href="../../../../icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap">
+<link rel="stylesheet" href="../../../style.css?v=202611151153">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "QC検定2級", "item": "https://jjayck.github.io/app-support/enekan/app/qc2/"}, {"@type": "ListItem", "position": 2, "name": "抜取検査", "item": "https://jjayck.github.io/app-support/enekan/app/qc2/bunya/sampling-inspection/"}, {"@type": "ListItem", "position": 3, "name": "計数規準型一回抜取検査の考え方", "item": "https://jjayck.github.io/app-support/enekan/app/qc2/ronten/attr-plan/"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Quiz", "name": "計数規準型一回抜取検査の考え方", "description": "良いロットを落とす確率(α)と悪いロットを通す確率(β)の両方を、決めた値以下にする n と c を選ぶ。 QC検定2級「抜取検査」の論点。オリジナルの練習問題1問と答え・解説つき。", "inLanguage": "ja", "learningResourceType": "練習問題", "educationalLevel": "QC検定2級", "about": "抜取検査", "isAccessibleForFree": true, "url": "https://jjayck.github.io/app-support/enekan/app/qc2/ronten/attr-plan/", "isPartOf": {"@type": "WebSite", "name": "合格ナビ QC検定2級", "url": "https://jjayck.github.io/app-support/enekan/app/qc2/"}, "hasPart": [{"@type": "Question", "eduQuestionType": "Multiple choice", "name": "空欄C", "text": "不適合品率 p₀ = 1 % のロットはなるべく合格させ(生産者危険 α ≤ 0.05)、p₁ = 8 % のロットはなるべく不合格にしたい(消費者危険 β ≤ 0.10)。表は、4 つの一回抜取方式(n 個抜き取り、不適合品が c 個以下なら合格)について、二項分布で計算したロットの合格の確率である。方式ア の生産者危険は [A]、方式エ の消費者危険は [B] であり、両方の条件を満たす方式は [C] である。 空欄[C]に入るものを解答群から選べ。", "acceptedAnswer": {"@type": "Answer", "text": "方式ア"}, "suggestedAnswer": [{"@type": "Answer", "text": "方式エ"}, {"@type": "Answer", "text": "方式イ"}, {"@type": "Answer", "text": "方式ウ"}]}], "educationalAlignment": {"@type": "AlignmentObject", "alignmentType": "educationalSubject", "targetName": "抜取検査"}}</script>
+</head>
+<body class="static">
+<header class="top"><div class="in">
+  <a class="brand" href="../../../qc2/"><span class="mark">QC</span>QC検定2級 合格ナビ</a>
+  <span class="sp"></span>
+  <nav><a href="../../../qc2/">論点一覧</a><a href="https://apps.apple.com/jp/app/id6826752834" rel="noopener">アプリで解く</a></nav>
+</div></header>
+<main class="wrap">
+<nav class="crumb" aria-label="パンくずリスト"><a href="../../../qc2/">QC検定2級</a><a href="../../../qc2/bunya/sampling-inspection/">抜取検査</a><span>計数規準型一回抜取検査の考え方</span></nav>
+<h1>計数規準型一回抜取検査の考え方</h1>
+<p class="lead"><span class="chip ink">手法</span><span class="chip ink">抜取検査</span><span class="chip calc">計算</span></p>
+<section class="card point-one"><h2 class="h-in">ひとことで言うと</h2><p>良いロットを落とす確率(α)と悪いロットを通す確率(β)の両方を、決めた値以下にする n と c を選ぶ。</p></section>
+<section><h2>練習問題</h2>
+<p class="note">空欄 A・B・C に入るものを答えてください。</p>
+<div class="stem" data-qid="qc2-attr_plan-01">不適合品率 p₀ = 1 % のロットはなるべく合格させ(生産者危険 α ≤ 0.05)、p₁ = 8 % のロットはなるべく不合格にしたい(消費者危険 β ≤ 0.10)。表は、4 つの一回抜取方式(n 個抜き取り、不適合品が c 個以下なら合格)について、二項分布で計算したロットの合格の確率である。方式ア の生産者危険は <span class="bl">A</span>、方式エ の消費者危険は <span class="bl">B</span> であり、両方の条件を満たす方式は <span class="bl">C</span> である。<div class="tbl-wrap"><div class="tbl-title">合格の確率 L(p)(二項分布で計算、p₀ = 0.01、p₁ = 0.08)</div><table class="qt"><thead><tr><th>方式</th><th>n</th><th>c</th><th>L(p₀)</th><th>L(p₁)</th></tr></thead><tbody><tr><td>方式ア</td><td>120</td><td>3</td><td>0.9670</td><td>0.0113</td></tr><tr><td>方式イ</td><td>20</td><td>0</td><td>0.8179</td><td>0.1887</td></tr><tr><td>方式ウ</td><td>150</td><td>3</td><td>0.9353</td><td>0.0017</td></tr><tr><td>方式エ</td><td>40</td><td>0</td><td>0.6690</td><td>0.0356</td></tr></tbody></table><div class="tbl-note">L(p) は不適合品率 p のロットが合格する確率</div></div></div><div class="sblank"><div class="lab"><span class="l">A</span>数値(5桁・□.□□□□)<span class="u"></span></div></div><div class="sblank"><div class="lab"><span class="l">B</span>数値(5桁・□.□□□□)<span class="u"></span></div></div><div class="sblank"><div class="lab"><span class="l">C</span>解答群</div><ol class="sopts"><li><span class="k">ア</span>方式エ</li><li><span class="k">イ</span>方式イ</li><li><span class="k">ウ</span>方式ア</li><li><span class="k">エ</span>方式ウ</li></ol></div><details class="answer"><summary>答えとやさしい解き方を見る</summary><ul class="anslist"><li><span class="l">A</span><b>0.0330</b> </li><li><span class="l">B</span><b>0.0356</b> </li><li><span class="l">C</span><b>ウ 方式ア</b> </li></ul><p class="note">数値の答えは本番と同じ「桁ごとのマーク」です。桁が余るときは先頭に 0 を入れます。</p><div class="guide"><div class="g-goal"><b>何を聞かれている?</b><br>抜取検査の方式(n, c)ごとの合格の確率から、生産者危険と消費者危険を出し、条件に合う方式を選ぶ問題。</div><h4>記号と単位</h4><ul><li>L(p) … 不適合品率 p のロットが合格する確率</li><li>α(生産者危険)… 良いロット(p₀)が不合格になる確率 = 1 − L(p₀)</li><li>β(消費者危険)… 悪いロット(p₁)が合格する確率 = L(p₁)</li></ul><h4>解き方</h4><div class="step"><span class="no">1</span><div><div class="why">良いロットの合格の確率を 1 から引くと、良いロットが落とされる確率 α。</div><div class=formula>生産者危険 α = 不適合品率 p₀ の良いロットが不合格になる確率 = 1 − L(p₀)。方式ア:1 − 0.9670 = 0.033 → 0.0330。</div></div></div><div class="step"><span class="no">2</span><div><div class="why">悪いロットの合格の確率は、そのまま β(通してしまう確率)。</div><div class=formula>消費者危険 β = 不適合品率 p₁ の悪いロットが合格してしまう確率 = L(p₁)。方式エ:0.0356 → 0.0356。</div></div></div><div class="step"><span class="no">3</span><div><div class="why">全部の方式で α と β を並べる。</div><div class=formula>各方式の α と β:方式ア α = 0.033・β = 0.0113、方式イ α = 0.1821・β = 0.1887、方式ウ α = 0.0647・β = 0.0017、方式エ α = 0.331・β = 0.0356。</div></div></div><div class="step"><span class="no">4</span><div><div class="why">α ≤ 0.05 と β ≤ 0.10 を両方満たす方式を選ぶ。</div><div class=formula>α ≤ 0.05 と β ≤ 0.10 を両方満たすのは 方式ア。n を大きくすると両方の危険を同時に小さくできる(OC 曲線が急になる)。</div></div></div><div class="trap"><b>つまずきやすいところ</b><br>α を L(p₀) そのものにしてしまう(α は不合格になる確率なので 1 から引く)。</div></div></details>
+</section>
+<aside class="cta card">
+  <div class="cta-h">この論点の問題は全 8 問(無料 1 問)</div>
+  <p class="note">iPhone・iPad のアプリ「合格ナビ」で、QC検定2級の全 680 問を分野・論点ごとに続けて解けます。本番と同じマーク形式で、計算は数値を変えた類題をくり返し練習できます。</p>
+  <a class="btn heat block" href="https://apps.apple.com/jp/app/id6826752834" rel="noopener">App Store で入手(無料)</a>
+  <p class="note">どの論点にも無料問題があります。全問の解禁はアプリ内の買い切り(¥1,200)です。ブラウザ版は今のところエネルギー管理士(熱分野)だけです。</p>
+</aside>
+<section><h2>「抜取検査」のイメージ</h2>
+<div class="card intro"><div class="one">ロットから一部だけを調べて、ロット全体を合格にするか決める方法。</div><p class="note" style="margin:8px 0 0"><a href="../../bunya/sampling-inspection/">抜取検査の要点と全論点を見る ›</a></p></div></section>
+<section><h2>同じ分野の論点</h2><div class="list"><a class="item" href="../../../qc2/ronten/oc-curve/"><div class="t"><div class="n"><span class="chip calc">計算</span>OC 曲線とロットの合格確率</div><div class="s">不良率ごとのロットの合格の確率。よいロットを落とす α と、悪いロットを通す β で評価する。</div></div></a><a class="item" href="../../../qc2/ronten/var-sampling/"><div class="t"><div class="n"><span class="chip calc">計算</span>計量規準型一回抜取検査(σ 既知)</div><div class="s">測った値の平均で判定する。正規分布表の値から n と k を決め、平均 ≤ Sᵤ − kσ なら合格。</div></div></a></div></section>
+<nav class="snav" aria-label="分野"><h2>分野から探す</h2><div class="list"><a class="item" href="../../../qc2/#s1"><div class="t"><div class="n">手法</div><div class="s">品質管理の手法</div></div><span class="cnt">›</span></a><a class="item" href="../../../qc2/#s2"><div class="t"><div class="n">実践</div><div class="s">品質管理の実践</div></div><span class="cnt">›</span></a></div></nav>
+<footer class="foot">合格ナビ QC検定2級 ・ <a href="../../../">エネルギー管理士(熱分野)の Web 版</a> ・ <a href="../../../../privacy.html">プライバシーポリシー</a> ・ <a href="../../../../support.html">お問い合わせ</a><br>
+問題はすべてオリジナルの類似問題で、過去問の問題文は載せていません。本サイトは一般財団法人日本規格協会(品質管理検定センター)および一般財団法人日本科学技術連盟とは関係のない個人制作です。「QC検定」は一般財団法人日本規格協会の登録商標です。</footer>
+</main>
+</body>
+</html>

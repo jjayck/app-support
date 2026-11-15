@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>期待値と分散の加法性|QC検定2級 手法 確率分布の練習問題とやさしい解き方</title>
+<meta name="description" content="和でも差でも、独立なら分散は足し算。標準偏差は足さない。 QC検定2級「確率分布」の論点。オリジナルの練習問題1問と答え・解説つき。">
+<link rel="canonical" href="https://jjayck.github.io/app-support/enekan/app/qc2/ronten/additivity/">
+<meta property="og:title" content="期待値と分散の加法性|QC検定2級 手法 確率分布の練習問題とやさしい解き方">
+<meta property="og:description" content="和でも差でも、独立なら分散は足し算。標準偏差は足さない。 QC検定2級「確率分布」の論点。オリジナルの練習問題1問と答え・解説つき。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://jjayck.github.io/app-support/enekan/app/qc2/ronten/additivity/">
+<meta property="og:site_name" content="合格ナビ QC検定2級">
+<meta name="apple-itunes-app" content="app-id=6826752834">
+<meta name="theme-color" content="#f6f1e7">
+<link rel="icon" href="../../../../icon.png">
+<link rel="apple-touch-icon" href="../../../../icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap">
+<link rel="stylesheet" href="../../../style.css?v=202611151153">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "QC検定2級", "item": "https://jjayck.github.io/app-support/enekan/app/qc2/"}, {"@type": "ListItem", "position": 2, "name": "確率分布", "item": "https://jjayck.github.io/app-support/enekan/app/qc2/bunya/distributions/"}, {"@type": "ListItem", "position": 3, "name": "期待値と分散の加法性", "item": "https://jjayck.github.io/app-support/enekan/app/qc2/ronten/additivity/"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Quiz", "name": "期待値と分散の加法性", "description": "和でも差でも、独立なら分散は足し算。標準偏差は足さない。 QC検定2級「確率分布」の論点。オリジナルの練習問題1問と答え・解説つき。", "inLanguage": "ja", "learningResourceType": "練習問題", "educationalLevel": "QC検定2級", "about": "確率分布", "isAccessibleForFree": true, "url": "https://jjayck.github.io/app-support/enekan/app/qc2/ronten/additivity/", "isPartOf": {"@type": "WebSite", "name": "合格ナビ QC検定2級", "url": "https://jjayck.github.io/app-support/enekan/app/qc2/"}, "hasPart": [{"@type": "Question", "eduQuestionType": "Multiple choice", "name": "空欄D", "text": "穴の内径 X は平均 30.0312 mm・標準偏差 5 μm、軸の外径 Y は平均 30.0000 mm・標準偏差 12 μm の、互いに独立な正規分布に従う。ランダムに組み合わせたときのすきま Z = X − Y の平均は [A] μm、標準偏差は [B] μm であり、すきまが負(はまらない)になる割合は [C] % である。Z の分散は [D] で求める。付表の正規分布表を用いよ。 空欄[D]に入るものを解答群から選べ。", "acceptedAnswer": {"@type": "Answer", "text": "σ_X² + σ_Y²"}, "suggestedAnswer": [{"@type": "Answer", "text": "σ_X + σ_Y"}, {"@type": "Answer", "text": "(σ_X − σ_Y)²"}, {"@type": "Answer", "text": "σ_X² − σ_Y²"}]}], "educationalAlignment": {"@type": "AlignmentObject", "alignmentType": "educationalSubject", "targetName": "確率分布"}}</script>
+</head>
+<body class="static">
+<header class="top"><div class="in">
+  <a class="brand" href="../../../qc2/"><span class="mark">QC</span>QC検定2級 合格ナビ</a>
+  <span class="sp"></span>
+  <nav><a href="../../../qc2/">論点一覧</a><a href="https://apps.apple.com/jp/app/id6826752834" rel="noopener">アプリで解く</a></nav>
+</div></header>
+<main class="wrap">
+<nav class="crumb" aria-label="パンくずリスト"><a href="../../../qc2/">QC検定2級</a><a href="../../../qc2/bunya/distributions/">確率分布</a><span>期待値と分散の加法性</span></nav>
+<h1>期待値と分散の加法性</h1>
+<p class="lead"><span class="chip ink">手法</span><span class="chip ink">確率分布</span><span class="chip calc">計算</span></p>
+<section class="card point-one"><h2 class="h-in">ひとことで言うと</h2><p>和でも差でも、独立なら分散は足し算。標準偏差は足さない。</p></section>
+<section><h2>練習問題</h2>
+<p class="note">空欄 A・B・C・D に入るものを答えてください。</p>
+<div class="stem" data-qid="qc2-additivity-01">穴の内径 X は平均 30.0312 mm・標準偏差 5 μm、軸の外径 Y は平均 30.0000 mm・標準偏差 12 μm の、互いに独立な正規分布に従う。ランダムに組み合わせたときのすきま Z = X − Y の平均は <span class="bl">A</span> μm、標準偏差は <span class="bl">B</span> μm であり、すきまが負(はまらない)になる割合は <span class="bl">C</span> % である。Z の分散は <span class="bl">D</span> で求める。付表の正規分布表を用いよ。<div class="tbl-wrap"><div class="tbl-title">正規分布表(K<sub>P</sub> から P を求める)の抜粋</div><table class="qt"><thead><tr><th>K<sub>P</sub></th><th>P</th></tr></thead><tbody><tr><td>2.20</td><td>0.0139</td></tr><tr><td>2.30</td><td>0.0107</td></tr><tr><td>2.40</td><td>0.0082</td></tr><tr><td>2.50</td><td>0.0062</td></tr><tr><td>2.60</td><td>0.0047</td></tr></tbody></table><div class="tbl-note">P は標準正規分布で K<sub>P</sub> より大きい値が出る確率(上側確率)</div></div></div><div class="sblank"><div class="lab"><span class="l">A</span>数値(3桁・□□.□)<span class="u">μm</span></div></div><div class="sblank"><div class="lab"><span class="l">B</span>数値(2桁・□□)<span class="u">μm</span></div></div><div class="sblank"><div class="lab"><span class="l">C</span>数値(3桁・□.□□)<span class="u">%</span></div></div><div class="sblank"><div class="lab"><span class="l">D</span>解答群</div><ol class="sopts"><li><span class="k">ア</span>σ_X + σ_Y</li><li><span class="k">イ</span>σ_X² + σ_Y²</li><li><span class="k">ウ</span>(σ_X − σ_Y)²</li><li><span class="k">エ</span>σ_X² − σ_Y²</li></ol></div><details class="answer"><summary>答えとやさしい解き方を見る</summary><ul class="anslist"><li><span class="l">A</span><b>31.2</b> μm</li><li><span class="l">B</span><b>13</b> μm</li><li><span class="l">C</span><b>0.82</b> %</li><li><span class="l">D</span><b>イ σ_X² + σ_Y²</b> </li></ul><p class="note">数値の答えは本番と同じ「桁ごとのマーク」です。桁が余るときは先頭に 0 を入れます。</p><div class="guide"><div class="g-goal"><b>何を聞かれている?</b><br>2 つの部品を組み合わせたときのすきま(差)の平均とばらつきを出し、はまらない確率を求める問題。</div><h4>記号と単位</h4><ul><li>E( ) … 平均(期待値)</li><li>V( ) … 分散(標準偏差の 2 乗)</li></ul><h4>解き方</h4><div class="step"><span class="no">1</span><div><div class="why">平均は、差なら差、和なら和。単位(mm と μm)をそろえる。</div><div class=formula>平均は差をとる:E(Z) = E(X) − E(Y) = 30.0312 − 30.0000 = 0.0312 mm = 31.2 μm → 31.2。</div></div></div><div class="step"><span class="no">2</span><div><div class="why">分散は、差でも和でも足す(独立なとき)。ここが最大のポイント。</div><div class=formula>分散は差でも足す(独立なとき):V(Z) = σ_X² + σ_Y² = 5² + 12² = 169。</div></div></div><div class="step"><span class="no">3</span><div><div class="why">足した分散の √ が標準偏差。</div><div class=formula>標準偏差 σ_Z = √169 = 13 → 13 μm。</div></div></div><div class="step"><span class="no">4</span><div><div class="why">すきま 0 を標準化して表を読む。マイナス側は対称性で読む。</div><div class=formula>Z &lt; 0 を標準化:K = (0 − 31.2)/13 = −2.40。対称なので表の K<sub>P</sub> = 2.40 を読み P = 0.0082 → 0.82 %。</div></div></div><div class="trap"><b>つまずきやすいところ</b><br>差だから分散も引いてしまう/標準偏差をそのまま足してしまう(足すのは 2 乗した分散)。</div></div></details>
+</section>
+<aside class="cta card">
+  <div class="cta-h">この論点の問題は全 8 問(無料 1 問)</div>
+  <p class="note">iPhone・iPad のアプリ「合格ナビ」で、QC検定2級の全 680 問を分野・論点ごとに続けて解けます。本番と同じマーク形式で、計算は数値を変えた類題をくり返し練習できます。</p>
+  <a class="btn heat block" href="https://apps.apple.com/jp/app/id6826752834" rel="noopener">App Store で入手(無料)</a>
+  <p class="note">どの論点にも無料問題があります。全問の解禁はアプリ内の買い切り(¥1,200)です。ブラウザ版は今のところエネルギー管理士(熱分野)だけです。</p>
+</aside>
+<section><h2>「確率分布」のイメージ</h2>
+<div class="card intro"><div class="one">データのばらつき方には決まった形があり、その形を使うと「どのくらいの確率で起きるか」が計算できる。</div><p class="note" style="margin:8px 0 0"><a href="../../bunya/distributions/">確率分布の要点と全論点を見る ›</a></p></div></section>
+<section><h2>同じ分野の論点</h2><div class="list"><a class="item" href="../../../qc2/ronten/normal-prob/"><div class="t"><div class="n"><span class="chip calc">計算</span>正規分布の確率</div><div class="s">(x − μ)/σ で標準化すれば、正規分布表 1 枚でどんな正規分布の確率も読める。</div></div></a><a class="item" href="../../../qc2/ronten/normal-inverse/"><div class="t"><div class="n"><span class="chip calc">計算</span>確率から値を求める(正規分布)</div><div class="s">上から 5 % の点は K = 1.645。値に戻すときは μ + Kσ。</div></div></a><a class="item" href="../../../qc2/ronten/binomial/"><div class="t"><div class="n"><span class="chip calc">計算</span>二項分布の確率</div><div class="s">n 個中 x 個が不良の確率。0 個は (1 − p)ⁿ、平均 np、分散 np(1 − p)。</div></div></a><a class="item" href="../../../qc2/ronten/poisson/"><div class="t"><div class="n"><span class="chip calc">計算</span>ポアソン分布の確率</div><div class="s">まれに起きることの回数。0 回の確率は e^(−λ)、平均も分散も λ。</div></div></a><a class="item" href="../../../qc2/ronten/xbar-dist/"><div class="t"><div class="n"><span class="chip calc">計算</span>平均値の分布と中心極限定理</div><div class="s">n 個の平均のばらつきは σ/√n。平均はもとの分布によらずほぼ正規分布になる。</div></div></a></div></section>
+<nav class="snav" aria-label="分野"><h2>分野から探す</h2><div class="list"><a class="item" href="../../../qc2/#s1"><div class="t"><div class="n">手法</div><div class="s">品質管理の手法</div></div><span class="cnt">›</span></a><a class="item" href="../../../qc2/#s2"><div class="t"><div class="n">実践</div><div class="s">品質管理の実践</div></div><span class="cnt">›</span></a></div></nav>
+<footer class="foot">合格ナビ QC検定2級 ・ <a href="../../../">エネルギー管理士(熱分野)の Web 版</a> ・ <a href="../../../../privacy.html">プライバシーポリシー</a> ・ <a href="../../../../support.html">お問い合わせ</a><br>
+問題はすべてオリジナルの類似問題で、過去問の問題文は載せていません。本サイトは一般財団法人日本規格協会(品質管理検定センター)および一般財団法人日本科学技術連盟とは関係のない個人制作です。「QC検定」は一般財団法人日本規格協会の登録商標です。</footer>
+</main>
+</body>
+</html>

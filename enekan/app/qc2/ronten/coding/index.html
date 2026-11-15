@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>データの変換(数値変換)|QC検定2級 手法 データのまとめ方の練習問題とやさしい解き方</title>
+<meta name="description" content="u = (x − 基準)× 倍率。平均は「ずらし+目盛り」を戻し、平方和は目盛りの 2 乗だけ戻す。 QC検定2級「データのまとめ方」の論点。オリジナルの練習問題1問と答え・解説つき。">
+<link rel="canonical" href="https://jjayck.github.io/app-support/enekan/app/qc2/ronten/coding/">
+<meta property="og:title" content="データの変換(数値変換)|QC検定2級 手法 データのまとめ方の練習問題とやさしい解き方">
+<meta property="og:description" content="u = (x − 基準)× 倍率。平均は「ずらし+目盛り」を戻し、平方和は目盛りの 2 乗だけ戻す。 QC検定2級「データのまとめ方」の論点。オリジナルの練習問題1問と答え・解説つき。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://jjayck.github.io/app-support/enekan/app/qc2/ronten/coding/">
+<meta property="og:site_name" content="合格ナビ QC検定2級">
+<meta name="apple-itunes-app" content="app-id=6826752834">
+<meta name="theme-color" content="#f6f1e7">
+<link rel="icon" href="../../../../icon.png">
+<link rel="apple-touch-icon" href="../../../../icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap">
+<link rel="stylesheet" href="../../../style.css?v=202611151153">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "QC検定2級", "item": "https://jjayck.github.io/app-support/enekan/app/qc2/"}, {"@type": "ListItem", "position": 2, "name": "データのまとめ方", "item": "https://jjayck.github.io/app-support/enekan/app/qc2/bunya/data-summary/"}, {"@type": "ListItem", "position": 3, "name": "データの変換(数値変換)", "item": "https://jjayck.github.io/app-support/enekan/app/qc2/ronten/coding/"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Quiz", "name": "データの変換(数値変換)", "description": "u = (x − 基準)× 倍率。平均は「ずらし+目盛り」を戻し、平方和は目盛りの 2 乗だけ戻す。 QC検定2級「データのまとめ方」の論点。オリジナルの練習問題1問と答え・解説つき。", "inLanguage": "ja", "learningResourceType": "練習問題", "educationalLevel": "QC検定2級", "about": "データのまとめ方", "isAccessibleForFree": true, "url": "https://jjayck.github.io/app-support/enekan/app/qc2/ronten/coding/", "isPartOf": {"@type": "WebSite", "name": "合格ナビ QC検定2級", "url": "https://jjayck.github.io/app-support/enekan/app/qc2/"}, "hasPart": [{"@type": "Question", "eduQuestionType": "Multiple choice", "name": "空欄D", "text": "測定値 x を、u = (x − 12) × 10 と変換して計算を簡単にする。8 個のデータを変換したところ Σu = 5、Σu² = 105 であった。元の測定値の平均 x̄ は [A]、平方和 Sₓ は [B]、標準偏差 sₓ は [C] である。なお、x = 12 + h·u(h = 0.1)と書けるとき、分散は u の分散の [D] になる。 空欄[D]に入るものを解答群から選べ。", "acceptedAnswer": {"@type": "Answer", "text": "h² 倍"}, "suggestedAnswer": [{"@type": "Answer", "text": "1/h² 倍"}, {"@type": "Answer", "text": "h 倍"}, {"@type": "Answer", "text": "変わらない"}]}], "educationalAlignment": {"@type": "AlignmentObject", "alignmentType": "educationalSubject", "targetName": "データのまとめ方"}}</script>
+</head>
+<body class="static">
+<header class="top"><div class="in">
+  <a class="brand" href="../../../qc2/"><span class="mark">QC</span>QC検定2級 合格ナビ</a>
+  <span class="sp"></span>
+  <nav><a href="../../../qc2/">論点一覧</a><a href="https://apps.apple.com/jp/app/id6826752834" rel="noopener">アプリで解く</a></nav>
+</div></header>
+<main class="wrap">
+<nav class="crumb" aria-label="パンくずリスト"><a href="../../../qc2/">QC検定2級</a><a href="../../../qc2/bunya/data-summary/">データのまとめ方</a><span>データの変換(数値変換)</span></nav>
+<h1>データの変換(数値変換)</h1>
+<p class="lead"><span class="chip ink">手法</span><span class="chip ink">データのまとめ方</span><span class="chip calc">計算</span></p>
+<section class="card point-one"><h2 class="h-in">ひとことで言うと</h2><p>u = (x − 基準)× 倍率。平均は「ずらし+目盛り」を戻し、平方和は目盛りの 2 乗だけ戻す。</p></section>
+<section><h2>練習問題</h2>
+<p class="note">空欄 A・B・C・D に入るものを答えてください。</p>
+<div class="stem" data-qid="qc2-coding-01">測定値 x を、u = (x − 12) × 10 と変換して計算を簡単にする。8 個のデータを変換したところ Σu = 5、Σu² = 105 であった。元の測定値の平均 x̄ は <span class="bl">A</span>、平方和 Sₓ は <span class="bl">B</span>、標準偏差 sₓ は <span class="bl">C</span> である。なお、x = 12 + h·u(h = 0.1)と書けるとき、分散は u の分散の <span class="bl">D</span> になる。</div><div class="sblank"><div class="lab"><span class="l">A</span>数値(5桁・□□.□□□)<span class="u"></span></div></div><div class="sblank"><div class="lab"><span class="l">B</span>数値(5桁・□□.□□□)<span class="u"></span></div></div><div class="sblank"><div class="lab"><span class="l">C</span>数値(4桁・□.□□□)<span class="u"></span></div></div><div class="sblank"><div class="lab"><span class="l">D</span>解答群</div><ol class="sopts"><li><span class="k">ア</span>1/h² 倍</li><li><span class="k">イ</span>h 倍</li><li><span class="k">ウ</span>h² 倍</li><li><span class="k">エ</span>変わらない</li></ol></div><details class="answer"><summary>答えとやさしい解き方を見る</summary><ul class="anslist"><li><span class="l">A</span><b>12.063</b> </li><li><span class="l">B</span><b>01.019</b> </li><li><span class="l">C</span><b>0.381</b> </li><li><span class="l">D</span><b>ウ h² 倍</b> </li></ul><p class="note">数値の答えは本番と同じ「桁ごとのマーク」です。桁が余るときは先頭に 0 を入れます。</p><div class="guide"><div class="g-goal"><b>何を聞かれている?</b><br>計算しやすいように数値を変換したデータ(u)の合計から、元のデータの平均と平方和・標準偏差に戻す問題。</div><h4>記号と単位</h4><ul><li>u … 変換したデータ。u = (x − 基準値) × 倍率</li><li>h … 目盛りの幅(倍率の逆数。× 10 なら h = 0.1)</li><li>Sᵤ・Sₓ … u と x の平方和</li></ul><h4>解き方</h4><div class="step"><span class="no">1</span><div><div class="why">まず u の世界で平均を出す。Σu を n で割る(マイナスでもそのまま)。</div><div class=formula>u の平均 ū = Σu/n = 5/8 = 0.625。</div></div></div><div class="step"><span class="no">2</span><div><div class="why">元に戻すときは「基準値 + h × ū」。変換の逆の操作をする。</div><div class=formula>x̄ = 12 + h·ū = 12 + 0.1 × 0.625 = 12.0625 → 12.063。</div></div></div><div class="step"><span class="no">3</span><div><div class="why">u の平方和も、Σu² − (Σu)²/n で出せる。</div><div class=formula>u の平方和 Sᵤ = Σu² − (Σu)²/n = 105 − (5)²/8 = 101.875。</div></div></div><div class="step"><span class="no">4</span><div><div class="why">平方和は、ずらし(基準値)の影響を受けず、目盛り(h)の 2 乗だけ変わる。だから h² を掛ける。</div><div class=formula>Sₓ = h²·Sᵤ = 0.1² × 101.875 = 1.01875 → 1.019(原点を 12 ずらしてもばらつきは変わらず、目盛りを h 倍すると平方和は h² 倍)。</div></div></div><div class="step"><span class="no">5</span><div><div class="why">あとは普通どおり n − 1 で割って √。標準偏差は h 倍(2 乗しない)になる。</div><div class=formula>Vₓ = Sₓ/(n − 1) = 1.01875/7 = 0.1455357、sₓ = √Vₓ = 0.38149 → 0.381。</div></div></div><div class="trap"><b>つまずきやすいところ</b><br>平方和や分散にも基準値を足してしまう/h² ではなく h を掛ける。平均は「ずらし+目盛り」、ばらつきは「目盛りだけ」。</div></div></details>
+</section>
+<aside class="cta card">
+  <div class="cta-h">この論点の問題は全 8 問(無料 1 問)</div>
+  <p class="note">iPhone・iPad のアプリ「合格ナビ」で、QC検定2級の全 680 問を分野・論点ごとに続けて解けます。本番と同じマーク形式で、計算は数値を変えた類題をくり返し練習できます。</p>
+  <a class="btn heat block" href="https://apps.apple.com/jp/app/id6826752834" rel="noopener">App Store で入手(無料)</a>
+  <p class="note">どの論点にも無料問題があります。全問の解禁はアプリ内の買い切り(¥1,200)です。ブラウザ版は今のところエネルギー管理士(熱分野)だけです。</p>
+</aside>
+<section><h2>「データのまとめ方」のイメージ</h2>
+<div class="card intro"><div class="one">たくさんの数字を、「真ん中」と「ばらつき」の 2 つの数にまとめる。</div><p class="note" style="margin:8px 0 0"><a href="../../bunya/data-summary/">データのまとめ方の要点と全論点を見る ›</a></p></div></section>
+<section><h2>同じ分野の論点</h2><div class="list"><a class="item" href="../../../qc2/ronten/basic-stats/"><div class="t"><div class="n"><span class="chip calc">計算</span>基本統計量の計算</div><div class="s">平均で真ん中、平方和→分散→標準偏差でばらつき。分散の分母は n − 1。</div></div></a><a class="item" href="../../../qc2/ronten/pareto/"><div class="t"><div class="n"><span class="chip calc">計算</span>パレート図の累積比率</div><div class="s">件数の多い順に並べ、「その他」は最後。上位の数項目で全体の大部分を占めることを見る。</div></div></a><a class="item" href="../../../qc2/ronten/sampling-kind/"><div class="t"><div class="n">サンプリングの種類と性質</div><div class="s">層ごとに抜く=層別、選んだまとまりを全部=集落、選んだまとまりからさらに抜く=2 段、一定間隔=系統。</div></div></a><a class="item" href="../../../qc2/ronten/data-kind/"><div class="t"><div class="n">データの種類</div><div class="s">測ったデータが計量値、数えたデータが計数値、文章のデータが言語データ。全体が母集団、取り出した一部がサンプル。</div></div></a><a class="item" href="../../../qc2/ronten/qc7/"><div class="t"><div class="n">QC七つ道具の使い分け</div><div class="s">件数の順ならパレート図、要因の整理なら特性要因図、ばらつきの形ならヒストグラム、2 つの関係なら散布図、分けて比べるなら層別。</div></div></a></div></section>
+<nav class="snav" aria-label="分野"><h2>分野から探す</h2><div class="list"><a class="item" href="../../../qc2/#s1"><div class="t"><div class="n">手法</div><div class="s">品質管理の手法</div></div><span class="cnt">›</span></a><a class="item" href="../../../qc2/#s2"><div class="t"><div class="n">実践</div><div class="s">品質管理の実践</div></div><span class="cnt">›</span></a></div></nav>
+<footer class="foot">合格ナビ QC検定2級 ・ <a href="../../../">エネルギー管理士(熱分野)の Web 版</a> ・ <a href="../../../../privacy.html">プライバシーポリシー</a> ・ <a href="../../../../support.html">お問い合わせ</a><br>
+問題はすべてオリジナルの類似問題で、過去問の問題文は載せていません。本サイトは一般財団法人日本規格協会(品質管理検定センター)および一般財団法人日本科学技術連盟とは関係のない個人制作です。「QC検定」は一般財団法人日本規格協会の登録商標です。</footer>
+</main>
+</body>
+</html>
