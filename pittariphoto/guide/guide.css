@@ -1,0 +1,28 @@
+/* 写真の条件ガイド(../../style.css の色トークンを使う) */
+a.app { text-decoration: none; color: inherit; }
+.crumb { font-size: 13px; color: var(--dim); margin: -12px 0 10px; }
+.crumb a { color: var(--dim); }
+.crumb span::before, .crumb a + a::before { content: "›"; margin: 0 6px; color: var(--dim); }
+.answer { border-color: var(--you); }
+.answer-h, .spec-h { font-weight: 700; font-size: 14px; color: var(--you); margin-bottom: 2px; }
+.spec-h { color: var(--ink); font-size: 15px; margin-bottom: 8px; }
+.answer p { margin: 0; }
+.spec table { width: 100%; border-collapse: collapse; font-size: 15px; }
+.spec th, .spec td { text-align: left; vertical-align: top; padding: 8px 0; border-top: 1px solid var(--line); }
+.spec th { width: 34%; padding-right: 12px; font-weight: 700; color: var(--dim); font-size: 14px; }
+.spec tr:first-child th, .spec tr:first-child td { border-top: 0; }
+.note { color: var(--dim); font-size: 14px; }
+.src { color: var(--dim); font-size: 13px; margin: 8px 0 0; word-break: break-all; }
+.srcs { font-size: 14px; word-break: break-all; }
+.steps { padding-left: 1.4em; }
+.steps li { margin: 6px 0; }
+.cta { margin-top: 28px; }
+.cta h2.in { margin-top: 0; }
+.btn { display: block; text-align: center; background: var(--you); color: #fff; font-weight: 700; text-decoration: none;
+  border-radius: 12px; padding: 13px 16px; margin-top: 12px; }
+.list { display: flex; flex-direction: column; gap: 8px; margin-top: 10px; }
+.list .item { display: block; text-decoration: none; color: inherit; background: var(--card); border: 1px solid var(--line);
+  border-radius: 12px; padding: 12px 14px; }
+.list .item b { display: block; line-height: 1.5; }
+.list .item span { display: block; color: var(--dim); font-size: 13px; line-height: 1.6; margin-top: 2px; }
+kbd { font-family: inherit; font-weight: 700; background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 0 5px; }
